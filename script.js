@@ -2,8 +2,8 @@
 const machines = [
   {
     id: 1,
-    type: "Торцовочные",
-    manufacturer: "Строгальные",
+    type: "Строгальные",
+    manufacturer: "БЗДС",
     country: "Россия",
     year: 2002,
     power: 49.6,
