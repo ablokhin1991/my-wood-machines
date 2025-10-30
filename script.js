@@ -79,37 +79,48 @@ function renderCatalog(filter = {}) {
   filtered.forEach(machine => {
     const card = document.createElement("div");
     card.className = "card";
-    const mainImg = machine.images[0];
+
+    const mainImg = machine.images[0] || "";
     const hoverImg = machine.images[1] || mainImg;
 
-    // Обрезаем описание до двух строк
-    const shortDesc = machine.description;
-
+    // Формируем внутреннюю разметку карточки с wrapper для изображения (чтобы CSS .used-label работал)
     card.innerHTML = `
-      <img src="${mainImg}" alt="${machine.name}">
-      <img src="${hoverImg}" class="second" alt="доп фото">
+      <div class="card-img-wrapper">
+        <span class="used-label">б/у</span>
+        <img src="${mainImg}" alt="${machine.name}">
+        <img src="${hoverImg}" class="second" alt="доп фото">
+      </div>
       <div class="card-content">
         <h3>${machine.name}</h3>
-        <p class="short-desc">${shortDesc}</p>
-        <p>Год: ${machine.year}</p>
+        <p class="short-desc">${escapeHtml(machine.description)}</p>
+        <p class="card-year" aria-hidden="true">Год: ${machine.year}</p>
         <div class="card-price">
           <span>${formatPrice(machine.price)}</span>
           <span class="oldprice">${formatPrice(machine.oldPrice)}</span>
         </div>
+        <div class="fake-button">Подробнее</div>
       </div>
     `;
+
+    // Вешаем обработчик на всю карточку — открывает popup
     card.addEventListener("click", () => showPopup(machine));
+
     catalog.appendChild(card);
   });
 }
 
+// helper: экранируем текст описания (на случай спецсимволов)
+function escapeHtml(text) {
+  if (!text) return "";
+  return String(text);
+}
+
 function showPopup(machine) {
-  currentImages = machine.images;
+  currentImages = machine.images && machine.images.length ? machine.images : [""];
   currentIndex = 0;
   updatePopupImage();
 
-  popupTitle.textContent = machine.name;
-
+  popupTitle.textContent = machine.name || "";
   popupSpecs.innerHTML = `
     <li><strong>Тип станка:</strong> ${machine.type}</li>
     <li><strong>Мощность:</strong> ${machine.power} кВт</li>
@@ -121,55 +132,100 @@ function showPopup(machine) {
   `;
   popupPrice.textContent = formatPrice(machine.price);
   popupOldPrice.textContent = formatPrice(machine.oldPrice);
-  popupDesc.textContent = machine.description;
+  popupDesc.textContent = machine.description || "";
+
+  // добавляем шильдик "б/у" в popup (в .popup-gallery), если ещё нет
+  const gallery = popup.querySelector(".popup-gallery");
+  if (gallery) {
+    // удалим старый, если вдруг остался (чтобы не дублировать)
+    const existing = gallery.querySelector(".used-label-popup");
+    if (!existing) {
+      const label = document.createElement("span");
+      label.className = "used-label-popup";
+      label.textContent = "б/у";
+      // label позиционируется абсолютом через CSS и должен быть внутри popup-gallery
+      gallery.appendChild(label);
+    }
+  }
+
   popup.style.display = "block";
 }
 
 function updatePopupImage() {
-  popupImg.src = currentImages[currentIndex];
+  popupImg.src = currentImages[currentIndex] || "";
 }
 
-document.querySelector(".nav-btn.prev").addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-  updatePopupImage();
-});
+// Навигация по изображениям — защищаем селекторы (на случай, если кнопки исчезнут)
+const prevBtn = document.querySelector(".nav-btn.prev");
+const nextBtn = document.querySelector(".nav-btn.next");
 
-document.querySelector(".nav-btn.next").addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % currentImages.length;
-  updatePopupImage();
-});
+if (prevBtn) {
+  prevBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (!currentImages.length) return;
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    updatePopupImage();
+  });
+}
 
-closeBtn.addEventListener("click", () => (popup.style.display = "none"));
+if (nextBtn) {
+  nextBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (!currentImages.length) return;
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    updatePopupImage();
+  });
+}
+
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => (popup.style.display = "none"));
+}
+
+// Закрытие при клике вне контента
 window.addEventListener("click", e => {
   if (e.target === popup) popup.style.display = "none";
 });
 
-document.getElementById("filter-type").addEventListener("change", updateFilters);
-document.getElementById("filter-manufacturer").addEventListener("input", updateFilters);
-document.getElementById("filter-country").addEventListener("input", updateFilters);
-document.getElementById("filter-year").addEventListener("input", updateFilters);
-document.getElementById("filter-power").addEventListener("input", updateFilters);
-document.getElementById("filter-weight").addEventListener("input", updateFilters);
+// Фильтры — обработчики
+const ftType = document.getElementById("filter-type");
+const ftMan = document.getElementById("filter-manufacturer");
+const ftCountry = document.getElementById("filter-country");
+const ftYear = document.getElementById("filter-year");
+const ftPower = document.getElementById("filter-power");
+const ftWeight = document.getElementById("filter-weight");
 
-document.getElementById("clear-filters").addEventListener("click", () => {
-  document.querySelectorAll(".filters input, .filters select").forEach(el => (el.value = ""));
-  renderCatalog();
-});
+if (ftType) ftType.addEventListener("change", updateFilters);
+if (ftMan) ftMan.addEventListener("input", updateFilters);
+if (ftCountry) ftCountry.addEventListener("input", updateFilters);
+if (ftYear) ftYear.addEventListener("input", updateFilters);
+if (ftPower) ftPower.addEventListener("input", updateFilters);
+if (ftWeight) ftWeight.addEventListener("input", updateFilters);
+
+const clearBtn = document.getElementById("clear-filters");
+if (clearBtn) {
+  clearBtn.addEventListener("click", () => {
+    document.querySelectorAll(".filters input, .filters select").forEach(el => (el.value = ""));
+    renderCatalog();
+  });
+}
 
 function updateFilters() {
   const filter = {
-    type: document.getElementById("filter-type").value,
-    manufacturer: document.getElementById("filter-manufacturer").value,
-    country: document.getElementById("filter-country").value,
-    year: document.getElementById("filter-year").value,
-    power: document.getElementById("filter-power").value,
-    weight: document.getElementById("filter-weight").value
+    type: document.getElementById("filter-type") ? document.getElementById("filter-type").value : "",
+    manufacturer: document.getElementById("filter-manufacturer") ? document.getElementById("filter-manufacturer").value : "",
+    country: document.getElementById("filter-country") ? document.getElementById("filter-country").value : "",
+    year: document.getElementById("filter-year") ? document.getElementById("filter-year").value : "",
+    power: document.getElementById("filter-power") ? document.getElementById("filter-power").value : "",
+    weight: document.getElementById("filter-weight") ? document.getElementById("filter-weight").value : ""
   };
   renderCatalog(filter);
 }
 
-toggleFiltersBtn.addEventListener("click", () => {
-  filtersSection.classList.toggle("active");
-});
+if (toggleFiltersBtn) {
+  toggleFiltersBtn.addEventListener("click", () => {
+    filtersSection.classList.toggle("active");
+  });
+}
 
+// Инициализация
 renderCatalog();
