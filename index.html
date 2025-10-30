@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Продажа б/у станков</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Продажа станков по деревообработке</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Б/у станки для деревообработки</h1>
-    </header>
+  <header>
+    <h1>Станки по деревообработке — быстро продаём!</h1>
+    <p>Выберите станок по фильтрам и смотрите подробности</p>
+  </header>
 
-    <main>
-        <section id="products">
-            <h2>Наши станки</h2>
-            <div class="product">
-                <h3>Фуговальный станок XYZ</h3>
-                <p>Состояние: отличное, использовался 2 года.</p>
-                <p>Цена: 120 000 ₽</p>
-            </div>
-            <!-- Добавь другие станки аналогично -->
-        </section>
-        <section id="contacts">
-            <h2>Контакты</h2>
-            <p>Телефон: +7 XXX XXX XX XX</p>
-            <p>Email: example@mail.com</p>
-        </section>
-    </main>
+  <section class="filters">
+    <h2>Фильтры</h2>
+    <div class="filter-group">
+      <label>Тип станка:</label>
+      <select id="filter-type">
+        <option value="">Все</option>
+        <option>Универсальные</option>
+        <option>Торцовочные</option>
+        <option>Лобзиковые</option>
+        <option>Рейсмусовые</option>
+        <option>Распиловочные</option>
+        <option>Токарные</option>
+        <option>Фрезерные</option>
+        <option>Строгальные</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Производитель:</label>
+      <input type="text" id="filter-manufacturer" placeholder="Любой">
+    </div>
+    <div class="filter-group">
+      <label>Страна:</label>
+      <input type="text" id="filter-country" placeholder="Любая">
+    </div>
+    <div class="filter-group">
+      <label>Год выпуска:</label>
+      <input type="number" id="filter-year" placeholder="Любой">
+    </div>
+    <div class="filter-group">
+      <label>Мощность, кВт:</label>
+      <input type="number" id="filter-power" placeholder="Любая">
+    </div>
+    <div class="filter-group">
+      <label>Масса, кг:</label>
+      <input type="number" id="filter-weight" placeholder="Любая">
+    </div>
+    <button id="clear-filters">Сбросить фильтры</button>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Б/у станки</p>
-    </footer>
+  <section class="catalog" id="catalog">
+    <!-- Карточки станков будут добавляться через JS -->
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Popup карточка -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <img id="popup-img" src="" alt="Фото станка">
+      <div class="popup-details">
+        <h3 id="popup-title"></h3>
+        <ul id="popup-specs"></ul>
+        <p id="popup-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
