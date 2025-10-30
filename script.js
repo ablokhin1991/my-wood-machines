@@ -9,7 +9,7 @@ const machines = [
     power: 49,6,
     dimensions: "4800x2000x1500",
     weight: 5200,
-    image: "images\wood-machines\borovichi-s25-5a-2002-1.webp",
+    image: "images/wood-machines/borovichi-s25-5a-2002-1.webp",
     description: "Мощная торцовочная машина, идеальна для быстрой резки дерева."
   },
   {
