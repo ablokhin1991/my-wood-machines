@@ -98,11 +98,13 @@ function showPopup(machine) {
 
   popupTitle.textContent = `${machine.type} - ${machine.manufacturer}`;
   popupSpecs.innerHTML = `
-    <li><strong>Страна:</strong> ${machine.country}</li>
-    <li><strong>Год выпуска:</strong> ${machine.year}</li>
+    <li><strong>Тип станка:</strong> ${machine.type}</li>
     <li><strong>Мощность:</strong> ${machine.power} кВт</li>
     <li><strong>Размеры:</strong> ${machine.dimensions}</li>
     <li><strong>Масса:</strong> ${machine.weight} кг</li>
+    <li><strong>Производитель:</strong> ${machine.manufacturer}</li>
+    <li><strong>Страна:</strong> ${machine.country}</li>
+    <li><strong>Год выпуска:</strong> ${machine.year}</li>
   `;
   popupPrice.textContent = formatPrice(machine.price);
   popupOldPrice.textContent = formatPrice(machine.oldPrice);
