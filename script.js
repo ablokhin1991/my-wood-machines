@@ -82,14 +82,12 @@ function renderCatalog(filter = {}) {
     const mainImg = machine.images[0];
     const hoverImg = machine.images[1] || mainImg;
 
+    // Обрезаем описание до двух строк
     const shortDesc = machine.description;
 
     card.innerHTML = `
-      <div class="card-img-wrapper">
-        <span class="used-label">б/у</span>
-        <img src="${mainImg}" alt="${machine.name}">
-        <img src="${hoverImg}" class="second" alt="доп фото">
-      </div>
+      <img src="${mainImg}" alt="${machine.name}">
+      <img src="${hoverImg}" class="second" alt="доп фото">
       <div class="card-content">
         <h3>${machine.name}</h3>
         <p class="short-desc">${shortDesc}</p>
@@ -98,7 +96,6 @@ function renderCatalog(filter = {}) {
           <span>${formatPrice(machine.price)}</span>
           <span class="oldprice">${formatPrice(machine.oldPrice)}</span>
         </div>
-        <div class="fake-button">Подробнее</div>
       </div>
     `;
     card.addEventListener("click", () => showPopup(machine));
@@ -112,15 +109,6 @@ function showPopup(machine) {
   updatePopupImage();
 
   popupTitle.textContent = machine.name;
-
-  // добавляем шильдик "б/у" в popup, если его нет
-  const existingLabel = popup.querySelector(".used-label-popup");
-  if (!existingLabel) {
-    const label = document.createElement("span");
-    label.className = "used-label-popup";
-    label.textContent = "б/у";
-    popup.querySelector(".popup-img-container").appendChild(label);
-  }
 
   popupSpecs.innerHTML = `
     <li><strong>Тип станка:</strong> ${machine.type}</li>
