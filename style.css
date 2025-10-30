@@ -196,6 +196,7 @@ header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-wrap: wrap;
   font-size: 1.3rem;
   font-weight: bold;
   color: #2e7d32;
@@ -206,6 +207,16 @@ header {
   color: #999;
   font-weight: normal;
   font-size: 1.1rem;
+}
+
+.price-badge {
+  background: #4CAF50;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .popup-details ul {
