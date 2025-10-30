@@ -330,6 +330,6 @@ header {
   pointer-events: none; /* делает её некликабельной */
 }
 
-.fake-button:hover {
+.card:hover .fake-button {
   background: #0069d9;
 }
