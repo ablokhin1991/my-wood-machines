@@ -2,6 +2,7 @@
 const machines = [
   {
     id: 1,
+    name: "Четырехсторонний станок Боровичи С25-5А",
     type: "Строгальные",
     manufacturer: "БЗДС",
     country: "Россия",
@@ -20,6 +21,7 @@ const machines = [
   },
   {
     id: 2,
+    name: "Фрезерный станок Makita PRO-F17",
     type: "Фрезерные",
     manufacturer: "Makita",
     country: "Япония",
@@ -75,10 +77,10 @@ function renderCatalog(filter = {}) {
     const hoverImg = machine.images[1] || mainImg;
 
     card.innerHTML = `
-      <img src="${mainImg}" alt="${machine.type}">
+      <img src="${mainImg}" alt="${machine.name}">
       <img src="${hoverImg}" class="second" alt="доп фото">
       <div class="card-content">
-        <h3>${machine.type} - ${machine.manufacturer}</h3>
+        <h3>${machine.name}</h3>
         <p>Год: ${machine.year}, Мощность: ${machine.power} кВт</p>
         <div class="card-price">
           <span>${formatPrice(machine.price)}</span>
@@ -96,7 +98,9 @@ function showPopup(machine) {
   currentIndex = 0;
   updatePopupImage();
 
-  popupTitle.textContent = `${machine.type} - ${machine.manufacturer}`;
+  // Теперь отображается уникальное имя станка
+  popupTitle.textContent = machine.name;
+
   popupSpecs.innerHTML = `
     <li><strong>Тип станка:</strong> ${machine.type}</li>
     <li><strong>Мощность:</strong> ${machine.power} кВт</li>
