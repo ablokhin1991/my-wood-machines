@@ -147,7 +147,7 @@ function showPopup(machine) {
       specsHTML += `<li><strong>${spec.label}:</strong> ${spec.value}</li>`;
     });
   }
-
+  popupDesc.innerHTML = machine.description;
   popupSpecs.innerHTML = specsHTML;
   popupPrice.textContent = formatPrice(machine.price);
   popupOldPrice.textContent = formatPrice(machine.oldPrice);
