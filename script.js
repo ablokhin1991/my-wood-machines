@@ -1,8 +1,7 @@
-// Пример массива станков с ценами
 const machines = [
   {
     id: 1,
-    name: "Четырехсторонний станок Боровичи С25-5А",
+    name: "Боровичи С25-5А",
     type: "Строгальные",
     manufacturer: "БЗДС",
     country: "Россия",
@@ -17,7 +16,8 @@ const machines = [
     ],
     price: 1000000,
     oldPrice: 1299000,
-    description: "Состояние хорошее! Станок подключен, можно проверить. Станок тяжелой серии С25-5А предназначен для производства различных погонажных изделий и профилированного бруса."
+    description:
+      "Состояние хорошее! Станок подключен, можно проверить. Станок тяжелой серии С25-5А предназначен для производства различных погонажных изделий и профилированного бруса."
   },
   {
     id: 2,
@@ -39,56 +39,65 @@ const machines = [
   }
 ];
 
-const catalog = document.getElementById('catalog');
-const popup = document.getElementById('popup');
-const popupImg = document.getElementById('popup-img');
-const popupTitle = document.getElementById('popup-title');
-const popupSpecs = document.getElementById('popup-specs');
-const popupDesc = document.getElementById('popup-desc');
-const popupPrice = document.getElementById('popup-price');
-const popupOldPrice = document.getElementById('popup-oldprice');
-const closeBtn = document.querySelector('.close');
-const filtersSection = document.getElementById('filters');
-const toggleFiltersBtn = document.getElementById('toggle-filters');
+const catalog = document.getElementById("catalog");
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popup-img");
+const popupTitle = document.getElementById("popup-title");
+const popupSpecs = document.getElementById("popup-specs");
+const popupDesc = document.getElementById("popup-desc");
+const popupPrice = document.getElementById("popup-price");
+const popupOldPrice = document.getElementById("popup-oldprice");
+const closeBtn = document.querySelector(".close");
+const filtersSection = document.getElementById("filters");
+const toggleFiltersBtn = document.getElementById("toggle-filters");
 
 let currentImages = [];
 let currentIndex = 0;
 
 function formatPrice(num) {
-  return num.toLocaleString('ru-RU') + ' ₽';
+  return num.toLocaleString("ru-RU") + " ₽";
 }
 
 function renderCatalog(filter = {}) {
-  catalog.innerHTML = '';
+  catalog.innerHTML = "";
 
   const filtered = machines.filter(machine => {
-    return (!filter.type || machine.type === filter.type) &&
-           (!filter.manufacturer || machine.manufacturer.toLowerCase().includes(filter.manufacturer.toLowerCase())) &&
-           (!filter.country || machine.country.toLowerCase().includes(filter.country.toLowerCase())) &&
-           (!filter.year || machine.year == filter.year) &&
-           (!filter.power || machine.power == filter.power) &&
-           (!filter.weight || machine.weight == filter.weight);
+    return (
+      (!filter.type || machine.type === filter.type) &&
+      (!filter.manufacturer ||
+        machine.manufacturer
+          .toLowerCase()
+          .includes(filter.manufacturer.toLowerCase())) &&
+      (!filter.country ||
+        machine.country.toLowerCase().includes(filter.country.toLowerCase())) &&
+      (!filter.year || machine.year == filter.year) &&
+      (!filter.power || machine.power == filter.power) &&
+      (!filter.weight || machine.weight == filter.weight)
+    );
   });
 
   filtered.forEach(machine => {
-    const card = document.createElement('div');
-    card.className = 'card';
+    const card = document.createElement("div");
+    card.className = "card";
     const mainImg = machine.images[0];
     const hoverImg = machine.images[1] || mainImg;
+
+    // Обрезаем описание до двух строк
+    const shortDesc = machine.description;
 
     card.innerHTML = `
       <img src="${mainImg}" alt="${machine.name}">
       <img src="${hoverImg}" class="second" alt="доп фото">
       <div class="card-content">
         <h3>${machine.name}</h3>
-        <p>Год: ${machine.year}, Мощность: ${machine.power} кВт</p>
+        <p class="short-desc">${shortDesc}</p>
         <div class="card-price">
           <span>${formatPrice(machine.price)}</span>
           <span class="oldprice">${formatPrice(machine.oldPrice)}</span>
         </div>
       </div>
     `;
-    card.addEventListener('click', () => showPopup(machine));
+    card.addEventListener("click", () => showPopup(machine));
     catalog.appendChild(card);
   });
 }
@@ -98,7 +107,6 @@ function showPopup(machine) {
   currentIndex = 0;
   updatePopupImage();
 
-  // Теперь отображается уникальное имя станка
   popupTitle.textContent = machine.name;
 
   popupSpecs.innerHTML = `
@@ -113,54 +121,54 @@ function showPopup(machine) {
   popupPrice.textContent = formatPrice(machine.price);
   popupOldPrice.textContent = formatPrice(machine.oldPrice);
   popupDesc.textContent = machine.description;
-  popup.style.display = 'block';
+  popup.style.display = "block";
 }
 
 function updatePopupImage() {
   popupImg.src = currentImages[currentIndex];
 }
 
-document.querySelector('.nav-btn.prev').addEventListener('click', () => {
+document.querySelector(".nav-btn.prev").addEventListener("click", () => {
   currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
   updatePopupImage();
 });
 
-document.querySelector('.nav-btn.next').addEventListener('click', () => {
+document.querySelector(".nav-btn.next").addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % currentImages.length;
   updatePopupImage();
 });
 
-closeBtn.addEventListener('click', () => popup.style.display = 'none');
-window.addEventListener('click', e => {
-  if (e.target === popup) popup.style.display = 'none';
+closeBtn.addEventListener("click", () => (popup.style.display = "none"));
+window.addEventListener("click", e => {
+  if (e.target === popup) popup.style.display = "none";
 });
 
-document.getElementById('filter-type').addEventListener('change', updateFilters);
-document.getElementById('filter-manufacturer').addEventListener('input', updateFilters);
-document.getElementById('filter-country').addEventListener('input', updateFilters);
-document.getElementById('filter-year').addEventListener('input', updateFilters);
-document.getElementById('filter-power').addEventListener('input', updateFilters);
-document.getElementById('filter-weight').addEventListener('input', updateFilters);
+document.getElementById("filter-type").addEventListener("change", updateFilters);
+document.getElementById("filter-manufacturer").addEventListener("input", updateFilters);
+document.getElementById("filter-country").addEventListener("input", updateFilters);
+document.getElementById("filter-year").addEventListener("input", updateFilters);
+document.getElementById("filter-power").addEventListener("input", updateFilters);
+document.getElementById("filter-weight").addEventListener("input", updateFilters);
 
-document.getElementById('clear-filters').addEventListener('click', () => {
-  document.querySelectorAll('.filters input, .filters select').forEach(el => el.value = '');
+document.getElementById("clear-filters").addEventListener("click", () => {
+  document.querySelectorAll(".filters input, .filters select").forEach(el => (el.value = ""));
   renderCatalog();
 });
 
 function updateFilters() {
   const filter = {
-    type: document.getElementById('filter-type').value,
-    manufacturer: document.getElementById('filter-manufacturer').value,
-    country: document.getElementById('filter-country').value,
-    year: document.getElementById('filter-year').value,
-    power: document.getElementById('filter-power').value,
-    weight: document.getElementById('filter-weight').value,
+    type: document.getElementById("filter-type").value,
+    manufacturer: document.getElementById("filter-manufacturer").value,
+    country: document.getElementById("filter-country").value,
+    year: document.getElementById("filter-year").value,
+    power: document.getElementById("filter-power").value,
+    weight: document.getElementById("filter-weight").value
   };
   renderCatalog(filter);
 }
 
-toggleFiltersBtn.addEventListener('click', () => {
-  filtersSection.classList.toggle('active');
+toggleFiltersBtn.addEventListener("click", () => {
+  filtersSection.classList.toggle("active");
 });
 
 renderCatalog();
