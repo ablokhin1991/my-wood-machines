@@ -93,6 +93,7 @@ function renderCatalog(filter = {}) {
       <div class="card-content">
         <h3>${machine.name}</h3>
         <p class="short-desc">${shortDesc}</p>
+        <p>Год: ${machine.year}</p>
         <div class="card-price">
           <span>${formatPrice(machine.price)}</span>
           <span class="oldprice">${formatPrice(machine.oldPrice)}</span>
