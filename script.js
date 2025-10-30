@@ -17,7 +17,17 @@ const machines = [
     price: 1000000,
     oldPrice: 1299000,
     description:
-      "Состояние отличное, все работает! Станок подключен, можно проверить. Станок тяжелой серии С25-5А предназначен для производства различных погонажных изделий и профилированного бруса."
+      "Состояние отличное, все работает! Станок подключен, можно проверить. Станок тяжелой серии С25-5А предназначен для производства различных погонажных изделий и профилированного бруса.",
+    uniqueSpecs: [
+      { label: "Количество шпинделей", value: 5 },
+      { label: "Ширина заготовки, мм", value: "35-260" },
+      { label: "Высота заготовки, мм", value: "12-160" },
+      { label: "Скорость работы, м/мин", value: "2-40" },
+      { label: "Мин. длина заготовки в потоке, мм", value: 250 },
+      { label: "Мин. длина одиночной заготовки, мм", value: 700 },
+      { label: "Диаметр выходных патрубков аспирации, мм", value: 150 },
+      { label: "Производительность требуемой аспирации, м3/ч", value: "5х2000" }
+    ]
   },
   {
     id: 2,
@@ -83,7 +93,6 @@ function renderCatalog(filter = {}) {
     const mainImg = machine.images[0] || "";
     const hoverImg = machine.images[1] || mainImg;
 
-    // Формируем внутреннюю разметку карточки с wrapper для изображения (чтобы CSS .used-label работал)
     card.innerHTML = `
       <div class="card-img-wrapper">
         <span class="used-label">б/у</span>
@@ -102,14 +111,11 @@ function renderCatalog(filter = {}) {
       </div>
     `;
 
-    // Вешаем обработчик на всю карточку — открывает popup
     card.addEventListener("click", () => showPopup(machine));
-
     catalog.appendChild(card);
   });
 }
 
-// helper: экранируем текст описания (на случай спецсимволов)
 function escapeHtml(text) {
   if (!text) return "";
   return String(text);
@@ -121,7 +127,8 @@ function showPopup(machine) {
   updatePopupImage();
 
   popupTitle.textContent = machine.name || "";
-  popupSpecs.innerHTML = `
+
+  let specsHTML = `
     <li><strong>Тип станка:</strong> ${machine.type}</li>
     <li><strong>Мощность:</strong> ${machine.power} кВт</li>
     <li><strong>Размеры:</strong> ${machine.dimensions}</li>
@@ -130,20 +137,25 @@ function showPopup(machine) {
     <li><strong>Страна:</strong> ${machine.country}</li>
     <li><strong>Год выпуска:</strong> ${machine.year}</li>
   `;
+
+  if (machine.uniqueSpecs && machine.uniqueSpecs.length) {
+    machine.uniqueSpecs.forEach(spec => {
+      specsHTML += `<li><strong>${spec.label}:</strong> ${spec.value}</li>`;
+    });
+  }
+
+  popupSpecs.innerHTML = specsHTML;
   popupPrice.textContent = formatPrice(machine.price);
   popupOldPrice.textContent = formatPrice(machine.oldPrice);
   popupDesc.textContent = machine.description || "";
 
-  // добавляем шильдик "б/у" в popup (в .popup-gallery), если ещё нет
   const gallery = popup.querySelector(".popup-gallery");
   if (gallery) {
-    // удалим старый, если вдруг остался (чтобы не дублировать)
     const existing = gallery.querySelector(".used-label-popup");
     if (!existing) {
       const label = document.createElement("span");
       label.className = "used-label-popup";
       label.textContent = "б/у";
-      // label позиционируется абсолютом через CSS и должен быть внутри popup-gallery
       gallery.appendChild(label);
     }
   }
@@ -155,7 +167,6 @@ function updatePopupImage() {
   popupImg.src = currentImages[currentIndex] || "";
 }
 
-// Навигация по изображениям — защищаем селекторы (на случай, если кнопки исчезнут)
 const prevBtn = document.querySelector(".nav-btn.prev");
 const nextBtn = document.querySelector(".nav-btn.next");
 
@@ -181,42 +192,29 @@ if (closeBtn) {
   closeBtn.addEventListener("click", () => (popup.style.display = "none"));
 }
 
-// Закрытие при клике вне контента
 window.addEventListener("click", e => {
   if (e.target === popup) popup.style.display = "none";
 });
 
-// Фильтры — обработчики
-const ftType = document.getElementById("filter-type");
-const ftMan = document.getElementById("filter-manufacturer");
-const ftCountry = document.getElementById("filter-country");
-const ftYear = document.getElementById("filter-year");
-const ftPower = document.getElementById("filter-power");
-const ftWeight = document.getElementById("filter-weight");
-
-if (ftType) ftType.addEventListener("change", updateFilters);
-if (ftMan) ftMan.addEventListener("input", updateFilters);
-if (ftCountry) ftCountry.addEventListener("input", updateFilters);
-if (ftYear) ftYear.addEventListener("input", updateFilters);
-if (ftPower) ftPower.addEventListener("input", updateFilters);
-if (ftWeight) ftWeight.addEventListener("input", updateFilters);
+["filter-type","filter-manufacturer","filter-country","filter-year","filter-power","filter-weight"].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el) el.addEventListener(id.includes("type")||id.includes("country")||id.includes("year")||id.includes("power")||id.includes("weight")?"change":"input", updateFilters);
+});
 
 const clearBtn = document.getElementById("clear-filters");
-if (clearBtn) {
-  clearBtn.addEventListener("click", () => {
-    document.querySelectorAll(".filters input, .filters select").forEach(el => (el.value = ""));
-    renderCatalog();
-  });
-}
+if (clearBtn) clearBtn.addEventListener("click", () => {
+  document.querySelectorAll(".filters input, .filters select").forEach(el => el.value = "");
+  renderCatalog();
+});
 
 function updateFilters() {
   const filter = {
-    type: document.getElementById("filter-type") ? document.getElementById("filter-type").value : "",
-    manufacturer: document.getElementById("filter-manufacturer") ? document.getElementById("filter-manufacturer").value : "",
-    country: document.getElementById("filter-country") ? document.getElementById("filter-country").value : "",
-    year: document.getElementById("filter-year") ? document.getElementById("filter-year").value : "",
-    power: document.getElementById("filter-power") ? document.getElementById("filter-power").value : "",
-    weight: document.getElementById("filter-weight") ? document.getElementById("filter-weight").value : ""
+    type: document.getElementById("filter-type")?.value || "",
+    manufacturer: document.getElementById("filter-manufacturer")?.value || "",
+    country: document.getElementById("filter-country")?.value || "",
+    year: document.getElementById("filter-year")?.value || "",
+    power: document.getElementById("filter-power")?.value || "",
+    weight: document.getElementById("filter-weight")?.value || ""
   };
   renderCatalog(filter);
 }
@@ -227,5 +225,4 @@ if (toggleFiltersBtn) {
   });
 }
 
-// Инициализация
 renderCatalog();
