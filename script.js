@@ -3,12 +3,12 @@ const machines = [
   {
     id: 1,
     type: "Торцовочные",
-    manufacturer: "BOSCH",
-    country: "Германия",
-    year: 2018,
-    power: 2.5,
-    dimensions: "1200x800x1000",
-    weight: 120,
+    manufacturer: "Строгальные",
+    country: "Россия",
+    year: 2002,
+    power: 49,6,
+    dimensions: "4800x2000x1500",
+    weight: 5200,
     image: "images\wood-machines\borovichi-s25-5a-2002-1.webp",
     description: "Мощная торцовочная машина, идеальна для быстрой резки дерева."
   },
