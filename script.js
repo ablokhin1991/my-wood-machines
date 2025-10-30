@@ -1,4 +1,4 @@
-// Пример массива станков (ты потом можешь добавлять реальные)
+// Пример массива станков
 const machines = [
   {
     id: 1,
@@ -21,9 +21,9 @@ const machines = [
     power: 1.2,
     dimensions: "900x500x800",
     weight: 60,
+    image: "https://via.placeholder.com/300x180",
     description: "Универсальный лобзиковый станок для домашней мастерской."
-  },
-  // Добавляй сюда новые станки
+  }
 ];
 
 const catalog = document.getElementById('catalog');
@@ -33,7 +33,10 @@ const popupTitle = document.getElementById('popup-title');
 const popupSpecs = document.getElementById('popup-specs');
 const popupDesc = document.getElementById('popup-desc');
 const closeBtn = document.querySelector('.close');
+const filtersSection = document.getElementById('filters');
+const toggleFiltersBtn = document.getElementById('toggle-filters');
 
+// === Отображение каталога ===
 function renderCatalog(filter = {}) {
   catalog.innerHTML = '';
 
@@ -61,15 +64,16 @@ function renderCatalog(filter = {}) {
   });
 }
 
+// === Popup ===
 function showPopup(machine) {
   popupImg.src = machine.image;
   popupTitle.textContent = `${machine.type} - ${machine.manufacturer}`;
   popupSpecs.innerHTML = `
-    <li>Страна: ${machine.country}</li>
-    <li>Год выпуска: ${machine.year}</li>
-    <li>Мощность: ${machine.power} кВт</li>
-    <li>Размеры: ${machine.dimensions}</li>
-    <li>Масса: ${machine.weight} кг</li>
+    <li><strong>Страна:</strong> ${machine.country}</li>
+    <li><strong>Год выпуска:</strong> ${machine.year}</li>
+    <li><strong>Мощность:</strong> ${machine.power} кВт</li>
+    <li><strong>Размеры:</strong> ${machine.dimensions}</li>
+    <li><strong>Масса:</strong> ${machine.weight} кг</li>
   `;
   popupDesc.textContent = machine.description;
   popup.style.display = 'block';
@@ -80,13 +84,14 @@ window.addEventListener('click', (e) => {
   if (e.target == popup) popup.style.display = 'none';
 });
 
-// Фильтры
-document.getElementById('filter-type').addEventListener('change', e => updateFilters());
-document.getElementById('filter-manufacturer').addEventListener('input', e => updateFilters());
-document.getElementById('filter-country').addEventListener('input', e => updateFilters());
-document.getElementById('filter-year').addEventListener('input', e => updateFilters());
-document.getElementById('filter-power').addEventListener('input', e => updateFilters());
-document.getElementById('filter-weight').addEventListener('input', e => updateFilters());
+// === Фильтры ===
+document.getElementById('filter-type').addEventListener('change', updateFilters);
+document.getElementById('filter-manufacturer').addEventListener('input', updateFilters);
+document.getElementById('filter-country').addEventListener('input', updateFilters);
+document.getElementById('filter-year').addEventListener('input', updateFilters);
+document.getElementById('filter-power').addEventListener('input', updateFilters);
+document.getElementById('filter-weight').addEventListener('input', updateFilters);
+
 document.getElementById('clear-filters').addEventListener('click', () => {
   document.getElementById('filter-type').value = '';
   document.getElementById('filter-manufacturer').value = '';
@@ -109,5 +114,11 @@ function updateFilters() {
   renderCatalog(filter);
 }
 
-// Инициализация
+// === Кнопка фильтров для мобильных ===
+toggleFiltersBtn.addEventListener('click', () => {
+  filtersSection.classList.toggle('active');
+  toggleFiltersBtn.classList.toggle('active');
+});
+
+// === Инициализация ===
 renderCatalog();

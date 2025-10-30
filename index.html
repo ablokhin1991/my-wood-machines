@@ -12,7 +12,12 @@
     <p>Выберите станок по фильтрам и смотрите подробности</p>
   </header>
 
-  <section class="filters">
+  <!-- Кнопка фильтров (показывается только на мобилках) -->
+  <button id="toggle-filters" class="filter-toggle">
+    ☰ Фильтры
+  </button>
+
+  <section class="filters" id="filters">
     <h2>Фильтры</h2>
     <div class="filter-group">
       <label>Тип станка:</label>
@@ -71,4 +76,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
