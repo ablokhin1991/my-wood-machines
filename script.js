@@ -1,4 +1,4 @@
-// Пример массива станков с несколькими фото
+// Пример массива станков с ценами
 const machines = [
   {
     id: 1,
@@ -14,7 +14,9 @@ const machines = [
       "images/wood-machines/borovichi-s25-5a-2002-2.webp",
       "images/wood-machines/borovichi-s25-5a-2002-3.webp"
     ],
-    description: "Состояние хорошее! Станок подключен, можно проверить. Станок тяжелой серии С25-5А предназначен для производства различных погонажных изделий и профилированного бруса, в том числе естественной влажности."
+    price: 1000000,
+    oldPrice: 1299000,
+    description: "Состояние хорошее! Станок подключен, можно проверить. Станок тяжелой серии С25-5А предназначен для производства различных погонажных изделий и профилированного бруса."
   },
   {
     id: 2,
@@ -29,6 +31,8 @@ const machines = [
       "https://via.placeholder.com/300x180?text=Makita+1",
       "https://via.placeholder.com/300x180?text=Makita+2"
     ],
+    price: 85000,
+    oldPrice: 105000,
     description: "Фрезерный станок для профессиональной обработки древесины."
   }
 ];
@@ -39,12 +43,18 @@ const popupImg = document.getElementById('popup-img');
 const popupTitle = document.getElementById('popup-title');
 const popupSpecs = document.getElementById('popup-specs');
 const popupDesc = document.getElementById('popup-desc');
+const popupPrice = document.getElementById('popup-price');
+const popupOldPrice = document.getElementById('popup-oldprice');
 const closeBtn = document.querySelector('.close');
 const filtersSection = document.getElementById('filters');
 const toggleFiltersBtn = document.getElementById('toggle-filters');
 
 let currentImages = [];
 let currentIndex = 0;
+
+function formatPrice(num) {
+  return num.toLocaleString('ru-RU') + ' ₽';
+}
 
 function renderCatalog(filter = {}) {
   catalog.innerHTML = '';
@@ -70,6 +80,10 @@ function renderCatalog(filter = {}) {
       <div class="card-content">
         <h3>${machine.type} - ${machine.manufacturer}</h3>
         <p>Год: ${machine.year}, Мощность: ${machine.power} кВт</p>
+        <div class="card-price">
+          <span>${formatPrice(machine.price)}</span>
+          <span class="oldprice">${formatPrice(machine.oldPrice)}</span>
+        </div>
       </div>
     `;
     card.addEventListener('click', () => showPopup(machine));
@@ -90,6 +104,8 @@ function showPopup(machine) {
     <li><strong>Размеры:</strong> ${machine.dimensions}</li>
     <li><strong>Масса:</strong> ${machine.weight} кг</li>
   `;
+  popupPrice.textContent = formatPrice(machine.price);
+  popupOldPrice.textContent = formatPrice(machine.oldPrice);
   popupDesc.textContent = machine.description;
   popup.style.display = 'block';
 }

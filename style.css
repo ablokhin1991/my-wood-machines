@@ -114,6 +114,22 @@ header {
   font-size: 1.1rem;
 }
 
+.card-price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.card-price .oldprice {
+  text-decoration: line-through;
+  color: #999;
+  font-weight: normal;
+  font-size: 0.95rem;
+}
+
 /* Popup */
 .popup {
   display: none;
@@ -176,6 +192,22 @@ header {
   cursor: pointer;
 }
 
+.popup-price {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.popup-price .oldprice {
+  text-decoration: line-through;
+  color: #999;
+  font-weight: normal;
+  font-size: 1.1rem;
+}
+
 .popup-details ul {
   list-style: none;
   padding: 0;
@@ -188,10 +220,6 @@ header {
     align-items: center;
     background: #fff;
   }
-  .filter-group {
-    min-width: 120px;
-    width: 100%;
-  }
 
   .filters.active {
     display: flex;
@@ -203,6 +231,11 @@ header {
 
   .catalog {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .filter-group {
+    min-width: 120px;
+    width: 100%;
   }
 }
 

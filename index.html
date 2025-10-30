@@ -54,11 +54,9 @@
     <button id="clear-filters">Сбросить фильтры</button>
   </section>
 
-  <section class="catalog" id="catalog">
-    <!-- Карточки станков добавляются JS -->
-  </section>
+  <section class="catalog" id="catalog"></section>
 
-  <!-- Popup слайдер -->
+  <!-- Popup -->
   <div id="popup" class="popup">
     <div class="popup-content">
       <span class="close">&times;</span>
@@ -69,6 +67,10 @@
       </div>
       <div class="popup-details">
         <h3 id="popup-title"></h3>
+        <div class="popup-price">
+          <span id="popup-price"></span>
+          <span id="popup-oldprice" class="oldprice"></span>
+        </div>
         <ul id="popup-specs"></ul>
         <p id="popup-desc"></p>
       </div>
