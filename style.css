@@ -319,7 +319,7 @@ header {
 
 /* Фальш-кнопка "Подробнее" */
 .fake-button {
-  background: #007bff;
+  background: #4caf50;
   color: #fff;
   padding: 0.5rem 1.2rem;
   border-radius: 6px;
