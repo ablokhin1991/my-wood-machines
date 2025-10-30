@@ -90,6 +90,7 @@ function renderCatalog(filter = {}) {
       <img src="${hoverImg}" class="second" alt="доп фото">
       <div class="card-content">
         <h3>${machine.name}</h3>
+        <p>Год: ${machine.year}</p>
         <p class="short-desc">${shortDesc}</p>
         <div class="card-price">
           <span>${formatPrice(machine.price)}</span>
