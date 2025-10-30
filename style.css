@@ -171,7 +171,10 @@ header h1 {
     align-items: center;
     background: #fff;
   }
-
+  .filter-group {
+    min-width: 120px;
+    width: 100%;
+  }
   .filters.active {
     display: flex;
   }
