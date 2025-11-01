@@ -197,6 +197,9 @@ header {
   max-width: 100%;
   }
 }
+.details-specs-phone-link {
+  font-weight: 600;
+}
 .card-price {
   display: flex;
   align-items: center;
