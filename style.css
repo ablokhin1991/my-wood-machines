@@ -15,7 +15,10 @@ body {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
 }
-
+.top-header-all {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .top-header-left {
   display: flex;
   align-items: center;
