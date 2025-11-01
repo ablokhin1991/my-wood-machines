@@ -7,30 +7,33 @@ body {
 }
 /* Верхняя шапка */
 .top-header {
+  background: #2e7d32; /* темно-зеленый под дизайн header */
+  color: #fff;
+}
+
+.top-header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #2e7d32; /* темно-зеленый под дизайн header */
-  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
 }
-.top-header-all {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 .top-header-left {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.icon-bun {
-  font-size: 1.2rem;
+.top-header-left i.fas.fa-map-pin {
+  font-size: 1rem;
 }
 
 .location-text {
   font-weight: 500;
+  white-space: nowrap; /* чтобы текст не ломался */
 }
 
 .top-header-right a.phone-link {
@@ -45,7 +48,7 @@ body {
 }
 
 @media(max-width: 768px) {
-  .top-header {
+  .top-header-inner {
     flex-direction: column;
     gap: 0.3rem;
     text-align: center;
@@ -54,6 +57,7 @@ body {
     margin-top: 0.2rem;
   }
 }
+
 
 header {
   text-align: center;
