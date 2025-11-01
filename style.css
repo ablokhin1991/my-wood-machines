@@ -188,11 +188,12 @@ header {
 .nav-btn.next { right: 5px; }
 
 .popup-content .close {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
+  /*position: absolute;*/
+  /*top: 0.5rem;*/
+  /*right: 1rem;*/
   font-size: 2rem;
   cursor: pointer;
+  align-self: flex-end;
 }
 
 .popup-price {
