@@ -169,10 +169,11 @@ function showPopup(machine) {
 
   specsHTML += '</table>';
 
-  popupSpecs.innerHTML = specsHTML;
+  
   popupPrice.textContent = formatPrice(machine.price);
   popupOldPrice.textContent = formatPrice(machine.oldPrice);
   popupDesc.textContent = machine.description || "";
+  popupSpecs.innerHTML = specsHTML;
 
   const gallery = popup.querySelector(".popup-gallery");
   if (gallery && !gallery.querySelector(".used-label-popup")) {
