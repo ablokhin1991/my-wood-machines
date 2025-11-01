@@ -135,25 +135,39 @@ function renderCatalog(filter = {}) {
 
 function showPopup(machine) {
   currentImages = Array.isArray(machine.images) && machine.images.length ? machine.images : [""];
+
   currentIndex = 0;
   updatePopupImage();
 
   popupTitle.textContent = machine.name || "";
 
-  let specsHTML = `<li><strong>Тип станка:</strong> ${escapeHtml(machine.type || "-")}</li>`;
-  if (machine.kind) specsHTML += `<li><strong>Вид станка:</strong> ${escapeHtml(machine.kind)}</li>`;
-  specsHTML += `<li><strong>Мощность:</strong> ${escapeHtml(machine.power)} кВт</li>`;
-  specsHTML += `<li><strong>Размеры:</strong> ${escapeHtml(machine.dimensions)}</li>`;
-  specsHTML += `<li><strong>Масса:</strong> ${escapeHtml(machine.weight)} кг</li>`;
-  specsHTML += `<li><strong>Производитель:</strong> ${escapeHtml(machine.manufacturer)}</li>`;
-  specsHTML += `<li><strong>Страна:</strong> ${escapeHtml(machine.country)}</li>`;
-  specsHTML += `<li><strong>Год выпуска:</strong> ${escapeHtml(machine.year)}</li>`;
+  // формируем таблицу вместо списка
+  let specsHTML = '<table style="border-collapse: collapse; width: 100%;">';
+
+  const basicSpecs = [
+    { label: "Тип станка", value: machine.type || "-" },
+    { label: "Вид станка", value: machine.kind || "-" },
+    { label: "Мощность, кВт", value: machine.power },
+    { label: "Размеры", value: machine.dimensions },
+    { label: "Масса, кг", value: machine.weight },
+    { label: "Производитель", value: machine.manufacturer },
+    { label: "Страна", value: machine.country },
+    { label: "Год выпуска", value: machine.year }
+  ];
+
+  basicSpecs.forEach(spec => {
+    specsHTML += `<tr><td style="border:1px solid black; padding:4px; font-weight:bold;">${escapeHtml(spec.label)}</td>
+                  <td style="border:1px solid black; padding:4px;">${escapeHtml(spec.value)}</td></tr>`;
+  });
 
   if (Array.isArray(machine.uniqueSpecs) && machine.uniqueSpecs.length) {
     machine.uniqueSpecs.forEach(spec => {
-      specsHTML += `<li><strong>${escapeHtml(spec.label)}:</strong> ${escapeHtml(spec.value)}</li>`;
+      specsHTML += `<tr><td style="border:1px solid black; padding:4px; font-weight:bold;">${escapeHtml(spec.label)}</td>
+                    <td style="border:1px solid black; padding:4px;">${escapeHtml(spec.value)}</td></tr>`;
     });
   }
+
+  specsHTML += '</table>';
 
   popupSpecs.innerHTML = specsHTML;
   popupPrice.textContent = formatPrice(machine.price);
@@ -241,7 +255,6 @@ function updateFilters() {
 
 // init
 renderCatalog();
-
 
 // Модальное окно для увеличения картинки
 const imageModal = document.getElementById("image-modal");
