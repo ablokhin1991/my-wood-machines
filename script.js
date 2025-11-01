@@ -102,6 +102,7 @@ function renderCatalog(filter = {}) {
       <div class="card-content">
         <h3>${machine.name}</h3>
         <p class="short-desc">${escapeHtml(machine.description)}</p>
+        <p class="card-type" aria-hidden="true">Тип станка: ${machine.type}</p>
         <p class="card-year" aria-hidden="true">Год: ${machine.year}</p>
         <div class="card-price">
           <span>${formatPrice(machine.price)}</span>
