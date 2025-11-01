@@ -31,20 +31,21 @@ const machines = [
   },
   {
     id: 2,
-    name: "Фрезерный станок Makita PRO-F17",
+    name: "Фрезерный станок ФС",
     type: "Фрезерный",
-    kind: "Настольный",
-    manufacturer: "Makita",
-    country: "Япония",
-    year: 2017,
-    power: 1.5,
-    dimensions: "900x500x800",
-    weight: 60,
+    kind: "Горизонтальный",
+    manufacturer: "Главдревстанкопром",
+    country: "СССР",
+    year: 1971,
+    power: 5,
+    dimensions: "1360x1265x1200",
+    weight: 880,
     images: [
-      "https://via.placeholder.com/300x180?text=Makita+1",
-      "https://via.placeholder.com/300x180?text=Makita+2"
+      "images/wood-machines/frezernyy-stanok-fs-1971-1.webp",
+      "images/wood-machines/frezernyy-stanok-fs-1971-2.webp",
+      "images/wood-machines/frezernyy-stanok-fs-1971-3.webp"
     ],
-    price: 85000,
+    price: 75000,
     oldPrice: 105000,
     description: "Фрезерный станок для профессиональной обработки древесины."
   }
