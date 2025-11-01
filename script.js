@@ -241,3 +241,27 @@ function updateFilters() {
 
 // init
 renderCatalog();
+
+
+// Модальное окно для увеличения картинки
+const imageModal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-img");
+const modalClose = document.querySelector(".image-modal-close");
+
+// Клик по картинке в popup открывает модалку
+popupImg.addEventListener("click", () => {
+  modalImg.src = popupImg.src;
+  imageModal.style.display = "block";
+});
+
+// Закрытие модалки крестиком
+modalClose.addEventListener("click", () => {
+  imageModal.style.display = "none";
+});
+
+// Закрытие при клике вне картинки
+imageModal.addEventListener("click", e => {
+  if (e.target === imageModal) {
+    imageModal.style.display = "none";
+  }
+});
