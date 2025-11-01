@@ -18,22 +18,19 @@ const machines = [
     price: 1000000,
     oldPrice: 1299000,
     description:
-      "Состояние отличное, все работает! Станок подключен, можно проверить. Станина станка выполнена из тяжелого литого металла с особой обработкой, что полностью гасит вибрации во время работы и обеспечивает выпуск изделий высокого качества. Шпиндели высокой скорости и повышенной точности гарантируют стабильность обработки. Подающие столы сделаны из стали 40Х с хромовым покрытием для долговечности и износоустойчивости. Механизм подачи рассредоточенного типа с верхними и нижними роликами обеспечивает ровное движение заготовки. Привод подачи реализован через электродвигатель с двухступенчатыми шкивами на валу двигателя и модулях. Шкивы трёхручьевые с применением стандартных клиновых ремней, а шкив на валу модулей свободно перемещается, создавая четыре постоянные передачи. В сочетании с частотным преобразователем диапазон скоростей подачи достигает 2–40 м/мин, что позволяет легко протягивать любые заготовки. Верхние ролики оснащены механическими прижимами для работы даже при низких отрицательных температурах, а по желанию их можно оснастить пневматической системой с плавной регулировкой давления, индивидуально для каждого ролика. Рифление «волчий зуб» верхних роликов обеспечивает эффективную обработку древесины любой влажности с минимальным вдавливанием. Система аспирации рассчитана на 2000 м³/ч на один суппорт, что обеспечивает чистоту рабочей зоны.",
+      "Состояние отличное, все работает! Станок подключен, можно проверить. Станина станка выполнена из тяжелого литого металла...",
     uniqueSpecs: [
       { label: "Количество шпинделей", value: 5 },
       { label: "Ширина заготовки, мм", value: "35-260" },
       { label: "Высота заготовки, мм", value: "12-160" },
-      { label: "Скорость работы, м/мин", value: "2-40" },
-      { label: "Мин. длина заготовки в потоке, мм", value: 250 },
-      { label: "Мин. длина одиночной заготовки, мм", value: 700 },
-      { label: "Диаметр выходных патрубков аспирации, мм", value: 150 },
-      { label: "Производительность требуемой аспирации, м3/ч", value: "5х2000" }
+      { label: "Скорость работы, м/мин", value: "2–40" }
     ]
   },
   {
     id: 2,
     name: "Фрезерный станок Makita PRO-F17",
     type: "Фрезерный",
+    kind: "Вертикальный",
     manufacturer: "Makita",
     country: "Япония",
     year: 2017,
@@ -75,10 +72,9 @@ function renderCatalog(filter = {}) {
   const filtered = machines.filter(machine => {
     return (
       (!filter.type || machine.type === filter.type) &&
+      (!filter.kind || machine.kind === filter.kind) &&
       (!filter.manufacturer ||
-        machine.manufacturer
-          .toLowerCase()
-          .includes(filter.manufacturer.toLowerCase())) &&
+        machine.manufacturer.toLowerCase().includes(filter.manufacturer.toLowerCase())) &&
       (!filter.country ||
         machine.country.toLowerCase().includes(filter.country.toLowerCase())) &&
       (!filter.year || machine.year == filter.year) &&
@@ -103,8 +99,9 @@ function renderCatalog(filter = {}) {
       <div class="card-content">
         <h3>${machine.name}</h3>
         <p class="short-desc">${escapeHtml(machine.description)}</p>
-        <p class="card-type" aria-hidden="true">Тип станка: ${machine.type}</p>
-        <p class="card-year" aria-hidden="true">Год: ${machine.year}</p>
+        <p class="card-type">Тип: ${machine.type}</p>
+        ${machine.kind ? `<p class="card-kind">Вид: ${machine.kind}</p>` : ""}
+        <p class="card-year">Год: ${machine.year}</p>
         <div class="card-price">
           <span>${formatPrice(machine.price)}</span>
           <span class="oldprice">${formatPrice(machine.oldPrice)}</span>
@@ -132,6 +129,7 @@ function showPopup(machine) {
 
   let specsHTML = `
     <li><strong>Тип станка:</strong> ${machine.type}</li>
+    ${machine.kind ? `<li><strong>Вид станка:</strong> ${machine.kind}</li>` : ""}
     <li><strong>Мощность:</strong> ${machine.power} кВт</li>
     <li><strong>Размеры:</strong> ${machine.dimensions}</li>
     <li><strong>Масса:</strong> ${machine.weight} кг</li>
@@ -140,7 +138,7 @@ function showPopup(machine) {
     <li><strong>Год выпуска:</strong> ${machine.year}</li>
   `;
 
-  if (machine.uniqueSpecs && machine.uniqueSpecs.length) {
+  if (machine.uniqueSpecs?.length) {
     machine.uniqueSpecs.forEach(spec => {
       specsHTML += `<li><strong>${spec.label}:</strong> ${spec.value}</li>`;
     });
@@ -152,14 +150,11 @@ function showPopup(machine) {
   popupDesc.textContent = machine.description || "";
 
   const gallery = popup.querySelector(".popup-gallery");
-  if (gallery) {
-    const existing = gallery.querySelector(".used-label-popup");
-    if (!existing) {
-      const label = document.createElement("span");
-      label.className = "used-label-popup";
-      label.textContent = "б/у";
-      gallery.appendChild(label);
-    }
+  if (gallery && !gallery.querySelector(".used-label-popup")) {
+    const label = document.createElement("span");
+    label.className = "used-label-popup";
+    label.textContent = "б/у";
+    gallery.appendChild(label);
   }
 
   popup.style.display = "block";
@@ -173,45 +168,53 @@ const prevBtn = document.querySelector(".nav-btn.prev");
 const nextBtn = document.querySelector(".nav-btn.next");
 
 if (prevBtn) {
-  prevBtn.addEventListener("click", (e) => {
+  prevBtn.addEventListener("click", e => {
     e.stopPropagation();
-    if (!currentImages.length) return;
     currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
     updatePopupImage();
   });
 }
 
 if (nextBtn) {
-  nextBtn.addEventListener("click", (e) => {
+  nextBtn.addEventListener("click", e => {
     e.stopPropagation();
-    if (!currentImages.length) return;
     currentIndex = (currentIndex + 1) % currentImages.length;
     updatePopupImage();
   });
 }
 
-if (closeBtn) {
-  closeBtn.addEventListener("click", () => (popup.style.display = "none"));
-}
+if (closeBtn) closeBtn.addEventListener("click", () => (popup.style.display = "none"));
 
 window.addEventListener("click", e => {
   if (e.target === popup) popup.style.display = "none";
 });
 
-["filter-type","filter-manufacturer","filter-country","filter-year","filter-power","filter-weight"].forEach(id=>{
-  const el=document.getElementById(id);
-  if(el) el.addEventListener(id.includes("type")||id.includes("country")||id.includes("year")||id.includes("power")||id.includes("weight")?"change":"input", updateFilters);
+const filterIds = [
+  "filter-type",
+  "filter-kind",
+  "filter-manufacturer",
+  "filter-country",
+  "filter-year",
+  "filter-power",
+  "filter-weight"
+];
+
+filterIds.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener("input", updateFilters);
 });
 
 const clearBtn = document.getElementById("clear-filters");
-if (clearBtn) clearBtn.addEventListener("click", () => {
-  document.querySelectorAll(".filters input, .filters select").forEach(el => el.value = "");
-  renderCatalog();
-});
+if (clearBtn)
+  clearBtn.addEventListener("click", () => {
+    document.querySelectorAll(".filters input, .filters select").forEach(el => (el.value = ""));
+    renderCatalog();
+  });
 
 function updateFilters() {
   const filter = {
     type: document.getElementById("filter-type")?.value || "",
+    kind: document.getElementById("filter-kind")?.value || "",
     manufacturer: document.getElementById("filter-manufacturer")?.value || "",
     country: document.getElementById("filter-country")?.value || "",
     year: document.getElementById("filter-year")?.value || "",
@@ -221,10 +224,7 @@ function updateFilters() {
   renderCatalog(filter);
 }
 
-if (toggleFiltersBtn) {
-  toggleFiltersBtn.addEventListener("click", () => {
-    filtersSection.classList.toggle("active");
-  });
-}
+if (toggleFiltersBtn)
+  toggleFiltersBtn.addEventListener("click", () => filtersSection.classList.toggle("active"));
 
 renderCatalog();
