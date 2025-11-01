@@ -12,9 +12,7 @@
     <p>Выберите станок по фильтрам и смотрите подробности</p>
   </header>
 
-  <button id="toggle-filters" class="filter-toggle">
-    ☰ Фильтры
-  </button>
+  <button id="toggle-filters" class="filter-toggle">☰ Фильтры</button>
 
   <section class="filters" id="filters">
     <div class="filter-group">
@@ -31,32 +29,47 @@
         <option>Строгальный</option>
       </select>
     </div>
+
+    <div class="filter-group">
+      <label>Вид станка:</label>
+      <select id="filter-kind">
+        <option value="">Все</option>
+        <option>Четырёхсторонний</option>
+        <option>Настольный</option>
+        <option>Продольно-строгальный</option>
+      </select>
+    </div>
+
     <div class="filter-group">
       <label>Производитель:</label>
       <input type="text" id="filter-manufacturer" placeholder="Любой">
     </div>
+
     <div class="filter-group">
       <label>Страна:</label>
       <input type="text" id="filter-country" placeholder="Любая">
     </div>
+
     <div class="filter-group">
       <label>Год выпуска:</label>
       <input type="number" id="filter-year" placeholder="Любой">
     </div>
+
     <div class="filter-group">
       <label>Мощность, кВт:</label>
       <input type="number" id="filter-power" placeholder="Любая">
     </div>
+
     <div class="filter-group">
       <label>Масса, кг:</label>
       <input type="number" id="filter-weight" placeholder="Любая">
     </div>
+
     <button id="clear-filters">Сбросить фильтры</button>
   </section>
 
   <section class="catalog" id="catalog"></section>
 
-  <!-- Popup -->
   <div id="popup" class="popup">
     <div class="popup-content">
       <span class="close">&times;</span>
