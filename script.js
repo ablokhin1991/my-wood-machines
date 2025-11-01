@@ -156,13 +156,13 @@ function showPopup(machine) {
   ];
 
   basicSpecs.forEach(spec => {
-    specsHTML += `<tr><td style="border:1px solid black; padding:4px; font-weight:bold;">${escapeHtml(spec.label)}</td>
+    specsHTML += `<tr><td style="border:1px solid black; padding:4px;">${escapeHtml(spec.label)}</td>
                   <td style="border:1px solid black; padding:4px;">${escapeHtml(spec.value)}</td></tr>`;
   });
 
   if (Array.isArray(machine.uniqueSpecs) && machine.uniqueSpecs.length) {
     machine.uniqueSpecs.forEach(spec => {
-      specsHTML += `<tr><td style="border:1px solid black; padding:4px; font-weight:bold;">${escapeHtml(spec.label)}</td>
+      specsHTML += `<tr><td style="border:1px solid black; padding:4px;">${escapeHtml(spec.label)}</td>
                     <td style="border:1px solid black; padding:4px;">${escapeHtml(spec.value)}</td></tr>`;
     });
   }
