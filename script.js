@@ -2,7 +2,7 @@ const machines = [
   {
     id: 1,
     name: "Боровичи С25-5А",
-    type: "Строгальные",
+    type: "Строгальный",
     manufacturer: "БЗДС",
     country: "Россия",
     year: 2002,
@@ -32,7 +32,7 @@ const machines = [
   {
     id: 2,
     name: "Фрезерный станок Makita PRO-F17",
-    type: "Фрезерные",
+    type: "Фрезерный",
     manufacturer: "Makita",
     country: "Япония",
     year: 2017,
