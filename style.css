@@ -183,6 +183,11 @@ header {
 .popup-details-specs {
   max-width: 60%;
 }
+@media(max-width: 768px) {
+  .popup-details-specs {
+  max-width: 100%;
+  }
+}
 .card-price {
   display: flex;
   align-items: center;
