@@ -201,7 +201,6 @@ header {
   background: #ffff00;
   padding: 1rem;
   border-radius: 8px;
-  line-height: 1.6180339887;
 }
 @media(max-width: 768px) {
   .popup-details-specs {
