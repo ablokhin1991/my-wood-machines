@@ -184,7 +184,9 @@ header {
   color: #333;
 }
 .popup-details-specs {
-  max-width: 60%;
+  background: #ffff00;
+  padding: 0.7rem;
+  border-radius: 8px;
 }
 @media(max-width: 768px) {
   .popup-details-specs {
