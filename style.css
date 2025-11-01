@@ -27,11 +27,12 @@ header {
 .filters {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
   padding: 1rem;
   background: #fff;
   border-bottom: 1px solid #ddd;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .filters.hidden {
