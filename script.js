@@ -3,6 +3,7 @@ const machines = [
     id: 1,
     name: "Боровичи С25-5А",
     type: "Строгальный",
+    kind: "Четырёхсторонний",
     manufacturer: "БЗДС",
     country: "Россия",
     year: 2002,
