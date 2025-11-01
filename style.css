@@ -5,6 +5,52 @@ body {
   background: #f9f9f9;
   color: #333;
 }
+/* Верхняя шапка */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2e7d32; /* темно-зеленый под дизайн header */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.top-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-bun {
+  font-size: 1.2rem;
+}
+
+.location-text {
+  font-weight: 500;
+}
+
+.top-header-right a.phone-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.top-header-right a.phone-link:hover {
+  color: #c8e6c9; /* светло-зеленый при наведении */
+}
+
+@media(max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+  }
+  .top-header-right {
+    margin-top: 0.2rem;
+  }
+}
 
 header {
   text-align: center;
