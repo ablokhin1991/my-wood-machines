@@ -169,6 +169,7 @@ header {
   max-height: 400px;
   object-fit: cover;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .nav-btn {
