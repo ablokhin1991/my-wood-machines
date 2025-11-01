@@ -5,9 +5,19 @@ body {
   background: #f9f9f9;
   color: #333;
 }
+
+p {
+  line-height: 1.6180339887;
+}
+@media (max-width: 768px) {
+  p {
+    line-height: 1.1997;
+  }
+}
+
 /* Верхняя шапка */
 .top-header {
-  background: #2e7d32; /* темно-зеленый под дизайн header */
+  background: #2e7d32; 
   color: #fff;
 }
 
@@ -189,8 +199,9 @@ header {
 }
 .popup-details-specs {
   background: #ffff00;
-  padding: 0.7rem;
+  padding: 1rem;
   border-radius: 8px;
+  line-height: 1.6180339887;
 }
 @media(max-width: 768px) {
   .popup-details-specs {
