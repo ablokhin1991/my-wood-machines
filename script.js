@@ -86,10 +86,11 @@ const machines = [
     weight: 4600,
     instock: 1,
     images: [
-      "images/wood-machines/borovichi-s25-5a-2002-1.webp",
-      "images/wood-machines/borovichi-s25-5a-2002-2.webp",
-      "images/wood-machines/borovichi-s25-5a-2002-3.webp",
-      "images/wood-machines/borovichi-s25-5a-2002-4.webp"
+      "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-1.webp",
+      "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-2.webp",
+      "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-3.webp",
+      "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-4.webp",
+      "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-5.webp"
     ],
     price: 1500000,
     oldPrice: 1799000,
