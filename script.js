@@ -133,10 +133,13 @@ const machines = [
     weight: 2000,
     instock: 2,
     images: [
-      "images/wood-machines/borovichi-s25-5a-2002-1.webp",
-      "images/wood-machines/borovichi-s25-5a-2002-2.webp",
-      "images/wood-machines/borovichi-s25-5a-2002-3.webp",
-      "images/wood-machines/borovichi-s25-5a-2002-4.webp"
+      "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-1.webp",
+      "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-2.webp",
+      "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-3.webp",
+      "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-4.webp",
+      "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-5.webp",
+      "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-6.webp",
+      "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-7.webp"
     ],
     price: 800000,
     oldPrice: 1000000,
