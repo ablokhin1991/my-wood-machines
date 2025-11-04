@@ -136,6 +136,10 @@ function renderCatalog(filter = {}) {
         <img src="${hoverImg}" class="second" alt="доп фото">
       </div>
       <div class="card-content">
+        <div class="card-price">
+          <span>${formatPrice(machine.price)}</span>
+          <span class="oldprice">${formatPrice(machine.oldPrice)}</span>
+        </div>
         <h3>${escapeHtml(machine.name)}</h3>
         <p class="short-desc">${escapeHtml(machine.description)}</p>
         <p class="card-type card-spec">Тип: ${escapeHtml(machine.type || "-")}</p>
@@ -143,10 +147,6 @@ function renderCatalog(filter = {}) {
         <p class="card-power card-spec">Мощность, кВт: ${escapeHtml(machine.power)}</p>
         <p class="card-country card-spec">Страна: ${escapeHtml(machine.country)}</p>
         <p class="card-year card-spec">Год: ${escapeHtml(machine.year)}</p>
-        <div class="card-price">
-          <span>${formatPrice(machine.price)}</span>
-          <span class="oldprice">${formatPrice(machine.oldPrice)}</span>
-        </div>
         <div class="fake-button">Подробнее</div>
       </div>
     `;
