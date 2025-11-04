@@ -183,7 +183,7 @@ function renderCatalog(filter = {}) {
         <h3>${escapeHtml(machine.name)}</h3>
         <p class="card-in-stock" style="color: rgb(60, 170, 60); font-size: 0.95rem; line-height: 0.7;">В наличии: ${escapeHtml(machine.instock)} шт.   <i class="fa-solid fa-check"></i></p>
         <p class="short-desc">${escapeHtml(machine.shortDescription || getShortDesc(machine.description))}</p>
-        <p class="short-desc" style="color: #777777;">${escapeHtml(machine.description)}</p>
+        
         <p class="card-type card-spec">Тип: ${escapeHtml(machine.type || "-")}</p>
         ${machine.kind ? `<p class="card-kind card-spec">Вид: ${escapeHtml(machine.kind)}</p>` : ""}
         <p class="card-power card-spec">Мощность, кВт: ${escapeHtml(machine.power)}</p>
