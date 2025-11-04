@@ -92,7 +92,7 @@ header {
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  background: #fff;
+  background: #f9f9f9;
   border-bottom: 1px solid #ddd;
   max-width: 1200px;
   margin: 0 auto;
