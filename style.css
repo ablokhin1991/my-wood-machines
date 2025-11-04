@@ -363,6 +363,11 @@ header {
     min-width: 120px;
     width: 100%;
   }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
 }
 
 
