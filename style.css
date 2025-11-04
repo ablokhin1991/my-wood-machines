@@ -96,6 +96,7 @@ header {
   border-bottom: 1px solid #ddd;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: center;
 }
 
 .filters.hidden {
