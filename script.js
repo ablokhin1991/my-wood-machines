@@ -144,13 +144,13 @@ function renderCatalog(filter = {}) {
           <span class="oldprice">${formatPrice(machine.oldPrice)}</span>
         </div>
         <h3>${escapeHtml(machine.name)}</h3>
+        <p class="card-in-stock" style="color: rgb(60, 170, 60);">В наличии: ${escapeHtml(machine.instock)} шт.</p>
         <p class="short-desc" style="color: #777777;">${escapeHtml(machine.description)}</p>
         <p class="card-type card-spec">Тип: ${escapeHtml(machine.type || "-")}</p>
         ${machine.kind ? `<p class="card-kind card-spec">Вид: ${escapeHtml(machine.kind)}</p>` : ""}
         <p class="card-power card-spec">Мощность, кВт: ${escapeHtml(machine.power)}</p>
         <p class="card-country card-spec">Страна: ${escapeHtml(machine.country)}</p>
         <p class="card-year card-spec">Год: ${escapeHtml(machine.year)}</p>
-        <p class="card-in-stock">В наличии: ${escapeHtml(machine.instock)} шт.</p>
         <div class="fake-button">Подробнее</div>
       </div>
     `;
