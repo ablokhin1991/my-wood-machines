@@ -10,6 +10,7 @@ const machines = [
     power: 49.6,
     dimensions: "4800x2000x1500",
     weight: 5200,
+    instock: 1,
     images: [
       "images/wood-machines/borovichi-s25-5a-2002-1.webp",
       "images/wood-machines/borovichi-s25-5a-2002-2.webp",
@@ -41,6 +42,7 @@ const machines = [
     power: 5,
     dimensions: "1360x1265x1200",
     weight: 880,
+    instock: 1,
     images: [
       "images/wood-machines/frezernyy-stanok-fs-1971-1.webp",
       "images/wood-machines/frezernyy-stanok-fs-1971-2.webp",
@@ -61,6 +63,7 @@ const machines = [
     power: 5,
     dimensions: "1270x1110x1000",
     weight: 810,
+    instock: 1,
     images: [
       "images/wood-machines/frezernyy-stanok-fssh-1-1980-1.webp",
       "images/wood-machines/frezernyy-stanok-fssh-1-1980-2.webp",
@@ -147,6 +150,7 @@ function renderCatalog(filter = {}) {
         <p class="card-power card-spec">Мощность, кВт: ${escapeHtml(machine.power)}</p>
         <p class="card-country card-spec">Страна: ${escapeHtml(machine.country)}</p>
         <p class="card-year card-spec">Год: ${escapeHtml(machine.year)}</p>
+        <p class="card-in-stock">В наличии: ${escapeHtml(machine.instock)} шт.</p>
         <div class="fake-button">Подробнее</div>
       </div>
     `;
