@@ -120,13 +120,16 @@ header {
 }
 
 #clear-filters {
-  background: #f44336;
+  background: #4caf50;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 4px;
   margin-top: 1.5rem;
+}
+#clear-filters:hover {
+    background: #2e7d32;
 }
 
 .catalog {
