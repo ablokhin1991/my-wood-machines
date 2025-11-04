@@ -183,6 +183,7 @@ header {
 .card-content h3 {
   margin: 0.5rem 0;
   font-size: 1.1rem;
+  font-weight: 500;
 }
 .popup-desc {
   margin-block-start: 0.5em !important;
