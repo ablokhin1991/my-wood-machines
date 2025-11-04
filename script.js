@@ -141,7 +141,7 @@ function renderCatalog(filter = {}) {
           <span class="oldprice">${formatPrice(machine.oldPrice)}</span>
         </div>
         <h3>${escapeHtml(machine.name)}</h3>
-        <p class="short-desc card-spec">${escapeHtml(machine.description)}</p>
+        <p class="short-desc">${escapeHtml(machine.description)}</p>
         <p class="card-type card-spec">Тип: ${escapeHtml(machine.type || "-")}</p>
         ${machine.kind ? `<p class="card-kind card-spec">Вид: ${escapeHtml(machine.kind)}</p>` : ""}
         <p class="card-power card-spec">Мощность, кВт: ${escapeHtml(machine.power)}</p>
