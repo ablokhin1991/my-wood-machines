@@ -81,7 +81,7 @@ const machines = [
     manufacturer: "Biesse",
     country: "Италия",
     year: 1988,
-    power: 22,6,
+    power: 22.6,
     dimensions: "5300x2440x2240",
     weight: 4600,
     instock: 1,
