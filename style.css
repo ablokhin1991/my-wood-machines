@@ -194,7 +194,6 @@ header {
 }
 .popup-desc {
   margin-block-start: 0.5em !important;
-  white-space: pre-wrap;
 }
 .popup-desc-name {
   font-size: 1rem;
