@@ -138,11 +138,11 @@ function renderCatalog(filter = {}) {
       <div class="card-content">
         <h3>${escapeHtml(machine.name)}</h3>
         <p class="short-desc">${escapeHtml(machine.description)}</p>
-        <p class="card-type" style="line-height: 0.7;">Тип: ${escapeHtml(machine.type || "-")}</p>
-        ${machine.kind ? `<p class="card-kind" style="line-height: 0.7;">Вид: ${escapeHtml(machine.kind)}</p>` : ""}
-        <p class="card-power" style="line-height: 0.7;">Мощность, кВт: ${escapeHtml(machine.power)}</p>
-        <p class="card-country" style="line-height: 0.7;">Страна: ${escapeHtml(machine.country)}</p>
-        <p class="card-year" style="line-height: 0.7;">Год: ${escapeHtml(machine.year)}</p>
+        <p class="card-type card-spec">Тип: ${escapeHtml(machine.type || "-")}</p>
+        ${machine.kind ? `<p class="card-kind card-spec">Вид: ${escapeHtml(machine.kind)}</p>` : ""}
+        <p class="card-power card-spec">Мощность, кВт: ${escapeHtml(machine.power)}</p>
+        <p class="card-country card-spec">Страна: ${escapeHtml(machine.country)}</p>
+        <p class="card-year card-spec>Год: ${escapeHtml(machine.year)}</p>
         <div class="card-price">
           <span>${formatPrice(machine.price)}</span>
           <span class="oldprice">${formatPrice(machine.oldPrice)}</span>
