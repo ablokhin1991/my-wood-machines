@@ -97,7 +97,6 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   align-items: center;
-  transition: all 0.2s;
 }
 
 .filters.hidden {
@@ -129,6 +128,7 @@ header {
   cursor: pointer;
   border-radius: 4px;
   margin-top: 1.5rem;
+  transition: all 0.2s;
 }
 #clear-filters:hover {
     background: #2e7d32;
