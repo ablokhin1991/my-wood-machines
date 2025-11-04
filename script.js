@@ -90,7 +90,8 @@ const machines = [
       "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-2.webp",
       "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-3.webp",
       "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-4.webp",
-      "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-5.webp"
+      "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-5.webp",
+      "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-6.webp"
     ],
     price: 1500000,
     oldPrice: 1799000,
