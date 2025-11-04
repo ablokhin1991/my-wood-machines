@@ -64,7 +64,6 @@ const machines = [
     images: [
       "images/wood-machines/frezernyy-stanok-fssh-1-1980-1.webp",
       "images/wood-machines/frezernyy-stanok-fssh-1-1980-2.webp",
-      "images/wood-machines/frezernyy-stanok-fssh-1-1980-3.webp",
       "images/wood-machines/frezernyy-stanok-fssh-1-1980-3.webp"
     ],
     price: 75000,
