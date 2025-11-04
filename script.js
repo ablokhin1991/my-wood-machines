@@ -13,7 +13,8 @@ const machines = [
     images: [
       "images/wood-machines/borovichi-s25-5a-2002-1.webp",
       "images/wood-machines/borovichi-s25-5a-2002-2.webp",
-      "images/wood-machines/borovichi-s25-5a-2002-3.webp"
+      "images/wood-machines/borovichi-s25-5a-2002-3.webp",
+      "images/wood-machines/borovichi-s25-5a-2002-4.webp"
     ],
     price: 1000000,
     oldPrice: 1299000,
