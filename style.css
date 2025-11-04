@@ -36,6 +36,13 @@ p {
   align-items: center;
   gap: 0.5rem;
 }
+.top-header-right {
+    background: #ffff00;
+    /* PADDING: 15PX; */
+    padding: 10px 15px;
+    border-radius: 8px;
+    /* color: #2e7d32; */
+}
 
 .top-header-left i.fas.fa-map-pin {
   font-size: 1rem;
@@ -47,14 +54,14 @@ p {
 }
 
 .top-header-right a.phone-link {
-  color: #fff;
+  color: #4caf50;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s;
 }
 
 .top-header-right a.phone-link:hover {
-  color: #c8e6c9; /* светло-зеленый при наведении */
+  color: #2e7d32; 
 }
 
 @media(max-width: 768px) {
