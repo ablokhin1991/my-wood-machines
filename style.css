@@ -389,6 +389,7 @@ header {
   text-overflow: ellipsis;
   line-height: 1.3;
   min-height: 2.6em;
+  max-height: 2.6em; /* высота для 2 строк */
 }
 
 /* Кружок "б/у" в карточках */
