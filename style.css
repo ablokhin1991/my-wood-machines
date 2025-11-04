@@ -367,6 +367,9 @@ header {
   .card-content {
     padding: 1.5rem;
   }
+  .popup-content {
+    width: 75%;
+  }
 
 }
 
