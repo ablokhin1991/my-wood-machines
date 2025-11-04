@@ -140,6 +140,7 @@ function renderCatalog(filter = {}) {
         <p class="short-desc">${escapeHtml(machine.description)}</p>
         <p class="card-type">Тип: ${escapeHtml(machine.type || "-")}</p>
         ${machine.kind ? `<p class="card-kind">Вид: ${escapeHtml(machine.kind)}</p>` : ""}
+        <p class="card-country">Страна: ${escapeHtml(machine.country)}</p>
         <p class="card-year">Год: ${escapeHtml(machine.year)}</p>
         <div class="card-price">
           <span>${formatPrice(machine.price)}</span>
