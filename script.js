@@ -144,7 +144,7 @@ function renderCatalog(filter = {}) {
           <span class="oldprice">${formatPrice(machine.oldPrice)}</span>
         </div>
         <h3>${escapeHtml(machine.name)}</h3>
-        <p class="card-in-stock" style="color: rgb(60, 170, 60); font-size: 0.95rem; line-height: 0.7;">В наличии: ${escapeHtml(machine.instock)} шт. <i class="fa-solid fa-check"></i></p>
+        <p class="card-in-stock" style="color: rgb(60, 170, 60); font-size: 0.95rem; line-height: 0.7;">В наличии: ${escapeHtml(machine.instock)} шт.   <i class="fa-solid fa-check"></i></p>
         <p class="short-desc" style="color: #777777;">${escapeHtml(machine.description)}</p>
         <p class="card-type card-spec">Тип: ${escapeHtml(machine.type || "-")}</p>
         ${machine.kind ? `<p class="card-kind card-spec">Вид: ${escapeHtml(machine.kind)}</p>` : ""}
