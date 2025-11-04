@@ -149,7 +149,7 @@ function showPopup(machine) {
     { label: "Тип станка", value: machine.type || "-" },
     { label: "Вид станка", value: machine.kind || "-" },
     { label: "Мощность, кВт", value: machine.power },
-    { label: "Размеры", value: machine.dimensions },
+    { label: "Размеры, мм", value: machine.dimensions },
     { label: "Масса, кг", value: machine.weight },
     { label: "Производитель", value: machine.manufacturer },
     { label: "Страна", value: machine.country },
