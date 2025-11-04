@@ -355,6 +355,7 @@ header {
   .catalog {
     /*grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));*/
     grid-template-columns: 1fr;
+    padding: 2rem;
   }
 
   .filter-group {
