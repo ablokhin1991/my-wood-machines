@@ -233,7 +233,9 @@ function showPopup(machine) {
   
   popupPrice.textContent = formatPrice(machine.price);
   popupOldPrice.textContent = formatPrice(machine.oldPrice);
-  popupDesc.textContent = machine.description || "";
+  //popupDesc.textContent = machine.description || "";
+  popupDesc.innerHTML = machine.description || "";
+
   popupSpecs.innerHTML = specsHTML;
 
   const gallery = popup.querySelector(".popup-gallery");
