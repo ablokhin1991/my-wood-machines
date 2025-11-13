@@ -162,7 +162,7 @@ const machines = [
   },
   {
     id: 6,
-    name: "Griggio G 60",
+    name: "Копировально-фрезерный станок Griggio G 60",
     type: "Фрезерный",
     kind: "Копировально-фрезерный",
     manufacturer: "Griggio",
