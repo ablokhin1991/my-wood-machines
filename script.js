@@ -231,7 +231,8 @@ const machines = [
       "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-2.webp",
       "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-3.webp",
       "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-4.webp",
-      "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-5.webp"
+      "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-5.webp",
+      "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-6.webp"
     ],
     price: 300000,
     oldPrice: 350000,
