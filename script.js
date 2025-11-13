@@ -1,7 +1,7 @@
 const machines = [
   {
     id: 1,
-    name: "Боровичи С25-5А",
+    name: "Четырехсторонний станк Боровичи С25-5А",
     type: "Строгальный",
     kind: "Четырёхсторонний",
     manufacturer: "БЗДС",
@@ -75,7 +75,7 @@ const machines = [
   },
   {
     id: 4,
-    name: "Biesse Rover 49",
+    name: "Сверлильно-фрезерный станок Biesse Rover 49",
     type: "Фрезерный",
     kind: "с ЧПУ",
     manufacturer: "Biesse",
