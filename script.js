@@ -342,6 +342,36 @@ const machines = [
       { label: "Расход потребляемого воздуха, м3/мин", value: "0,15" },
       { label: "Уровень рабочего стола от пола, мм", value: 900 }
     ]
+  },
+  {
+    id: 12,
+    name: "Шлифовальный станок ШлПС-6М",
+    type: "Шлифовальный",
+    kind: "Ленточный",
+    manufacturer: "Кодос",
+    country: "Россия",
+    year: 1995,
+    power: "2,2",
+    dimensions: "3500x1500x1500",
+    weight: 450,
+    instock: 2,
+    images: [
+      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-1.webp",
+      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-2.webp",
+      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-3.webp",
+      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-4.webp",
+      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-5.webp"
+    ],
+    price: 250000,
+    oldPrice: 300000,
+    description: "Станок ШлПС-6М предназначен для шлифования плоских поверхностей щитовых деталей из массивной древесины и мебельных щитов, в том числе облицованных шпоном и покрытых полиэфирным лаком узкой шлифовальной лентой на подвижном столе с утюжком.",
+    uniqueSpecs: [
+      { label: "Толщина заготовки, мм", value: "до 300" },
+      { label: "Ширина заготовки, мм", value: "до 1000" },
+      { label: "Длина заготовки, мм", value: "не огранич." },
+      { label: "Размеры шлифовальной ленты, мм", value: "6760х100-160" },
+      { label: "Скорость резания, м/с", value: 20 }
+    ]
   }
 ];
 
