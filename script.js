@@ -225,7 +225,7 @@ const machines = [
     power: "32,4",
     dimensions: "1930x1780x1630",
     weight: 2150,
-    instock: 1,
+    instock: 2,
     images: [
       "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-1.webp",
       "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-2.webp",
