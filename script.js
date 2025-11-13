@@ -278,6 +278,37 @@ const machines = [
       { label: "Производительность требуемой аспирации, м3/ч", value: "5х2000" }
     ]
   },
+  {
+    id: 10,
+    name: "Четырехсторонний станк Боровичи С25-4А",
+    type: "Строгальный",
+    kind: "Четырёхсторонний",
+    manufacturer: "БЗДС",
+    country: "Россия",
+    year: 1994,
+    power: "49,6",
+    dimensions: "3150x1570x1315",
+    weight: 4200,
+    instock: 1,
+    images: [
+      "images/wood-machines/borovichi-s25-4a-1994-1.webp",
+      "images/wood-machines/borovichi-s25-4a-1994-2.webp",
+      "images/wood-machines/borovichi-s25-4a-1994-3.webp",
+      "images/wood-machines/borovichi-s25-4a-1994-4.webp"
+    ],
+    price: 500000,
+    oldPrice: 700000,
+    description: "Четырехшпиндельный станок тяжелой серии предназначен для производства различных погонажных изделий и профилированного бруса, в том числе естественной влажности. Станок в отличном состоянии и полностью рабочий!",
+    uniqueSpecs: [
+      { label: "Количество шпинделей", value: 4 },
+      { label: "Ширина заготовки, мм", value: "50-250" },
+      { label: "Высота заготовки, мм", value: "12-230" },
+      { label: "Скорость работы, м/мин", value: "7-35" },
+      { label: "Мин. длина одиночной заготовки, мм", value: 700 },
+      { label: "Диаметр выходных патрубков аспирации, мм", value: 150 },
+      { label: "Производительность требуемой аспирации, м3/ч", value: "5х2000" }
+    ]
+  }
 ];
 
 const typeToKindMap = {
