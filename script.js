@@ -286,7 +286,7 @@ const machines = [
     manufacturer: "БЗДС",
     country: "Россия",
     year: 1994,
-    power: "49,6",
+    power: "38,6",
     dimensions: "3150x1570x1315",
     weight: 4200,
     instock: 1,
