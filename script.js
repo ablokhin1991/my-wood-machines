@@ -264,8 +264,8 @@ const machines = [
       "images/wood-machines/borovichi-s25-5a-1997-3.webp",
       "images/wood-machines/borovichi-s25-5a-1997-4.webp"
     ],
-    price: 1000000,
-    oldPrice: 1299000,
+    price: 700000,
+    oldPrice: 1000000,
     description: "Пятишпиндельный станок тяжелой серии предназначен для производства различных погонажных изделий и профилированного бруса, в том числе естественной влажности. Станок в отличном состоянии и полностью рабочий!",
     uniqueSpecs: [
       { label: "Количество шпинделей", value: 5 },
