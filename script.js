@@ -388,13 +388,13 @@ const machines = [
     weight: 230,
     instock: 1,
     images: [
-      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-1.webp",
-      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-2.webp",
-      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-3.webp",
-      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-4.webp",
-      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-5.webp",
-      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-6.webp",
-      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-7.webp"
+      "images/wood-machines/lentochnaya-pila-centauro-sp-500-1.webp",
+      "images/wood-machines/lentochnaya-pila-centauro-sp-500-2.webp",
+      "images/wood-machines/lentochnaya-pila-centauro-sp-500-3.webp",
+      "images/wood-machines/lentochnaya-pila-centauro-sp-500-4.webp",
+      "images/wood-machines/lentochnaya-pila-centauro-sp-500-5.webp",
+      "images/wood-machines/lentochnaya-pila-centauro-sp-500-6.webp",
+      "images/wood-machines/lentochnaya-pila-centauro-sp-500-7.webp"
     ],
     price: 349000,
     oldPrice: 496000,
@@ -402,8 +402,8 @@ const machines = [
     uniqueSpecs: [
       { label: "Макс. высота заготовки, мм", value: "300" },
       { label: "Размеры рабочего стола, мм", value: "500x700" },
-      { label: "Длина пильного полотна, мм", value: "3945" },
-      { label: "Макс. ширина и толщина пильного полотна, мм", value: "25x0,5" },
+      { label: "Длина пильного полотна, мм", value: "3860-3945" },
+      { label: "Макс. ширина и толщина пильного полотна, мм", value: "30x0,5" },
       { label: "Диаметр шкивов, мм", value: 500 },
       { label: "Скорость вращения шкивов, об/мин", value: 930 },
       { label: "Наклонный чугунный стол, гр (°)", value: "до 45°" },
