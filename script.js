@@ -362,8 +362,8 @@ const machines = [
       "images/wood-machines/shlifovalnyy-stanok-shlps-6m-4.webp",
       "images/wood-machines/shlifovalnyy-stanok-shlps-6m-5.webp"
     ],
-    price: 250000,
-    oldPrice: 300000,
+    price: 75000,
+    oldPrice: 130000,
     description: "Станок в хорошем состоянии — всю жизнь отработал в тёплом цеху! *В наличии 2 шт!* Станок ШлПС-6М предназначен для шлифования плоских поверхностей щитовых деталей из массивной древесины и мебельных щитов, в том числе облицованных шпоном и покрытых полиэфирным лаком узкой шлифовальной лентой на подвижном столе с утюжком.",
     uniqueSpecs: [
       { label: "Толщина заготовки, мм", value: "до 300" },
@@ -469,12 +469,12 @@ function showPopup(machine) {
   updatePopupImage();
 
   popupTitle.textContent = machine.name || "";
-
+  // <- добавили
   const inStockCount = (machine.instock === undefined || machine.instock === null) ? "-" : escapeHtml(String(machine.instock));
   popupInstock.innerHTML = `В наличии: ${inStockCount} шт. <i class="fa-solid fa-check" aria-hidden="true"></i>`;
-  // формируем таблицу вместо списка
-  let specsHTML = '<table style="border-collapse: collapse; width: 100%;">';
 
+
+  let specsHTML = '<table style="border-collapse: collapse; width: 100%;">';
   const basicSpecs = [
     { label: "Тип станка", value: machine.type || "-" },
     { label: "Вид станка", value: machine.kind || "-" },
