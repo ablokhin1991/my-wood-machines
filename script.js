@@ -394,6 +394,7 @@ const popupSpecs = document.getElementById("popup-specs");
 const popupDesc = document.getElementById("popup-desc");
 const popupPrice = document.getElementById("popup-price");
 const popupOldPrice = document.getElementById("popup-oldprice");
+const popupInstock = document.getElementById("popup-instock"); // <- добавили
 const closeBtn = document.querySelector(".close");
 const filtersSection = document.getElementById("filters");
 const toggleFiltersBtn = document.getElementById("toggle-filters");
@@ -464,12 +465,13 @@ function renderCatalog(filter = {}) {
 
 function showPopup(machine) {
   currentImages = Array.isArray(machine.images) && machine.images.length ? machine.images : [""];
-
   currentIndex = 0;
   updatePopupImage();
 
   popupTitle.textContent = machine.name || "";
 
+  const inStockCount = (machine.instock === undefined || machine.instock === null) ? "-" : escapeHtml(String(machine.instock));
+  popupInstock.innerHTML = `В наличии: ${inStockCount} шт. <i class="fa-solid fa-check" aria-hidden="true"></i>`;
   // формируем таблицу вместо списка
   let specsHTML = '<table style="border-collapse: collapse; width: 100%;">';
 
