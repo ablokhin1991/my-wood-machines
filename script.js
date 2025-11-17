@@ -377,7 +377,7 @@ const machines = [
   },
   {
     id: 13,
-    name: "Ленточная пила Centauro SP 500",
+    name: "Ленточная пила по дереву Centauro SP 500",
     type: "Распиловочный",
     kind: "Ленточный",
     manufacturer: "Centauro",
