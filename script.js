@@ -360,7 +360,9 @@ const machines = [
       "images/wood-machines/shlifovalnyy-stanok-shlps-6m-2.webp",
       "images/wood-machines/shlifovalnyy-stanok-shlps-6m-3.webp",
       "images/wood-machines/shlifovalnyy-stanok-shlps-6m-4.webp",
-      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-5.webp"
+      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-5.webp",
+      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-6.webp",
+      "images/wood-machines/shlifovalnyy-stanok-shlps-6m-7.webp"
     ],
     price: 75000,
     oldPrice: 130000,
