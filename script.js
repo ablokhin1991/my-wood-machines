@@ -428,7 +428,8 @@ const machines = [
       "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-2.webp",
       "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-3.webp",
       "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-4.webp",
-      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-5.webp"
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-5.webp",
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-6.webp"
     ],
     price: 1200000,
     oldPrice: 1490000,
