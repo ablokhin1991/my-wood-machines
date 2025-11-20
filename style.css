@@ -100,7 +100,7 @@ header {
 }
 .highlight {
   background: #ffff00;
-  padding: 0 3px;
+  padding: 7px 10px;
   border-radius: 6px;
 }
 .filter-toggle {
