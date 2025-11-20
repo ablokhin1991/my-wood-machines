@@ -103,7 +103,8 @@ header {
   border-bottom: 1px solid #ddd;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: center;
+  /*align-items: center;*/
+  margin-top: 1rem;
 }
 
 .filters.hidden {
