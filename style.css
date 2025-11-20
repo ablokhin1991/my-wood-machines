@@ -128,6 +128,7 @@ header {
   height: 50px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 17px;
 }
 
 #clear-filters {
@@ -371,6 +372,7 @@ header {
   #clear-filters {
     width: 100%;
     padding: 10px 15px;
+    height: 50px;
   }
 
   .catalog {
