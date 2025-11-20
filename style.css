@@ -82,7 +82,13 @@ header {
   background: #4CAF50;
   color: white;
 }
-
+.hero {
+  background: #4CAF50;
+  color: white;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .filter-toggle {
   display: none;
   background: #2e7d32;
