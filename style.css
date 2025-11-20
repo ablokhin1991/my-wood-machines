@@ -141,6 +141,7 @@ header {
 @media(max-width: 768px) {
   .filter-group input, .filter-group select {
   width: 100% !important;
+  max-width: none !important;
   }
 }
 
