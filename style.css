@@ -5,7 +5,10 @@ body {
   background: #f9f9f9;
   color: #333;
 }
-
+h1 {
+    margin-block-start: 0em;
+    margin-block-end: 0.67em;
+}
 p {
   line-height: 1.6180339887;
 }
