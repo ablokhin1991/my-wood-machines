@@ -121,7 +121,7 @@ header {
   font-size: 1rem;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .hero-benefits i {
