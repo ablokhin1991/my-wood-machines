@@ -666,17 +666,20 @@ header {
 @media (max-width: 768px) {
     .footer-columns {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
+        padding: 2rem;
     }
 
     .footer-col {
         min-width: 100%;
     }
-
+    .site-footer {
+        padding: 0rem;
+    }
     .footer-col.col-1, 
     .footer-col.col-2, 
     .footer-col.col-3 {
-        text-align: center; /* если хочешь центрировать колонки на мобилке */
+        text-align: left; 
     }
 
     .footer-bottom {
