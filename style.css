@@ -373,6 +373,7 @@ header {
   }
 
   .filter-group {
+    margin-top: 1rem;
     min-width: 120px;
     width: 100%;
   }
