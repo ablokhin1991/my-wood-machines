@@ -60,19 +60,21 @@ p {
 }
 
 .top-header-right a.phone-link {
+  background: #2e7d32;
   color: #fff;
   font-size: 17px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s;
   padding: 10px 15px;
-  border: 3px solid #ffffff;
+  /*border: 3px solid #ffffff;*/
   border-radius: 6px;
 }
 
 .top-header-right a.phone-link:hover {
-  color: #ffff00; 
-  border: 3px solid #ffff00;
+  /*color: #ffff00; */
+  /*border: 3px solid #ffff00;*/
+  background: #ffff00;
 }
 
 @media(max-width: 768px) {
