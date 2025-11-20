@@ -132,7 +132,7 @@ header {
 }
 @media(max-width: 768px) {
   .hero-benefits {
-    line-height: 1;
+    line-height: 1.5;
   }
 }
 .hero-benefits li {
