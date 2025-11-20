@@ -639,6 +639,8 @@ header {
 /* Колонка 3 */
 .footer-col.col-3 p {
     margin-bottom: 0.5rem;
+    margin-block-start: 0em;
+    margin-block-end: 1em;
 }
 
 .footer-col.col-3 .phone {
