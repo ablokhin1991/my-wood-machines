@@ -445,7 +445,7 @@ header {
 
   .filters.active {
     display: flex;
-    padding: 2rem;
+    padding: 0rem 2rem;
   }
 
   .filter-toggle {
