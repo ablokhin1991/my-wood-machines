@@ -610,6 +610,8 @@ header {
 .footer-col.col-1 h3 {
     font-size: 1.3rem;
     line-height: 1.4;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
 .footer-col.col-1 .highlight {
