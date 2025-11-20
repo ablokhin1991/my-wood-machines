@@ -23,7 +23,6 @@ p {
   background: #4CAF50; 
   color: #fff;
   padding: 0.7rem;
-  border-bottom: 1px solid #2e7d32;
 }
 @media (max-width: 768px) {
   .top-header {
@@ -38,6 +37,7 @@ p {
   margin: 0 auto;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
+  border-bottom: 1px solid #2e7d32;
 }
 
 .top-header-left {
