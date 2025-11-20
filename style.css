@@ -599,6 +599,7 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .footer-col {
@@ -657,6 +658,8 @@ header {
     padding-top: 1rem;
     text-align: left;
     font-size: 0.85rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Адаптив для мобильной версии */
