@@ -85,6 +85,9 @@ header {
 .hero {
   background: #4CAF50;
   color: white;
+}
+.hero-content {
+  color: white;
   text-align: left;
   max-width: 1200px;
   margin: 0 auto;
