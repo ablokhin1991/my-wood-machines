@@ -98,6 +98,11 @@ header {
     padding: 2rem;
   }
 }
+.highlight {
+  background: #ffff00;
+  padding: 0 3px;
+  border-radius: 6px;
+}
 .filter-toggle {
   display: none;
   background: #2e7d32;
