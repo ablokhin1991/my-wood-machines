@@ -136,7 +136,7 @@ header {
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 6px;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   transition: all 0.2s;
@@ -368,6 +368,7 @@ header {
 
   #clear-filters {
     width: 100%;
+    padding: 10px 15px;
   }
 
   .catalog {
