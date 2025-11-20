@@ -39,18 +39,11 @@ p {
   align-items: center;
   gap: 0.5rem;
 }
-.top-header-right {
-    /*background: #ffff00;*/
-    /* PADDING: 15PX; */
+/*.top-header-right {
     padding: 10px 15px;
     border: 3px solid #ffffff;
     border-radius: 6px;
-    /* color: #2e7d32; */
-    transition: all 0.2s;
-}
-.top-header-right:hover {
-  border: 3px solid #ffff00; 
-}
+}*/
 
 .top-header-left i.fas.fa-map-pin {
   font-size: 1rem;
@@ -67,6 +60,10 @@ p {
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s;
+
+      padding: 10px 15px;
+    border: 3px solid #ffffff;
+    border-radius: 6px;
 }
 
 .top-header-right a.phone-link:hover {
