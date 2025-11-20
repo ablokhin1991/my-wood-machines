@@ -450,6 +450,8 @@ header {
 
   .filter-toggle {
     display: block;
+    text-align: left;
+    padding: 1rem 2rem;
   }
 
   #clear-filters {
