@@ -105,7 +105,7 @@ header {
   background: #ffff00;
   padding: 7px 10px;
   border-radius: 6px;
-  color: #777777;
+  color: #4caf50;
 }
 @media(max-width: 768px) {
   .highlight {
