@@ -132,6 +132,11 @@ header {
   appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+
+  width: 100%;
+  max-width: 300px;
+  min-width: 250px;
+  box-sizing: border-box;
 }
 
 #clear-filters {
