@@ -22,8 +22,13 @@ p {
 .top-header {
   background: #2e7d32; 
   color: #fff;
+  padding: 0.7rem;
 }
-
+@media (max-width: 768px) {
+  .top-header {
+    padding: 0rem;
+  }
+}
 .top-header-inner {
   display: flex;
   justify-content: space-between;
