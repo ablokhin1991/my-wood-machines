@@ -72,8 +72,7 @@ p {
 }
 
 .top-header-right a.phone-link:hover {
-  /*color: #ffff00; */
-  /*border: 3px solid #ffff00;*/
+  color: #4CAF50; 
   background: #ffff00;
 }
 
