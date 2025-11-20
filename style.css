@@ -614,9 +614,10 @@ header {
 
 .footer-col.col-1 .highlight {
     background: #ffff00;
-    color: #000;
+    color: #2e7d32;
     padding: 0 0.2em; /* внутренний отступ слева/справа */
-    display: inline; /* ! Важно: по ширине текста */
+    display: inline-block;
+    margin-top: 0.3rem;
 }
 
 /* Колонка 2 */
