@@ -366,6 +366,10 @@ header {
     display: block;
   }
 
+  #clear-filters {
+    width: 100%;
+  }
+
   .catalog {
     /*grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));*/
     grid-template-columns: 1fr;
