@@ -138,6 +138,11 @@ header {
   min-width: 250px;
   box-sizing: border-box;
 }
+@media(max-width: 768px) {
+  .filter-group input, .filter-group select {
+  width: 100% !important;
+  }
+}
 
 #clear-filters {
   background: #4caf50;
