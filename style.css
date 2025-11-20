@@ -103,6 +103,25 @@ header {
   padding: 7px 10px;
   border-radius: 6px;
 }
+.hero-benefits {
+  list-style: none;
+  margin: 15px 0 0;
+  padding: 0;
+}
+
+.hero-benefits li {
+  margin: 6px 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-benefits i {
+  color: #4caf50; /* твой фирменный зелёный */
+  font-size: 1.1rem;
+}
+
 .filter-toggle {
   display: none;
   background: #2e7d32;
