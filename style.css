@@ -135,6 +135,7 @@ header {
   cursor: pointer;
   border-radius: 4px;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   transition: all 0.2s;
 }
 #clear-filters:hover {
