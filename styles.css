@@ -183,19 +183,27 @@ a:hover { text-decoration: underline; }
   position: relative;
 }
 .modal-close {
-  position: sticky;
-  top: 0;
-  float: right;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #666;
-  line-height: 1;
-  z-index: 10;
-  margin: -8px -8px 0 0;
+    position: sticky;
+    top: 0;
+    float: right;
+    font-size: 24px;
+    background: rgba(255,255,255,.9);
+    border: none;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+    z-index: 10;
+    margin: -8px -8px 0 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,.15);
+    transition: background .2s, color .2s;
 }
-.modal-close:hover { color: #222; }
+.modal-close:hover { color: #222; background: rgba(240,240,240,.95); }
 
 .modal-title { font-size: 24px; color: #222; margin-bottom: 8px; padding-right: 40px; }
 .modal-price-row { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; width: 97%; }
