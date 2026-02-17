@@ -37,9 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // === Рендер карточки ===
-  const renderCard = (machine) => {
-    const img1 = machine.images && machine.images[0] ? normalizeImagePath(machine.images[0]) : "";
+    const renderCard = (machine, index) => {
+        const img1 = machine.images && machine.images[0] ? normalizeImagePath(machine.images[0]) : "";
     const img2 = machine.images && machine.images[1] ? normalizeImagePath(machine.images[1]) : "";
+    const isAboveFold = index < 4;
+    const loadingAttr = isAboveFold ? "eager" : "lazy";
+    const priorityAttr = isAboveFold ? ' fetchpriority="high"' : '';
     const yearText = (!machine.year || machine.year === "-") ? "не указан" : machine.year;
     const powerText = (!machine.power || machine.power === "-") ? "не указана" : machine.power + " кВт";
     const shortDesc = truncateText(machine.description, 140);
@@ -52,12 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let hoverImgHtml = "";
     if (img2) {
-      hoverImgHtml = `<img class="card-img-hover" src="${img2}" alt="${machine.name} — фото 2" loading="lazy">`;
+      hoverImgHtml = `<img class="card-img-hover" src="${img2}" alt="${machine.type} ${machine.name} б/у — фото 2" width="400" height="300" loading="lazy" decoding="async">`;
     }
 
         card.innerHTML = `
       <div class="card-image-wrap">
-        <img class="card-img-main" src="${img1}" alt="${machine.name} — фото 1" loading="lazy" decoding="async" itemprop="image">
+        <img class="card-img-main" src="${img1}" alt="${machine.type} ${machine.name} б/у — фото 1" width="400" height="300" loading="${loadingAttr}"${priorityAttr} decoding="async" itemprop="image">
         ${hoverImgHtml}
       </div>
       <div class="card-body">
@@ -106,8 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    filtered.forEach(machine => {
-      catalogGrid.appendChild(renderCard(machine));
+    filtered.forEach((machine, index) => {
+      catalogGrid.appendChild(renderCard(machine, index));
     });
 
     // Навешиваем обработчики на кнопки «Подробнее»
