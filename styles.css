@@ -126,13 +126,10 @@ a:hover { text-decoration: underline; }
   object-fit: cover;
   transition: opacity .3s;
 }
-.card-image-wrap .card-img-hover {
-  opacity: 0;
-  position: absolute;
-  top: 0; left: 0;
+
+.card-img-main {
+  transition: opacity .2s;
 }
-.machine-card:hover .card-img-hover { opacity: 1; }
-.machine-card:hover .card-img-main { opacity: 0; }
 
 .card-body { padding: 14px; display: flex; flex-direction: column; flex: 1; }
 .card-price-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; flex-wrap: wrap; }

@@ -54,14 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
     card.setAttribute("itemtype", "https://schema.org/Product");
 
     let hoverImgHtml = "";
-    if (img2) {
-      hoverImgHtml = `<img class="card-img-hover" src="${img2}" alt="${machine.type} ${machine.name} б/у — фото 2" width="400" height="300" loading="lazy" decoding="async">`;
-    }
 
         card.innerHTML = `
       <div class="card-image-wrap">
-        <img class="card-img-main" src="${img1}" alt="${machine.type} ${machine.name} б/у — фото 1" width="400" height="300" loading="${loadingAttr}"${priorityAttr} decoding="async" itemprop="image">
-        ${hoverImgHtml}
+        <img class="card-img-main" src="${img1}"${img2 ? ' data-hover="' + img2 + '"' : ''} alt="${machine.type} ${machine.name} б/у — фото 1" width="400" height="300" loading="${loadingAttr}"${priorityAttr} decoding="async" itemprop="image">
       </div>
       <div class="card-body">
         <div class="card-price-row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
@@ -122,6 +118,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const id = parseInt(btn.getAttribute("data-id"), 10);
         const machine = machines.find(m => m.id === id);
         if (machine) openModal(machine);
+      });
+    });
+
+    // Hover-фото: загружаем только при первом наведении
+    catalogGrid.querySelectorAll(".card-img-main[data-hover]").forEach(img => {
+      let hoverLoaded = false;
+      const wrap = img.closest(".card-image-wrap");
+      const originalSrc = img.src;
+      const hoverSrc = img.getAttribute("data-hover");
+
+      wrap.addEventListener("mouseenter", () => {
+        if (!hoverLoaded) {
+          const preload = new Image();
+          preload.src = hoverSrc;
+          hoverLoaded = true;
+        }
+        img.src = hoverSrc;
+      });
+
+      wrap.addEventListener("mouseleave", () => {
+        img.src = originalSrc;
       });
     });
   };
