@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <span class="card-price">${formatPrice(machine.price)}</span>
           <span class="card-old-price">${formatPrice(machine.oldPrice)}</span>
         </div>
-        <div class="card-price-note">Цена и наличие уточняйте по телефону. Не является публичной офертой.</div>
+        <!--<div class="card-price-note">Цена и наличие уточняйте по телефону. Не является публичной офертой.</div>-->
         <h3 class="card-title" itemprop="name">${machine.name}</h3>
         <div class="card-instock">В наличии: ${machine.instock} шт.</div>
         <p class="card-desc" itemprop="description">${shortDesc}</p>
