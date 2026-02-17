@@ -183,8 +183,9 @@ a:hover { text-decoration: underline; }
   position: relative;
 }
 .modal-close {
-  position: absolute;
-  top: 12px; right: 16px;
+  position: sticky;
+  top: 0;
+  float: right;
   font-size: 28px;
   background: none;
   border: none;
@@ -192,6 +193,7 @@ a:hover { text-decoration: underline; }
   color: #666;
   line-height: 1;
   z-index: 10;
+  margin: -8px -8px 0 0;
 }
 .modal-close:hover { color: #222; }
 
