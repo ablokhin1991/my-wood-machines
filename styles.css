@@ -369,4 +369,5 @@ a:hover { text-decoration: underline; }
   /*.card-specs { display: none; }*/
   .card-desc { display: none; }
   .card-price-note { font-size: 10px; }
+  .catalog-section h2 { font-size: 20px; }
 }
