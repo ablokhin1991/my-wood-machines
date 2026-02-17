@@ -521,4 +521,5 @@ a:hover { text-decoration: underline; }
   .stat-label { font-size: 12px; }
   .seller-trust ul li { font-size: 13px; }
   .seller-contact p { font-size: 13px; }
+  .modal-close { font-size: 14px; width: 20px; height: 20px; }
 }
