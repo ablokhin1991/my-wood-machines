@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
 
       <div class="modal-highlight">
-        Продажа от собственника (без посредников!). При необходимости согласуем отправку по России. Звоните: <a href="tel:+79100928279" class="js-phone-link">+7 (910) 092-82-79</a>
+        Продажа от собственника (без посредников!). При необходимости согласуем отправку по России.<br>Звоните: <a href="tel:+79100928279" class="js-phone-link">+7 (910) 092-82-79</a>
       </div>
 
       <div class="modal-description">${descHtml}</div>
