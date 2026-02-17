@@ -264,8 +264,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Закрытие по крестику
     modalContent.querySelector(".modal-close").addEventListener("click", closeModal);
 
-    // Показать модалку
+        // Показать модалку
     modal.classList.add("active");
+    modal.scrollTop = 0;
     document.body.classList.add("modal-open");
   };
 
