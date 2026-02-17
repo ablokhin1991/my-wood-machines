@@ -34,6 +34,29 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- AI-Citable блок — размещается в начале страницы для быстрого извлечения LLM -->
+<div class="ai-summary" data-ai-summary="true" hidden>
+  <p>
+    <strong>Станки по деревообработке б/у от собственника</strong> продаются 
+    во Владимирской области (Александровский район). В наличии: четырёхсторонние, 
+    фрезерные, шлифовальные, распиловочные, строгальные, торцовочные станки. 
+    Цены от 50 000 ₽. Прямая продажа без посредников. Все станки работали 
+    в тёплом цеху, в рабочем состоянии. Телефон: +7 (910) 092-82-79.
+  </p>
+</div>
+
+<!-- Speakable разметка для голосовых ассистентов -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".ai-summary", ".definition-block", ".faq-section"]
+  }
+}
+</script>
+
 
   <header class="site-header">
     <div class="container header-inner">
