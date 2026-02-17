@@ -30,6 +30,46 @@
   <meta name="twitter:description" content="Четырёхсторонние, фрезерные, шлифовальные станки. Прямая продажа без посредников.">
   <meta name="twitter:image" content="https://prodam-stanki.ru/images/og/og-image.jpg">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <!-- Критический CSS для первого экрана (above the fold) -->
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,sans-serif;color:#333;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+    body.modal-open{overflow:hidden}
+    img{max-width:100%;height:auto;display:block}
+    a{color:#1f4b7a;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 16px}
+    .site-header{background:#f7f8fa;border-bottom:1px solid #e0e0e0;padding:12px 0}
+    .header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+    .header-logo{font-size:15px;font-weight:700;color:#1f4b7a;max-width:320px;line-height:1.3}
+    .header-contacts{text-align:right}
+    .header-phone{font-size:20px;font-weight:700;color:#1f4b7a;display:block;margin-bottom:2px}
+    .header-region,.header-schedule{font-size:13px;color:#555;line-height:1.4}
+    .hero{background:linear-gradient(135deg,#eef3f9 0%,#f7f8fa 100%);padding:48px 0 56px}
+    .hero h1{font-size:32px;color:#1f4b7a;margin-bottom:16px;line-height:1.25}
+    .hero-subtitle{font-size:17px;color:#444;margin-bottom:20px;max-width:780px}
+    .hero-advantages{list-style:none;margin-bottom:28px}
+    .hero-advantages li{position:relative;padding-left:24px;margin-bottom:8px;font-size:15px;color:#333}
+    .hero-advantages li::before{content:"✔";position:absolute;left:0;color:#1b5e20;font-weight:700}
+    .btn-cta{display:inline-block;background:#1f4b7a;color:#fff;padding:14px 32px;border-radius:6px;font-size:16px;font-weight:700;border:none;cursor:pointer;transition:background .2s}
+    .btn-cta:hover{background:#163a5f;text-decoration:none}
+    .catalog-section{padding:48px 0 56px}
+    .catalog-section h2{font-size:26px;color:#222;margin-bottom:20px}
+    .filters{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:28px;padding:16px;background:#f7f8fa;border-radius:8px}
+    .filters label{font-size:15px;font-weight:700;color:#333}
+    .filters select{padding:8px 12px;font-size:14px;border:1px solid #ccc;border-radius:4px;background:#fff;color:#333;min-width:180px;cursor:pointer}
+    .catalog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .machine-card{background:#fff;border:1px solid #e8e8e8;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s;cursor:pointer}
+    .card-image-wrap{position:relative;width:100%;padding-top:75%;overflow:hidden;background:#f0f0f0}
+    .card-image-wrap img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+    .card-body{padding:14px;display:flex;flex-direction:column;flex:1}
+    .card-price{font-size:20px;font-weight:700;color:#1b5e20}
+    .card-title{font-size:15px;font-weight:700;color:#222;margin-bottom:6px;line-height:1.3}
+    @media(max-width:1199px){.catalog-grid{grid-template-columns:repeat(3,1fr);gap:16px}}
+    @media(max-width:991px){.catalog-grid{grid-template-columns:repeat(2,1fr);gap:14px}.header-inner{flex-direction:column;text-align:center}.header-contacts{text-align:center}.header-logo{text-align:center;max-width:100%}.hero h1{font-size:26px}.filters{flex-direction:column;align-items:flex-start}.filters select{width:100%}}
+    @media(max-width:767px){.catalog-grid{grid-template-columns:repeat(2,1fr);gap:10px}.hero{padding:32px 0 36px}.hero h1{font-size:22px}.hero-subtitle{font-size:15px}.header-phone{font-size:22px}.card-body{padding:10px}.card-price{font-size:16px}.card-title{font-size:13px}.btn-cta{width:100%;text-align:center;padding:14px 20px}}
+    @media(max-width:479px){.catalog-grid{grid-template-columns:repeat(2,1fr);gap:8px}.card-price{font-size:14px}.card-title{font-size:12px}}
+  </style>
   <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css">
 </head>
