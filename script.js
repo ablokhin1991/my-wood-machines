@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalContent = modal.querySelector(".modal-content");
 
   // === Утилиты ===
-  const formatPrice = (n) => Number(n).toLocaleString("ru-RU") + " ₽";
+  const formatPrice = (n) => Number(n).toLocaleString("ru-RU") + " руб.";
 
   const normalizeImagePath = (p) => {
     if (!p) return "";
