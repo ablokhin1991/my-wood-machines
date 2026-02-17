@@ -295,112 +295,197 @@ document.addEventListener("DOMContentLoaded", () => {
     if (closeBtn) closeBtn.addEventListener("click", closeLegalModals);
   });
 
-  // === JSON-LD: FAQ ===
-  const faqData = [
-    {
-      question: "Как купить деревообрабатывающий станок б/у во Владимирской области?",
-      answer: "Чтобы купить станок, позвоните по телефону +7 (910) 092-82-79. Мы расскажем о состоянии станка, ответим на вопросы и согласуем все детали покупки. Формы заказа на сайте нет — вся коммуникация только по телефону, чтобы вы получили живой ответ на все вопросы."
-    },
-    {
-      question: "Можно ли приехать посмотреть станок б/у и запустить его в работе?",
-      answer: "Да, вы можете приехать к нам во Владимирскую область (Александровский район) и лично осмотреть любой станок. Мы покажем оборудование, при необходимости запустим его в работе, чтобы вы убедились в исправности. Договоритесь о визите по телефону +7 (910) 092-82-79 заранее."
-    },
-    {
-      question: "Как организуется доставка деревообрабатывающего станка по России?",
-      answer: "Доставку обсуждаем индивидуально. Мы помогаем с погрузкой, подбираем подходящий транспорт и согласовываем логистику. Стоимость доставки зависит от габаритов станка и расстояния. Все условия и расходы на транспорт оговариваются по телефону до отправки."
-    },
-    {
-      question: "Возможен ли торг при покупке станка б/у?",
-      answer: "Да, торг уместен. Окончательная цена согласовывается при встрече. Мы готовы обсудить индивидуальные условия, особенно при покупке нескольких единиц оборудования. Звоните: +7 (910) 092-82-79."
-    },
-    {
-      question: "Какие гарантии на б/у деревообрабатывающие станки?",
-      answer: "Мы честно продаём б/у оборудование без скрытых дефектов. Все станки работали в тёплом отапливаемом цеху и находятся в хорошем рабочем состоянии. При личном осмотре вы можете убедиться в исправности каждого станка. Мы не скрываем реальное состояние оборудования."
-    },
-    {
-      question: "Можно ли забронировать станок б/у на несколько дней?",
-      answer: "Да, мы можем отложить станок на 2–3 дня, пока вы принимаете решение или организуете транспорт. Условия бронирования уточняйте по телефону +7 (910) 092-82-79."
-    },
-    {
-      question: "Вы посредники или собственники станков?",
-      answer: "Мы — собственники. Все станки принадлежат нашему предприятию по обработке древесины. Продажа ведётся напрямую, без перекупщиков и посредников, что позволяет предложить честные цены без лишних наценок."
-    }
-  ];
+  // === JSON-LD === //
+  const origin = window.location.origin || "https://prodam-stanki.ru";
+  const path = window.location.pathname || "/";
+  const siteUrl = origin + path;
+  const businessId = origin + "/#business";
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqData.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
+  const insertJsonLd = (obj) => {
+    const s = document.createElement("script");
+    s.type = "application/ld+json";
+    s.textContent = JSON.stringify(obj);
+    document.head.appendChild(s);
   };
 
-  const faqScript = document.createElement("script");
-  faqScript.type = "application/ld+json";
-  faqScript.textContent = JSON.stringify(faqSchema);
-  document.head.appendChild(faqScript);
+  // --- 1. LocalBusiness ---
+  insertJsonLd({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": businessId,
+    "name": "Станки по деревообработке б/у от собственника",
+    "description": "Продажа б/у деревообрабатывающих станков от собственника во Владимирской области. Четырёхсторонние, фрезерные, шлифовальные, распиловочные станки.",
+    "url": siteUrl,
+    "telephone": "+7-910-092-82-79",
+    "priceRange": "₽₽",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Владимирская область",
+      "addressLocality": "Александровский район",
+      "addressCountry": "RU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 56.3926,
+      "longitude": 38.7382
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
+    "areaServed": [
+      { "@type": "State", "name": "Владимирская область" },
+      { "@type": "Country", "name": "Россия" }
+    ],
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Product",
+        "name": "Деревообрабатывающие станки б/у"
+      }
+    }
+  });
 
-  // === JSON-LD: Products ===
-  const productsSchema = {
+  // --- 2. FAQPage ---
+  const faqItems = document.querySelectorAll(".faq-item[itemscope]");
+  if (faqItems.length > 0) {
+    insertJsonLd({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": origin + "/#faq",
+      "mainEntity": Array.from(faqItems).map(item => {
+        const question = item.querySelector("[itemprop='name']");
+        const answer = item.querySelector("[itemprop='text']");
+        return {
+          "@type": "Question",
+          "name": question ? question.textContent.trim() : "",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": answer ? answer.textContent.trim() : ""
+          }
+        };
+      })
+    });
+  }
+
+  // --- 3. Products ---
+  insertJsonLd({
     "@context": "https://schema.org",
     "@graph": machines.map(machine => {
-      const origin = window.location.origin || "";
-      const path = window.location.pathname || "/";
       const normalizedImage = machine.images && machine.images[0]
         ? (machine.images[0].startsWith("/") ? machine.images[0] : "/" + machine.images[0])
         : "";
-      const url = origin + path + "#machine-" + machine.id;
+      const url = siteUrl + "#machine-" + machine.id;
       const imageUrl = normalizedImage ? origin + normalizedImage : undefined;
+      const yearText = (!machine.year || machine.year === "-") ? "не указан" : String(machine.year);
+      const powerText = (!machine.power || machine.power === "-") ? "не указана" : machine.power + " кВт";
+      const weightText = (!machine.weight || machine.weight === "-") ? "не указана" : machine.weight + " кг";
+      const dimensionsText = (!machine.dimensions || machine.dimensions === "-") ? "не указаны" : machine.dimensions + " мм";
+
+      const additionalProperty = [
+        { "@type": "PropertyValue", "name": "Состояние", "value": "Б/у, рабочее" },
+        { "@type": "PropertyValue", "name": "Условия хранения", "value": "Тёплый отапливаемый цех" },
+        { "@type": "PropertyValue", "name": "Год выпуска", "value": yearText },
+        { "@type": "PropertyValue", "name": "Мощность", "value": powerText },
+        { "@type": "PropertyValue", "name": "Габариты (ДxШxВ)", "value": dimensionsText },
+        { "@type": "PropertyValue", "name": "Масса", "value": weightText },
+        { "@type": "PropertyValue", "name": "Страна производства", "value": machine.country }
+      ];
+
+      if (machine.uniqueSpecs && machine.uniqueSpecs.length > 0) {
+        machine.uniqueSpecs.forEach(spec => {
+          additionalProperty.push({
+            "@type": "PropertyValue",
+            "name": spec.label,
+            "value": String(spec.value)
+          });
+        });
+      }
 
       return {
         "@type": "Product",
         "name": machine.name,
         "description": machine.description,
         "image": imageUrl,
+        "sku": "STANOK-" + machine.id,
         "category": machine.type + " / " + machine.kind,
-        "brand": {
-          "@type": "Brand",
-          "name": machine.manufacturer
+        "brand": { "@type": "Brand", "name": machine.manufacturer },
+        "offers": {
+          "@type": "Offer",
+          "url": url,
+          "priceCurrency": "RUB",
+          "price": String(machine.price),
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/UsedCondition",
+          "seller": { "@id": businessId }
         },
+        "additionalProperty": additionalProperty
+      };
+    })
+  });
+
+  // --- 4. ItemList ---
+  insertJsonLd({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Каталог деревообрабатывающих станков б/у",
+    "description": "Станки по деревообработке б/у от собственника во Владимирской области",
+    "numberOfItems": machines.length,
+    "itemListElement": machines.map((machine, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Product",
+        "name": machine.name,
+        "description": machine.description,
         "offers": {
           "@type": "Offer",
           "price": String(machine.price),
           "priceCurrency": "RUB",
           "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/UsedCondition",
-          "url": url,
-          "seller": {
-            "@type": "Person",
-            "name": "Собственник"
-          }
+          "itemCondition": "https://schema.org/UsedCondition"
         }
-      };
-    })
-  };
+      }
+    }))
+  });
 
-  const productsScript = document.createElement("script");
-  productsScript.type = "application/ld+json";
-  productsScript.textContent = JSON.stringify(productsSchema);
-  document.head.appendChild(productsScript);
-
-  // === JSON-LD: WebPage ===
-  const webPageSchema = {
+  // --- 5. WebPage + BreadcrumbList ---
+  insertJsonLd({
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Станки по деревообработке б/у во Владимирской области — продажа от собственника",
-    "description": "Купить деревообрабатывающий станок б/у от собственника во Владимирской области. Четырёхсторонние, фрезерные, шлифовальные, распиловочные станки по дереву в наличии.",
-    "url": (window.location.origin || "") + (window.location.pathname || "/")
-  };
+    "@id": origin + "/#webpage",
+    "url": siteUrl,
+    "name": "Станки по деревообработке б/у от собственника — Владимирская область",
+    "description": "Купить деревообрабатывающий станок б/у от собственника. Четырёхсторонние, фрезерные, шлифовальные станки. Прямая продажа без посредников.",
+    "inLanguage": "ru-RU",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": origin + "/#website",
+      "url": siteUrl,
+      "name": "Станки по деревообработке б/у",
+      "publisher": { "@id": businessId }
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Деревообрабатывающие станки б/у"
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero", ".faq-section", ".info-section"]
+    }
+  });
 
-  const webPageScript = document.createElement("script");
-  webPageScript.type = "application/ld+json";
-  webPageScript.textContent = JSON.stringify(webPageSchema);
-  document.head.appendChild(webPageScript);
+  insertJsonLd({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Главная", "item": siteUrl },
+      { "@type": "ListItem", "position": 2, "name": "Каталог станков", "item": siteUrl + "#catalog" }
+    ]
+  });
 
   // === Инициализация ===
   renderCatalog();
