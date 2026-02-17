@@ -478,7 +478,7 @@ a:hover { text-decoration: underline; }
   .modal-content { padding: 18px; margin: 10px auto; }
   .modal-title { font-size: 18px; }
   .modal-price { font-size: 20px; }
-  .gallery-main-wrap { max-height: 280px; }
+  .gallery-main-wrap { max-height: 280px; margin-right: 18px; }
   .gallery-main-wrap img { max-height: 280px; }
   .gallery-thumbs img { width: 56px; height: 42px; }
   .specs-table th, .specs-table td { padding: 6px 8px; font-size: 12px; }
