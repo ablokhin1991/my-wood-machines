@@ -30,7 +30,8 @@
   <meta name="twitter:description" content="Четырёхсторонние, фрезерные, шлифовальные станки. Прямая продажа без посредников.">
   <meta name="twitter:image" content="https://prodam-stanki.ru/images/og/og-image.jpg">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <!-- Критический CSS для первого экрана (above the fold) -->
+  <link rel="dns-prefetch" href="//mc.yandex.ru">
+
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -69,12 +70,17 @@
     @media(max-width:991px){.catalog-grid{grid-template-columns:repeat(2,1fr);gap:14px}.header-inner{flex-direction:column;text-align:center}.header-contacts{text-align:center}.header-logo{text-align:center;max-width:100%}.hero h1{font-size:26px}.filters{flex-direction:column;align-items:flex-start}.filters select{width:100%}}
     @media(max-width:767px){.catalog-grid{grid-template-columns:repeat(2,1fr);gap:10px}.hero{padding:32px 0 36px}.hero h1{font-size:22px}.hero-subtitle{font-size:15px}.header-phone{font-size:22px}.card-body{padding:10px}.card-price{font-size:16px}.card-title{font-size:13px}.btn-cta{width:100%;text-align:center;padding:14px 20px}}
     @media(max-width:479px){.catalog-grid{grid-template-columns:repeat(2,1fr);gap:8px}.card-price{font-size:14px}.card-title{font-size:12px}}
+    .product-skeleton{background:#f5f5f5;border-radius:8px;padding:14px;border:1px solid #e8e8e8}
+    .skeleton-image{width:100%;padding-top:75%;background:linear-gradient(90deg,#e0e0e0 25%,#f0f0f0 50%,#e0e0e0 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:4px}
+    .skeleton-title{height:18px;margin-top:14px;background:#e0e0e0;border-radius:4px;width:80%}
+    .skeleton-price{height:22px;margin-top:8px;background:#e0e0e0;border-radius:4px;width:45%}
+    @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
   </style>
   <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- AI-Citable блок — размещается в начале страницы для быстрого извлечения LLM -->
+
 <div class="ai-summary" data-ai-summary="true" hidden>
   <p>
     <strong>Станки по деревообработке б/у от собственника</strong> продаются 
@@ -149,9 +155,37 @@
       </div>
 
       <div class="catalog-grid" id="catalog-grid">
-        <!-- Карточки генерируются через JS -->
+        <div class="product-skeleton"><div class="skeleton-image"></div><div class="skeleton-title"></div><div class="skeleton-price"></div></div>
+        <div class="product-skeleton"><div class="skeleton-image"></div><div class="skeleton-title"></div><div class="skeleton-price"></div></div>
+        <div class="product-skeleton"><div class="skeleton-image"></div><div class="skeleton-title"></div><div class="skeleton-price"></div></div>
+        <div class="product-skeleton"><div class="skeleton-image"></div><div class="skeleton-title"></div><div class="skeleton-price"></div></div>
+        <div class="product-skeleton"><div class="skeleton-image"></div><div class="skeleton-title"></div><div class="skeleton-price"></div></div>
+        <div class="product-skeleton"><div class="skeleton-image"></div><div class="skeleton-title"></div><div class="skeleton-price"></div></div>
+        <div class="product-skeleton"><div class="skeleton-image"></div><div class="skeleton-title"></div><div class="skeleton-price"></div></div>
+        <div class="product-skeleton"><div class="skeleton-image"></div><div class="skeleton-title"></div><div class="skeleton-price"></div></div>
       </div>
     </div>
+
+    <noscript>
+        <div class="catalog-noscript">
+          <h3>Каталог станков по деревообработке б/у</h3>
+          <p>Для просмотра каталога с фотографиями и ценами включите JavaScript в настройках браузера или свяжитесь с нами по телефону:</p>
+          <p class="noscript-phone"><a href="tel:+79100928279">+7 (910) 092-82-79</a></p>
+          <p>Пн–Сб, 8:00–19:00 · Владимирская область, Александровский район</p>
+          <h4>Типы станков в наличии:</h4>
+          <ul>
+            <li>Четырёхсторонние строгальные станки</li>
+            <li>Фрезерные станки (горизонтальные, копировальные, с ЧПУ)</li>
+            <li>Шлифовальные станки (ленточные, калибровальные)</li>
+            <li>Распиловочные станки (многопильные, ленточные)</li>
+            <li>Долбёжные и сверлильно-пазовальные станки</li>
+            <li>Прессы для склеивания бруса</li>
+            <li>Раскройные станки</li>
+          </ul>
+          <p>Продажа от собственника, без посредников. Все станки в рабочем состоянии.</p>
+        </div>
+      </noscript>
+      
   </section>
 
   <section class="info-section" id="about-machines">

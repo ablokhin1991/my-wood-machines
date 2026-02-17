@@ -77,7 +77,29 @@ a:hover { text-decoration: underline; }
   color: #888;
   font-size: 16px;
 }
-
+/* === СКЕЛЕТОН ЗАГРУЗКИ === */
+.product-skeleton { background: #f5f5f5; border-radius: 8px; padding: 14px; border: 1px solid #e8e8e8; }
+.skeleton-image { width: 100%; padding-top: 75%; background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 4px; }
+.skeleton-title { height: 18px; margin-top: 14px; background: #e0e0e0; border-radius: 4px; width: 80%; }
+.skeleton-price { height: 22px; margin-top: 8px; background: #e0e0e0; border-radius: 4px; width: 45%; }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+/* === NOSCRIPT FALLBACK === */
+.catalog-noscript {
+  grid-column: 1 / -1;
+  background: #f7f8fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
+}
+.catalog-noscript h3 { font-size: 20px; color: #222; margin-bottom: 12px; }
+.catalog-noscript h4 { font-size: 16px; color: #222; margin: 20px 0 10px; }
+.catalog-noscript p { font-size: 15px; color: #444; line-height: 1.6; margin-bottom: 8px; }
+.catalog-noscript .noscript-phone { margin: 16px 0; }
+.catalog-noscript .noscript-phone a { font-size: 22px; font-weight: 700; color: #1f4b7a; }
+.catalog-noscript ul { list-style: none; display: inline-block; text-align: left; margin-bottom: 16px; }
+.catalog-noscript ul li { position: relative; padding-left: 20px; margin-bottom: 6px; font-size: 14px; color: #333; }
+.catalog-noscript ul li::before { content: "✔"; position: absolute; left: 0; color: #1b5e20; font-weight: 700; }
 /* === КАРТОЧКА СТАНКА === */
 .machine-card {
   background: #fff;
