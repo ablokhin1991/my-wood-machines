@@ -365,6 +365,7 @@ a:hover { text-decoration: underline; }
   .card-price { font-size: 14px; }
   .card-old-price { font-size: 11px; }
   .card-title { font-size: 12px; }
+  /*.card-specs { display: none; }*/
   .card-specs { display: none; }
   .card-price-note { font-size: 10px; }
 }
