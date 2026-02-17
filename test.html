@@ -1,606 +1,198 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index,follow">
   <title>Станки по деревообработке б/у во Владимирской области — продажа от собственника</title>
-  <meta name="description" content="Станки по дереву б/у: купить станок по дереву от собственника. В наличии четырёхсторонний станок, фрезерный станок по дереву и др. Владимирская область, Александровский район.">
+  <meta name="description" content="Купить деревообрабатывающий станок б/у от собственника во Владимирской области, Александровский район. Четырёхсторонние, фрезерные, шлифовальные, распиловочные станки по дереву в наличии. Прямая продажа без посредников.">
   <link rel="canonical" href="/">
-
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Станки по деревообработке б/у — Владимирская область (от собственника)">
-  <meta property="og:description" content="Собственные станки от предприятия: рабочее состояние, без перекупщиков. Каталог, характеристики, фото. Владимирская область, Александровский район.">
-  <meta property="og:url" content="/">
-
-  <!-- Tailwind CSS (required by platform) -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-  <style>
-    :root{
-      --bg:#ffffff;
-      --bg-soft:#f5f7fa;
-      --bg-soft-2:#eef2f6;
-      --text:#222;
-      --muted:#5b6573;
-      --border:#d9e0e8;
-      --accent:#1f4b7a;
-      --accent-2:#1b5e20;
-      --danger:#8a1d1d;
-      --shadow:0 12px 28px rgba(16,24,40,.12);
-      --radius:14px;
-    }
-
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.5;
-    }
-    img{max-width:100%; display:block;}
-    a{color:inherit; text-decoration:none;}
-
-    .container{max-width:1200px; margin:0 auto; padding:0 16px;}
-    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
-
-    /* Header */
-    header{border-bottom:1px solid var(--border); background:#fff;}
-    .header-inner{display:flex; gap:16px; align-items:flex-start; justify-content:space-between; padding:14px 0;}
-    .header-label{font-size:13px; color:var(--muted); max-width:520px;}
-    .header-right{display:flex; flex-wrap:wrap; justify-content:flex-end; gap:10px 18px; text-align:right;}
-    .header-right .phone{font-weight:800; color:var(--accent); letter-spacing:.2px;}
-    .header-right .meta{font-size:13px; color:var(--muted);}
-
-    /* Hero */
-    .hero{background:linear-gradient(180deg, var(--bg-soft), #ffffff);}
-    .hero-inner{padding:28px 0 18px; display:grid; grid-template-columns: 1.2fr .8fr; gap:18px; align-items:start;}
-    .hero h1{margin:0 0 10px; font-size:34px; line-height:1.15; letter-spacing:-.2px;}
-    .hero p{margin:0 0 12px; color:var(--muted); font-size:16px;}
-    .hero ul{margin:0; padding-left:18px; color:var(--text);}
-    .hero li{margin:8px 0;}
-    .hero-cta{display:flex; gap:12px; align-items:center; margin-top:16px; flex-wrap:wrap;}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 16px;
-      border-radius:12px;
-      border:1px solid transparent;
-      background:var(--accent);
-      color:#fff;
-      font-weight:700;
-      cursor:pointer;
-      user-select:none;
-      transition:transform .08s ease, background .15s ease, border-color .15s ease;
-      min-height:44px;
-    }
-    .btn:active{transform:translateY(1px);}
-    .btn:hover{background:#183e66;}
-    .btn-secondary{background:#fff; color:var(--accent); border-color:var(--border);}
-    .btn-secondary:hover{background:var(--bg-soft);}
-    .hero-note{
-      background:var(--bg-soft-2);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:14px 14px;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .hero-note strong{color:var(--text);}
-
-    /* Sections */
-    section{padding:22px 0;}
-    .section-title{margin:0 0 10px; font-size:24px; letter-spacing:-.15px;}
-
-    /* Catalog filters */
-    .filters{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      align-items:center;
-      padding:12px;
-      border:1px solid var(--border);
-      background:var(--bg-soft);
-      border-radius:var(--radius);
-    }
-    .filters .label{font-weight:700; color:var(--text);}
-    .select{
-      min-width:240px;
-      max-width:100%;
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:12px;
-      padding:10px 12px;
-      font-size:14px;
-      color:var(--text);
-      outline:none;
-    }
-    .select:disabled{background:#f3f5f8; color:#8a95a3;}
-
-    /* Catalog grid */
-    .catalog-top{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:10px;}
-    .catalog-meta{font-size:13px; color:var(--muted);}
-
-    .catalog-grid{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:12px;
-      margin-top:12px;
-    }
-    .card{
-      border:1px solid var(--border);
-      border-radius:16px;
-      overflow:hidden;
-      background:#fff;
-      display:flex;
-      flex-direction:column;
-      min-height:100%;
-      box-shadow: 0 2px 10px rgba(16,24,40,.04);
-    }
-    .card-media{position:relative; aspect-ratio: 4/3; background:var(--bg-soft); overflow:hidden;}
-    .card-media img{
-      width:100%; height:100%; object-fit:cover;
-      transition:transform .2s ease;
-    }
-    .card:hover .card-media img{transform:scale(1.02);}
-    .card-body{padding:12px 12px 12px; display:flex; flex-direction:column; gap:10px; flex:1;}
-
-    .price-row{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
-    .price-current{font-size:20px; font-weight:900; color:var(--accent-2);}
-    .price-old{font-size:13px; color:#7a8796; text-decoration:line-through;}
-    .price-disclaimer{font-size:11.5px; color:#6a7786;}
-
-    .card h3{margin:0; font-size:15px; line-height:1.25; letter-spacing:-.1px;}
-    .instock{font-size:13px; color:var(--muted);}
-    .excerpt{margin:0; font-size:13px; color:var(--muted);}
-
-    .specs{display:grid; gap:6px; margin:0;}
-    .specs-row{display:grid; grid-template-columns: 1fr; gap:2px;}
-    .specs dt{font-size:12px; color:#6a7786;}
-    .specs dd{margin:0; font-size:13px; color:var(--text);}
-
-    .card-actions{margin-top:auto; display:flex; gap:10px;}
-    .btn-small{padding:10px 12px; border-radius:12px; min-height:42px; width:100%;}
-
-    .empty{
-      border:1px dashed var(--border);
-      border-radius:var(--radius);
-      padding:16px;
-      background:var(--bg-soft);
-      color:var(--muted);
-      margin-top:12px;
-    }
-
-    /* FAQ */
-    .faq{background:#fff;}
-    .faq-grid{display:grid; grid-template-columns: 1fr; gap:10px;}
-    details{
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:12px;
-      background:var(--bg-soft);
-    }
-    summary{cursor:pointer; font-weight:800; color:var(--text); list-style:none;}
-    summary::-webkit-details-marker{display:none;}
-    .faq-answer{margin-top:10px; color:var(--muted); font-size:14px;}
-
-    /* Footer */
-    footer{border-top:1px solid var(--border); background:var(--bg-soft);}
-    .footer-inner{padding:22px 0;}
-    .footer-cols{display:grid; grid-template-columns: 1.1fr 1fr 1.1fr; gap:16px;}
-    .footer-title{font-weight:900; margin:0 0 8px;}
-    .footer-text{margin:0; color:var(--muted); font-size:14px;}
-    .footer-list{margin:0; padding-left:18px; color:var(--muted); font-size:14px;}
-    .footer-list li{margin:7px 0;}
-    .footer-legal{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;}
-    .footer-legal a{color:var(--accent); text-decoration:underline; text-underline-offset:3px;}
-    .footer-bottom{margin-top:16px; color:var(--muted); font-size:13px;}
-
-    /* Modal base */
-    body.modal-open{overflow:hidden;}
-
-    .modal{
-      position:fixed;
-      inset:0;
-      background:rgba(9, 17, 28, .62);
-      display:none;
-      overflow-y:auto;
-      padding:18px 14px;
-      z-index:50;
-    }
-    .modal.is-open{display:block;}
-
-    .modal-content{
-      max-width:900px;
-      margin:18px auto;
-      background:#fff;
-      border-radius:16px;
-      box-shadow:var(--shadow);
-      border:1px solid rgba(255,255,255,.25);
-    }
-    .modal-header{padding:14px 14px 10px; border-bottom:1px solid var(--border); display:flex; gap:12px; align-items:flex-start; justify-content:space-between;}
-    .modal-title{margin:0; font-size:20px; line-height:1.2; letter-spacing:-.15px;}
-    .modal-close{
-      background:transparent;
-      border:1px solid var(--border);
-      border-radius:12px;
-      width:42px;
-      height:42px;
-      cursor:pointer;
-      color:#314156;
-      font-size:20px;
-      line-height:1;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      flex:0 0 auto;
-    }
-    .modal-close:hover{background:var(--bg-soft);}
-
-    .modal-body{padding:14px;}
-
-    .modal-top{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:10px;
-      margin-bottom:12px;
-    }
-    .modal-price{
-      display:flex;
-      align-items:center;
-      justify-content:flex-start;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:6px 10px;
-      border-radius:999px;
-      background:#e8f5e9;
-      color:var(--accent-2);
-      font-weight:900;
-      font-size:12px;
-      border:1px solid #cfe8d1;
-    }
-
-    /* Gallery */
-    .gallery{border:1px solid var(--border); border-radius:16px; overflow:hidden; background:var(--bg-soft);}
-    .gallery-main{position:relative; background:var(--bg-soft);}
-    .gallery-main img{
-      width:100%;
-      height:auto;
-      max-height:460px;
-      object-fit:contain;
-      background:linear-gradient(180deg, #f8fafc, #eef2f6);
-      cursor:zoom-in;
-      transition:transform .18s ease;
-      transform-origin:center;
-    }
-    .gallery-main img.zoom{transform:scale(1.6); cursor:zoom-out;}
-
-    .gallery-nav-btn{
-      position:absolute;
-      top:50%;
-      transform:translateY(-50%);
-      border:1px solid rgba(255,255,255,.75);
-      background:rgba(15, 23, 42, .35);
-      color:#fff;
-      width:44px;
-      height:44px;
-      border-radius:999px;
-      cursor:pointer;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:18px;
-      user-select:none;
-    }
-    .gallery-nav-btn:hover{background:rgba(15, 23, 42, .48);}
-    .gallery-prev{left:10px;}
-    .gallery-next{right:10px;}
-
-    .thumbs{display:flex; gap:8px; padding:10px; overflow:auto; border-top:1px solid var(--border); background:#fff;}
-    .thumbs button{
-      border:1px solid var(--border);
-      padding:0;
-      border-radius:12px;
-      background:#fff;
-      cursor:pointer;
-      flex:0 0 auto;
-      width:72px;
-      height:54px;
-      overflow:hidden;
-    }
-    .thumbs button[aria-current="true"]{outline:2px solid rgba(31,75,122,.35); border-color:rgba(31,75,122,.45);}
-    .thumbs img{width:100%; height:100%; object-fit:cover;}
-
-    .highlight{
-      margin:12px 0;
-      padding:12px;
-      border-radius:14px;
-      background:#fff8e1;
-      border:1px solid #f3e1a6;
-      color:#5b4d1d;
-      font-weight:700;
-    }
-    .highlight a{color:inherit; text-decoration:underline; text-underline-offset:3px;}
-
-    .desc p{margin:0 0 10px; color:var(--muted);}
-
-    table{width:100%; border-collapse:collapse; border:1px solid var(--border); border-radius:14px; overflow:hidden;}
-    th, td{padding:10px 10px; border-bottom:1px solid var(--border); text-align:left; vertical-align:top; font-size:14px;}
-    th{background:var(--bg-soft); font-weight:900;}
-    tr:last-child td{border-bottom:none;}
-
-    /* Responsive */
-    @media (max-width:1199px){
-      .hero-inner{grid-template-columns: 1fr;}
-      .catalog-grid{grid-template-columns: repeat(3, 1fr);}    
-    }
-    @media (max-width:991px){
-      .header-inner{flex-direction:column;}
-      .header-right{text-align:left; justify-content:flex-start;}
-      .catalog-grid{grid-template-columns: repeat(2, 1fr);} 
-      .footer-cols{grid-template-columns: 1fr;}
-    }
-    @media (max-width:767px){
-      .header-right .phone{font-size:20px;}
-      .hero h1{font-size:26px;}
-      .select{min-width: 100%;}
-      .catalog-grid{grid-template-columns: repeat(2, minmax(0, 1fr)); gap:10px;}
-      .card-body{padding:10px;}
-      .price-current{font-size:18px;}
-      .modal{padding:12px 10px;}
-      .thumbs button{width:64px; height:48px;}
-      .gallery-main img{max-height:360px;}
-    }
-    @media (max-width:360px){
-      .catalog-grid{grid-template-columns: 1fr;}
-    }
-  </style>
+  <meta property="og:title" content="Станки по деревообработке б/у — продажа от собственника, Владимирская область">
+  <meta property="og:description" content="Купить деревообрабатывающий станок б/у от собственника. Четырёхсторонние, фрезерные, шлифовальные станки по дереву в наличии. Без посредников.">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="sr-only" href="#catalog">Перейти к каталогу</a>
 
-  <header>
+  <!-- === HEADER === -->
+  <header class="site-header">
     <div class="container header-inner">
-      <div class="header-label">Станки по деревообработке б/у от собственника</div>
-      <div class="header-right" aria-label="Контакты">
-        <div>
-          <div class="meta">Телефон</div>
-          <a class="phone js-phone-link" href="tel:+79100928279">+7 (910) 092-82-79</a>
-        </div>
-        <div>
-          <div class="meta">Регион</div>
-          <div>Владимирская область, Александровский р-н</div>
-        </div>
-        <div>
-          <div class="meta">Режим работы</div>
-          <div>Пн–Сб, 8:00–19:00</div>
-        </div>
+      <div class="header-logo">Станки по деревообработке б/у от&nbsp;собственника</div>
+      <div class="header-contacts">
+        <a href="tel:+79100928279" class="header-phone js-phone-link">+7 (910) 092-82-79</a>
+        <div class="header-region">Владимирская область, Александровский р-н</div>
+        <div class="header-schedule">Пн–Сб, 8:00–19:00</div>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero" aria-label="Обложка">
-      <div class="container hero-inner">
-        <div>
-          <h1>Станки по деревообработке б/у от собственника во Владимирской области</h1>
-          <p>Собственные станки от предприятия по обработке древесины — в хорошем и рабочем состоянии. Вся техника работала в тёплом отапливаемом цеху, без перекупщиков и лишних наценок.</p>
+  <!-- === HERO === -->
+  <section class="hero">
+    <div class="container">
+      <h1>Станки по деревообработке б/у от собственника во&nbsp;Владимирской области</h1>
+      <p class="hero-subtitle">Собственные станки от предприятия по обработке древесины — в хорошем и рабочем состоянии. Вся техника работала в тёплом отапливаемом цеху, без перекупщиков и лишних наценок.</p>
+      <ul class="hero-advantages">
+        <li>Прямая продажа — без посредников</li>
+        <li>Станки работали всегда в тёплом цеху</li>
+        <li>Гибкие условия — согласуем все вопросы</li>
+        <li>Помощь с погрузкой и отправкой по России</li>
+      </ul>
+      <a href="#catalog" class="btn-cta js-go-to-catalog">Посмотреть станки в наличии</a>
+    </div>
+  </section>
+
+  <!-- === КАТАЛОГ === -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      <h2>Каталог станков по деревообработке б/у</h2>
+
+      <div class="filters">
+        <label>Подбор станка:</label>
+        <select id="filter-type">
+          <option value="">Все типы</option>
+          <option value="Долбежный">Долбежный</option>
+          <option value="Лобзиковый">Лобзиковый</option>
+          <option value="Раскройный">Раскройный</option>
+          <option value="Распиловочный">Распиловочный</option>
+          <option value="Строгальный">Строгальный</option>
+          <option value="Фрезерный">Фрезерный</option>
+          <option value="Пресс">Пресс</option>
+          <option value="Торцовочный">Торцовочный</option>
+          <option value="Шлифовальный">Шлифовальный</option>
+        </select>
+        <select id="filter-kind" disabled>
+          <option value="">Сначала выберите тип</option>
+        </select>
+      </div>
+
+      <div class="catalog-grid" id="catalog-grid">
+        <!-- Карточки генерируются через JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- === FAQ === -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2>Частые вопросы о покупке станков</h2>
+
+      <details class="faq-item">
+        <summary>Как купить станок?</summary>
+        <div class="faq-answer">Позвоните по телефону +7 (910) 092-82-79. Мы расскажем о состоянии станка, ответим на вопросы и согласуем все детали покупки. Формы заказа на сайте нет — вся коммуникация только по телефону, чтобы вы получили живой ответ на все вопросы.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Можно ли приехать посмотреть станок и запустить его?</summary>
+        <div class="faq-answer">Да, вы можете приехать к нам во Владимирскую область (Александровский район) и лично осмотреть любой станок. Мы покажем оборудование, при необходимости запустим его в работе, чтобы вы убедились в исправности. Договоритесь о визите по телефону заранее.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Как организуется доставка по России?</summary>
+        <div class="faq-answer">Доставку обсуждаем индивидуально. Мы помогаем с погрузкой, подбираем подходящий транспорт и согласовываем логистику. Стоимость доставки зависит от габаритов станка и расстояния. Все условия и расходы на транспорт оговариваются по телефону до отправки.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Возможен ли торг и скидки?</summary>
+        <div class="faq-answer">Да, торг уместен. Окончательная цена согласовывается по телефону. Мы готовы обсудить индивидуальные условия, особенно при покупке нескольких единиц оборудования.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Какие гарантии на б/у станки?</summary>
+        <div class="faq-answer">Мы честно продаём б/у оборудование без скрытых дефектов. Все станки работали в тёплом отапливаемом цеху и находятся в хорошем рабочем состоянии. При личном осмотре вы можете убедиться в исправности каждого станка. Мы не скрываем реальное состояние оборудования.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Можно ли забронировать станок на несколько дней?</summary>
+        <div class="faq-answer">Да, мы можем отложить станок на 2–3 дня, пока вы принимаете решение или организуете транспорт. Условия бронирования уточняйте по телефону +7 (910) 092-82-79.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Вы посредники или собственники?</summary>
+        <div class="faq-answer">Мы — собственники. Все станки принадлежат нашему предприятию по обработке древесины. Продажа ведётся напрямую, без перекупщиков и посредников, что позволяет предложить честные цены без лишних наценок.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- === FOOTER === -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Станки по деревообработке б/у от собственника!</h3>
+          <p>Собственные станки от предприятия по обработке древесины — в хорошем и рабочем состоянии!</p>
+        </div>
+        <div class="footer-col">
+          <h3>Преимущества</h3>
           <ul>
             <li>Прямая продажа — без посредников</li>
             <li>Станки работали всегда в тёплом цеху</li>
             <li>Гибкие условия — согласуем все вопросы</li>
-            <li>Помощь с погрузкой и отправкой по России</li>
-          </ul>
-          <div class="hero-cta">
-            <a class="btn js-go-to-catalog" href="#catalog">Посмотреть станки в наличии</a>
-            <a class="btn btn-secondary js-phone-link" href="tel:+79100928279">Позвонить и уточнить</a>
-          </div>
-        </div>
-        <aside class="hero-note">
-          <strong>Кому подходит:</strong> владельцам мастерских и цехов, предпринимателям 30–50 лет, которым важно купить деревообрабатывающий станок б/у без рисков и «сюрпризов».<br><br>
-          <strong>Как работаем:</strong> только по телефону — обсудим наличие, состояние, торг и логистику.
-        </aside>
-      </div>
-    </section>
-
-    <section id="catalog" aria-label="Каталог">
-      <div class="container">
-        <div class="catalog-top">
-          <div>
-            <h2 class="section-title">Каталог станков по деревообработке б/у</h2>
-            <div class="catalog-meta">Подбор по типу и виду. Карточки ведут к подробной информации, фото и характеристикам.</div>
-          </div>
-          <div class="catalog-meta" id="resultsMeta" aria-live="polite"></div>
-        </div>
-
-        <div class="filters" role="group" aria-label="Фильтры каталога">
-          <div class="label">Подбор станка:</div>
-          <label>
-            <span class="sr-only">Тип станка</span>
-            <select class="select" id="typeSelect" aria-label="Тип станка"></select>
-          </label>
-          <label>
-            <span class="sr-only">Вид станка</span>
-            <select class="select" id="kindSelect" aria-label="Вид станка" disabled></select>
-          </label>
-        </div>
-
-        <div id="catalogGrid" class="catalog-grid" aria-label="Список станков"></div>
-        <div id="emptyState" class="empty" style="display:none;">Подходящих станков не найдено. Попробуйте изменить фильтры.</div>
-
-        <noscript>
-          <div class="empty">Для отображения каталога нужен JavaScript. Вы можете уточнить наличие по телефону: <a href="tel:+79100928279">+7 (910) 092-82-79</a>.</div>
-        </noscript>
-      </div>
-    </section>
-
-    <section id="faq" class="faq" aria-label="FAQ">
-      <div class="container">
-        <h2 class="section-title">Частые вопросы о покупке станков</h2>
-        <div class="faq-grid" id="faqList">
-          <details>
-            <summary>Как купить станок и что нужно для сделки?</summary>
-            <div class="faq-answer">Позвоните по телефону +7 (910) 092-82-79, назовите интересующий станок из каталога и уточните наличие. Далее договоримся об осмотре, запуске и варианте оплаты/самовывоза. Форм на сайте нет — все вопросы решаем по звонку.</div>
-          </details>
-          <details>
-            <summary>Можно ли приехать, посмотреть и запустить станок в работе?</summary>
-            <div class="faq-answer">Да. По предварительной договорённости можно приехать, осмотреть станок, проверить комплектацию и при возможности запустить в работе. Мы открыто показываем состояние и отвечаем на вопросы по эксплуатации.</div>
-          </details>
-          <details>
-            <summary>Есть ли доставка по России и кто её оплачивает?</summary>
-            <div class="faq-answer">Отправку по России согласуем индивидуально: подберём перевозчика, поможем с погрузкой и подготовкой к перевозке. Доставка и страхование оплачиваются покупателем, условия фиксируем по телефону.</div>
-          </details>
-          <details>
-            <summary>Возможен торг или скидка при покупке?</summary>
-            <div class="faq-answer">Торг возможен. Размер скидки зависит от конкретного станка, объёма покупки и условий сделки. Уточняйте по телефону — договоримся по ситуации.</div>
-          </details>
-          <details>
-            <summary>Какие гарантии и как убедиться, что станок рабочий?</summary>
-            <div class="faq-answer">Оборудование честно б/у, продаётся от собственника. Мы не скрываем состояние: при осмотре можно проверить узлы, посмотреть наработку и обсудить нюансы. Финальное решение — после проверки на месте.</div>
-          </details>
-          <details>
-            <summary>Можно ли забронировать станок на пару дней?</summary>
-            <div class="faq-answer">Да, краткосрочную бронь обычно можно согласовать, если вы подтверждаете дату приезда/оплаты. Срок и условия бронирования обсуждаем по телефону.</div>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-cols">
-        <div>
-          <p class="footer-title">Станки по деревообработке б/у от собственника!</p>
-          <p class="footer-text">Собственные станки от предприятия по обработке древесины — в хорошем и рабочем состоянии!</p>
-        </div>
-        <div>
-          <p class="footer-title">Преимущества</p>
-          <ul class="footer-list">
-            <li>Прямая продажа — без посредников</li>
-            <li>Станки работали всегда в тёплом цеху</li>
-            <li>Гибкие условия — согласуем все вопросы</li>
           </ul>
         </div>
-        <div>
-          <p class="footer-title">Контакт</p>
-          <p class="footer-text">Продажа от собственника (без посредников!), при необходимости согласуем отправку по России, звоните: <a class="js-phone-link" href="tel:+79100928279" style="color:var(--accent); text-decoration:underline; text-underline-offset:3px;">+7 (910) 092-82-79</a></p>
+        <div class="footer-col">
+          <h3>Контакты</h3>
+          <p>Продажа от собственника (без посредников!), при необходимости согласуем отправку по России.</p>
+          <p>Звоните: <a href="tel:+79100928279" class="footer-phone js-phone-link">+7 (910) 092-82-79</a></p>
+          <p>Пн–Сб, 8:00–19:00</p>
         </div>
       </div>
-
-      <div class="footer-legal" aria-label="Юридические документы">
-        <a href="#" class="js-legal-link" data-modal="privacyModal">Политика конфиденциальности</a>
-        <a href="#" class="js-legal-link" data-modal="offerModal">Отказ от публичной оферты</a>
-        <a href="#" class="js-legal-link" data-modal="termsModal">Условия использования сайта</a>
+      <div class="footer-bottom">
+        <span class="footer-disclaimer">Информация на сайте не является публичной офертой.</span>
+        <div class="footer-links">
+          <a href="#" data-legal="modal-privacy">Политика конфиденциальности</a>
+          <a href="#" data-legal="modal-offer">Отказ от публичной оферты</a>
+          <a href="#" data-legal="modal-terms">Условия использования сайта</a>
+        </div>
       </div>
-
-      <div class="footer-bottom">Информация на сайте не является публичной офертой.</div>
     </div>
   </footer>
 
-  <!-- Machine details modal -->
-  <div class="modal" id="machineModal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-content" role="document">
-      <div class="modal-header">
-        <div>
-          <h2 class="modal-title" id="modalTitle">Подробнее о станке</h2>
-          <div class="modal-price" aria-label="Цена">
-            <span class="price-current" id="modalPrice">—</span>
-            <span class="price-old" id="modalOldPrice"></span>
-            <span class="badge">Торг</span>
-          </div>
-          <div class="instock" id="modalInStock">В наличии: —</div>
-        </div>
-        <button class="modal-close" type="button" id="modalCloseBtn" aria-label="Закрыть">×</button>
-      </div>
-      <div class="modal-body">
-        <div class="gallery" aria-label="Галерея">
-          <div class="gallery-main">
-            <button class="gallery-nav-btn gallery-prev" type="button" id="galleryPrev" aria-label="Предыдущее фото">‹</button>
-            <img id="galleryMainImg" src="" alt="" loading="eager" decoding="async">
-            <button class="gallery-nav-btn gallery-next" type="button" id="galleryNext" aria-label="Следующее фото">›</button>
-          </div>
-          <div class="thumbs" id="thumbs" aria-label="Миниатюры"></div>
-        </div>
-
-        <div class="highlight">Продажа от собственника (без посредников!). При необходимости согласуем отправку по России. Звоните: <a class="js-phone-link" href="tel:+79100928279">+7 (910) 092-82-79</a></div>
-
-        <div class="desc" id="modalDesc" aria-label="Описание"></div>
-
-        <div id="specsBlock" style="display:none;">
-          <h3 style="margin:14px 0 10px; font-size:18px; letter-spacing:-.1px;">Технические характеристики</h3>
-          <table aria-label="Технические характеристики">
-            <thead>
-              <tr>
-                <th style="width:55%;">Параметр</th>
-                <th>Значение</th>
-              </tr>
-            </thead>
-            <tbody id="specsTable"></tbody>
-          </table>
-        </div>
-      </div>
+  <!-- === МОДАЛКА СТАНКА === -->
+  <div class="modal" id="machine-modal">
+    <div class="modal-content">
+      <!-- Содержимое заполняется из JS -->
     </div>
   </div>
 
-  <!-- Legal modals -->
-  <div class="modal" id="privacyModal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-content" role="document">
-      <div class="modal-header">
-        <h2 class="modal-title">Политика конфиденциальности</h2>
-        <button class="modal-close" type="button" data-close-modal aria-label="Закрыть">×</button>
-      </div>
-      <div class="modal-body">
-        <div class="desc">
-          <p><strong>Настоящий текст не является юридической консультацией. При необходимости получите профессиональную юридическую помощь.</strong></p>
-          <p>Этот сайт носит информационный характер и не является интернет‑магазином. На сайте нет личных кабинетов и форм для отправки персональных данных.</p>
-          <p>Мы не запрашиваем и не принимаем персональные данные через формы. Связь по вопросам покупки осуществляется только по телефону.</p>
-          <p>Для анализа посещаемости и улучшения качества сайта может использоваться система веб‑аналитики (например, Яндекс.Метрика). Она может автоматически собирать технические данные: IP‑адрес, cookies, параметры устройства/браузера и действия на сайте. Эти данные используются только для статистики и улучшения содержания страниц.</p>
-          <p>Если вы не согласны с использованием cookies и аналитики, вы можете ограничить их в настройках браузера.</p>
-          <p>Контакты для связи по вопросам содержания сайта: <a class="js-phone-link" href="tel:+79100928279">+7 (910) 092-82-79</a>.</p>
-        </div>
-      </div>
+  <!-- === ЮРИДИЧЕСКИЕ МОДАЛКИ === -->
+
+  <!-- Политика конфиденциальности -->
+  <div class="legal-modal" id="modal-privacy">
+    <div class="legal-modal-content">
+      <button class="modal-close" aria-label="Закрыть">&times;</button>
+      <h2>Политика конфиденциальности</h2>
+      <p class="disclaimer">Настоящий текст не является юридической консультацией. При необходимости получите профессиональную юридическую помощь.</p>
+      <p>Данный сайт представляет собой информационную страницу, предназначенную для ознакомления с ассортиментом б/у деревообрабатывающих станков. Сайт не является интернет-магазином, не содержит форм обратной связи, личных кабинетов и не осуществляет сбор персональных данных пользователей через формы ввода.</p>
+      <p>На сайте может использоваться система веб-аналитики Яндекс.Метрика, которая автоматически собирает обезличенные технические данные: IP-адрес, тип браузера, информацию о посещённых страницах и файлы cookies. Эти данные используются исключительно для анализа посещаемости и улучшения работы сайта.</p>
+      <p>Файлы cookies не содержат персональной информации и не передаются третьим лицам. Продолжая использование сайта, вы соглашаетесь с обработкой указанных данных в описанных целях.</p>
+      <p>Если у вас есть вопросы по данной политике, свяжитесь с нами по телефону, указанному на сайте.</p>
     </div>
   </div>
 
-  <div class="modal" id="offerModal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-content" role="document">
-      <div class="modal-header">
-        <h2 class="modal-title">Отказ от публичной оферты</h2>
-        <button class="modal-close" type="button" data-close-modal aria-label="Закрыть">×</button>
-      </div>
-      <div class="modal-body">
-        <div class="desc">
-          <p><strong>Настоящий текст не является юридической консультацией. При необходимости получите профессиональную юридическую помощь.</strong></p>
-          <p>Все материалы на сайте (описания, фото, цены, скидки и указание наличия) носят справочный характер и не являются публичной офертой в смысле ст. 437 ГК РФ.</p>
-          <p>Фактические условия сделки, итоговая цена, наличие, комплектация, состояние, а также способы оплаты и передачи оборудования согласуются индивидуально и подтверждаются только по телефону: <a class="js-phone-link" href="tel:+79100928279">+7 (910) 092-82-79</a>.</p>
-          <p>Информация на сайте может быть изменена без предварительного уведомления.</p>
-        </div>
-      </div>
+  <!-- Отказ от публичной оферты -->
+  <div class="legal-modal" id="modal-offer">
+    <div class="legal-modal-content">
+      <button class="modal-close" aria-label="Закрыть">&times;</button>
+      <h2>Отказ от публичной оферты</h2>
+      <p class="disclaimer">Настоящий текст не является юридической консультацией. При необходимости получите профессиональную юридическую помощь.</p>
+      <p>Вся информация, размещённая на данном сайте, включая цены, описания, технические характеристики и фотографии станков, носит исключительно информационный и ознакомительный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 Гражданского кодекса Российской Федерации.</p>
+      <p>Актуальные цены, наличие, комплектация и технические характеристики станков могут отличаться от указанных на сайте. Для получения точной и актуальной информации, а также для согласования условий покупки необходимо связаться с продавцом по телефону: +7 (910) 092-82-79.</p>
+      <p>Продавец оставляет за собой право вносить изменения в информацию на сайте без предварительного уведомления.</p>
     </div>
   </div>
 
-  <div class="modal" id="termsModal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-content" role="document">
-      <div class="modal-header">
-        <h2 class="modal-title">Условия использования сайта</h2>
-        <button class="modal-close" type="button" data-close-modal aria-label="Закрыть">×</button>
-      </div>
-      <div class="modal-body">
-        <div class="desc">
-          <p><strong>Настоящий текст не является юридической консультацией. При необходимости получите профессиональную юридическую помощь.</strong></p>
-          <p>Используя этот сайт, вы подтверждаете, что делаете это добровольно и на свой страх и риск. Владелец сайта не несёт ответственности за возможные убытки или ущерб, возникшие в результате использования размещённой информации.</p>
-          <p>Мы стараемся поддерживать актуальность данных, однако не гарантируем их полную точность и актуальность на момент просмотра. Уточняйте детали по телефону перед принятием решений.</p>
-          <p>Запрещается копирование, распространение и использование материалов сайта (тексты, фото, структура) без предварительного согласия владельца.</p>
-          <p>По вопросам использования материалов и уточнения информации: <a class="js-phone-link" href="tel:+79100928279">+7 (910) 092-82-79</a>.</p>
-        </div>
-      </div>
+  <!-- Условия использования сайта -->
+  <div class="legal-modal" id="modal-terms">
+    <div class="legal-modal-content">
+      <button class="modal-close" aria-label="Закрыть">&times;</button>
+      <h2>Условия использования сайта</h2>
+      <p class="disclaimer">Настоящий текст не является юридической консультацией. При необходимости получите профессиональную юридическую помощь.</p>
+      <p>Используя данный сайт, вы подтверждаете своё согласие с настоящими условиями. Если вы не согласны с каким-либо из условий, пожалуйста, прекратите использование сайта.</p>
+      <p>Информация на сайте предоставляется «как есть», без каких-либо гарантий полноты, точности и актуальности. Владелец сайта не несёт ответственности за любые убытки, прямые или косвенные, возникшие в результате использования или невозможности использования информации, размещённой на данном сайте.</p>
+      <p>Все материалы сайта (тексты, фотографии, описания) являются собственностью владельца сайта. Копирование, распространение или иное использование материалов без письменного согласия владельца запрещено.</p>
+      <p>Владелец сайта оставляет за собой право вносить изменения в содержание сайта и настоящие условия без предварительного уведомления пользователей.</p>
     </div>
   </div>
 
@@ -608,1039 +200,7 @@
   <!-- Здесь владелец позже вставит код счётчика Яндекс.Метрики -->
   <!-- /Yandex.Metrika counter -->
 
-  <script>
-    // machines-data.js (embedded)
-    // Подсказка: чтобы добавить новый станок — добавьте новый объект в массив machines.
-    // Важно: заполните id (уникальный), name, type, kind, images (минимум 1 фото), price, oldPrice, description.
-    // Если параметр неизвестен — используйте "-" (как в текущих данных) и он корректно отобразится.
-    const machines = [
-      // Боровичи С25-5А 2002 г.
-      {
-        id: 1,
-        name: "Четырехсторонний станк Боровичи С25-5А",
-        type: "Строгальный",
-        kind: "Четырёхсторонний",
-        manufacturer: "БЗДС",
-        country: "Россия",
-        year: 2002,
-        power: "49,6",
-        dimensions: "4800x2000x1500",
-        weight: 5200,
-        instock: 1,
-        images: [
-          "images/wood-machines/borovichi-s25-5a-2002-1.webp",
-          "images/wood-machines/borovichi-s25-5a-2002-2.webp",
-          "images/wood-machines/borovichi-s25-5a-2002-3.webp",
-          "images/wood-machines/borovichi-s25-5a-2002-4.webp"
-        ],
-        price: 1000000,
-        oldPrice: 1299000,
-        description: "Пятишпиндельный станок тяжелой серии предназначен для производства различных погонажных изделий и профилированного бруса, в том числе естественной влажности. Станок в отличном состоянии и полностью рабочий!",
-        uniqueSpecs: [
-          { label: "Количество шпинделей", value: 5 },
-          { label: "Ширина заготовки, мм", value: "35-260" },
-          { label: "Высота заготовки, мм", value: "12-160" },
-          { label: "Скорость работы, м/мин", value: "2-40" },
-          { label: "Мин. длина заготовки в потоке, мм", value: 250 },
-          { label: "Мин. длина одиночной заготовки, мм", value: 700 },
-          { label: "Диаметр выходных патрубков аспирации, мм", value: 150 },
-          { label: "Производительность требуемой аспирации, м3/ч", value: "5х2000" }
-        ]
-      },
-      // Фрезерный станок ФС
-      {
-        id: 2,
-        name: "Фрезерный станок ФС",
-        type: "Фрезерный",
-        kind: "Горизонтальный",
-        manufacturer: "Главдревстанкопром",
-        country: "СССР",
-        year: 1971,
-        power: 5,
-        dimensions: "1360x1265x1200",
-        weight: 880,
-        instock: 1,
-        images: [
-          "images/wood-machines/frezernyy-stanok-fs-1971-1.webp",
-          "images/wood-machines/frezernyy-stanok-fs-1971-2.webp",
-          "images/wood-machines/frezernyy-stanok-fs-1971-3.webp"
-        ],
-        price: 75000,
-        oldPrice: 105000,
-        description: "Редкая и надёжная машина советского времени, выпущенная в 1971 году заводом Главдревстанкопром (г. Днепропетровск). Он создан специально для деревообработки: фрезеровки профилей, торцов, фигурных элементов и других столярных задач. Модель ФС 1971 объединяет классическую конструкцию с мощным приводом 5 кВт, что делает его отличным решением для мастерской с высоким уровнем нагрузки."
-      },
-      // Фрезерный станок ФСШ-1
-      {
-        id: 3,
-        name: "Фрезерный станок ФСШ-1",
-        type: "Фрезерный",
-        kind: "Горизонтальный",
-        manufacturer: "ДСПО",
-        country: "СССР",
-        year: 1980,
-        power: 5,
-        dimensions: "1270x1110x1000",
-        weight: 810,
-        instock: 1,
-        images: [
-          "images/wood-machines/frezernyy-stanok-fssh-1-1980-1.webp",
-          "images/wood-machines/frezernyy-stanok-fssh-1-1980-2.webp",
-          "images/wood-machines/frezernyy-stanok-fssh-1-1980-3.webp"
-        ],
-        price: 75000,
-        oldPrice: 105000,
-        description: "Надёжный представитель советской инженерной школы, выпущенный в 1980 году Днепропетровским станкостроительным заводом (ДСПО). Эта модель создана для точной и стабильной работы по дереву: идеально подходит для фрезеровки профилей, торцов, фигурных и сложных элементов. Мощный двигатель 5 кВт и частота вращения шпинделя до 9000 об/мин обеспечивают уверенную обработку даже твёрдых пород древесины. При весе 810 кг станок стоит монолитно и исключает вибрации, что повышает точность и чистоту обработки. ФСШ-1 — выбор тех, кто ценит советское качество, долговечность и простоту обслуживания. Он одинаково хорош как для частной мастерской, так и для производственного цеха, где ценится стабильный результат и надёжность, проверенная временем."
-      },
-      // Biesse Rover 49
-      {
-        id: 4,
-        name: "Сверлильно-фрезерный станок Biesse Rover 49",
-        type: "Фрезерный",
-        kind: "с ЧПУ",
-        manufacturer: "Biesse",
-        country: "Италия",
-        year: 1988,
-        power: "22,6",
-        dimensions: "5300x2440x2240",
-        weight: 4600,
-        instock: 1,
-        images: [
-          "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-1.webp",
-          "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-2.webp",
-          "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-3.webp",
-          "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-4.webp",
-          "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-5.webp",
-          "images/wood-machines/sverlilno-frezernyy-stanok-rover-49-6.webp"
-        ],
-        price: 1500000,
-        oldPrice: 1799000,
-        description:
-          "Редкая находка для мебельного производства и любых предприятий, где ценят надёжность, стабильность и долговечность оборудования. Этот станок построен так, что один раз настроив на деталь, можно работать круглосуточно без остановки, что делает его идеальным решением для поточного и массового производства. \n\nСтанок работает по координатам X, Y и Z, может фрезеровать криволинейные профили, пазы, выборки и фигурные элементы с высокой точностью. Оснащён 36 вертикальными шпинделями и 12 горизонтальными, что позволяет одновременно выполнять присадку множества отверстий на панели с четырёх сторон — идеальное решение для серийного производства. Два фрезера со стандартными цангами и два с конусом Морзе CM2 обеспечивают возможность работы с фрезами разного диаметра и формы, включая дисковые фрезы до Ø120 мм. Шпиндели фрезеров работают до 18 000 об/мин с мощностью до 5,59 кВт, а дисковые фрезы обеспечивают быстрый и точный рез любой древесины или композитных материалов. Станок рассчитан на непрерывное производство, один раз настроив на деталь, можно работать круглосуточно без остановки. При желании можно за небольшие деньги обновить главный компьютер, и станок будет работать на современном уровне. Для сравнения: аналогичная модель Biesse Rover 2025 года сегодня продаётся от 20 млн рублей. ROVER 49 даёт практически те же возможности за разумные деньги.",
-        uniqueSpecs: [
-          { label: "Рабочее поле, мм", value: "3200x1304" },
-          { label: "Скорость Ось X, м/мин", value: 34 },
-          { label: "Скорость Ось Y, м/мин", value: 30 },
-          { label: "Скорость Ось Z, м/мин", value: 15 },
-          { label: "Мощность сверлильных головок, кВт", value: 1.34 },
-          { label: "Хвостовик сверла Ø, мм", value: 10 },
-          { label: "Кол-во шпинделей вертикального сверления", value: 36 },
-          { label: "Кол-во шпинделей горизонтального сверления (по 4 сторонам панели)", value: 12 },
-          { label: "Обороты шпинделей сверления, об/мин", value: 4000 },
-          { label: "Направление вращения 2-х фрезеров", value: "передний - правое вращение; задний – левое вращение" },
-          { label: "Скорость и мощность фрезера со цангой", value: "12 000 об/мин (1,49 кВт); 18 000 об/мин (2,24 кВт)" },
-          { label: "Стандартная цанга для фрезеров Ø, мм", value: "9,5 – 12" },
-          { label: "Направление вращения 2-х дисковых фрез", value: "передняя – левое; задняя – правое" },
-          { label: "Обороты дисковых фрез, об/мин", value: 12000 },
-          { label: "Параметры дисковой фрезы", value: "Ø наружный 120 мм — Ø внутренний 35 мм — толщина 3,5–6 мм" },
-          { label: "Мощность двигателей дисковых фрез, кВт", value: "1,86 - 3,73" },
-          { label: "Рабочее давление воздуха, бар", value: 6 },
-          { label: "Патрубок аспирации Ø, мм", value: 200 },
-          { label: "Расход воздуха на аспирацию, м³/ч", value: 2800 },
-          { label: "Производительность вакуумного насоса, м³/ч", value: 35 }
-        ]
-      },
-      // Пресс для склеивания бруса ПВС-3
-      {
-        id: 5,
-        name: "Пресс для склеивания бруса ПВС-3",
-        type: "Пресс",
-        kind: "Вертикальный",
-        manufacturer: "-",
-        country: "Россия",
-        year: "-",
-        power: "-",
-        dimensions: "4100x2400x1600",
-        weight: 2000,
-        instock: 2,
-        images: [
-          "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-1.webp",
-          "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-2.webp",
-          "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-3.webp",
-          "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-4.webp",
-          "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-5.webp",
-          "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-6.webp",
-          "images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-7.webp"
-        ],
-        price: 1000000,
-        oldPrice: 1500000,
-        description: "Цена за 2 пресса! Состояние: хорошее, рабочее! По одному не продается. Пресс вертикальный для склеивания бруса и щита, предназначен для сращивания заготовок на гладкую фугу по толщине с целью получения бруса или по ширине с целью получения щита из массивной древесины. Пресс состоит из 2-х частей (каждая из которых по техническим характеристикам соответствует мод. ПВС-3) и устанавливается на специальных домкратах входящих в состав пресса, с помощью которых производится выставка опорных поверхностей 2-х частей в одной плоскости с требуемой точностью. После этого они могут быть соединены технологическими накладками или сваркой. Работа пресса предусматривается в двух режимах: работа на половине пресса (для изделий до 3000 мм.) и работа всего пресса (для изделий до 6000 мм.). Режим работы выбирается переключателем, расположенном на эл. шкафу.",
-        uniqueSpecs: [
-          { label: "Толщина заготовки, мм", value: "25-50" },
-          { label: "Ширина заготовки, мм", value: "25-150" },
-          { label: "Длина заготовки, мм", value: "800-3000 / 6000" },
-          { label: "Рабочая зона (Мин), мм", value: "700x800" },
-          { label: "Рабочая зона (Макс), мм", value: "1000x3000 / 6000" },
-          { label: "Макс. усилие гидроцилиндра прессования, кГс", value: 7000 },
-          { label: "Наибольшее усилие прижима, кГс", value: 2000 },
-          { label: "Количество гидроцилиндров прессования", value: 6 },
-          { label: "Наибольший ход прессующего элемента, мм", value: 320 },
-          { label: "Наибольший ход прижимной балки, мм", value: 160 },
-          { label: "Удельное давление прессования, кг/см² (Хвойные породы)", value: 12 },
-          { label: "Удельное давление прессования, кг/см² (Твердолиственные породы)", value: 16 },
-          { label: "Количество операторов, обслуживающих пресс", value: "2 чел" }
-        ]
-      },
-      // Копировально-фрезерный станок Griggio G 60
-      {
-        id: 6,
-        name: "Копировально-фрезерный станок Griggio G 60",
-        type: "Фрезерный",
-        kind: "Копировально-фрезерный",
-        manufacturer: "Griggio",
-        country: "Италия",
-        year: "-",
-        power: "2,2",
-        dimensions: "1900x1200x800",
-        weight: 230,
-        instock: 1,
-        images: [
-          "images/wood-machines/kopirovalno-frezernyy-stanok-griggio-g60-1.webp",
-          "images/wood-machines/kopirovalno-frezernyy-stanok-griggio-g60-2.webp",
-          "images/wood-machines/kopirovalno-frezernyy-stanok-griggio-g60-3.webp",
-          "images/wood-machines/kopirovalno-frezernyy-stanok-griggio-g60-4.webp",
-          "images/wood-machines/kopirovalno-frezernyy-stanok-griggio-g60-5.webp"
-        ],
-        price: 185000,
-        oldPrice: 210000,
-        description: "Станок в хорошем и рабочем состоянии! Надёжный итальянский копировально-фрезерный станок, идеально подходящий для мебельных и столярных цехов. Он легко справляется с фрезеровкой прямых и криволинейных форм, пазов и декоративных элементов по шаблону — от дверных полотен до фасадов и рамок. Две скорости шпинделя (9000 и 18 000 об/мин) позволяют точно работать с деревом, МДФ и фанерой, а прочная конструкция и плавная регулировка стола обеспечивают стабильную и чистую обработку. Это универсальная и долговечная «рабочая лошадка» для тех, кто ценит качество и надёжность.",
-        uniqueSpecs: [
-          { label: "Размер рабочего стола, мм", value: "800x600" },
-          { label: "Вертикальный ход стола, мм", value: 150 },
-          { label: "Вертикальный ход шпинделя, мм", value: 80 },
-          { label: "Частота вращения шпинделя, об/мин", value: "9000 и 18000" },
-          { label: "Макс. расстояние от стола до головки (без патрона), мм", value: 195 },
-          { label: "Патрубок аспирации Ø, мм", value: 80 }
-        ]
-      },
-      // Станок для раскроя рулонов
-      {
-        id: 7,
-        name: "Станок для раскроя рулонов",
-        type: "Раскройный",
-        kind: "Раскрой рулона",
-        manufacturer: "Самодельный",
-        country: "Россия",
-        year: "2010",
-        power: "3",
-        dimensions: "-",
-        weight: "-",
-        instock: 1,
-        images: [
-          "images/wood-machines/stanok-dlya-raskroya-rulonov-1.webp",
-          "images/wood-machines/stanok-dlya-raskroya-rulonov-2.webp",
-          "images/wood-machines/stanok-dlya-raskroya-rulonov-3.webp",
-          "images/wood-machines/stanok-dlya-raskroya-rulonov-4.webp"
-        ],
-        price: 135000,
-        oldPrice: 150000,
-        description: "Станок отличного качества и неприхотливый  - изготовили сами, силами слесарной комманды на базе имеющегося станка. Продаем в связи не надобностью! Данный станок использовался для дверного производства, а именно для раскроя рулонов покрытия дверей (пленка / бумага / пластик) - на фото видно.",
-        uniqueSpecs: []
-      },
-      // Многопильный станок ЦДК 5-3
-      {
-        id: 8,
-        name: "Многопильный станок ЦДК 5-3",
-        type: "Распиловочный",
-        kind: "Дисковый многопильный",
-        manufacturer: "ТСЗ",
-        country: "Россия",
-        year: "1993",
-        power: "32,4",
-        dimensions: "1930x1780x1630",
-        weight: 2150,
-        instock: 2,
-        images: [
-          "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-1.webp",
-          "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-2.webp",
-          "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-3.webp",
-          "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-4.webp",
-          "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-5.webp",
-          "images/wood-machines/mnogopilnyy-stanok-cdk-5-3-6.webp"
-        ],
-        price: 300000,
-        oldPrice: 350000,
-        description: "Станок в хорошем состоянии — всю жизнь отработал в тёплом цеху! В наличии 2 шт.! Многопильный ЦДК 5-3, произведённый Тюменским станкостроительным заводом, — это надёжная и мощная машина (32,4 кВт) для продольного раскроя бруса и досок на обрезные пиломатериалы. Благодаря чугунной станине, продуманной конструкции и виброустойчивому пильному узлу, станок работает спокойно и точно даже при высоких оборотах. Подача заготовок осуществляется широкой конвейерной цепью, обеспечивающей стабильное и ровное движение без пробуксовок. Подходит для пилорам и деревообрабатывающих цехов, где требуется стабильная «рабочая лошадка» для поточного распила заготовок толщиной до 120 мм и шириной до 260 мм.",
-        uniqueSpecs: [
-          { label: "Толщина заготовки, мм", value: "16-120" },
-          { label: "Ширина заготовки, мм", value: "10-260" },
-          { label: "Длина заготовки, мм", value: "от 500" },
-          { label: "Диаметр применяемых пил, мм", value: "315-400" },
-          { label: "Скорость подачи, м/мин", value: "5,5; 10,5; 4,5; 18,5" },
-          { label: "Мощность привода пильного вала, кВт", value: 30 }
-        ]
-      },
-      // Боровичи С25-5А 1997 г.
-      {
-        id: 9,
-        name: "Четырехсторонний станк Боровичи С25-5А",
-        type: "Строгальный",
-        kind: "Четырёхсторонний",
-        manufacturer: "БЗДС",
-        country: "Россия",
-        year: 1997,
-        power: "49,6",
-        dimensions: "4800x2000x1500",
-        weight: 5200,
-        instock: 1,
-        images: [
-          "images/wood-machines/borovichi-s25-5a-1997-1.webp",
-          "images/wood-machines/borovichi-s25-5a-1997-2.webp",
-          "images/wood-machines/borovichi-s25-5a-1997-3.webp",
-          "images/wood-machines/borovichi-s25-5a-1997-4.webp"
-        ],
-        price: 700000,
-        oldPrice: 1000000,
-        description: "Пятишпиндельный станок тяжелой серии предназначен для производства различных погонажных изделий и профилированного бруса, в том числе естественной влажности. Станок в отличном состоянии и полностью рабочий!",
-        uniqueSpecs: [
-          { label: "Количество шпинделей", value: 5 },
-          { label: "Ширина заготовки, мм", value: "35-260" },
-          { label: "Высота заготовки, мм", value: "12-160" },
-          { label: "Скорость работы, м/мин", value: "2-40" },
-          { label: "Мин. длина заготовки в потоке, мм", value: 250 },
-          { label: "Мин. длина одиночной заготовки, мм", value: 700 },
-          { label: "Диаметр выходных патрубков аспирации, мм", value: 150 },
-          { label: "Производительность требуемой аспирации, м3/ч", value: "5х2000" }
-        ]
-      },
-      // Боровичи С25-5А 1994 г.
-      {
-        id: 10,
-        name: "Четырехсторонний станк Боровичи С25-4А",
-        type: "Строгальный",
-        kind: "Четырёхсторонний",
-        manufacturer: "БЗДС",
-        country: "Россия",
-        year: 1994,
-        power: "38,6",
-        dimensions: "3150x1570x1315",
-        weight: 4200,
-        instock: 1,
-        images: [
-          "images/wood-machines/borovichi-s25-4a-1994-1.webp",
-          "images/wood-machines/borovichi-s25-4a-1994-2.webp",
-          "images/wood-machines/borovichi-s25-4a-1994-3.webp",
-          "images/wood-machines/borovichi-s25-4a-1994-4.webp"
-        ],
-        price: 500000,
-        oldPrice: 700000,
-        description: "Четырехшпиндельный станок тяжелой серии предназначен для производства различных погонажных изделий и профилированного бруса, в том числе естественной влажности. Станок в отличном состоянии и полностью рабочий!",
-        uniqueSpecs: [
-          { label: "Количество шпинделей", value: 4 },
-          { label: "Ширина заготовки, мм", value: "50-250" },
-          { label: "Высота заготовки, мм", value: "12-230" },
-          { label: "Скорость работы, м/мин", value: "7-35" },
-          { label: "Мин. длина одиночной заготовки, мм", value: 700 },
-          { label: "Диаметр выходных патрубков аспирации, мм", value: 150 },
-          { label: "Производительность требуемой аспирации, м3/ч", value: "5х2000" }
-        ]
-      },
-      // ШЛК-10 Простор
-      {
-        id: 11,
-        name: "Шлифовальный станок ШЛК-10 Простор",
-        type: "Шлифовальный",
-        kind: "Калибровальный",
-        manufacturer: "Простор",
-        country: "Россия",
-        year: 2000,
-        power: "18",
-        dimensions: "1950x1850x1630",
-        weight: 2800,
-        instock: 1,
-        images: [
-          "images/wood-machines/shlifovalnyy-stanok-shlk-10-prostor-1.webp",
-          "images/wood-machines/shlifovalnyy-stanok-shlk-10-prostor-2.webp",
-          "images/wood-machines/shlifovalnyy-stanok-shlk-10-prostor-3.webp",
-          "images/wood-machines/shlifovalnyy-stanok-shlk-10-prostor-4.webp"
-        ],
-        price: 250000,
-        oldPrice: 300000,
-        description: "Станок в хорошем и рабочем состоянии! Станок ШЛК-10 широколенточный с конвейерной подачей заготовки предназначен для калибрования и шлифования плоских параллельных поверхностей щитовых деталей.",
-        uniqueSpecs: [
-          { label: "Толщина заготовки, мм", value: "5-100" },
-          { label: "Ширина заготовки, мм", value: "до 900" },
-          { label: "Длина заготовки, мм", value: "от 360" },
-          { label: "Длина шлифовальной ленты, мм", value: 1900 },
-          { label: "Ширина шлифовальной ленты, мм", value: 1000 },
-          { label: "Скорость шлифовальной ленты, м/сек", value: 25 },
-          { label: "Скорость подачи, м/мин", value: 10 },
-          { label: "Давление пневмосети, минимальное, кг/см2", value: 4 },
-          { label: "Расход потребляемого воздуха, м3/мин", value: "0,15" },
-          { label: "Уровень рабочего стола от пола, мм", value: 900 }
-        ]
-      },
-      // Шлифовальный станок ШлПС-6М
-      {
-        id: 12,
-        name: "Шлифовальный станок ШлПС-6М",
-        type: "Шлифовальный",
-        kind: "Ленточный",
-        manufacturer: "Кодос",
-        country: "Россия",
-        year: 1995,
-        power: "2,2",
-        dimensions: "3500x1500x1500",
-        weight: 450,
-        instock: 2,
-        images: [
-          "images/wood-machines/shlifovalnyy-stanok-shlps-6m-1.webp",
-          "images/wood-machines/shlifovalnyy-stanok-shlps-6m-2.webp",
-          "images/wood-machines/shlifovalnyy-stanok-shlps-6m-3.webp",
-          "images/wood-machines/shlifovalnyy-stanok-shlps-6m-4.webp",
-          "images/wood-machines/shlifovalnyy-stanok-shlps-6m-5.webp",
-          "images/wood-machines/shlifovalnyy-stanok-shlps-6m-6.webp",
-          "images/wood-machines/shlifovalnyy-stanok-shlps-6m-7.webp"
-        ],
-        price: 75000,
-        oldPrice: 130000,
-        description: "Станки в хорошем состоянии — всю жизнь отработали в тёплом цеху! *В наличии 2 шт!* Станок ШлПС-6М предназначен для шлифования плоских поверхностей щитовых деталей из массивной древесины и мебельных щитов, в том числе облицованных шпоном и покрытых полиэфирным лаком узкой шлифовальной лентой на подвижном столе с утюжком.",
-        uniqueSpecs: [
-          { label: "Толщина заготовки, мм", value: "до 300" },
-          { label: "Ширина заготовки, мм", value: "до 1000" },
-          { label: "Длина заготовки, мм", value: "не огранич." },
-          { label: "Размеры шлифовальной ленты, мм", value: "6760х100-160" },
-          { label: "Скорость резания, м/с", value: 20 }
-        ]
-      },
-      // Centauro SP 500
-      {
-        id: 13,
-        name: "Ленточная пила по дереву Centauro SP 500",
-        type: "Распиловочный",
-        kind: "Ленточный",
-        manufacturer: "Centauro",
-        country: "Италия",
-        year: 2004,
-        power: "1,8",
-        dimensions: "1910x905x630",
-        weight: 230,
-        instock: 1,
-        images: [
-          "images/wood-machines/lentochnaya-pila-centauro-sp-500-1.webp",
-          "images/wood-machines/lentochnaya-pila-centauro-sp-500-2.webp",
-          "images/wood-machines/lentochnaya-pila-centauro-sp-500-3.webp",
-          "images/wood-machines/lentochnaya-pila-centauro-sp-500-4.webp",
-          "images/wood-machines/lentochnaya-pila-centauro-sp-500-5.webp",
-          "images/wood-machines/lentochnaya-pila-centauro-sp-500-6.webp",
-          "images/wood-machines/lentochnaya-pila-centauro-sp-500-7.webp"
-        ],
-        price: 349000,
-        oldPrice: 496000,
-        description: "Сocтояние отличное, рaбoтaли на станке не много - только точечные и какие-то разовые операции, требующие ручного распила! Ленточнaя пилa по дереву Сеntaurо SР-500 (Италия) - это профессиональный станок для продольного, поперечного и криволинейного распила древесины. Максимально удобная для работы конструкции. Станок выдает обработку древесины на высоком и качественном уровне.",
-        uniqueSpecs: [
-          { label: "Макс. высота заготовки, мм", value: "300" },
-          { label: "Размеры рабочего стола, мм", value: "500x700" },
-          { label: "Длина пильного полотна, мм", value: "3860-3945" },
-          { label: "Макс. ширина и толщина пильного полотна, мм", value: "30x0,5" },
-          { label: "Диаметр шкивов, мм", value: 500 },
-          { label: "Скорость вращения шкивов, об/мин", value: 930 },
-          { label: "Наклонный чугунный стол, гр (°)", value: "до 45°" },
-          { label: "Патрубок аспирации Ø, мм", value: 100 },
-          { label: "Торможение шкивов", value: "ножной тормоз" }
-        ]
-      },
-      // Yuetong MDK 4120 NC
-      {
-        id: 14,
-        name: "Сверлильно-пазовальный станок Yuetong MDK 4120 NC",
-        type: "Долбежный",
-        kind: "Сверлильно-пазовальный",
-        manufacturer: "Yuetong",
-        country: "Китай",
-        year: 2007,
-        power: "7",
-        dimensions: "2540x2270x1620",
-        weight: 1900,
-        instock: 1,
-        images: [
-          "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-1.webp",
-          "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-2.webp",
-          "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-3.webp",
-          "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-4.webp",
-          "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-5.webp",
-          "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-6.webp"
-        ],
-        price: 1200000,
-        oldPrice: 1490000,
-        description: "Сocтояние отличное, рaбoтaли на станке мало - только разовые операции под заказные двери! Станок предназначен специально для проведения фрезерных операций при изготовлении пазов и отверстий различного назначение (установка фурнитуры дверного полотна/коробки: механизм замка, накладка замка, личинка, ручка, петли).",
-        uniqueSpecs: [
-          { label: "Макс. ширина заготовки, мм", value: 1000 },
-          { label: "Макс. длина заготовки, мм", value: 2200 },
-          { label: "Толщина заготовки, мм", value: "30-60" },
-          { label: "Количество шпинделей, шт.", value: 6 },
-          { label: "Обороты шпинделей, об/мин", value: 12000 }
-        ]
-      }
-    ];
-  </script>
-
-  <script>
-    // script.js (embedded)
-    document.addEventListener('DOMContentLoaded', () => {
-      const typeToKinds = {
-        "Долбежный": ["Сверлильно-пазовальный"],
-        "Строгальный": ["Долбёжный","Комбинированный","Рейсмусовый","Фуговальный","Четырёхсторонний","Шипорезный"],
-        "Фрезерный": ["Горизонтальный","Копировально-фрезерный","Вертикальный", "с ЧПУ"],
-        "Раскройный": ["Раскрой рулона"],
-        "Распиловочный": ["Дисковый многопильный","Ленточный","Циркулярный","Форматно-раскроечный"],
-        "Лобзиковый": ["Ленточный"],
-        "Торцовочный": ["Ручной","Стационарный"],
-        "Шлифовальный": ["Ленточный", "Калибровальный"],
-        "Пресс": ["Веерный", "Вертикальный"]
-      };
-
-      const types = [
-        "Долбежный",
-        "Лобзиковый",
-        "Раскройный",
-        "Распиловочный",
-        "Строгальный",
-        "Фрезерный",
-        "Пресс",
-        "Торцовочный",
-        "Шлифовальный"
-      ];
-
-      const $ = (sel, root = document) => root.querySelector(sel);
-      const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-
-      const normalizeImagePath = (p) => {
-        if (!p || typeof p !== 'string') return '';
-        return p.startsWith('/') ? p : '/' + p;
-      };
-
-      const formatPrice = (n) => {
-        const num = Number(n);
-        if (!Number.isFinite(num)) return '—';
-        return num.toLocaleString('ru-RU') + ' ₽';
-      };
-
-      const safeText = (s) => (s == null ? '' : String(s));
-
-      const trimSpaces = (s) => safeText(s).replace(/\s+/g, ' ').trim();
-
-      const truncateByWord = (text, maxLen = 150) => {
-        const clean = trimSpaces(text);
-        if (clean.length <= maxLen) return clean;
-        const cut = clean.slice(0, maxLen);
-        const lastSpace = cut.lastIndexOf(' ');
-        return (lastSpace > 80 ? cut.slice(0, lastSpace) : cut).replace(/[\s,;:.!?]+$/,'') + '…';
-      };
-
-      const powerToText = (p) => {
-        const v = safeText(p).trim();
-        if (!v || v === '-') return 'не указана';
-        return v.includes('кВт') ? v : (v + ' кВт');
-      };
-
-      const yearToText = (y) => {
-        const v = safeText(y).trim();
-        if (!v || v === '-' ) return 'не указан';
-        return v;
-      };
-
-      const placeholderSvg = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(
-        '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">'
-        + '<rect width="800" height="600" fill="#f5f7fa"/>'
-        + '<rect x="40" y="40" width="720" height="520" rx="18" fill="#eef2f6" stroke="#d9e0e8"/>'
-        + '<text x="400" y="310" text-anchor="middle" font-family="Arial" font-size="28" fill="#5b6573">Фото отсутствует</text>'
-        + '</svg>'
-      );
-
-      // DOM
-      const typeSelect = $('#typeSelect');
-      const kindSelect = $('#kindSelect');
-      const grid = $('#catalogGrid');
-      const emptyState = $('#emptyState');
-      const resultsMeta = $('#resultsMeta');
-
-      // Modal DOM
-      const machineModal = $('#machineModal');
-      const modalCloseBtn = $('#modalCloseBtn');
-      const modalTitle = $('#modalTitle');
-      const modalPrice = $('#modalPrice');
-      const modalOldPrice = $('#modalOldPrice');
-      const modalInStock = $('#modalInStock');
-      const galleryMainImg = $('#galleryMainImg');
-      const thumbs = $('#thumbs');
-      const galleryPrev = $('#galleryPrev');
-      const galleryNext = $('#galleryNext');
-      const modalDesc = $('#modalDesc');
-      const specsBlock = $('#specsBlock');
-      const specsTable = $('#specsTable');
-
-      // State
-      let currentMachine = null;
-      let galleryIndex = 0;
-      let lastFocus = null;
-
-      // SEO JSON-LD
-      const injectJsonLd = (id, obj) => {
-        const head = document.head || document.documentElement;
-        const existing = document.getElementById(id);
-        if (existing) existing.remove();
-        const s = document.createElement('script');
-        s.type = 'application/ld+json';
-        s.id = id;
-        s.textContent = JSON.stringify(obj);
-        head.appendChild(s);
-      };
-
-      const buildFaqSchemaFromDom = () => {
-        const details = $$('#faqList details');
-        const mainEntity = details.map(d => {
-          const q = trimSpaces($('summary', d)?.textContent || '');
-          const a = trimSpaces($('.faq-answer', d)?.textContent || '');
-          return {
-            '@type': 'Question',
-            name: q,
-            acceptedAnswer: { '@type': 'Answer', text: a }
-          };
-        });
-
-        return {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity
-        };
-      };
-
-      const buildProductsSchema = () => {
-        const origin = window.location.origin || '';
-        const path = window.location.pathname || '/';
-
-        return {
-          '@context': 'https://schema.org',
-          '@graph': machines.map(machine => {
-            const normalizedImage = (machine.images && machine.images[0])
-              ? (machine.images[0].startsWith('/') ? machine.images[0] : '/' + machine.images[0])
-              : '';
-            const url = origin + path + '#machine-' + machine.id;
-            const imageUrl = normalizedImage ? (origin + normalizedImage) : undefined;
-
-            return {
-              '@type': 'Product',
-              name: machine.name,
-              description: machine.description,
-              image: imageUrl,
-              category: `${machine.type} / ${machine.kind}`,
-              brand: { '@type': 'Brand', name: machine.manufacturer },
-              offers: {
-                '@type': 'Offer',
-                price: String(machine.price),
-                priceCurrency: 'RUB',
-                availability: 'https://schema.org/InStock',
-                itemCondition: 'https://schema.org/UsedCondition',
-                url,
-                seller: { '@type': 'Person', name: 'Собственник' }
-              }
-            };
-          })
-        };
-      };
-
-      const buildWebPageSchema = () => {
-        const origin = window.location.origin || '';
-        const path = window.location.pathname || '/';
-        return {
-          '@context': 'https://schema.org',
-          '@type': 'WebPage',
-          name: document.title,
-          url: origin + path,
-          inLanguage: 'ru',
-          description: $('meta[name="description"]')?.getAttribute('content') || ''
-        };
-      };
-
-      // Filters
-      const setTypeOptions = () => {
-        typeSelect.innerHTML = '';
-        const optAll = document.createElement('option');
-        optAll.value = 'all';
-        optAll.textContent = 'Все типы';
-        typeSelect.appendChild(optAll);
-        types.forEach(t => {
-          const o = document.createElement('option');
-          o.value = t;
-          o.textContent = t;
-          typeSelect.appendChild(o);
-        });
-      };
-
-      const setKindPlaceholder = () => {
-        kindSelect.innerHTML = '';
-        const o = document.createElement('option');
-        o.value = 'all';
-        o.textContent = 'Сначала выберите тип';
-        kindSelect.appendChild(o);
-      };
-
-      const setKindOptionsForType = (type) => {
-        kindSelect.innerHTML = '';
-        const oAll = document.createElement('option');
-        oAll.value = 'all';
-        oAll.textContent = 'Все виды этого типа';
-        kindSelect.appendChild(oAll);
-
-        (typeToKinds[type] || []).forEach(k => {
-          const o = document.createElement('option');
-          o.value = k;
-          o.textContent = k;
-          kindSelect.appendChild(o);
-        });
-      };
-
-      const getFiltered = () => {
-        const typeVal = typeSelect.value;
-        const kindVal = kindSelect.value;
-
-        return machines.filter(m => {
-          const okType = (typeVal === 'all') ? true : m.type === typeVal;
-          const okKind = (typeVal === 'all') ? true : ((kindVal === 'all') ? true : m.kind === kindVal);
-          return okType && okKind;
-        });
-      };
-
-      // Catalog rendering
-      const createSpecRow = (label, value) => {
-        const row = document.createElement('div');
-        row.className = 'specs-row';
-        const dt = document.createElement('dt');
-        const dd = document.createElement('dd');
-        dt.textContent = label;
-        dd.textContent = value;
-        row.appendChild(dt);
-        row.appendChild(dd);
-        return row;
-      };
-
-      const renderCatalog = (list) => {
-        grid.innerHTML = '';
-        emptyState.style.display = list.length ? 'none' : 'block';
-        resultsMeta.textContent = list.length ? `Показано: ${list.length}` : '';
-
-        const frag = document.createDocumentFragment();
-
-        list.forEach(machine => {
-          const card = document.createElement('article');
-          card.className = 'card';
-          card.id = 'machine-' + machine.id;
-          card.setAttribute('data-id', String(machine.id));
-
-          const imgWrap = document.createElement('div');
-          imgWrap.className = 'card-media';
-
-          const img = document.createElement('img');
-          const img1 = machine.images?.[0] ? normalizeImagePath(machine.images[0]) : '';
-          const img2 = machine.images?.[1] ? normalizeImagePath(machine.images[1]) : '';
-
-          img.src = img1 || placeholderSvg;
-          img.alt = `${machine.name} — фото 1`;
-          img.loading = 'lazy';
-          img.decoding = 'async';
-          img.setAttribute('data-img-1', img1 || '');
-          img.setAttribute('data-img-2', img2 || '');
-          img.addEventListener('error', () => { img.src = placeholderSvg; });
-
-          imgWrap.appendChild(img);
-
-          const body = document.createElement('div');
-          body.className = 'card-body';
-
-          const priceBlock = document.createElement('div');
-          const priceRow = document.createElement('div');
-          priceRow.className = 'price-row';
-          const priceCur = document.createElement('div');
-          priceCur.className = 'price-current';
-          priceCur.textContent = formatPrice(machine.price);
-          const priceOld = document.createElement('div');
-          priceOld.className = 'price-old';
-          priceOld.textContent = formatPrice(machine.oldPrice);
-          priceRow.appendChild(priceCur);
-          priceRow.appendChild(priceOld);
-
-          const disclaimer = document.createElement('div');
-          disclaimer.className = 'price-disclaimer';
-          disclaimer.textContent = 'Цена и наличие уточняйте по телефону. Не является публичной офертой.';
-
-          priceBlock.appendChild(priceRow);
-          priceBlock.appendChild(disclaimer);
-
-          const title = document.createElement('h3');
-          title.textContent = machine.name;
-
-          const instock = document.createElement('div');
-          instock.className = 'instock';
-          instock.textContent = `В наличии: ${machine.instock} шт.`;
-
-          const excerpt = document.createElement('p');
-          excerpt.className = 'excerpt';
-          excerpt.textContent = truncateByWord(machine.description, 160);
-
-          const specs = document.createElement('dl');
-          specs.className = 'specs';
-          specs.appendChild(createSpecRow('Тип станка', safeText(machine.type)));
-          specs.appendChild(createSpecRow('Вид станка', safeText(machine.kind)));
-          specs.appendChild(createSpecRow('Мощность', powerToText(machine.power)));
-          specs.appendChild(createSpecRow('Страна', safeText(machine.country)));
-          specs.appendChild(createSpecRow('Год', yearToText(machine.year)));
-
-          const actions = document.createElement('div');
-          actions.className = 'card-actions';
-          const moreBtn = document.createElement('button');
-          moreBtn.type = 'button';
-          moreBtn.className = 'btn btn-small js-more-btn';
-          moreBtn.textContent = 'Подробнее';
-          moreBtn.setAttribute('data-id', String(machine.id));
-          actions.appendChild(moreBtn);
-
-          body.appendChild(priceBlock);
-          body.appendChild(title);
-          body.appendChild(instock);
-          body.appendChild(excerpt);
-          body.appendChild(specs);
-          body.appendChild(actions);
-
-          card.appendChild(imgWrap);
-          card.appendChild(body);
-
-          frag.appendChild(card);
-        });
-
-        grid.appendChild(frag);
-
-        // Hover swap image (desktop)
-        const canHover = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-        if (canHover) {
-          $$('.card-media img', grid).forEach(img => {
-            const i1 = img.getAttribute('data-img-1');
-            const i2 = img.getAttribute('data-img-2');
-            if (!i2) return;
-
-            const onEnter = () => { img.src = i2; img.alt = img.alt.replace(/фото\s\d+$/, 'фото 2'); };
-            const onLeave = () => { img.src = i1 || placeholderSvg; img.alt = img.alt.replace(/фото\s\d+$/, 'фото 1'); };
-
-            img.addEventListener('mouseenter', onEnter);
-            img.addEventListener('mouseleave', onLeave);
-          });
-        }
-      };
-
-      const updateCatalog = () => {
-        renderCatalog(getFiltered());
-      };
-
-      // Modal helpers
-      const openModal = (modalEl) => {
-        lastFocus = document.activeElement;
-        document.body.classList.add('modal-open');
-        modalEl.classList.add('is-open');
-        modalEl.setAttribute('aria-hidden', 'false');
-        // focus close
-        const close = $('[data-close-modal], #modalCloseBtn', modalEl) || $('.modal-close', modalEl);
-        if (close) close.focus();
-      };
-
-      const closeModal = (modalEl) => {
-        modalEl.classList.remove('is-open');
-        modalEl.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('modal-open');
-        // reset zoom state for machine modal
-        if (modalEl === machineModal) galleryMainImg.classList.remove('zoom');
-        if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
-        lastFocus = null;
-      };
-
-      const closeAnyOpenModal = () => {
-        $$('.modal.is-open').forEach(m => closeModal(m));
-      };
-
-      const renderDescription = (text) => {
-        const clean = safeText(text);
-        const parts = clean.split(/\n\n+/g).map(p => trimSpaces(p)).filter(Boolean);
-        modalDesc.innerHTML = '';
-        const frag = document.createDocumentFragment();
-        if (!parts.length) {
-          const p = document.createElement('p');
-          p.textContent = clean;
-          frag.appendChild(p);
-        } else {
-          parts.forEach(pText => {
-            const p = document.createElement('p');
-            p.textContent = pText;
-            frag.appendChild(p);
-          });
-        }
-        modalDesc.appendChild(frag);
-      };
-
-      const setGalleryIndex = (idx) => {
-        if (!currentMachine) return;
-        const imgs = currentMachine.images || [];
-        if (!imgs.length) return;
-        const max = imgs.length;
-        const next = ((idx % max) + max) % max;
-        galleryIndex = next;
-
-        const src = normalizeImagePath(imgs[galleryIndex]);
-        galleryMainImg.src = src || placeholderSvg;
-        galleryMainImg.alt = `${currentMachine.name} — фото ${galleryIndex + 1}`;
-        if (!src) galleryMainImg.src = placeholderSvg;
-
-        $$('#thumbs button').forEach((b, i) => b.setAttribute('aria-current', i === galleryIndex ? 'true' : 'false'));
-      };
-
-      const openMachineModal = (machineId) => {
-        const m = machines.find(x => String(x.id) === String(machineId));
-        if (!m) return;
-        currentMachine = m;
-        galleryIndex = 0;
-
-        modalTitle.textContent = m.name;
-        modalPrice.textContent = formatPrice(m.price);
-        modalOldPrice.textContent = formatPrice(m.oldPrice);
-        modalInStock.textContent = `В наличии: ${m.instock} шт.`;
-
-        // Gallery thumbs
-        thumbs.innerHTML = '';
-        const imgs = Array.isArray(m.images) ? m.images : [];
-        if (!imgs.length) {
-          galleryMainImg.src = placeholderSvg;
-          galleryMainImg.alt = `${m.name} — фото 1`;
-          galleryPrev.style.display = 'none';
-          galleryNext.style.display = 'none';
-        } else {
-          galleryPrev.style.display = imgs.length > 1 ? '' : 'none';
-          galleryNext.style.display = imgs.length > 1 ? '' : 'none';
-
-          const frag = document.createDocumentFragment();
-          imgs.forEach((p, i) => {
-            const btn = document.createElement('button');
-            btn.type = 'button';
-            btn.setAttribute('aria-label', `Открыть фото ${i + 1}`);
-            btn.setAttribute('aria-current', i === 0 ? 'true' : 'false');
-
-            const im = document.createElement('img');
-            const src = normalizeImagePath(p);
-            im.src = src || placeholderSvg;
-            im.alt = `${m.name} — фото ${i + 1}`;
-            im.loading = 'lazy';
-            im.decoding = 'async';
-            im.addEventListener('error', () => { im.src = placeholderSvg; });
-
-            btn.appendChild(im);
-            btn.addEventListener('click', () => setGalleryIndex(i));
-            frag.appendChild(btn);
-          });
-          thumbs.appendChild(frag);
-          setGalleryIndex(0);
-        }
-
-        galleryMainImg.addEventListener('error', () => { galleryMainImg.src = placeholderSvg; });
-
-        renderDescription(m.description);
-
-        // Specs table
-        const specs = Array.isArray(m.uniqueSpecs) ? m.uniqueSpecs : [];
-        if (specs.length) {
-          specsTable.innerHTML = '';
-          const frag = document.createDocumentFragment();
-          specs.forEach(s => {
-            const tr = document.createElement('tr');
-            const td1 = document.createElement('td');
-            const td2 = document.createElement('td');
-            td1.textContent = safeText(s.label);
-            td2.textContent = safeText(s.value);
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            frag.appendChild(tr);
-          });
-          specsTable.appendChild(frag);
-          specsBlock.style.display = '';
-        } else {
-          specsBlock.style.display = 'none';
-          specsTable.innerHTML = '';
-        }
-
-        openModal(machineModal);
-
-        // Optional: удобно для целей Метрики
-        // - кнопка перехода в каталог: .js-go-to-catalog
-        // - клики по телефону: .js-phone-link
-        // - открытие карточки: .js-more-btn
-      };
-
-      // Bind events
-      setTypeOptions();
-      setKindPlaceholder();
-
-      typeSelect.addEventListener('change', () => {
-        if (typeSelect.value === 'all') {
-          kindSelect.disabled = true;
-          setKindPlaceholder();
-        } else {
-          kindSelect.disabled = false;
-          setKindOptionsForType(typeSelect.value);
-        }
-        updateCatalog();
-      });
-
-      kindSelect.addEventListener('change', () => updateCatalog());
-
-      grid.addEventListener('click', (e) => {
-        const btn = e.target.closest('.js-more-btn');
-        if (!btn) return;
-        e.preventDefault();
-        openMachineModal(btn.getAttribute('data-id'));
-      });
-
-      modalCloseBtn.addEventListener('click', () => closeModal(machineModal));
-      machineModal.addEventListener('click', (e) => {
-        if (e.target === machineModal) closeModal(machineModal);
-      });
-
-      galleryPrev.addEventListener('click', () => setGalleryIndex(galleryIndex - 1));
-      galleryNext.addEventListener('click', () => setGalleryIndex(galleryIndex + 1));
-      galleryMainImg.addEventListener('click', () => galleryMainImg.classList.toggle('zoom'));
-
-      // Legal modals
-      $$('.js-legal-link').forEach(a => {
-        a.addEventListener('click', (e) => {
-          e.preventDefault();
-          const id = a.getAttribute('data-modal');
-          const modal = document.getElementById(id);
-          if (modal) openModal(modal);
-        });
-      });
-
-      $$('[data-close-modal]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const modal = btn.closest('.modal');
-          if (modal) closeModal(modal);
-        });
-      });
-
-      $$('.modal').forEach(m => {
-        if (m === machineModal) return;
-        m.addEventListener('click', (e) => {
-          if (e.target === m) closeModal(m);
-        });
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          closeAnyOpenModal();
-        }
-      });
-
-      // Initial render
-      updateCatalog();
-
-      // Inject JSON-LD (FAQ + products + webpage)
-      injectJsonLd('jsonld-faq', buildFaqSchemaFromDom());
-      injectJsonLd('jsonld-products', buildProductsSchema());
-      injectJsonLd('jsonld-webpage', buildWebPageSchema());
-    });
-  </script>
+  <script src="machines-data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
