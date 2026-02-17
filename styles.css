@@ -290,7 +290,7 @@ a:hover { text-decoration: underline; }
 .modal-description p { margin-bottom: 10px; }
 
 /* Таблица характеристик */
-.specs-table { width: 100%; border-collapse: collapse; margin-top: 8px; max-width: 97%; }
+.specs-table { width: 100%; border-collapse: collapse; margin-top: 8px; max-width: 93%; }
 .specs-table th, .specs-table td { text-align: left; padding: 8px 12px; font-size: 14px; border-bottom: 1px solid #e8e8e8; }
 .specs-table th { color: #555; font-weight: 400; width: 50%; background: #fafafa; }
 .specs-table td { color: #222; font-weight: 600; }
