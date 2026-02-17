@@ -112,8 +112,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Навешиваем обработчики на кнопки «Подробнее»
     // Тут же можно вешать цели Яндекс.Метрики: ym(XXXXXX, 'reachGoal', 'click_more_btn');
-    catalogGrid.querySelectorAll(".js-more-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
+    catalogGrid.querySelectorAll(".machine-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const btn = card.querySelector(".js-more-btn");
+        if (!btn) return;
         const id = parseInt(btn.getAttribute("data-id"), 10);
         const machine = machines.find(m => m.id === id);
         if (machine) openModal(machine);
