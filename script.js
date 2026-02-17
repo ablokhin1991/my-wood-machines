@@ -55,26 +55,26 @@ document.addEventListener("DOMContentLoaded", () => {
       hoverImgHtml = `<img class="card-img-hover" src="${img2}" alt="${machine.name} — фото 2" loading="lazy">`;
     }
 
-    card.innerHTML = `
+        card.innerHTML = `
       <div class="card-image-wrap">
-        <img class="card-img-main" src="${img1}" alt="${machine.name} — фото 1" loading="lazy" itemprop="image">
+        <img class="card-img-main" src="${img1}" alt="${machine.name} — фото 1" loading="lazy" decoding="async" itemprop="image">
         ${hoverImgHtml}
       </div>
       <div class="card-body">
-        <div class="card-price-row">
-          <span class="card-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <meta itemprop="price" content="${machine.price}">
-            <meta itemprop="priceCurrency" content="RUB">
-            ${formatPrice(machine.price)}
-          </span>
+        <div class="card-price-row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="RUB">
+          <meta itemprop="price" content="${machine.price}">
+          <link itemprop="availability" href="https://schema.org/InStock">
+          <meta itemprop="itemCondition" content="https://schema.org/UsedCondition">
+          <span class="card-price">${formatPrice(machine.price)}</span>
           <span class="card-old-price">${formatPrice(machine.oldPrice)}</span>
         </div>
-        <!--<div class="card-price-note">Цена и наличие уточняйте по телефону. Не является публичной офертой.</div>-->
+        <div class="card-price-note">Цена и наличие уточняйте по телефону. Не является публичной офертой.</div>
         <h3 class="card-title" itemprop="name">${machine.name}</h3>
         <div class="card-instock">В наличии: ${machine.instock} шт.</div>
         <p class="card-desc" itemprop="description">${shortDesc}</p>
         <ul class="card-specs">
-          <li><strong>Тип:</strong> ${machine.type}</li>
+          <li><strong>Тип:</strong> <span itemprop="category">${machine.type}</span></li>
           <li><strong>Вид:</strong> ${machine.kind}</li>
           <li><strong>Мощность:</strong> ${powerText}</li>
           <li><strong>Страна:</strong> ${machine.country}</li>
