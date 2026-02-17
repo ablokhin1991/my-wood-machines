@@ -179,14 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modalContent.innerHTML = `
       <button class="modal-close" aria-label="Закрыть">&times;</button>
-      <h2 class="modal-title">${machine.name}</h2>
-      <div class="modal-price-row">
-        <span class="modal-price">${formatPrice(machine.price)}</span>
-        <span class="modal-old-price">${formatPrice(machine.oldPrice)}</span>
-        <span class="badge-torg">Торг</span>
-      </div>
-      <div class="modal-instock">В наличии: ${machine.instock} шт.</div>
-
       <div class="gallery">
         <div class="gallery-main-wrap">
           <button class="gallery-arrow left" aria-label="Назад">&#10094;</button>
@@ -195,6 +187,16 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="gallery-thumbs">${thumbsHtml}</div>
       </div>
+      
+      <h2 class="modal-title">${machine.name}</h2>
+      <div class="modal-price-row">
+        <span class="modal-price">${formatPrice(machine.price)}</span>
+        <span class="modal-old-price">${formatPrice(machine.oldPrice)}</span>
+        <span class="badge-torg">Торг</span>
+      </div>
+      <div class="modal-instock">В наличии: ${machine.instock} шт.</div>
+
+      
 
       <div class="modal-highlight">
         Продажа от собственника (без посредников!). При необходимости согласуем отправку по России. Звоните: <a href="tel:+79100928279" class="js-phone-link">+7 (910) 092-82-79</a>
