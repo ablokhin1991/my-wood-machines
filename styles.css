@@ -205,8 +205,8 @@ a:hover { text-decoration: underline; }
 }
 .modal-close:hover { color: #222; background: rgba(240,240,240,.95); }
 
-.modal-title { font-size: 24px; color: #222; margin-bottom: 8px; padding-right: 40px; }
-.modal-price-row { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; width: 97%; }
+.modal-title { font-size: 24px; color: #222; margin-bottom: 8px; padding-right: 56px; }
+.modal-price-row { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; margin-right: 56px; }
 .modal-price { font-size: 24px; font-weight: 700; color: #1b5e20; }
 .modal-old-price { font-size: 16px; color: #999; text-decoration: line-through; }
 .badge-torg {
@@ -224,7 +224,7 @@ a:hover { text-decoration: underline; }
 .gallery { margin-bottom: 20px; }
 .gallery-main-wrap {
   position: relative;
-  width: 97%;
+  margin-right: 56px;
   max-height: 450px;
   overflow: hidden;
   background: #f0f0f0;
@@ -259,7 +259,7 @@ a:hover { text-decoration: underline; }
 .gallery-arrow.left { left: 8px; }
 .gallery-arrow.right { right: 8px; }
 
-.gallery-thumbs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; width: 97%; }
+.gallery-thumbs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; margin-right: 56px; }
 .gallery-thumbs img {
   width: 72px; height: 54px;
   object-fit: cover;
@@ -282,11 +282,11 @@ a:hover { text-decoration: underline; }
   font-size: 14px;
   color: #2e7d32;
   line-height: 1.5;
-  width: 97%;
+  margin-right: 56px;
 }
 .modal-highlight a { color: #1b5e20; font-weight: 700; }
 
-.modal-description { margin-bottom: 20px; font-size: 15px; color: #333; line-height: 1.6; width: 97%; }
+.modal-description { margin-bottom: 20px; font-size: 15px; color: #333; line-height: 1.6; margin-right: 56px; }
 .modal-description p { margin-bottom: 10px; }
 
 /* Таблица характеристик */
@@ -294,7 +294,7 @@ a:hover { text-decoration: underline; }
 .specs-table th, .specs-table td { text-align: left; padding: 8px 12px; font-size: 14px; border-bottom: 1px solid #e8e8e8; }
 .specs-table th { color: #555; font-weight: 400; width: 50%; background: #fafafa; }
 .specs-table td { color: #222; font-weight: 600; }
-.specs-heading { font-size: 18px; color: #222; margin-bottom: 8px; margin-top: 12px; }
+.specs-heading { font-size: 18px; color: #222; margin-bottom: 8px; margin-top: 12px; margin-right: 56px; }
 
 /* === ИНФОРМАЦИОННЫЙ БЛОК === */
 .info-section { padding: 48px 0 56px; }
