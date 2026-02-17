@@ -268,6 +268,53 @@ a:hover { text-decoration: underline; }
 .specs-table td { color: #222; font-weight: 600; }
 .specs-heading { font-size: 18px; color: #222; margin-bottom: 8px; margin-top: 12px; }
 
+/* === ИНФОРМАЦИОННЫЙ БЛОК === */
+.info-section { padding: 0 0 8px; }
+.info-block { border: 1px solid #e0e0e0; border-radius: 8px; background: #f7f8fa; }
+.info-block summary {
+  padding: 18px 40px 18px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f4b7a;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+.info-block summary::-webkit-details-marker { display: none; }
+.info-block summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #999;
+}
+.info-block[open] summary::after { content: "−"; }
+.info-block[open] summary { border-bottom: 1px solid #e0e0e0; }
+.info-content { padding: 20px; }
+.info-content p { font-size: 15px; color: #333; line-height: 1.6; margin-bottom: 14px; }
+.info-content p:last-child { margin-bottom: 0; }
+.info-content h3 { font-size: 16px; color: #222; margin-bottom: 10px; margin-top: 4px; }
+.info-content ul { list-style: none; margin-bottom: 16px; padding: 0; }
+.info-content ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+.info-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #1f4b7a;
+  font-weight: 700;
+  font-size: 16px;
+}
+.info-content ul li strong { color: #222; }
+
 /* === FAQ === */
 .faq-section { padding: 48px 0 56px; background: #f7f8fa; }
 .faq-section h2 { font-size: 26px; color: #222; margin-bottom: 24px; }
@@ -360,6 +407,12 @@ a:hover { text-decoration: underline; }
   .catalog-section h2 { font-size: 20px; }
   .faq-section h2 { font-size: 20px; }
   .btn-cta { width: 100%; text-align: center; padding: 14px 20px; }
+  .info-block summary { font-size: 14px; padding: 14px 36px 14px 14px; }
+  .info-block summary::after { right: 14px; }
+  .info-content { padding: 14px; }
+  .info-content p { font-size: 14px; }
+  .info-content h3 { font-size: 15px; }
+  .info-content ul li { font-size: 13px; }
 }
 @media (max-width: 479px) {
   .catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
@@ -370,4 +423,8 @@ a:hover { text-decoration: underline; }
   .card-desc { display: none; }
   .card-price-note { font-size: 10px; }
   .catalog-section h2 { max-width: 300px; }
+  .info-block summary { font-size: 13px; padding: 12px 32px 12px 12px; }
+  .info-content { padding: 12px; }
+  .info-content p { font-size: 13px; }
+  .info-content ul li { font-size: 12px; }
 }
