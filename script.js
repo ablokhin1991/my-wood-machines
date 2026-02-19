@@ -208,11 +208,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Миниатюры
-        const thumbsHtml = allMedia.map((media, i) => {
+           const thumbsHtml = allMedia.map((media, i) => {
       if (media.type === "video") {
-        return `<div class="gallery-thumb-video${i === 0 ? " active" : ""}" data-index="${i}"><img src="${currentMachineImages[0] || ""}" alt="${machine.name} — видео" loading="lazy"><span class="thumb-play">▶</span></div>`;
+        return `<div class="gallery-thumb-video${i === 0 ? " active" : ""}" data-index="${i}"><img src="${currentMachineImages[0] || ""}" alt="${machine.name} — видео" loading="lazy" onerror="this.style.display='none'"><span class="thumb-play">▶</span></div>`;
       }
-      return `<img src="${media.src}" alt="${machine.name} — фото ${i + 1}" class="${i === 0 ? "active" : ""}" data-index="${i}" loading="lazy">`;
+      return `<img src="${media.src}" alt="${machine.name} — фото ${i + 1}" class="${i === 0 ? "active" : ""}" data-index="${i}" loading="lazy" onerror="this.classList.add('thumb-broken')">`;
     }).join("");
 
     modalContent.innerHTML = `
