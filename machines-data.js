@@ -741,7 +741,7 @@ const machines = [
   // Alfamacchine T350
   {
     id: 19,
-    name: "Станок для резки багета двухдисковый Alfamacchine T350",
+    name: "Станок для резки багета Alfamacchine T350",
     type: "Торцовочный",
     kind: "Стационарный",
     manufacturer: "Alfamacchine",
