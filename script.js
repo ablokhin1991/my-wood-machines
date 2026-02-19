@@ -297,7 +297,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("modal-open");
   };
 
-  const closeModal = () => {
+    const closeModal = () => {
+    const video = document.getElementById("gallery-main-video");
+    if (video) {
+      video.pause();
+      video.removeAttribute("src");
+      video.load();
+    }
     modal.classList.remove("active");
     document.body.classList.remove("modal-open");
   };
