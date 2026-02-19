@@ -662,7 +662,7 @@ const machines = [
       { label: "Год", value: "не указан" }
     ]
   },
-  // Бакаут СФ 003
+  // Бакаут СФ 003 (второй)
   {
     id: 17,
     name: "Двухшпиндельный фрезерный станок Бакаут СФ 003",
@@ -676,10 +676,10 @@ const machines = [
     weight: 440,
     instock: 1,
     images: [
-      "images/wood-machines/frezernyy-stanok-bakaut-sf-003.webp",
-      "images/wood-machines/frezernyy-stanok-bakaut-sf-003-2.webp",
-      "images/wood-machines/frezernyy-stanok-bakaut-sf-003-3.webp",
-      "images/wood-machines/frezernyy-stanok-bakaut-sf-003-4.webp"
+      "images/wood-machines/frezernyy-stanok-bakaut-sf-003(2).webp",
+      "images/wood-machines/frezernyy-stanok-bakaut-sf-003(2)-2.webp",
+      "images/wood-machines/frezernyy-stanok-bakaut-sf-003(2)-3.webp",
+      "images/wood-machines/frezernyy-stanok-bakaut-sf-003(2)-4.webp"
     ],
     price: 200000,
     oldPrice: 250000,
