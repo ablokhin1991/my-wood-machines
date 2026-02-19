@@ -576,7 +576,7 @@ const machines = [
   },
   // Biesse Artech Lato 23s
   {
-    id: 14,
+    id: 15,
     name: "Кромкооблицовочный станок Artech Lato 23s Biesse",
     type: "Кромкооблицовочный",
     kind: "Односторонний",
