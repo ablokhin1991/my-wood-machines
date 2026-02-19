@@ -251,20 +251,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainVideo = document.getElementById("gallery-main-video");
     const thumbElements = modalContent.querySelectorAll(".gallery-thumbs img, .gallery-thumbs .gallery-thumb-video");
 
-    const updateGallery = (index) => {
+        const updateGallery = (index) => {
       currentGalleryIndex = index;
       const media = allMedia[index];
+      const placeholder = document.getElementById("gallery-placeholder");
 
       if (media && media.type === "video") {
         mainImg.style.display = "none";
         mainImg.classList.remove("zoomed");
+        if (placeholder) placeholder.style.display = "none";
         mainVideo.src = media.src;
         mainVideo.style.display = "block";
       } else {
         mainVideo.style.display = "none";
         mainVideo.pause();
         mainVideo.removeAttribute("src");
-        const placeholder = document.getElementById("gallery-placeholder");
         if (placeholder) placeholder.style.display = "none";
         mainImg.src = media ? media.src : "";
         mainImg.alt = machine.name + " — фото " + (index + 1);
