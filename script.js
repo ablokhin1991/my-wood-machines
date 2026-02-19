@@ -220,7 +220,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="gallery">
         <div class="gallery-main-wrap">
           <button class="gallery-arrow left" aria-label="Назад">&#10094;</button>
-          <img id="gallery-main-img" src="${currentMachineImages[0] || ""}" alt="${machine.name} — фото 1">
+          <img id="gallery-main-img" src="${currentMachineImages[0] || ""}" alt="${machine.name} — фото 1" onerror="this.style.display='none';document.getElementById('gallery-placeholder').style.display='flex'">
+          <div id="gallery-placeholder" style="display:none;width:100%;height:300px;background:#e8e8e8;border-radius:6px;align-items:center;justify-content:center;color:#888;font-size:16px;">Фото скоро появится</div>
           <video id="gallery-main-video" controls playsinline style="display:none;max-height:450px;width:100%;border-radius:6px;"></video>
           <button class="gallery-arrow right" aria-label="Вперёд">&#10095;</button>
         </div>
