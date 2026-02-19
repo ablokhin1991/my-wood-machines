@@ -752,9 +752,8 @@ const machines = [
     weight: "380",
     instock: 1,
     images: [
-      "images/wood-machines/veernaya-vayma-sroj--les-cerknica-slr-66.webp",
-      "images/wood-machines/veernaya-vayma-sroj--les-cerknica-slr-66-2.webp",
-      "images/wood-machines/veernaya-vayma-sroj--les-cerknica-slr-66-3.webp"
+      "images/wood-machines/Alfamacchine-T350.webp",
+      "images/wood-machines/Alfamacchine-T350-2.webp"
     ],
     price: 400000,
     oldPrice: 450000,
