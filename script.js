@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="gallery">
         <div class="gallery-main-wrap">
           <button class="gallery-arrow left" aria-label="Назад">&#10094;</button>
-          <img id="gallery-main-img" src="${currentMachineImages[0] || ""}" alt="${machine.name} — фото 1" onerror="this.style.display='none';document.getElementById('gallery-placeholder').style.display='flex'">
+          <img id="gallery-main-img" src="${currentMachineImages[0] || ""}" alt="${machine.name} — фото 1">
           <div id="gallery-placeholder" style="display:none;width:100%;height:300px;background:#e8e8e8;border-radius:6px;align-items:center;justify-content:center;color:#888;font-size:16px;">Фото скоро появится</div>
           <video id="gallery-main-video" controls playsinline style="display:none;max-height:450px;width:100%;border-radius:6px;"></video>
           <button class="gallery-arrow right" aria-label="Вперёд">&#10095;</button>
@@ -256,6 +256,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const media = allMedia[index];
       const placeholder = document.getElementById("gallery-placeholder");
 
+      // Сбрасываем обработчик ошибки
+      mainImg.onerror = null;
+
       if (media && media.type === "video") {
         mainImg.style.display = "none";
         mainImg.classList.remove("zoomed");
@@ -267,6 +270,13 @@ document.addEventListener("DOMContentLoaded", () => {
         mainVideo.pause();
         mainVideo.removeAttribute("src");
         if (placeholder) placeholder.style.display = "none";
+
+        // Назначаем onerror только для фото
+        mainImg.onerror = () => {
+          mainImg.style.display = "none";
+          if (placeholder) placeholder.style.display = "flex";
+        };
+
         mainImg.src = media ? media.src : "";
         mainImg.alt = machine.name + " — фото " + (index + 1);
         mainImg.style.display = "block";
@@ -274,6 +284,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       thumbElements.forEach((t, i) => t.classList.toggle("active", i === index));
+    };
+
+    // Инициализация: обработка ошибки для первого фото
+    mainImg.onerror = () => {
+      mainImg.style.display = "none";
+      const placeholder = document.getElementById("gallery-placeholder");
+      if (placeholder) placeholder.style.display = "flex";
     };
 
     thumbElements.forEach(t => {
