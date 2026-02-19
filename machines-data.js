@@ -588,12 +588,8 @@ const machines = [
     weight: 1000,
     instock: 1,
     images: [
-      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-1.webp",
-      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-2.webp",
-      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-3.webp",
-      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-4.webp",
-      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-5.webp",
-      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-6.webp"
+      "images/wood-machines/Biesse-Artech-Lato-23s.webp",
+      "images/wood-machines/Biesse-Artech-Lato-23s-2.webp"
     ],
     price: 1200000,
     oldPrice: 1490000,
@@ -617,7 +613,7 @@ const machines = [
       { label: "Виды обрабатываемых кромкой заготовок", value: "Деревянные панели, ДСП, МДФ, деревянные плиты" },
       { label: "Мощность, кВт", value: "10" },
       { label: "Габариты ДxШxВ, мм", value: "3690x1400x1195" },
-      { label: "Масса, кг", value: "1000" },
+      { label: "Масса, кг", value: "900" },
       { label: "Произодитель", value: "Biesse" },
       { label: "Страна", value: "Италия" },
       { label: "Год", value: "2007" }
