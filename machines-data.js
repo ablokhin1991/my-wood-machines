@@ -592,7 +592,7 @@ const machines = [
       "images/wood-machines/Biesse-Artech-Lato-23s-2.webp"
     ],
     videos: [
-      "videos/borovichi-s25-5a-2002.mp4"
+      "videos/Biesse-Artech-Lato-23s.mov"
     ],
     price: 1200000,
     oldPrice: 1490000,
