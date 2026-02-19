@@ -713,27 +713,29 @@ const machines = [
     weight: "-",
     instock: 1,
     images: [
-      "images/wood-machines/frezernyy-stanok-bakaut-sf-003(2).webp",
-      "images/wood-machines/frezernyy-stanok-bakaut-sf-003(2)-2.webp",
-      "images/wood-machines/frezernyy-stanok-bakaut-sf-003(2)-3.webp",
-      "images/wood-machines/frezernyy-stanok-bakaut-sf-003(2)-4.webp"
+      "images/wood-machines/veernaya-vayma-sroj--les-cerknica-slr-66.webp",
+      "images/wood-machines/veernaya-vayma-sroj--les-cerknica-slr-66-2.webp",
+      "images/wood-machines/veernaya-vayma-sroj--les-cerknica-slr-66-3.webp"
     ],
     price: 270000,
     oldPrice: 300000,
     description: "Продам веерную вайму шести пролётную для склейки щита Stroj & Les (Производство Словения). Модель SLR 6/6. Год выпуска 2002. Клеит щит размером 2400 × 800 мм. Хорошее состояние. Очень качественное оборудование.",
     uniqueSpecs: [
-      { label: "Количество шпинделей", value: 2 },
-      { label: "Диаметр шпинделей посадочный, мм", value: 40 },
-      { label: "Высота шпинделей под фрезу, мм", value: 85 },
-      { label: "Частота вращения шпинделей, об./мин", value: 6000 },
-      { label: "Расстояние между шпинделями, мм", value: 700 },
-      { label: "Смещение шпинделей по высоте, мм", value: 10 },
-      { label: "Мощность, кВт", value: "11,2" },
-      { label: "Габариты ДxШxВ, мм", value: "1425x1350x755" },
-      { label: "Масса, кг", value: "440" },
-      { label: "Произодитель", value: "Бакаут" },
-      { label: "Страна", value: "Россия" },
-      { label: "Год", value: "не указан" }
+      { label: "Макс. длина заготовки, мм", value: 2400 },
+      { label: "Макс. ширина заготовки, мм", value: 800 },
+      { label: "Толщина склеиваемого щита, мм", value: "25-90" },
+      { label: "Количество секций, шт.", value: 6 },
+      { label: "Количество зажимов, шт.", value: 6 },
+      { label: "Усилие на зажим, кН (кг)", value: "1-10 (100-1000)" },
+      { label: "Потребление воздуха, л/с", value: 15 },
+      { label: "Макс. нагрузка на секцию, кг", value: 150 },
+
+      { label: "Мощность, кВт", value: "-" },
+      { label: "Габариты ДxШxВ, мм", value: "-" },
+      { label: "Масса, кг", value: "-" },
+      { label: "Произодитель", value: "SROJ & LES" },
+      { label: "Страна", value: "Словения" },
+      { label: "Год", value: "2002" }
     ]
   },
 ];
