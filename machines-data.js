@@ -62,6 +62,7 @@ const machines = [
       { label: "Мощность, кВт", value: "49,6" },
       { label: "Габариты ДxШxВ, мм", value: "4800x2000x1500" },
       { label: "Масса, кг", value: "5200" },
+      { label: "Произодитель", value: "БЗДС" },
       { label: "Страна", value: "Россия" },
       { label: "Год", value: "2002" }
     ]
@@ -92,6 +93,7 @@ const machines = [
       { label: "Мощность, кВт", value: "5" },
       { label: "Габариты ДxШxВ, мм", value: "1360x1265x1200" },
       { label: "Масса, кг", value: "880" },
+      { label: "Произодитель", value: "Главдревстанкопром" },
       { label: "Страна", value: "СССР" },
       { label: "Год", value: "1971" }
     ]
@@ -122,6 +124,7 @@ const machines = [
       { label: "Мощность, кВт", value: "5" },
       { label: "Габариты ДxШxВ, мм", value: "1270x1110x1000" },
       { label: "Масса, кг", value: "810" },
+      { label: "Произодитель", value: "ДСПО" },
       { label: "Страна", value: "СССР" },
       { label: "Год", value: "1980" }
     ]
@@ -173,6 +176,7 @@ const machines = [
       { label: "Производительность вакуумного насоса, м³/ч", value: 35 },
       { label: "Габариты ДxШxВ, мм", value: "5300x2440x2240" },
       { label: "Масса, кг", value: "4600" },
+      { label: "Произодитель", value: "Biesse" },
       { label: "Страна", value: "Италия" },
       { label: "Год", value: "1988" }
     ]
@@ -218,6 +222,7 @@ const machines = [
       { label: "Количество операторов, обслуживающих пресс", value: "2 чел" },
       { label: "Габариты ДxШxВ, мм", value: "4100x2400x1600" },
       { label: "Масса, кг", value: "2000" },
+      { label: "Произодитель", value: "-" },
       { label: "Страна", value: "Россия" },
       { label: "Год", value: "не указан" }
       
@@ -256,6 +261,7 @@ const machines = [
       { label: "Мощность, кВт", value: "2,2" },
       { label: "Габариты ДxШxВ, мм", value: "1900x1200x800" },
       { label: "Масса, кг", value: "230" },
+      { label: "Произодитель", value: "Griggio" },
       { label: "Страна", value: "Италия" },
       { label: "Год", value: "не указан" }
     ]
@@ -266,7 +272,7 @@ const machines = [
     name: "Станок для раскроя рулонов",
     type: "Раскройный",
     kind: "Раскрой рулона",
-    manufacturer: "Самодельный",
+    manufacturer: "-",
     country: "Россия",
     year: "2010",
     power: "3",
@@ -286,6 +292,7 @@ const machines = [
       { label: "Мощность, кВт", value: "3" },
       { label: "Габариты ДxШxВ, мм", value: "-" },
       { label: "Масса, кг", value: "-" },
+      { label: "Произодитель", value: "-" },
       { label: "Страна", value: "Россия" },
       { label: "Год", value: "не указан" }
     ]
@@ -324,6 +331,7 @@ const machines = [
       { label: "Мощность, кВт", value: "32,4" },
       { label: "Габариты ДxШxВ, мм", value: "1930x1780x1630" },
       { label: "Масса, кг", value: "2150" },
+      { label: "Произодитель", value: "ТСЗ" },
       { label: "Страна", value: "Россия" },
       { label: "Год", value: "1993" }
     ]
@@ -362,6 +370,7 @@ const machines = [
       { label: "Мощность, кВт", value: "49,6" },
       { label: "Габариты ДxШxВ, мм", value: "4800x2000x1500" },
       { label: "Масса, кг", value: "5200" },
+      { label: "Произодитель", value: "БЗДС" },
       { label: "Страна", value: "Россия" },
       { label: "Год", value: "1997" }
     ]
@@ -399,6 +408,7 @@ const machines = [
       { label: "Мощность, кВт", value: "38,6" },
       { label: "Габариты ДxШxВ, мм", value: "3150x1570x1315" },
       { label: "Масса, кг", value: "4200" },
+      { label: "Произодитель", value: "БЗДС" },
       { label: "Страна", value: "Россия" },
       { label: "Год", value: "1994" }
     ]
@@ -439,6 +449,7 @@ const machines = [
       { label: "Мощность, кВт", value: "18" },
       { label: "Габариты ДxШxВ, мм", value: "1950x1850x1630" },
       { label: "Масса, кг", value: "2800" },
+      { label: "Произодитель", value: "Простор" },
       { label: "Страна", value: "Россия" },
       { label: "Год", value: "2000" }
     ]
