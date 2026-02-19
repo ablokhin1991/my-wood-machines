@@ -699,4 +699,41 @@ const machines = [
       { label: "Год", value: "не указан" }
     ]
   },
+  // Бакаут СФ 003 (второй)
+  {
+    id: 18,
+    name: "Веерная вайма SROJ & LES CERKNICA SLR 6/6",
+    type: "Пресс",
+    kind: "Веерный",
+    manufacturer: "SROJ & LES",
+    country: "Словения",
+    year: "2002",
+    power: "-",
+    dimensions: "-",
+    weight: "-",
+    instock: 1,
+    images: [
+      "images/wood-machines/frezernyy-stanok-bakaut-sf-003(2).webp",
+      "images/wood-machines/frezernyy-stanok-bakaut-sf-003(2)-2.webp",
+      "images/wood-machines/frezernyy-stanok-bakaut-sf-003(2)-3.webp",
+      "images/wood-machines/frezernyy-stanok-bakaut-sf-003(2)-4.webp"
+    ],
+    price: 270000,
+    oldPrice: 300000,
+    description: "Продам веерную вайму шести пролётную для склейки щита Stroj & Les (Производство Словения). Модель SLR 6/6. Год выпуска 2002. Клеит щит размером 2400 × 800 мм. Хорошее состояние. Очень качественное оборудование.",
+    uniqueSpecs: [
+      { label: "Количество шпинделей", value: 2 },
+      { label: "Диаметр шпинделей посадочный, мм", value: 40 },
+      { label: "Высота шпинделей под фрезу, мм", value: 85 },
+      { label: "Частота вращения шпинделей, об./мин", value: 6000 },
+      { label: "Расстояние между шпинделями, мм", value: 700 },
+      { label: "Смещение шпинделей по высоте, мм", value: 10 },
+      { label: "Мощность, кВт", value: "11,2" },
+      { label: "Габариты ДxШxВ, мм", value: "1425x1350x755" },
+      { label: "Масса, кг", value: "440" },
+      { label: "Произодитель", value: "Бакаут" },
+      { label: "Страна", value: "Россия" },
+      { label: "Год", value: "не указан" }
+    ]
+  },
 ];
