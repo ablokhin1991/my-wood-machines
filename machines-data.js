@@ -573,5 +573,43 @@ const machines = [
       { label: "Страна", value: "Китай" },
       { label: "Год", value: "2007" }
     ]
-  }
+  },
+  // Biesse Artech Lato 23s
+  {
+    id: 14,
+    name: "Кромкооблицовочный станок Artech Lato 23s Biesse",
+    type: "Долбежный",
+    kind: "Сверлильно-пазовальный",
+    manufacturer: "Biesse",
+    country: "Италия",
+    year: 2007,
+    power: "7",
+    dimensions: "2540x2270x1620",
+    weight: 1900,
+    instock: 1,
+    images: [
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-1.webp",
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-2.webp",
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-3.webp",
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-4.webp",
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-5.webp",
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-6.webp"
+    ],
+    price: 1200000,
+    oldPrice: 1490000,
+    description: "Сocтояние отличное, рaбoтaли на станке мало - только разовые операции под заказные двери! Станок предназначен специально для проведения фрезерных операций при изготовлении пазов и отверстий различного назначение (установка фурнитуры дверного полотна/коробки: механизм замка, накладка замка, личинка, ручка, петли).",
+    uniqueSpecs: [
+      { label: "Макс. ширина заготовки, мм", value: 1000 },
+      { label: "Макс. длина заготовки, мм", value: 2200 },
+      { label: "Толщина заготовки, мм", value: "30-60" },
+      { label: "Количество шпинделей, шт.", value: 6 },
+      { label: "Обороты шпинделей, об/мин", value: 12000 },
+      { label: "Мощность, кВт", value: "7" },
+      { label: "Габариты ДxШxВ, мм", value: "2540x2270x1620" },
+      { label: "Масса, кг", value: "1900" },
+      { label: "Произодитель", value: "Yuetong" },
+      { label: "Страна", value: "Китай" },
+      { label: "Год", value: "2007" }
+    ]
+  },
 ];
