@@ -699,7 +699,7 @@ const machines = [
       { label: "Год", value: "не указан" }
     ]
   },
-  // Бакаут СФ 003 (второй)
+  // Веерная вайма SROJ & LES CERKNICA SLR 6/6
   {
     id: 18,
     name: "Веерная вайма SROJ & LES CERKNICA SLR 6/6",
