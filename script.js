@@ -60,7 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       card.innerHTML = `
       <div class="card-image-wrap">
-        <img class="card-img-main" src="${thumb1}"${thumb2 ? ' data-hover="' + thumb2 + '"' : ''} alt="${machine.type} ${machine.name} б/у — фото 1" width="400" height="300" loading="${loadingAttr}"${priorityAttr} decoding="async" itemprop="image">
+        ${thumb1
+          ? `<img class="card-img-main" src="${thumb1}"${thumb2 ? ' data-hover="' + thumb2 + '"' : ''} alt="${machine.type} ${machine.name} б/у — фото 1" width="400" height="300" loading="${loadingAttr}"${priorityAttr} decoding="async" itemprop="image" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-image-placeholder" style="display:none">Фото скоро появится</div>`
+          : `<div class="card-image-placeholder">Фото скоро появится</div>`
+        }
       </div>
       <div class="card-body">
         <div class="card-price-row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
