@@ -279,8 +279,8 @@ const machines = [
       "images/wood-machines/stanok-dlya-raskroya-rulonov-3.webp",
       "images/wood-machines/stanok-dlya-raskroya-rulonov-4.webp"
     ],
-    price: 135000,
-    oldPrice: 150000,
+    price: 200000,
+    oldPrice: 250000,
     description: "Станок отличного качества и неприхотливый  - изготовили сами, силами слесарной комманды на базе имеющегося станка. Продаем в связи не надобностью! Данный станок использовался для дверного производства, а именно для раскроя рулонов покрытия дверей (пленка / бумага / пластик) - на фото видно.",
     uniqueSpecs: []
   },
