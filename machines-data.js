@@ -539,7 +539,7 @@ const machines = [
   // Yuetong MDK 4120 NC
   {
     id: 14,
-    name: "Сверлильно-пазовальный станок Yuetong MDK 4120 NC",
+    name: "Сверлильно-пазовальный станок с ЧПУ Yuetong MDK 4120 NC",
     type: "Долбежный",
     kind: "Сверлильно-пазовальный",
     manufacturer: "Yuetong",
