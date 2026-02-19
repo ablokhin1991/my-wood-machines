@@ -788,8 +788,9 @@ const machines = [
     weight: "525",
     instock: 1,
     images: [
-      "images/wood-machines/Alfamacchine-T3502.webp",
-      "images/wood-machines/Alfamacchine-T350-22.webp"
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-svpg-2a-dspo.webp",
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-svpg-2a-dspo-2.webp",
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-svpg-2a-dspo-3.webp"
     ],
     price: 400000,
     oldPrice: 450000,
