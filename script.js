@@ -264,6 +264,8 @@ document.addEventListener("DOMContentLoaded", () => {
         mainVideo.style.display = "none";
         mainVideo.pause();
         mainVideo.removeAttribute("src");
+        const placeholder = document.getElementById("gallery-placeholder");
+        if (placeholder) placeholder.style.display = "none";
         mainImg.src = media ? media.src : "";
         mainImg.alt = machine.name + " — фото " + (index + 1);
         mainImg.style.display = "block";
