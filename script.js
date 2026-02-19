@@ -179,6 +179,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const openModal = (machine) => {
     currentGalleryIndex = 0;
     currentMachineImages = (machine.images || []).map(normalizeImagePath);
+    const machineVideos = (machine.videos || []).map(normalizeImagePath);
+    const firstImage = currentMachineImages[0] ? [{ type: "image", src: currentMachineImages[0] }] : [];
+    const videoItems = machineVideos.map(src => ({ type: "video", src }));
+    const restImages = currentMachineImages.slice(1).map(src => ({ type: "image", src }));
+    const allMedia = [...firstImage, ...videoItems, ...restImages];
 
     const yearText = (!machine.year || machine.year === "-") ? "не указан" : machine.year;
     const powerText = (!machine.power || machine.power === "-") ? "не указана" : machine.power + " кВт";
@@ -200,7 +205,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Миниатюры
-    const thumbsHtml = currentMachineImages.map((img, i) => `<img src="${img}" alt="${machine.name} — фото ${i + 1}" class="${i === 0 ? "active" : ""}" data-index="${i}" loading="lazy">`).join("");
+        const thumbsHtml = allMedia.map((media, i) => {
+      if (media.type === "video") {
+        return `<div class="gallery-thumb-video${i === 0 ? " active" : ""}" data-index="${i}"><img src="${currentMachineImages[0] || ""}" alt="${machine.name} — видео" loading="lazy"><span class="thumb-play">▶</span></div>`;
+      }
+      return `<img src="${media.src}" alt="${machine.name} — фото ${i + 1}" class="${i === 0 ? "active" : ""}" data-index="${i}" loading="lazy">`;
+    }).join("");
 
     modalContent.innerHTML = `
       <button class="modal-close" aria-label="Закрыть">&times;</button>
@@ -208,6 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="gallery-main-wrap">
           <button class="gallery-arrow left" aria-label="Назад">&#10094;</button>
           <img id="gallery-main-img" src="${currentMachineImages[0] || ""}" alt="${machine.name} — фото 1">
+          <video id="gallery-main-video" controls playsinline style="display:none;max-height:450px;width:100%;border-radius:6px;"></video>
           <button class="gallery-arrow right" aria-label="Вперёд">&#10095;</button>
         </div>
         <div class="gallery-thumbs">${thumbsHtml}</div>
@@ -232,32 +243,47 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     // Обработчики галереи
-    const mainImg = document.getElementById("gallery-main-img");
-    const thumbs = modalContent.querySelectorAll(".gallery-thumbs img");
+        const mainImg = document.getElementById("gallery-main-img");
+    const mainVideo = document.getElementById("gallery-main-video");
+    const thumbElements = modalContent.querySelectorAll(".gallery-thumbs img, .gallery-thumbs .gallery-thumb-video");
 
     const updateGallery = (index) => {
       currentGalleryIndex = index;
-      mainImg.src = currentMachineImages[index] || "";
-      mainImg.alt = machine.name + " — фото " + (index + 1);
-      mainImg.classList.remove("zoomed");
-      thumbs.forEach((t, i) => t.classList.toggle("active", i === index));
+      const media = allMedia[index];
+
+      if (media && media.type === "video") {
+        mainImg.style.display = "none";
+        mainImg.classList.remove("zoomed");
+        mainVideo.src = media.src;
+        mainVideo.style.display = "block";
+      } else {
+        mainVideo.style.display = "none";
+        mainVideo.pause();
+        mainVideo.removeAttribute("src");
+        mainImg.src = media ? media.src : "";
+        mainImg.alt = machine.name + " — фото " + (index + 1);
+        mainImg.style.display = "block";
+        mainImg.classList.remove("zoomed");
+      }
+
+      thumbElements.forEach((t, i) => t.classList.toggle("active", i === index));
     };
 
-    thumbs.forEach(t => {
+    thumbElements.forEach(t => {
       t.addEventListener("click", () => updateGallery(parseInt(t.getAttribute("data-index"), 10)));
     });
 
     modalContent.querySelector(".gallery-arrow.left").addEventListener("click", () => {
-      const newIdx = (currentGalleryIndex - 1 + currentMachineImages.length) % currentMachineImages.length;
+      const newIdx = (currentGalleryIndex - 1 + allMedia.length) % allMedia.length;
       updateGallery(newIdx);
     });
 
     modalContent.querySelector(".gallery-arrow.right").addEventListener("click", () => {
-      const newIdx = (currentGalleryIndex + 1) % currentMachineImages.length;
+      const newIdx = (currentGalleryIndex + 1) % allMedia.length;
       updateGallery(newIdx);
     });
 
-    // Зум по клику на главное фото
+    // Зум по клику на главное фото (только для изображений)
     mainImg.addEventListener("click", () => {
       mainImg.classList.toggle("zoomed");
     });
