@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedType = typeSelect.value;
     const selectedKind = kindSelect.value;
 
-    let filtered = machines;
+        let filtered = machines.filter(m => !m.status || m.status === 'active');
     if (selectedType) {
       filtered = filtered.filter(m => m.type === selectedType);
       if (selectedKind) {
@@ -453,7 +453,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- 3. Products ---
   insertJsonLd({
     "@context": "https://schema.org",
-    "@graph": machines.map(machine => {
+        "@graph": machines.filter(m => !m.status || m.status === 'active').map(machine => {
       const normalizedImage = machine.images && machine.images[0]
         ? (machine.images[0].startsWith("/") ? machine.images[0] : "/" + machine.images[0])
         : "";
@@ -513,8 +513,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "@type": "ItemList",
     "name": "Каталог деревообрабатывающих станков б/у",
     "description": "Станки по деревообработке б/у от собственника во Владимирской области",
-    "numberOfItems": machines.length,
-    "itemListElement": machines.map((machine, index) => ({
+        "numberOfItems": machines.filter(m => !m.status || m.status === 'active').length,
+    "itemListElement": machines.filter(m => !m.status || m.status === 'active').map((machine, index) => ({
       "@type": "ListItem",
       "position": index + 1,
       "item": {
