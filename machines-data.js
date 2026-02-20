@@ -826,7 +826,7 @@ const machines = [
     type: "Фрезерный",
     kind: "Горизонтальный",
     manufacturer: "КСЗ",
-    country: "СССР",
+    country: "Россия",
     year: 2000,
     power: "4,2",
     dimensions: "1270x1100x1000",
