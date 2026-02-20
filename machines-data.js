@@ -819,4 +819,36 @@ const machines = [
     ],
     status: "active"
   }
+  ,
+  {
+    id: 22,
+    name: "Фрезерный станок ФСШ-1а",
+    type: "Фрезерный",
+    kind: "Горизонтальный",
+    manufacturer: "Главдревстанкопром",
+    country: "СССР",
+    year: "-",
+    power: "5",
+    dimensions: "1360x1265x1200",
+    weight: 880,
+    instock: 1,
+    images: [
+      "images/wood-machines/frezernyy-stanok-fssh-1a.webp",
+      "images/wood-machines/frezernyy-stanok-fssh-1a-2.webp",
+      "images/wood-machines/frezernyy-stanok-fssh-1a-3.webp",
+      "images/wood-machines/frezernyy-stanok-fssh-1a-4.webp"
+    ],
+    price: 75000,
+    oldPrice: 105000,
+    description: "Продаем отличный и надежный фрезер. Надёжная машина советского времени, выпущенная заводом Главдревстанкопром (г. Днепропетровск). Предназначен для: фрезеровки профилей, торцов, фигурных элементов и других столярных задач. Классическая конструкция с мощным приводом 5 кВт - отличное решением для мастерской с высоким уровнем нагрузки.",
+    uniqueSpecs: [
+      { label: "Мощность, кВт", value: 5 },
+      { label: "Габариты ДxШxВ, мм", value: "1360x1265x1200" },
+      { label: "Масса, кг", value: 880 },
+      { label: "Производитель", value: "Главдревстанкопром" },
+      { label: "Страна", value: "СССР" },
+      { label: "Год", value: "-" }
+    ],
+    status: "active"
+  }
 ];
