@@ -9,7 +9,6 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Arial, sans-serif; background: #f0f2f5; color: #333; line-height: 1.6; }
 
-    /* Шапка */
     .admin-header { background: #1f2d3d; color: #fff; padding: 16px 0; }
     .admin-header .container { display: flex; justify-content: space-between; align-items: center; }
     .admin-header h1 { font-size: 18px; font-weight: 700; }
@@ -17,7 +16,6 @@
 
     .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 
-    /* Табы */
     .tabs { display: flex; gap: 0; margin: 24px 0 0; border-bottom: 2px solid #e0e0e0; }
     .tab-btn { padding: 12px 24px; font-size: 15px; font-weight: 700; color: #666; background: none; border: none; border-bottom: 2px solid transparent; margin-bottom: -2px; cursor: pointer; transition: all .2s; }
     .tab-btn.active { color: #1f4b7a; border-bottom-color: #1f4b7a; }
@@ -25,7 +23,6 @@
     .tab-content { display: none; padding: 24px 0; }
     .tab-content.active { display: block; }
 
-    /* Таблица станков */
     .machines-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
     .machines-table th, .machines-table td { padding: 12px 14px; text-align: left; font-size: 14px; border-bottom: 1px solid #e8e8e8; }
     .machines-table th { background: #f7f8fa; color: #555; font-weight: 700; font-size: 12px; text-transform: uppercase; }
@@ -35,7 +32,6 @@
     .machines-table .status-draft { color: #e65100; font-weight: 700; }
     .machines-table .status-hidden { color: #999; font-weight: 700; }
 
-    /* Кнопки */
     .btn { display: inline-block; padding: 8px 16px; border-radius: 4px; font-size: 13px; font-weight: 700; border: none; cursor: pointer; transition: all .2s; text-decoration: none; }
     .btn-primary { background: #1f4b7a; color: #fff; }
     .btn-primary:hover { background: #163a5f; }
@@ -48,9 +44,8 @@
     .btn-outline { background: #fff; color: #1f4b7a; border: 1px solid #1f4b7a; }
     .btn-outline:hover { background: #eef3f9; }
     .btn-sm { padding: 5px 10px; font-size: 12px; }
-    .btn-group { display: flex; gap: 6px; }
+    .btn-group { display: flex; gap: 6px; flex-wrap: wrap; }
 
-    /* Форма */
     .form-section { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
     .form-section h3 { font-size: 16px; color: #222; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #e8e8e8; }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -63,7 +58,6 @@
     .form-group .hint { font-size: 11px; color: #999; }
     .form-group input[readonly] { background: #f5f5f5; color: #888; }
 
-    /* Спеки */
     .specs-editor { border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; }
     .specs-row { display: grid; grid-template-columns: 1fr 1fr 40px; gap: 0; border-bottom: 1px solid #e8e8e8; }
     .specs-row:last-child { border-bottom: none; }
@@ -76,7 +70,6 @@
     .specs-add-btn { padding: 8px 16px; background: #f7f8fa; border: none; color: #1f4b7a; font-size: 13px; font-weight: 700; cursor: pointer; width: 100%; text-align: left; }
     .specs-add-btn:hover { background: #eef3f9; }
 
-    /* Загрузка фото */
     .photo-upload-area { border: 2px dashed #ccc; border-radius: 8px; padding: 32px; text-align: center; cursor: pointer; transition: all .2s; background: #fafafa; }
     .photo-upload-area:hover { border-color: #1f4b7a; background: #f0f5fa; }
     .photo-upload-area.dragover { border-color: #1b5e20; background: #e8f5e9; }
@@ -88,39 +81,38 @@
     .photo-preview-item .photo-badge { position: absolute; top: 4px; left: 4px; background: rgba(0,0,0,.6); color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 3px; }
     .photo-preview-item .photo-remove { position: absolute; top: 4px; right: 4px; background: rgba(200,0,0,.8); color: #fff; border: none; width: 22px; height: 22px; border-radius: 50%; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; }
     .photo-preview-item .photo-info { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,.6); color: #fff; font-size: 10px; padding: 3px 6px; }
-    .photo-preview-item.sortable-drag { opacity: 0.5; }
+    .photo-preview-item.existing { border: 2px solid #1f4b7a; }
 
-    /* Форма кнопки */
     .form-actions { display: flex; gap: 12px; margin-top: 24px; padding-top: 20px; border-top: 1px solid #e0e0e0; }
 
-    /* Код вывод */
     .code-output { background: #1e1e1e; color: #d4d4d4; border-radius: 8px; padding: 20px; font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.5; overflow-x: auto; white-space: pre-wrap; word-break: break-all; max-height: 500px; overflow-y: auto; margin-top: 16px; }
     .copy-btn { margin-top: 8px; }
 
-    /* Git команды */
     .git-commands { background: #263238; color: #aed581; border-radius: 8px; padding: 16px 20px; font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.8; margin-top: 16px; }
 
-    /* Уведомления */
     .toast { position: fixed; bottom: 24px; right: 24px; background: #1b5e20; color: #fff; padding: 14px 24px; border-radius: 6px; font-size: 14px; font-weight: 700; z-index: 9999; transform: translateY(100px); opacity: 0; transition: all .3s; box-shadow: 0 4px 12px rgba(0,0,0,.2); }
     .toast.show { transform: translateY(0); opacity: 1; }
     .toast.error { background: #c62828; }
 
-    /* Статистика */
     .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
     .stat-card { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.08); text-align: center; }
     .stat-card .stat-number { font-size: 32px; font-weight: 700; color: #1f4b7a; }
     .stat-card .stat-label { font-size: 13px; color: #888; margin-top: 4px; }
 
-    /* Модалка подтверждения */
     .confirm-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,.5); z-index: 5000; align-items: center; justify-content: center; }
     .confirm-overlay.show { display: flex; }
     .confirm-box { background: #fff; border-radius: 8px; padding: 28px; max-width: 400px; width: 100%; text-align: center; }
     .confirm-box p { font-size: 15px; margin-bottom: 20px; color: #333; }
     .confirm-box .btn-group { justify-content: center; }
 
-    /* Прогресс обработки фото */
     .processing-bar { background: #e0e0e0; border-radius: 4px; height: 6px; margin-top: 8px; overflow: hidden; }
     .processing-bar .bar-fill { height: 100%; background: #1b5e20; border-radius: 4px; transition: width .3s; width: 0; }
+
+    .download-section { background: #f0f7ff; border: 1px solid #c2d9f0; border-radius: 8px; padding: 16px; margin-top: 16px; }
+    .download-section h4 { font-size: 14px; color: #1f4b7a; margin-bottom: 8px; }
+    .download-item { display: flex; gap: 8px; margin-bottom: 6px; align-items: center; flex-wrap: wrap; }
+    .download-item span { font-size: 12px; color: #555; }
+    .download-item strong { color: #222; }
 
     @media (max-width: 768px) {
       .form-grid { grid-template-columns: 1fr; }
@@ -143,7 +135,6 @@
 
   <div class="container">
 
-    <!-- Табы -->
     <div class="tabs">
       <button class="tab-btn active" data-tab="dashboard">📊 Обзор</button>
       <button class="tab-btn" data-tab="machines-list">📋 Все станки</button>
@@ -189,7 +180,6 @@
     <div class="tab-content" id="tab-add-machine">
       <h2 style="font-size:20px;color:#222;margin-bottom:16px;" id="form-title">Новый станок</h2>
 
-      <!-- Основные данные -->
       <div class="form-section">
         <h3>Основная информация</h3>
         <div class="form-grid">
@@ -241,7 +231,6 @@
         </div>
       </div>
 
-      <!-- Цена -->
       <div class="form-section">
         <h3>Цена</h3>
         <div class="form-grid">
@@ -256,19 +245,18 @@
         </div>
       </div>
 
-      <!-- Фото -->
       <div class="form-section">
         <h3>Фотографии</h3>
+        <p style="font-size:13px;color:#666;margin-bottom:12px;">Новые фото добавляются к существующим. Для удаления нажмите × на фото.</p>
         <div class="photo-upload-area" id="photo-upload-area">
           <p>📷 Перетащите фото сюда или нажмите для выбора</p>
-          <span class="hint">Поддерживаются JPG, PNG, WebP. Автоматическая конвертация в WebP.</span>
+          <span class="hint">Поддерживаются JPG, PNG, WebP. Новые фото добавятся к существующим.</span>
           <input type="file" id="photo-input" multiple accept="image/*" style="display:none">
         </div>
         <div class="processing-bar" id="processing-bar" style="display:none"><div class="bar-fill" id="bar-fill"></div></div>
         <div class="photo-preview-grid" id="photo-preview-grid"></div>
       </div>
 
-      <!-- Видео -->
       <div class="form-section">
         <h3>Видео (необязательно)</h3>
         <div class="form-group">
@@ -278,7 +266,6 @@
         </div>
       </div>
 
-      <!-- Описание -->
       <div class="form-section">
         <h3>Описание</h3>
         <div class="form-group full">
@@ -287,7 +274,6 @@
         </div>
       </div>
 
-      <!-- Характеристики -->
       <div class="form-section">
         <h3>Технические характеристики</h3>
         <div class="specs-editor" id="specs-editor">
@@ -296,15 +282,12 @@
             <input value="Значение" readonly style="font-weight:700;font-size:12px;color:#555;text-transform:uppercase;">
             <span></span>
           </div>
-          <!-- Пользовательские строки вставляются сюда -->
           <div id="specs-custom-area"></div>
-          <!-- Строки по умолчанию -->
           <div id="specs-default-area"></div>
         </div>
         <button class="specs-add-btn" id="add-spec-btn">+ Добавить характеристику</button>
       </div>
 
-      <!-- Кнопки -->
       <div class="form-actions">
         <button class="btn btn-warning" id="btn-save-draft">📝 Сохранить черновик</button>
         <button class="btn btn-success" id="btn-save-publish">✅ Сохранить и опубликовать</button>
@@ -334,17 +317,16 @@ git push -u origin main</div>
       </div>
 
       <div class="form-section">
-        <h3>📸 Файлы фотографий для загрузки</h3>
-        <p style="font-size:14px;color:#666;margin-bottom:12px;">Скачайте обработанные фото и разместите в соответствующие папки:</p>
+        <h3>📸 Фотографии для скачивания</h3>
+        <p style="font-size:14px;color:#666;margin-bottom:12px;">Скачайте обработанные фото и положите в соответствующие папки проекта:</p>
         <div id="download-photos-area">
-          <p style="font-size:13px;color:#999;">Фотографии появятся здесь после добавления станков с фото.</p>
+          <p style="font-size:13px;color:#999;">Фотографии появятся здесь после добавления новых фото к станкам.</p>
         </div>
       </div>
     </div>
 
   </div>
 
-  <!-- Подтверждение -->
   <div class="confirm-overlay" id="confirm-overlay">
     <div class="confirm-box">
       <p id="confirm-text">Вы уверены?</p>
@@ -355,7 +337,6 @@ git push -u origin main</div>
     </div>
   </div>
 
-  <!-- Тост -->
   <div class="toast" id="toast"></div>
 
   <script src="machines-data.js"></script>
@@ -385,13 +366,15 @@ git push -u origin main</div>
 
     // === Состояние ===
     let localMachines = JSON.parse(JSON.stringify(typeof machines !== 'undefined' ? machines : []));
-    // Добавляем поле status если нет
     localMachines.forEach(m => {
       if (!m.hasOwnProperty('status')) m.status = 'active';
     });
 
     let editingId = null;
-    let uploadedPhotos = []; // {file, originalName, processedFull, processedThumb, fileName}
+    // Хранилище фото: ключ — id станка, значение — массив обработанных фото
+    let allUploadedPhotos = {};
+    // Существующие фото текущего станка (из machines-data.js)
+    let existingPhotos = [];
     let confirmCallback = null;
 
     // === Утилиты ===
@@ -418,6 +401,10 @@ git push -u origin main</div>
     const getNextId = () => {
       if (localMachines.length === 0) return 1;
       return Math.max(...localMachines.map(m => m.id)) + 1;
+    };
+
+    const getMachineId = () => {
+      return editingId || Number(document.getElementById('f-id').value) || getNextId();
     };
 
     const showToast = (msg, isError = false) => {
@@ -510,7 +497,6 @@ git push -u origin main</div>
       if (m) {
         m.status = newStatus;
         renderMachinesList();
-        renderExport();
         showToast(newStatus === 'active' ? 'Станок опубликован' : 'Станок снят с продажи');
       }
     };
@@ -519,8 +505,8 @@ git push -u origin main</div>
       const m = localMachines.find(x => x.id === id);
       showConfirm(`Удалить "${m ? m.name : ''}"? Это действие нельзя отменить.`, () => {
         localMachines = localMachines.filter(x => x.id !== id);
+        delete allUploadedPhotos[id];
         renderMachinesList();
-        renderExport();
         showToast('Станок удалён');
       });
     };
@@ -555,22 +541,91 @@ git push -u origin main</div>
       // Спеки
       renderSpecsForEdit(m.uniqueSpecs || []);
 
-      // Фото превью (существующие)
-      uploadedPhotos = [];
-      const grid = document.getElementById('photo-preview-grid');
-      grid.innerHTML = (m.images || []).map((img, i) => `
-        <div class="photo-preview-item">
-          <img src="${img}" alt="Фото ${i+1}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%2284%22><rect fill=%22%23e0e0e0%22 width=%22150%22 height=%2284%22/><text x=%2275%22 y=%2242%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22>${img.split('/').pop()}</text></svg>'">
-          <span class="photo-badge">${i === 0 ? 'Главное' : i === 1 ? 'Hover' : `#${i+1}`}</span>
-        </div>
-      `).join('');
+      // Фото: загружаем существующие
+      existingPhotos = [...(m.images || [])];
 
+      // Восстанавливаем ранее загруженные новые фото для этого станка
+      if (!allUploadedPhotos[id]) {
+        allUploadedPhotos[id] = [];
+      }
+
+      renderAllPhotos();
       switchTab('add-machine');
+    };
+
+    // === Рендер всех фото (существующие + новые) ===
+    const renderAllPhotos = () => {
+      const grid = document.getElementById('photo-preview-grid');
+      const machineId = getMachineId();
+      const newPhotos = allUploadedPhotos[machineId] || [];
+      const totalCount = existingPhotos.length + newPhotos.length;
+
+      let html = '';
+
+      // Существующие фото
+      existingPhotos.forEach((img, i) => {
+        const label = i === 0 ? 'Главное' : i === 1 ? 'Hover' : `#${i + 1}`;
+        html += `
+          <div class="photo-preview-item existing">
+            <img src="${img}" alt="Фото ${i+1}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%2284%22><rect fill=%22%23e0e0e0%22 width=%22150%22 height=%2284%22/><text x=%2275%22 y=%2242%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2210%22>Файл не найден</text></svg>'">
+            <span class="photo-badge">${label}</span>
+            <button class="photo-remove" onclick="removeExistingPhoto(${i})" title="Удалить">×</button>
+            <div class="photo-info">📁 ${img.split('/').pop()}</div>
+          </div>
+        `;
+      });
+
+      // Новые загруженные фото
+      newPhotos.forEach((p, i) => {
+        const globalIndex = existingPhotos.length + i;
+        const label = globalIndex === 0 ? 'Главное' : globalIndex === 1 ? 'Hover' : `#${globalIndex + 1}`;
+        html += `
+          <div class="photo-preview-item">
+            <img src="${p.fullUrl}" alt="${p.fileName}">
+            <span class="photo-badge">🆕 ${label}</span>
+            <button class="photo-remove" onclick="removeNewPhoto(${i})" title="Удалить">×</button>
+            <div class="photo-info">${p.fileName} · ${p.fullSize}KB${p.thumbSize ? ' · thumb: ' + p.thumbSize + 'KB' : ''}</div>
+          </div>
+        `;
+      });
+
+      if (totalCount === 0) {
+        html = '<p style="font-size:13px;color:#999;grid-column:1/-1;">Фото не добавлены</p>';
+      }
+
+      grid.innerHTML = html;
+    };
+
+    const removeExistingPhoto = (index) => {
+      existingPhotos.splice(index, 1);
+      renderAllPhotos();
+    };
+
+    const removeNewPhoto = (index) => {
+      const machineId = getMachineId();
+      if (allUploadedPhotos[machineId]) {
+        allUploadedPhotos[machineId].splice(index, 1);
+        renameNewPhotos(machineId);
+      }
+      renderAllPhotos();
+    };
+
+    const renameNewPhotos = (machineId) => {
+      const name = document.getElementById('f-name').value.trim();
+      if (!name) return;
+      const baseName = transliterate(name);
+      const photos = allUploadedPhotos[machineId] || [];
+      photos.forEach((p, i) => {
+        const globalIndex = existingPhotos.length + i;
+        const suffix = globalIndex === 0 ? '' : `-${globalIndex + 1}`;
+        p.fileName = `${baseName}${suffix}.webp`;
+      });
     };
 
     // === Форма ===
     const resetForm = () => {
       editingId = null;
+      existingPhotos = [];
       document.getElementById('form-title').textContent = 'Новый станок';
       document.getElementById('f-id').value = getNextId();
       document.getElementById('f-name').value = '';
@@ -588,7 +643,6 @@ git push -u origin main</div>
       document.getElementById('f-oldprice').value = '';
       document.getElementById('f-description').value = '';
       document.getElementById('f-video').value = '';
-      uploadedPhotos = [];
       document.getElementById('photo-preview-grid').innerHTML = '';
       renderDefaultSpecs();
     };
@@ -691,7 +745,7 @@ git push -u origin main</div>
       photoArea.classList.remove('dragover');
       handleFiles(e.dataTransfer.files);
     });
-    photoInput.addEventListener('change', () => handleFiles(photoInput.files));
+    photoInput.addEventListener('change', () => { handleFiles(photoInput.files); photoInput.value = ''; });
 
     const handleFiles = async (files) => {
       const name = document.getElementById('f-name').value.trim();
@@ -706,7 +760,15 @@ git push -u origin main</div>
       fill.style.width = '0%';
 
       const baseName = transliterate(name);
-      const startIndex = uploadedPhotos.length;
+      const machineId = getMachineId();
+
+      if (!allUploadedPhotos[machineId]) {
+        allUploadedPhotos[machineId] = [];
+      }
+
+      const existingCount = existingPhotos.length;
+      const newExistingCount = allUploadedPhotos[machineId].length;
+      const startIndex = existingCount + newExistingCount;
 
       for (let i = 0; i < files.length; i++) {
         const file = files[i];
@@ -714,16 +776,13 @@ git push -u origin main</div>
         const suffix = photoIndex === 0 ? '' : `-${photoIndex + 1}`;
         const fileName = `${baseName}${suffix}.webp`;
 
-        // Обработка полноразмерного фото
         const fullBlob = await processImage(file, 1920, 1080, 0.85);
-        // Обработка превью (только первые 2)
         let thumbBlob = null;
         if (photoIndex < 2) {
           thumbBlob = await processImage(file, 600, 338, 0.80);
         }
 
-        uploadedPhotos.push({
-          file,
+        allUploadedPhotos[machineId].push({
           fileName,
           fullBlob,
           thumbBlob,
@@ -737,8 +796,8 @@ git push -u origin main</div>
       }
 
       setTimeout(() => { bar.style.display = 'none'; }, 500);
-      renderPhotoPreview();
-      showToast(`${files.length} фото обработано`);
+      renderAllPhotos();
+      showToast(`${files.length} фото обработано и добавлено`);
     };
 
     const processImage = (file, maxW, maxH, quality) => {
@@ -751,7 +810,6 @@ git push -u origin main</div>
           let w = img.width;
           let h = img.height;
 
-          // Масштабируем
           if (w > maxW || h > maxH) {
             const ratio = Math.min(maxW / w, maxH / h);
             w = Math.round(w * ratio);
@@ -767,30 +825,6 @@ git push -u origin main</div>
         };
         img.src = url;
       });
-    };
-
-    const renderPhotoPreview = () => {
-      const grid = document.getElementById('photo-preview-grid');
-      grid.innerHTML = uploadedPhotos.map((p, i) => `
-        <div class="photo-preview-item">
-          <img src="${p.fullUrl}" alt="${p.fileName}">
-          <span class="photo-badge">${i === 0 ? 'Главное' : i === 1 ? 'Hover' : `#${i+1}`}</span>
-          <button class="photo-remove" onclick="removePhoto(${i})">×</button>
-          <div class="photo-info">${p.fileName} · ${p.fullSize}KB${p.thumbSize ? ' · thumb: ' + p.thumbSize + 'KB' : ''}</div>
-        </div>
-      `).join('');
-    };
-
-    const removePhoto = (index) => {
-      uploadedPhotos.splice(index, 1);
-      // Переименовываем
-      const name = document.getElementById('f-name').value.trim();
-      const baseName = transliterate(name);
-      uploadedPhotos.forEach((p, i) => {
-        const suffix = i === 0 ? '' : `-${i + 1}`;
-        p.fileName = `${baseName}${suffix}.webp`;
-      });
-      renderPhotoPreview();
     };
 
     // === Сбор данных формы ===
@@ -829,16 +863,13 @@ git push -u origin main</div>
         if (label && value) uniqueSpecs.push({ label, value });
       });
 
-      // Картинки
-      let images;
-      if (uploadedPhotos.length > 0) {
-        images = uploadedPhotos.map(p => `images/wood-machines/${p.fileName}`);
-      } else if (editingId) {
-        const existing = localMachines.find(m => m.id === editingId);
-        images = existing ? existing.images : [];
-      } else {
-        images = [];
-      }
+      // Картинки: существующие + новые
+      const machineId = getMachineId();
+      const newPhotos = allUploadedPhotos[machineId] || [];
+      const images = [
+        ...existingPhotos,
+        ...newPhotos.map(p => `images/wood-machines/${p.fileName}`)
+      ];
 
       // Видео
       const videoPath = document.getElementById('f-video').value.trim();
@@ -888,6 +919,7 @@ git push -u origin main</div>
 
     document.getElementById('btn-cancel-form').addEventListener('click', () => {
       editingId = null;
+      existingPhotos = [];
       switchTab('machines-list');
     });
 
@@ -899,7 +931,7 @@ git push -u origin main</div>
         localMachines.push(data);
       }
       editingId = null;
-      renderExport();
+      existingPhotos = [];
       switchTab('machines-list');
     };
 
@@ -908,29 +940,43 @@ git push -u origin main</div>
       const code = generateMachinesDataJs();
       document.getElementById('code-output').textContent = code;
 
-      // Кнопки скачивания фото
+      // Собираем все новые фото из всех станков
       const dlArea = document.getElementById('download-photos-area');
-      const allPhotos = [];
-      localMachines.forEach(m => {
-        // Находим uploadedPhotos для этого станка (по fileName)
-      });
+      let hasPhotos = false;
+      let photosHtml = '';
 
-      if (uploadedPhotos.length > 0) {
-        dlArea.innerHTML = `
-          <p style="font-size:13px;color:#666;margin-bottom:8px;">Обработанные фото (${uploadedPhotos.length} шт.):</p>
-          <div class="btn-group" style="flex-wrap:wrap;gap:8px;">
-            <button class="btn btn-success" onclick="downloadAllPhotos()">📥 Скачать все фото (ZIP не поддерживается, скачаются по одному)</button>
-          </div>
-          <div style="margin-top:12px;">
-            ${uploadedPhotos.map((p, i) => `
-              <div style="display:flex;gap:8px;margin-bottom:6px;align-items:center;">
-                <span style="font-size:12px;color:#555;">📷 images/wood-machines/<strong>${p.fileName}</strong> (${p.fullSize}KB)</span>
-                <button class="btn btn-outline btn-sm" onclick="downloadPhoto(${i},'full')">Скачать</button>
-                ${p.thumbBlob ? `<span style="font-size:12px;color:#555;">🖼 thumbs/<strong>${p.fileName}</strong> (${p.thumbSize}KB)</span><button class="btn btn-outline btn-sm" onclick="downloadPhoto(${i},'thumb')">Скачать</button>` : ''}
+      Object.keys(allUploadedPhotos).forEach(machineId => {
+        const photos = allUploadedPhotos[machineId];
+        if (photos.length === 0) return;
+        hasPhotos = true;
+
+        const machine = localMachines.find(m => m.id === Number(machineId));
+        const machineName = machine ? machine.name : `Станок #${machineId}`;
+
+        photosHtml += `
+          <div class="download-section">
+            <h4>📷 ${machineName} (${photos.length} новых фото)</h4>
+            ${photos.map((p, i) => `
+              <div class="download-item">
+                <span>📁 images/wood-machines/<strong>${p.fileName}</strong> (${p.fullSize}KB)</span>
+                <button class="btn btn-outline btn-sm" onclick="downloadPhotoById('${machineId}',${i},'full')">⬇ Скачать</button>
+                ${p.thumbBlob ? `
+                  <span>🖼 thumbs/<strong>${p.fileName}</strong> (${p.thumbSize}KB)</span>
+                  <button class="btn btn-outline btn-sm" onclick="downloadPhotoById('${machineId}',${i},'thumb')">⬇ Превью</button>
+                ` : ''}
               </div>
             `).join('')}
+            <div style="margin-top:8px;">
+              <button class="btn btn-success btn-sm" onclick="downloadAllForMachine('${machineId}')">📥 Скачать все фото этого станка</button>
+            </div>
           </div>
         `;
+      });
+
+      if (hasPhotos) {
+        dlArea.innerHTML = photosHtml;
+      } else {
+        dlArea.innerHTML = '<p style="font-size:13px;color:#999;">Новых фотографий нет. Фото появятся после загрузки в форме редактирования.</p>';
       }
     };
 
@@ -980,7 +1026,7 @@ git push -u origin main</div>
         lines.push(`    description: ${JSON.stringify(m.description || "")},`);
         lines.push(`    uniqueSpecs: [`);
         (m.uniqueSpecs || []).forEach((s, i) => {
-          const val = isNaN(s.value) ? JSON.stringify(s.value) : s.value;
+          const val = isNaN(s.value) ? JSON.stringify(String(s.value)) : s.value;
           lines.push(`      { label: ${JSON.stringify(s.label)}, value: ${val} }${i < m.uniqueSpecs.length - 1 ? ',' : ''}`);
         });
         lines.push(`    ],`);
@@ -993,22 +1039,27 @@ git push -u origin main</div>
     };
 
     // === Скачивание фото ===
-    const downloadPhoto = (index, type) => {
-      const p = uploadedPhotos[index];
+    const downloadPhotoById = (machineId, index, type) => {
+      const photos = allUploadedPhotos[machineId];
+      if (!photos || !photos[index]) return;
+      const p = photos[index];
       const blob = type === 'thumb' ? p.thumbBlob : p.fullBlob;
       if (!blob) return;
+      const prefix = type === 'thumb' ? 'thumb-' : '';
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
-      a.download = p.fileName;
+      a.download = prefix + p.fileName;
       a.click();
     };
 
-    const downloadAllPhotos = () => {
-      uploadedPhotos.forEach((p, i) => {
+    const downloadAllForMachine = (machineId) => {
+      const photos = allUploadedPhotos[machineId];
+      if (!photos) return;
+      photos.forEach((p, i) => {
         setTimeout(() => {
-          downloadPhoto(i, 'full');
+          downloadPhotoById(machineId, i, 'full');
           if (p.thumbBlob) {
-            setTimeout(() => downloadPhoto(i, 'thumb'), 300);
+            setTimeout(() => downloadPhotoById(machineId, i, 'thumb'), 300);
           }
         }, i * 600);
       });
@@ -1028,7 +1079,6 @@ git push -u origin main</div>
     // === Инициализация ===
     renderDashboard();
 
-    // Если machines-data.js не загрузился
     if (typeof machines === 'undefined') {
       showToast('Файл machines-data.js не найден. Создаём пустой каталог.', true);
       localMachines = [];
