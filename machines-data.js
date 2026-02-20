@@ -785,6 +785,6 @@ const machines = [
       { label: "Страна", value: "Россия" },
       { label: "Год", value: 1993 }
     ],
-    status: "hidden"
+    status: "active"
   }
 ];
