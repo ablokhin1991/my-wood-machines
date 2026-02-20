@@ -762,7 +762,9 @@ const machines = [
     images: [
       "images/wood-machines/sverlilno-pazovalnyy-stanok-svpg-2a-dspo.webp",
       "images/wood-machines/sverlilno-pazovalnyy-stanok-svpg-2a-dspo-2.webp",
-      "images/wood-machines/sverlilno-pazovalnyy-stanok-svpg-2a-dspo-3.webp"
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-svpg-2a-dspo-3.webp",
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-svpg-2a-dspo-5.webp",
+      "images/wood-machines/sverlilno-pazovalnyy-stanok-svpg-2a-dspo-4.webp"
     ],
     price: 135000,
     oldPrice: 155000,
