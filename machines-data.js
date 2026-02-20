@@ -833,10 +833,6 @@ const machines = [
     weight: 880,
     instock: 1,
     images: [
-      "images/wood-machines/frezernyy-stanok-fssh-1a.webp",
-      "images/wood-machines/frezernyy-stanok-fssh-1a-2.webp",
-      "images/wood-machines/frezernyy-stanok-fssh-1a-3.webp",
-      "images/wood-machines/frezernyy-stanok-fssh-1a-4.webp"
     ],
     price: 75000,
     oldPrice: 105000,
