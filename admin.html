@@ -269,7 +269,7 @@
         <button class="btn btn-outline" id="btn-cancel-form">Отмена</button>
       </div>
     </div>
-    <!-- ===== ТАБ: Экспорт ===== -->
+    <!-- ===== ТА��: Экспорт ===== -->
     <div class="tab-content" id="tab-export">
       <h2 style="font-size:20px;color:#222;margin-bottom:16px;">Экспорт и публикация</h2>
       <div class="form-section">
@@ -284,7 +284,7 @@
         <button class="btn btn-primary copy-btn" onclick="copyGit()">📋 Скопировать команды</button>
         <div class="git-commands" id="git-commands">cd /c/Users/mmqq2/Desktop/my-wood-machines
 git add .
-git commit -m "Обновление каталога станков"
+git commit -m "��бновление каталога станков"
 git push -u origin main</div>
       </div>
       <div class="form-section">
@@ -497,7 +497,7 @@ git push -u origin main</div>
         ...newPhotos.map((p, i) => ({ source: 'new', index: i, data: p }))
       ];
       if (allItems.length === 0) {
-        grid.innerHTML = '<p style="font-size:13px;color:#999;grid-column:1/-1;">Фото не добавлены</p>';
+        grid.innerHTML = '<p style="font-size:13px;color:#999;grid-column:1/-1;">Фото не доб��влены</p>';
         return;
       }
       let html = '';
@@ -907,7 +907,7 @@ git push -u origin main</div>
           photosHtml += `
             <div class="download-section" style="background:#f0fff0;border-color:#c2f0c2;">
               <h4>🖼 ${machineName} — images/wood-machines/thumbs/ (${thumbPhotos.length} превью)</h4>
-              <p style="font-size:12px;color:#888;margin-bottom:8px;">Превью 600×338 → положить в <strong>images/wood-machines/thumbs/</strong> (имена совпадают с оригиналами)</p>
+              <p style="font-size:12px;color:#888;margin-bottom:8px;">Превью 600×338 → положить в <strong>images/wood-machines/thumbs/</strong> (имена с��впадают с оригиналами)</p>
               ${photos.map((p, i) => p.thumbBlob ? `
                 <div class="download-item">
                   <span>🖼 <strong>${p.fileName}</strong> (${p.thumbSize}KB)</span>
