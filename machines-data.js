@@ -850,5 +850,47 @@ const machines = [
       { label: "Год", value: 2000 }
     ],
     status: "active"
+  },
+  {
+    id: 23,
+    name: "Форматно-раскроенный станок Giben matic standard",
+    type: "Распиловочный",
+    kind: "Форматно-раскроечный",
+    manufacturer: "GIBEN",
+    country: "Италия",
+    year: "-",
+    power: "7,5",
+    dimensions: "6000х3000х1300",
+    weight: 3500,
+    instock: 1,
+    images: [
+      "images/wood-machines/formatno-raskroennyy-stanok-giben-matic-standard.webp",
+      "images/wood-machines/formatno-raskroennyy-stanok-giben-matic-standard-2.webp",
+      "images/wood-machines/formatno-raskroennyy-stanok-giben-matic-standard-3.webp",
+      "images/wood-machines/formatno-raskroennyy-stanok-giben-matic-standard-4.webp",
+      "images/wood-machines/formatno-raskroennyy-stanok-giben-matic-standard-5.webp",
+      "images/wood-machines/formatno-raskroennyy-stanok-giben-matic-standard-6.webp"
+    ],
+    price: 820000,
+    oldPrice: 875000,
+    description: "Продаем форматно-раскроенный станок, произведенный заводом GIBEN в Италии. Станок отличается высокой точностью, безопасностью и чистотой реза - рез получается финишным, за счет наличия основной и подрезной пилы. Станок имеет 4 диапазона положения пильного узла. Ему не нужно каждый раз возвращаться в исходное положение, если вы пилите короткие заготовки. Это серьезно сокращает время цикла. Работа на станке безопасна, потому что во время самого реза оператор не имеет прямого контакта с разрезаемым материалом, а заготовка прижимается сверху прижимной балкой с помощью сжатого воздуха. Активация прижимной балки и подача пилы осуществляется с помощью ножной педали. Станок может работать в автоматическом и полуавтоматическом цикле. Станок подходит для работы с плитным материалом и деревом. Станок массивный, прочный и надежный.",
+    uniqueSpecs: [
+      { label: "Диаметр основной пилы, мм", value: 350 },
+      { label: "Диаметр подрезной пилы, мм", value: 125 },
+      { label: "Макс. ширина резки, мм", value: 1200 },
+      { label: "Макс. длина резки, мм", value: 4200 },
+      { label: "Макс. высота резки (основной пилы), мм", value: 70 },
+      { label: "Макс. высота резки (подрезной пилы), мм", value: 2 },
+      { label: "Скорость пильного диска, об/мин", value: 3800 },
+      { label: "Скорость подачи, м/мин", value: 7 },
+      { label: "Патрубок аспирации Ø, мм", value: 250 },
+      { label: "Мощность, кВт", value: "7,5" },
+      { label: "Габариты ДxШxВ, мм", value: "6000х3000х1300" },
+      { label: "Масса, кг", value: 3500 },
+      { label: "Производитель", value: "GIBEN" },
+      { label: "Страна", value: "Италия" },
+      { label: "Год", value: "-" }
+    ],
+    status: "active"
   }
 ];
