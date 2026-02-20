@@ -8,21 +8,17 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Arial, sans-serif; background: #f0f2f5; color: #333; line-height: 1.6; }
-
     .admin-header { background: #1f2d3d; color: #fff; padding: 16px 0; }
     .admin-header .container { display: flex; justify-content: space-between; align-items: center; }
     .admin-header h1 { font-size: 18px; font-weight: 700; }
     .admin-header .site-link { color: #90caf9; font-size: 13px; }
-
     .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
-
     .tabs { display: flex; gap: 0; margin: 24px 0 0; border-bottom: 2px solid #e0e0e0; }
     .tab-btn { padding: 12px 24px; font-size: 15px; font-weight: 700; color: #666; background: none; border: none; border-bottom: 2px solid transparent; margin-bottom: -2px; cursor: pointer; transition: all .2s; }
     .tab-btn.active { color: #1f4b7a; border-bottom-color: #1f4b7a; }
     .tab-btn:hover { color: #1f4b7a; }
     .tab-content { display: none; padding: 24px 0; }
     .tab-content.active { display: block; }
-
     .machines-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
     .machines-table th, .machines-table td { padding: 12px 14px; text-align: left; font-size: 14px; border-bottom: 1px solid #e8e8e8; }
     .machines-table th { background: #f7f8fa; color: #555; font-weight: 700; font-size: 12px; text-transform: uppercase; }
@@ -31,7 +27,6 @@
     .machines-table .status-active { color: #1b5e20; font-weight: 700; white-space: nowrap; }
     .machines-table .status-draft { color: #e65100; font-weight: 700; }
     .machines-table .status-hidden { color: #999; font-weight: 700; }
-
     .btn { display: inline-block; padding: 8px 16px; border-radius: 4px; font-size: 13px; font-weight: 700; border: none; cursor: pointer; transition: all .2s; text-decoration: none; }
     .btn-primary { background: #1f4b7a; color: #fff; }
     .btn-primary:hover { background: #163a5f; }
@@ -45,7 +40,6 @@
     .btn-outline:hover { background: #eef3f9; }
     .btn-sm { padding: 5px 10px; font-size: 12px; }
     .btn-group { display: flex; gap: 6px; flex-wrap: nowrap; }
-
     .form-section { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
     .form-section h3 { font-size: 16px; color: #222; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #e8e8e8; }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -57,7 +51,6 @@
     .form-group textarea { resize: vertical; min-height: 100px; }
     .form-group .hint { font-size: 11px; color: #999; }
     .form-group input[readonly] { background: #f5f5f5; color: #888; }
-
     .specs-editor { border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; }
     .specs-row { display: grid; grid-template-columns: 1fr 1fr 40px; gap: 0; border-bottom: 1px solid #e8e8e8; }
     .specs-row:last-child { border-bottom: none; }
@@ -69,7 +62,6 @@
     .specs-row-default input:first-child { background: #f0f7ff; font-weight: 600; }
     .specs-add-btn { padding: 8px 16px; background: #f7f8fa; border: none; color: #1f4b7a; font-size: 13px; font-weight: 700; cursor: pointer; width: 100%; text-align: left; }
     .specs-add-btn:hover { background: #eef3f9; }
-
     .photo-upload-area { border: 2px dashed #ccc; border-radius: 8px; padding: 32px; text-align: center; cursor: pointer; transition: all .2s; background: #fafafa; }
     .photo-upload-area:hover { border-color: #1f4b7a; background: #f0f5fa; }
     .photo-upload-area.dragover { border-color: #1b5e20; background: #e8f5e9; }
@@ -77,48 +69,39 @@
     .photo-upload-area .hint { font-size: 12px; color: #999; }
     .photo-preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin-top: 16px; }
     .photo-preview-item { position: relative; border-radius: 6px; overflow: hidden; background: #f0f0f0; aspect-ratio: 16/9; }
-    .photo-preview-item img { width: 100%; height: 100%; object-fit: cover; }
+    .photo-preview-item img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
     .photo-preview-item .photo-badge { position: absolute; top: 4px; left: 4px; background: rgba(0,0,0,.6); color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 3px; }
-    .photo-preview-item .photo-remove { position: absolute; top: 4px; right: 4px; background: rgba(200,0,0,.8); color: #fff; border: none; width: 22px; height: 22px; border-radius: 50%; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+    .photo-preview-item .photo-remove { position: absolute; top: 4px; right: 4px; background: rgba(200,0,0,.8); color: #fff; border: none; width: 22px; height: 22px; border-radius: 50%; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; z-index: 5; }
     .photo-preview-item .photo-info { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,.6); color: #fff; font-size: 10px; padding: 3px 6px; }
     .photo-preview-item.existing { border: 2px solid #1f4b7a; }
-
+    .photo-preview-item[draggable="true"] { cursor: grab; user-select: none; }
+    .photo-preview-item[draggable="true"]:active { cursor: grabbing; }
+    .photo-preview-item.drag-over { outline: 3px dashed #1f4b7a; outline-offset: -3px; opacity: .7; }
+    .photo-preview-item.dragging { opacity: .4; }
+    .photo-badge.badge-main { background: #1b5e20; }
     .form-actions { display: flex; gap: 12px; margin-top: 24px; padding-top: 20px; border-top: 1px solid #e0e0e0; }
-
     .code-output { background: #1e1e1e; color: #d4d4d4; border-radius: 8px; padding: 20px; font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.5; overflow-x: auto; white-space: pre-wrap; word-break: break-all; max-height: 500px; overflow-y: auto; margin-top: 16px; }
     .copy-btn { margin-top: 8px; }
-
     .git-commands { background: #263238; color: #aed581; border-radius: 8px; padding: 16px 20px; font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.8; margin-top: 16px; }
-
     .toast { position: fixed; bottom: 24px; right: 24px; background: #1b5e20; color: #fff; padding: 14px 24px; border-radius: 6px; font-size: 14px; font-weight: 700; z-index: 9999; transform: translateY(100px); opacity: 0; transition: all .3s; box-shadow: 0 4px 12px rgba(0,0,0,.2); }
     .toast.show { transform: translateY(0); opacity: 1; }
     .toast.error { background: #c62828; }
-
     .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
     .stat-card { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.08); text-align: center; }
     .stat-card .stat-number { font-size: 32px; font-weight: 700; color: #1f4b7a; }
     .stat-card .stat-label { font-size: 13px; color: #888; margin-top: 4px; }
-
     .confirm-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,.5); z-index: 5000; align-items: center; justify-content: center; }
     .confirm-overlay.show { display: flex; }
     .confirm-box { background: #fff; border-radius: 8px; padding: 28px; max-width: 400px; width: 100%; text-align: center; }
     .confirm-box p { font-size: 15px; margin-bottom: 20px; color: #333; }
     .confirm-box .btn-group { justify-content: center; }
-
     .processing-bar { background: #e0e0e0; border-radius: 4px; height: 6px; margin-top: 8px; overflow: hidden; }
     .processing-bar .bar-fill { height: 100%; background: #1b5e20; border-radius: 4px; transition: width .3s; width: 0; }
-
     .download-section { background: #f0f7ff; border: 1px solid #c2d9f0; border-radius: 8px; padding: 16px; margin-top: 16px; }
     .download-section h4 { font-size: 14px; color: #1f4b7a; margin-bottom: 8px; }
     .download-item { display: flex; gap: 8px; margin-bottom: 6px; align-items: center; flex-wrap: wrap; }
     .download-item span { font-size: 12px; color: #555; }
     .download-item strong { color: #222; }
-    .photo-preview-item[draggable="true"] { cursor: grab; }
-    .photo-preview-item[draggable="true"]:active { cursor: grabbing; }
-    .photo-preview-item.drag-over { outline: 3px dashed #1f4b7a; outline-offset: -3px; opacity: .7; }
-    .photo-preview-item.dragging { opacity: .4; }
-    .photo-badge.badge-main { background: #1b5e20; }
-
     @media (max-width: 768px) {
       .form-grid { grid-template-columns: 1fr; }
       .stats-row { grid-template-columns: repeat(2, 1fr); }
@@ -130,23 +113,19 @@
   </style>
 </head>
 <body>
-
   <header class="admin-header">
     <div class="container">
       <h1>⚙️ Админ-панель — Управление станками</h1>
       <a href="https://prodam-stanki.ru/" target="_blank" class="site-link">Открыть сайт ↗</a>
     </div>
   </header>
-
   <div class="container">
-
     <div class="tabs">
       <button class="tab-btn active" data-tab="dashboard">📊 Обзор</button>
       <button class="tab-btn" data-tab="machines-list">📋 Все станки</button>
       <button class="tab-btn" data-tab="add-machine">➕ Новый станок</button>
       <button class="tab-btn" data-tab="export">💾 Экспорт</button>
     </div>
-
     <!-- ===== ТАБ: Обзор ===== -->
     <div class="tab-content active" id="tab-dashboard">
       <div class="stats-row" id="stats-row"></div>
@@ -158,7 +137,6 @@
         </div>
       </div>
     </div>
-
     <!-- ===== ТАБ: Все станки ===== -->
     <div class="tab-content" id="tab-machines-list">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
@@ -180,11 +158,9 @@
         <tbody id="machines-tbody"></tbody>
       </table>
     </div>
-
     <!-- ===== ТАБ: Новый станок ===== -->
     <div class="tab-content" id="tab-add-machine">
       <h2 style="font-size:20px;color:#222;margin-bottom:16px;" id="form-title">Новый станок</h2>
-
       <div class="form-section">
         <h3>Основная информация</h3>
         <div class="form-grid">
@@ -235,7 +211,6 @@
           </div>
         </div>
       </div>
-
       <div class="form-section">
         <h3>Цена</h3>
         <div class="form-grid">
@@ -249,19 +224,17 @@
           </div>
         </div>
       </div>
-
       <div class="form-section">
         <h3>Фотографии</h3>
-        <p style="font-size:13px;color:#666;margin-bottom:12px;">Новые фото добавляются к существующим. Для удаления нажмите × на фото.</p>
+        <p style="font-size:13px;color:#666;margin-bottom:12px;">Новые фото добавляются к существующим. Перетаскивайте фото мышкой для изменения порядка. Фото №1 = главное.</p>
         <div class="photo-upload-area" id="photo-upload-area">
           <p>📷 Перетащите фото сюда или нажмите для выбора</p>
-          <span class="hint">Поддерживаются JPG, PNG, WebP. Новые фото добавятся к существующим.</span>
+          <span class="hint">Поддерживаются JPG, PNG, WebP. Можно выбрать несколько файлов.</span>
           <input type="file" id="photo-input" multiple accept="image/*" style="display:none">
         </div>
         <div class="processing-bar" id="processing-bar" style="display:none"><div class="bar-fill" id="bar-fill"></div></div>
         <div class="photo-preview-grid" id="photo-preview-grid"></div>
       </div>
-
       <div class="form-section">
         <h3>Видео (необязательно)</h3>
         <div class="form-group">
@@ -270,7 +243,6 @@
           <span class="hint">Загрузите видео вручную в папку videos/ и укажите путь</span>
         </div>
       </div>
-
       <div class="form-section">
         <h3>Описание</h3>
         <div class="form-group full">
@@ -278,7 +250,6 @@
           <textarea id="f-description" rows="6" placeholder="Подробное описание состояния, особенностей и преимуществ станка..."></textarea>
         </div>
       </div>
-
       <div class="form-section">
         <h3>Технические характеристики</h3>
         <div class="specs-editor" id="specs-editor">
@@ -292,25 +263,21 @@
         </div>
         <button class="specs-add-btn" id="add-spec-btn">+ Добавить характеристику</button>
       </div>
-
       <div class="form-actions">
         <button class="btn btn-warning" id="btn-save-draft">📝 Сохранить черновик</button>
         <button class="btn btn-success" id="btn-save-publish">✅ Сохранить и опубликовать</button>
         <button class="btn btn-outline" id="btn-cancel-form">Отмена</button>
       </div>
     </div>
-
     <!-- ===== ТАБ: Экспорт ===== -->
     <div class="tab-content" id="tab-export">
       <h2 style="font-size:20px;color:#222;margin-bottom:16px;">Экспорт и публикация</h2>
-
       <div class="form-section">
         <h3>📄 Код machines-data.js</h3>
         <p style="font-size:14px;color:#666;margin-bottom:12px;">Скопируйте этот код и замените содержимое файла <code>machines-data.js</code></p>
         <button class="btn btn-primary copy-btn" onclick="copyCode()">📋 Скопировать код</button>
         <div class="code-output" id="code-output"></div>
       </div>
-
       <div class="form-section">
         <h3>🚀 Публикация на сайт</h3>
         <p style="font-size:14px;color:#666;margin-bottom:12px;">После замены файла выполните эти команды в Git Bash:</p>
@@ -320,7 +287,6 @@ git add .
 git commit -m "Обновление каталога станков"
 git push -u origin main</div>
       </div>
-
       <div class="form-section">
         <h3>📸 Фотографии для скачивания</h3>
         <p style="font-size:14px;color:#666;margin-bottom:12px;">Скачайте обработанные фото и положите в соответствующие папки проекта:</p>
@@ -329,9 +295,7 @@ git push -u origin main</div>
         </div>
       </div>
     </div>
-
   </div>
-
   <div class="confirm-overlay" id="confirm-overlay">
     <div class="confirm-box">
       <p id="confirm-text">Вы уверены?</p>
@@ -341,9 +305,7 @@ git push -u origin main</div>
       </div>
     </div>
   </div>
-
   <div class="toast" id="toast"></div>
-
   <script src="machines-data.js"></script>
   <script>
     // === Конфигурация ===
@@ -359,7 +321,6 @@ git push -u origin main</div>
       "Пресс": ["Веерный","Вертикальный"],
       "Кромкооблицовочный": ["Односторонний"]
     };
-
     const defaultSpecLabels = [
       "Мощность, кВт",
       "Габариты ДxШxВ, мм",
@@ -368,23 +329,17 @@ git push -u origin main</div>
       "Страна",
       "Год"
     ];
-
     // === Состояние ===
     let localMachines = JSON.parse(JSON.stringify(typeof machines !== 'undefined' ? machines : []));
     localMachines.forEach(m => {
       if (!m.hasOwnProperty('status')) m.status = 'active';
     });
-
     let editingId = null;
-    // Хранилище фото: ключ — id станка, значение — массив обработанных фото
     let allUploadedPhotos = {};
-    // Существующие фото текущего станка (из machines-data.js)
     let existingPhotos = [];
     let confirmCallback = null;
-
     // === Утилиты ===
     const formatPrice = (n) => Number(n).toLocaleString("ru-RU") + " руб.";
-
     const transliterate = (str) => {
       const map = {
         'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'yo','ж':'zh','з':'z','и':'i',
@@ -402,16 +357,13 @@ git push -u origin main</div>
         .replace(/^-|-$/g, '')
         .toLowerCase();
     };
-
     const getNextId = () => {
       if (localMachines.length === 0) return 1;
       return Math.max(...localMachines.map(m => m.id)) + 1;
     };
-
     const getMachineId = () => {
       return editingId || Number(document.getElementById('f-id').value) || getNextId();
     };
-
     const showToast = (msg, isError = false) => {
       const toast = document.getElementById('toast');
       toast.textContent = msg;
@@ -419,48 +371,40 @@ git push -u origin main</div>
       setTimeout(() => toast.classList.add('show'), 10);
       setTimeout(() => toast.classList.remove('show'), 3000);
     };
-
     const showConfirm = (text, callback) => {
       document.getElementById('confirm-text').textContent = text;
       document.getElementById('confirm-overlay').classList.add('show');
       confirmCallback = callback;
     };
-
     document.getElementById('confirm-yes').addEventListener('click', () => {
       document.getElementById('confirm-overlay').classList.remove('show');
       if (confirmCallback) confirmCallback();
       confirmCallback = null;
     });
-
     document.getElementById('confirm-no').addEventListener('click', () => {
       document.getElementById('confirm-overlay').classList.remove('show');
       confirmCallback = null;
     });
-
     // === Табы ===
     const switchTab = (tabId) => {
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
       document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
       document.getElementById(`tab-${tabId}`).classList.add('active');
-
       if (tabId === 'dashboard') renderDashboard();
       if (tabId === 'machines-list') renderMachinesList();
       if (tabId === 'export') renderExport();
       if (tabId === 'add-machine' && !editingId) resetForm();
     };
-
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => switchTab(btn.getAttribute('data-tab')));
     });
-
     // === Дашборд ===
     const renderDashboard = () => {
       const active = localMachines.filter(m => m.status === 'active').length;
       const drafts = localMachines.filter(m => m.status === 'draft').length;
       const hidden = localMachines.filter(m => m.status === 'hidden').length;
       const totalValue = localMachines.filter(m => m.status === 'active').reduce((s, m) => s + (m.price || 0), 0);
-
       document.getElementById('stats-row').innerHTML = `
         <div class="stat-card"><div class="stat-number">${active}</div><div class="stat-label">Активных</div></div>
         <div class="stat-card"><div class="stat-number">${drafts}</div><div class="stat-label">Черновиков</div></div>
@@ -468,7 +412,6 @@ git push -u origin main</div>
         <div class="stat-card"><div class="stat-number">${formatPrice(totalValue)}</div><div class="stat-label">Общая стоимость</div></div>
       `;
     };
-
     // === Список станков ===
     const renderMachinesList = () => {
       const tbody = document.getElementById('machines-tbody');
@@ -487,7 +430,7 @@ git push -u origin main</div>
               <button class="btn btn-outline btn-sm" onclick="editMachine(${m.id})">✏️</button>
               ${m.status === 'active'
                 ? `<button class="btn btn-warning btn-sm" onclick="toggleStatus(${m.id}, 'hidden')">Снять</button>`
-                : `<button class="btn btn-success btn-sm" onclick="toggleStatus(${m.id}, 'active')">Опубликовать</button>`
+                : `<button class="btn btn-success btn-sm" onclick="toggleStatus(${m.id}, 'active')">Опубл.</button>`
               }
               <button class="btn btn-danger btn-sm" onclick="deleteMachine(${m.id})">🗑</button>
             </div>
@@ -495,7 +438,6 @@ git push -u origin main</div>
         </tr>`;
       }).join('');
     };
-
     // === Действия со станками ===
     const toggleStatus = (id, newStatus) => {
       const m = localMachines.find(x => x.id === id);
@@ -505,7 +447,6 @@ git push -u origin main</div>
         showToast(newStatus === 'active' ? 'Станок опубликован' : 'Станок снят с продажи');
       }
     };
-
     const deleteMachine = (id) => {
       const m = localMachines.find(x => x.id === id);
       showConfirm(`Удалить "${m ? m.name : ''}"? Это действие нельзя отменить.`, () => {
@@ -515,14 +456,11 @@ git push -u origin main</div>
         showToast('Станок удалён');
       });
     };
-
     const editMachine = (id) => {
       const m = localMachines.find(x => x.id === id);
       if (!m) return;
-
       editingId = id;
       document.getElementById('form-title').textContent = 'Редактирование: ' + m.name;
-
       document.getElementById('f-id').value = m.id;
       document.getElementById('f-name').value = m.name || '';
       document.getElementById('f-manufacturer').value = m.manufacturer || '';
@@ -536,163 +474,118 @@ git push -u origin main</div>
       document.getElementById('f-oldprice').value = m.oldPrice || '';
       document.getElementById('f-description').value = m.description || '';
       document.getElementById('f-video').value = (m.videos && m.videos[0]) || '';
-
-      // Тип
       const typeSelect = document.getElementById('f-type');
       typeSelect.value = m.type || '';
       updateKindSelect(m.type);
       document.getElementById('f-kind').value = m.kind || '';
-
-      // Спеки
       renderSpecsForEdit(m.uniqueSpecs || []);
-
-      // Фото: загружаем существующие
       existingPhotos = [...(m.images || [])];
-
-      // Восстанавливаем ранее загруженные новые фото для этого станка
       if (!allUploadedPhotos[id]) {
         allUploadedPhotos[id] = [];
       }
-
       renderAllPhotos();
       switchTab('add-machine');
     };
-
-    // === Рендер всех фото (существующие + новые) ===
+    // === Рендер всех фото (существующие + новые) с drag-and-drop ===
     const renderAllPhotos = () => {
       const grid = document.getElementById('photo-preview-grid');
       const machineId = getMachineId();
       const newPhotos = allUploadedPhotos[machineId] || [];
-      const totalCount = existingPhotos.length + newPhotos.length;
-
-      let html = '';
-
-      // Существующие фото
-      existingPhotos.forEach((img, i) => {
-        const globalIndex = i;
-        const label = globalIndex === 0 ? 'Главное' : `#${globalIndex + 1}`;
-        const badgeClass = globalIndex === 0 ? 'photo-badge badge-main' : 'photo-badge';
-        html += `
-          <div class="photo-preview-item existing" draggable="true" data-source="existing" data-index="${i}">
-            <img src="${img}" alt="Фото ${i+1}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%2284%22><rect fill=%22%23e0e0e0%22 width=%22150%22 height=%2284%22/><text x=%2275%22 y=%2242%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2210%22>Файл не найден</text></svg>'">
-            <span class="${badgeClass}">${label}</span>
-            <button class="photo-remove" onclick="event.stopPropagation();removeExistingPhoto(${i})" title="Удалить">×</button>
-            <div class="photo-info">📁 ${img.split('/').pop()}</div>
-          </div>
-        `;
-      });
-
-      // Новые загруженные фото
-      newPhotos.forEach((p, i) => {
-        const globalIndex = existingPhotos.length + i;
-        const label = globalIndex === 0 ? 'Главное' : `#${globalIndex + 1}`;
-        const badgeClass = globalIndex === 0 ? 'photo-badge badge-main' : 'photo-badge';
-        html += `
-          <div class="photo-preview-item" draggable="true" data-source="new" data-index="${i}">
-            <img src="${p.fullUrl}" alt="${p.fileName}">
-            <span class="${badgeClass}">${globalIndex === 0 ? 'Главное' : '🆕 ' + label}</span>
-            <button class="photo-remove" onclick="event.stopPropagation();removeNewPhoto(${i})" title="Удалить">×</button>
-            <div class="photo-info">${p.fileName} · ${p.fullSize}KB${p.thumbSize ? ' · thumb: ' + p.thumbSize + 'KB' : ''}</div>
-          </div>
-        `;
-      });
-
-      if (totalCount === 0) {
-        html = '<p style="font-size:13px;color:#999;grid-column:1/-1;">Фото не добавлены</p>';
+      // Собираем единый массив для отображения
+      const allItems = [
+        ...existingPhotos.map((img, i) => ({ source: 'existing', index: i, data: img })),
+        ...newPhotos.map((p, i) => ({ source: 'new', index: i, data: p }))
+      ];
+      if (allItems.length === 0) {
+        grid.innerHTML = '<p style="font-size:13px;color:#999;grid-column:1/-1;">Фото не добавлены</p>';
+        return;
       }
-
+      let html = '';
+      allItems.forEach((item, globalIdx) => {
+        const label = globalIdx === 0 ? 'Главное' : `#${globalIdx + 1}`;
+        const badgeClass = globalIdx === 0 ? 'photo-badge badge-main' : 'photo-badge';
+        if (item.source === 'existing') {
+          html += `
+            <div class="photo-preview-item existing" draggable="true" data-global="${globalIdx}">
+              <img src="${item.data}" alt="Фото ${globalIdx+1}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%2284%22><rect fill=%22%23e0e0e0%22 width=%22150%22 height=%2284%22/><text x=%2275%22 y=%2242%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2210%22>Файл не найден</text></svg>'">
+              <span class="${badgeClass}">${label}</span>
+              <button class="photo-remove" onclick="event.stopPropagation();removePhotoGlobal(${globalIdx})" title="Удалить">×</button>
+              <div class="photo-info">📁 ${item.data.split('/').pop()}</div>
+            </div>
+          `;
+        } else {
+          const p = item.data;
+          html += `
+            <div class="photo-preview-item" draggable="true" data-global="${globalIdx}">
+              <img src="${p.fullUrl}" alt="${p.fileName}">
+              <span class="${badgeClass}">${globalIdx === 0 ? 'Главное' : '🆕 ' + label}</span>
+              <button class="photo-remove" onclick="event.stopPropagation();removePhotoGlobal(${globalIdx})" title="Удалить">×</button>
+              <div class="photo-info">${p.fileName} · ${p.fullSize}KB${p.thumbSize ? ' · thumb: ' + p.thumbSize + 'KB' : ''}</div>
+            </div>
+          `;
+        }
+      });
       grid.innerHTML = html;
       initPhotoDragAndDrop();
     };
-
-        const initPhotoDragAndDrop = () => {
+    // Собрать единый массив и разделить обратно
+    const getCombinedPhotos = () => {
+      const machineId = getMachineId();
+      const newPhotos = allUploadedPhotos[machineId] || [];
+      return [
+        ...existingPhotos.map(img => ({ source: 'existing', data: img })),
+        ...newPhotos.map(p => ({ source: 'new', data: p }))
+      ];
+    };
+    const applyCombined = (combined) => {
+      const machineId = getMachineId();
+      existingPhotos = combined.filter(c => c.source === 'existing').map(c => c.data);
+      allUploadedPhotos[machineId] = combined.filter(c => c.source === 'new').map(c => c.data);
+    };
+    const removePhotoGlobal = (globalIdx) => {
+      const combined = getCombinedPhotos();
+      combined.splice(globalIdx, 1);
+      applyCombined(combined);
+      renderAllPhotos();
+    };
+    const initPhotoDragAndDrop = () => {
       const grid = document.getElementById('photo-preview-grid');
       const items = grid.querySelectorAll('.photo-preview-item[draggable]');
       let dragItem = null;
-
       items.forEach(item => {
         item.addEventListener('dragstart', (e) => {
           dragItem = item;
           item.classList.add('dragging');
           e.dataTransfer.effectAllowed = 'move';
+          e.dataTransfer.setData('text/plain', '');
         });
-
         item.addEventListener('dragend', () => {
           if (dragItem) dragItem.classList.remove('dragging');
           items.forEach(el => el.classList.remove('drag-over'));
           dragItem = null;
         });
-
         item.addEventListener('dragover', (e) => {
           e.preventDefault();
           e.dataTransfer.dropEffect = 'move';
           if (item !== dragItem) item.classList.add('drag-over');
         });
-
         item.addEventListener('dragleave', () => {
           item.classList.remove('drag-over');
         });
-
         item.addEventListener('drop', (e) => {
           e.preventDefault();
           item.classList.remove('drag-over');
           if (!dragItem || dragItem === item) return;
-
-          const fromSource = dragItem.getAttribute('data-source');
-          const fromIndex = parseInt(dragItem.getAttribute('data-index'), 10);
-          const toSource = item.getAttribute('data-source');
-          const toIndex = parseInt(item.getAttribute('data-index'), 10);
-
-          // Собираем единый массив: [существующие..., новые...]
-          const machineId = getMachineId();
-          const newPhotos = allUploadedPhotos[machineId] || [];
-          const combined = [
-            ...existingPhotos.map((img, i) => ({ source: 'existing', data: img })),
-            ...newPhotos.map((p, i) => ({ source: 'new', data: p }))
-          ];
-
-          const fromGlobal = fromSource === 'existing' ? fromIndex : existingPhotos.length + fromIndex;
-          const toGlobal = toSource === 'existing' ? toIndex : existingPhotos.length + toIndex;
-
-          // Перемещение
+          const fromGlobal = parseInt(dragItem.getAttribute('data-global'), 10);
+          const toGlobal = parseInt(item.getAttribute('data-global'), 10);
+          const combined = getCombinedPhotos();
           const moved = combined.splice(fromGlobal, 1)[0];
           combined.splice(toGlobal, 0, moved);
-
-          // Разделяем обратно
-          existingPhotos = combined.filter(c => c.source === 'existing').map(c => c.data);
-          allUploadedPhotos[machineId] = combined.filter(c => c.source === 'new').map(c => c.data);
-
+          applyCombined(combined);
           renderAllPhotos();
         });
       });
     };
-
-    const removeExistingPhoto = (index) => {
-      existingPhotos.splice(index, 1);
-      renderAllPhotos();
-    };
-
-    const removeNewPhoto = (index) => {
-      const machineId = getMachineId();
-      if (allUploadedPhotos[machineId]) {
-        allUploadedPhotos[machineId].splice(index, 1);
-        renameNewPhotos(machineId);
-      }
-      renderAllPhotos();
-    };
-
-    const renameNewPhotos = (machineId) => {
-      const name = document.getElementById('f-name').value.trim();
-      if (!name) return;
-      const baseName = transliterate(name);
-      const photos = allUploadedPhotos[machineId] || [];
-      photos.forEach((p, i) => {
-        const globalIndex = existingPhotos.length + i;
-        const suffix = globalIndex === 0 ? '' : `-${globalIndex + 1}`;
-        p.fileName = `${baseName}${suffix}.webp`;
-      });
-    };
-
     // === Форма ===
     const resetForm = () => {
       editingId = null;
@@ -717,7 +610,6 @@ git push -u origin main</div>
       document.getElementById('photo-preview-grid').innerHTML = '';
       renderDefaultSpecs();
     };
-
     // Заполнение типов
     const typeSelect = document.getElementById('f-type');
     Object.keys(typeToKinds).sort().forEach(type => {
@@ -726,7 +618,6 @@ git push -u origin main</div>
       opt.textContent = type;
       typeSelect.appendChild(opt);
     });
-
     const updateKindSelect = (type) => {
       const kindSelect = document.getElementById('f-kind');
       kindSelect.innerHTML = '';
@@ -744,9 +635,7 @@ git push -u origin main</div>
         kindSelect.appendChild(opt);
       });
     };
-
     typeSelect.addEventListener('change', () => updateKindSelect(typeSelect.value));
-
     // === Спеки ===
     const renderDefaultSpecs = () => {
       document.getElementById('specs-custom-area').innerHTML = '';
@@ -758,16 +647,13 @@ git push -u origin main</div>
         </div>
       `).join('');
     };
-
     const renderSpecsForEdit = (specs) => {
       const customArea = document.getElementById('specs-custom-area');
       const defaultArea = document.getElementById('specs-default-area');
       customArea.innerHTML = '';
-
       const defaultLabelsLower = defaultSpecLabels.map(l => l.toLowerCase());
       const customSpecs = specs.filter(s => !defaultLabelsLower.includes(s.label.toLowerCase()));
       const defaultSpecs = specs.filter(s => defaultLabelsLower.includes(s.label.toLowerCase()));
-
       customSpecs.forEach(s => {
         customArea.innerHTML += `
           <div class="specs-row">
@@ -777,7 +663,6 @@ git push -u origin main</div>
           </div>
         `;
       });
-
       defaultArea.innerHTML = defaultSpecLabels.map(label => {
         const found = defaultSpecs.find(s => s.label.toLowerCase() === label.toLowerCase());
         return `
@@ -789,7 +674,6 @@ git push -u origin main</div>
         `;
       }).join('');
     };
-
     document.getElementById('add-spec-btn').addEventListener('click', () => {
       const customArea = document.getElementById('specs-custom-area');
       const row = document.createElement('div');
@@ -801,14 +685,15 @@ git push -u origin main</div>
       `;
       customArea.appendChild(row);
     });
-
     renderDefaultSpecs();
-
     // === Загрузка фото ===
     const photoArea = document.getElementById('photo-upload-area');
     const photoInput = document.getElementById('photo-input');
-
-    photoArea.addEventListener('click', () => photoInput.click());
+    photoArea.addEventListener('click', (e) => {
+      if (e.target === photoArea || e.target.tagName === 'P' || e.target.tagName === 'SPAN') {
+        photoInput.click();
+      }
+    });
     photoArea.addEventListener('dragover', (e) => { e.preventDefault(); photoArea.classList.add('dragover'); });
     photoArea.addEventListener('dragleave', () => photoArea.classList.remove('dragover'));
     photoArea.addEventListener('drop', (e) => {
@@ -816,43 +701,44 @@ git push -u origin main</div>
       photoArea.classList.remove('dragover');
       handleFiles(e.dataTransfer.files);
     });
-    photoInput.addEventListener('change', () => { handleFiles(photoInput.files); photoInput.value = ''; });
-
-    const handleFiles = async (files) => {
+    photoInput.addEventListener('change', () => {
+      handleFiles(photoInput.files);
+      photoInput.value = '';
+    });
+    const handleFiles = async (fileList) => {
       const name = document.getElementById('f-name').value.trim();
       if (!name) {
         showToast('Сначала заполните название станка', true);
         return;
       }
-
+      const files = Array.from(fileList);
+      if (files.length === 0) {
+        showToast('Файлы не выбраны', true);
+        return;
+      }
       const bar = document.getElementById('processing-bar');
       const fill = document.getElementById('bar-fill');
       bar.style.display = 'block';
       fill.style.width = '0%';
-
       const baseName = transliterate(name);
       const machineId = getMachineId();
-
       if (!allUploadedPhotos[machineId]) {
         allUploadedPhotos[machineId] = [];
       }
-
-      const existingCount = existingPhotos.length;
-      const newExistingCount = allUploadedPhotos[machineId].length;
-      const startIndex = existingCount + newExistingCount;
-
+      let processed = 0;
       for (let i = 0; i < files.length; i++) {
         const file = files[i];
-        const photoIndex = startIndex + i;
-        const suffix = photoIndex === 0 ? '' : `-${photoIndex + 1}`;
+        // Вычисляем глобальную позицию для имени файла
+        const globalPosition = existingPhotos.length + allUploadedPhotos[machineId].length;
+        const suffix = globalPosition === 0 ? '' : `-${globalPosition + 1}`;
         const fileName = `${baseName}${suffix}.webp`;
-
+        // Обработка полноразмерного фото
         const fullBlob = await processImage(file, 1920, 1080, 0.85);
+        // Превью только для первых 2 фото в общем списке
         let thumbBlob = null;
-        if (photoIndex < 2) {
+        if (globalPosition < 2) {
           thumbBlob = await processImage(file, 600, 338, 0.80);
         }
-
         allUploadedPhotos[machineId].push({
           fileName,
           fullBlob,
@@ -862,15 +748,13 @@ git push -u origin main</div>
           fullSize: (fullBlob.size / 1024).toFixed(0),
           thumbSize: thumbBlob ? (thumbBlob.size / 1024).toFixed(0) : null
         });
-
-        fill.style.width = `${((i + 1) / files.length * 100).toFixed(0)}%`;
+        processed++;
+        fill.style.width = `${Math.round((processed / files.length) * 100)}%`;
       }
-
       setTimeout(() => { bar.style.display = 'none'; }, 500);
       renderAllPhotos();
-      showToast(`${files.length} фото обработано и добавлено`);
+      showToast(`${processed} фото обработано и добавлено`);
     };
-
     const processImage = (file, maxW, maxH, quality) => {
       return new Promise((resolve) => {
         const img = new Image();
@@ -880,35 +764,29 @@ git push -u origin main</div>
           const canvas = document.createElement('canvas');
           let w = img.width;
           let h = img.height;
-
           if (w > maxW || h > maxH) {
             const ratio = Math.min(maxW / w, maxH / h);
             w = Math.round(w * ratio);
             h = Math.round(h * ratio);
           }
-
           canvas.width = w;
           canvas.height = h;
           const ctx = canvas.getContext('2d');
           ctx.drawImage(img, 0, 0, w, h);
-
           canvas.toBlob((blob) => resolve(blob), 'image/webp', quality);
         };
         img.src = url;
       });
     };
-
     // === Сбор данных формы ===
     const collectFormData = (status) => {
       const name = document.getElementById('f-name').value.trim();
       const type = document.getElementById('f-type').value;
       const kind = document.getElementById('f-kind').value;
-
       if (!name || !type || !kind) {
         showToast('Заполните обязательные поля: Название, Тип, Вид', true);
         return null;
       }
-
       if (status === 'active') {
         const price = document.getElementById('f-price').value;
         const oldPrice = document.getElementById('f-oldprice').value;
@@ -918,7 +796,6 @@ git push -u origin main</div>
           return null;
         }
       }
-
       // Собираем спеки
       const uniqueSpecs = [];
       document.querySelectorAll('#specs-custom-area .specs-row').forEach(row => {
@@ -933,22 +810,17 @@ git push -u origin main</div>
         const value = inputs[1].value.trim();
         if (label && value) uniqueSpecs.push({ label, value });
       });
-
-      // Картинки: существующие + новые
-      const machineId = getMachineId();
-      const newPhotos = allUploadedPhotos[machineId] || [];
-      const images = [
-        ...existingPhotos,
-        ...newPhotos.map(p => `images/wood-machines/${p.fileName}`)
-      ];
-
+      // Картинки: собираем в правильном порядке из единого массива
+      const combined = getCombinedPhotos();
+      const images = combined.map(c => {
+        if (c.source === 'existing') return c.data;
+        return `images/wood-machines/${c.data.fileName}`;
+      });
       // Видео
       const videoPath = document.getElementById('f-video').value.trim();
       const videos = videoPath ? [videoPath] : [];
-
       const yearVal = document.getElementById('f-year').value.trim();
       const weightVal = document.getElementById('f-weight').value.trim();
-
       const machine = {
         id: editingId || getNextId(),
         name,
@@ -969,10 +841,8 @@ git push -u origin main</div>
         uniqueSpecs,
         status
       };
-
       return machine;
     };
-
     // === Сохранение ===
     document.getElementById('btn-save-draft').addEventListener('click', () => {
       const data = collectFormData('draft');
@@ -980,20 +850,17 @@ git push -u origin main</div>
       saveMachine(data);
       showToast('Черновик сохранён');
     });
-
     document.getElementById('btn-save-publish').addEventListener('click', () => {
       const data = collectFormData('active');
       if (!data) return;
       saveMachine(data);
       showToast('Станок опубликован!');
     });
-
     document.getElementById('btn-cancel-form').addEventListener('click', () => {
       editingId = null;
       existingPhotos = [];
       switchTab('machines-list');
     });
-
     const saveMachine = (data) => {
       if (editingId) {
         const idx = localMachines.findIndex(m => m.id === editingId);
@@ -1005,66 +872,61 @@ git push -u origin main</div>
       existingPhotos = [];
       switchTab('machines-list');
     };
-
     // === Экспорт ===
     const renderExport = () => {
       const code = generateMachinesDataJs();
       document.getElementById('code-output').textContent = code;
-
-      // Собираем все новые фото из всех станков
       const dlArea = document.getElementById('download-photos-area');
       let hasPhotos = false;
       let photosHtml = '';
-
       Object.keys(allUploadedPhotos).forEach(machineId => {
         const photos = allUploadedPhotos[machineId];
-        if (photos.length === 0) return;
+        if (!photos || photos.length === 0) return;
         hasPhotos = true;
-
         const machine = localMachines.find(m => m.id === Number(machineId));
         const machineName = machine ? machine.name : `Станок #${machineId}`;
-
-                const thumbPhotos = photos.filter(p => p.thumbBlob);
-
+        const thumbPhotos = photos.filter(p => p.thumbBlob);
+        // Блок полноразмерных фото
         photosHtml += `
           <div class="download-section">
             <h4>📁 ${machineName} — images/wood-machines/ (${photos.length} фото)</h4>
-            <p style="font-size:12px;color:#888;margin-bottom:8px;">Полноразмерные фото → положить в <strong>images/wood-machines/</strong></p>
+            <p style="font-size:12px;color:#888;margin-bottom:8px;">Полноразмерные фото 1920×1080 → положить в <strong>images/wood-machines/</strong></p>
             ${photos.map((p, i) => `
               <div class="download-item">
                 <span>📷 <strong>${p.fileName}</strong> (${p.fullSize}KB)</span>
-                <button class="btn btn-outline btn-sm" onclick="downloadPhotoById('${machineId}',${i},'full')">⬇ Скачать</button>
+                <button class="btn btn-outline btn-sm" onclick="downloadPhoto('${machineId}',${i},'full')">⬇ Скачать</button>
               </div>
             `).join('')}
             <div style="margin-top:8px;">
-              <button class="btn btn-primary btn-sm" onclick="downloadAllFullForMachine('${machineId}')">📥 Скачать все полноразмерные</button>
+              <button class="btn btn-primary btn-sm" onclick="downloadAllFull('${machineId}')">📥 Скачать все полноразмерные</button>
             </div>
           </div>
-          ${thumbPhotos.length > 0 ? `
-          <div class="download-section" style="background:#f0fff0;border-color:#c2f0c2;">
-            <h4>🖼 ${machineName} — images/wood-machines/thumbs/ (${thumbPhotos.length} превью)</h4>
-            <p style="font-size:12px;color:#888;margin-bottom:8px;">Превью 600×338 → положить в <strong>images/wood-machines/thumbs/</strong> (имена файлов совпадают с оригиналами)</p>
-            ${photos.map((p, i) => p.thumbBlob ? `
-              <div class="download-item">
-                <span>🖼 <strong>${p.fileName}</strong> (${p.thumbSize}KB)</span>
-                <button class="btn btn-outline btn-sm" onclick="downloadPhotoById('${machineId}',${i},'thumb')">⬇ Скачать</button>
-              </div>
-            ` : '').join('')}
-            <div style="margin-top:8px;">
-              <button class="btn btn-success btn-sm" onclick="downloadAllThumbsForMachine('${machineId}')">📥 Скачать все превью</button>
-            </div>
-          </div>
-          ` : ''}
         `;
+        // Блок превью
+        if (thumbPhotos.length > 0) {
+          photosHtml += `
+            <div class="download-section" style="background:#f0fff0;border-color:#c2f0c2;">
+              <h4>🖼 ${machineName} — images/wood-machines/thumbs/ (${thumbPhotos.length} превью)</h4>
+              <p style="font-size:12px;color:#888;margin-bottom:8px;">Превью 600×338 → положить в <strong>images/wood-machines/thumbs/</strong> (имена совпадают с оригиналами)</p>
+              ${photos.map((p, i) => p.thumbBlob ? `
+                <div class="download-item">
+                  <span>🖼 <strong>${p.fileName}</strong> (${p.thumbSize}KB)</span>
+                  <button class="btn btn-outline btn-sm" onclick="downloadPhoto('${machineId}',${i},'thumb')">⬇ Скачать</button>
+                </div>
+              ` : '').join('')}
+              <div style="margin-top:8px;">
+                <button class="btn btn-success btn-sm" onclick="downloadAllThumbs('${machineId}')">📥 Скачать все превью</button>
+              </div>
+            </div>
+          `;
+        }
       });
-
       if (hasPhotos) {
         dlArea.innerHTML = photosHtml;
       } else {
         dlArea.innerHTML = '<p style="font-size:13px;color:#999;">Новых фотографий нет. Фото появятся после загрузки в форме редактирования.</p>';
       }
     };
-
     const generateMachinesDataJs = () => {
       const lines = [];
       lines.push('// machines-data.js');
@@ -1072,7 +934,6 @@ git push -u origin main</div>
       lines.push('// Станки со status: "hidden" или "draft" не отображаются на сайте.');
       lines.push('');
       lines.push('const machines = [');
-
       localMachines.forEach((m, idx) => {
         lines.push('  {');
         lines.push(`    id: ${m.id},`);
@@ -1118,13 +979,11 @@ git push -u origin main</div>
         lines.push(`    status: ${JSON.stringify(m.status || "active")}`);
         lines.push(`  }${idx < localMachines.length - 1 ? ',' : ''}`);
       });
-
       lines.push('];');
       return lines.join('\n');
     };
-
     // === Скачивание фото ===
-        const downloadPhotoById = (machineId, index, type) => {
+    const downloadPhoto = (machineId, index, type) => {
       const photos = allUploadedPhotos[machineId];
       if (!photos || !photos[index]) return;
       const p = photos[index];
@@ -1135,51 +994,39 @@ git push -u origin main</div>
       a.download = p.fileName;
       a.click();
     };
-
-    const downloadAllFullForMachine = (machineId) => {
+    const downloadAllFull = (machineId) => {
       const photos = allUploadedPhotos[machineId];
       if (!photos) return;
       photos.forEach((p, i) => {
-        setTimeout(() => downloadPhotoById(machineId, i, 'full'), i * 400);
+        setTimeout(() => downloadPhoto(machineId, i, 'full'), i * 400);
       });
     };
-
-    const downloadAllThumbsForMachine = (machineId) => {
+    const downloadAllThumbs = (machineId) => {
       const photos = allUploadedPhotos[machineId];
       if (!photos) return;
-      photos.filter(p => p.thumbBlob).forEach((p, i) => {
-        const index = photos.indexOf(p);
-        setTimeout(() => downloadPhotoById(machineId, index, 'thumb'), i * 400);
+      let delay = 0;
+      photos.forEach((p, i) => {
+        if (p.thumbBlob) {
+          setTimeout(() => downloadPhoto(machineId, i, 'thumb'), delay);
+          delay += 400;
+        }
       });
     };
-
-    const downloadAllForMachine = (machineId) => {
-      downloadAllFullForMachine(machineId);
-      const photos = allUploadedPhotos[machineId];
-      if (!photos) return;
-      const thumbCount = photos.filter(p => p.thumbBlob).length;
-      setTimeout(() => downloadAllThumbsForMachine(machineId), photos.length * 400 + 500);
-    };
-
     // === Копирование ===
     const copyCode = () => {
       const code = document.getElementById('code-output').textContent;
       navigator.clipboard.writeText(code).then(() => showToast('Код скопирован!')).catch(() => showToast('Ошибка копирования', true));
     };
-
     const copyGit = () => {
       const git = document.getElementById('git-commands').textContent;
       navigator.clipboard.writeText(git).then(() => showToast('Git-команды скопированы!')).catch(() => showToast('Ошибка копирования', true));
     };
-
     // === Инициализация ===
     renderDashboard();
-
     if (typeof machines === 'undefined') {
       showToast('Файл machines-data.js не найден. Создаём пустой каталог.', true);
       localMachines = [];
     }
-
   </script>
 </body>
 </html>
