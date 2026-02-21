@@ -307,9 +307,11 @@ document.addEventListener("DOMContentLoaded", () => {
       updateGallery(newIdx);
     });
 
-    // Зум по клику на главное фото (только для изображений)
+        // Открытие лайтбокса по клику на главное фото
     mainImg.addEventListener("click", () => {
-      mainImg.classList.toggle("zoomed");
+      if (allMedia[currentGalleryIndex] && allMedia[currentGalleryIndex].type === "image") {
+        openLightbox(currentGalleryIndex, allMedia, machine.name);
+      }
     });
 
     // Закрытие по крестику
@@ -338,12 +340,77 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Закрытие по Escape
-  document.addEventListener("keydown", (e) => {
+    document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      closeModal();
-      closeLegalModals();
+      if (lightbox.classList.contains("active")) {
+        closeLightbox();
+      } else {
+        closeModal();
+        closeLegalModals();
+      }
+    }
+    if (lightbox.classList.contains("active")) {
+      if (e.key === "ArrowLeft") {
+        lightboxIndex = (lightboxIndex - 1 + lightboxMedia.length) % lightboxMedia.length;
+        updateLightbox();
+      } else if (e.key === "ArrowRight") {
+        lightboxIndex = (lightboxIndex + 1) % lightboxMedia.length;
+        updateLightbox();
+      }
     }
   });
+
+    // === Лайтбокс (полноэкранный просмотр фото) ===
+  const lightbox = document.getElementById("photo-lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCounter = document.getElementById("lightbox-counter");
+  let lightboxIndex = 0;
+  let lightboxMedia = [];
+  let lightboxName = "";
+
+  const openLightbox = (index, media, name) => {
+    // Фильтруем только изображения для лайтбокса
+    lightboxMedia = media.filter(m => m.type === "image");
+    lightboxName = name;
+    // Находим позицию текущего фото среди отфильтрованных
+    const clickedSrc = media[index] ? media[index].src : "";
+    lightboxIndex = lightboxMedia.findIndex(m => m.src === clickedSrc);
+    if (lightboxIndex < 0) lightboxIndex = 0;
+    updateLightbox();
+    lightbox.classList.add("active");
+  };
+
+  const updateLightbox = () => {
+    const item = lightboxMedia[lightboxIndex];
+    if (!item) return;
+    lightboxImg.src = item.src;
+    lightboxImg.alt = lightboxName + " — фото " + (lightboxIndex + 1);
+    lightboxCounter.textContent = (lightboxIndex + 1) + " / " + lightboxMedia.length;
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+  };
+
+  lightbox.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
+
+  lightbox.querySelector(".lightbox-arrow.left").addEventListener("click", (e) => {
+    e.stopPropagation();
+    lightboxIndex = (lightboxIndex - 1 + lightboxMedia.length) % lightboxMedia.length;
+    updateLightbox();
+  });
+
+  lightbox.querySelector(".lightbox-arrow.right").addEventListener("click", (e) => {
+    e.stopPropagation();
+    lightboxIndex = (lightboxIndex + 1) % lightboxMedia.length;
+    updateLightbox();
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
 
   // === Юридические модалки ===
   const legalModals = document.querySelectorAll(".legal-modal");
