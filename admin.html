@@ -636,7 +636,32 @@ git push -u origin main</div>
         kindSelect.appendChild(opt);
       });
     };
-    typeSelect.addEventListener('change', () => updateKindSelect(typeSelect.value));
+        typeSelect.addEventListener('change', () => updateKindSelect(typeSelect.value));
+
+    // === Синхронизация полей «Основная информация» → «Технические характеристики» ===
+    const fieldToSpecMap = {
+      'f-power': 'Мощность, кВт',
+      'f-dimensions': 'Габариты ДxШxВ, мм',
+      'f-weight': 'Масса, кг',
+      'f-manufacturer': 'Производитель',
+      'f-country': 'Страна',
+      'f-year': 'Год'
+    };
+
+    const syncFieldToSpec = (fieldId) => {
+      const value = document.getElementById(fieldId).value.trim();
+      const specLabel = fieldToSpecMap[fieldId];
+      if (!specLabel) return;
+      const specInput = document.querySelector(`#specs-default-area input[data-default-label="${specLabel}"]`);
+      if (specInput) {
+        specInput.value = value;
+      }
+    };
+
+    Object.keys(fieldToSpecMap).forEach(fieldId => {
+      document.getElementById(fieldId).addEventListener('input', () => syncFieldToSpec(fieldId));
+    });
+
     // === Спеки ===
     const renderDefaultSpecs = () => {
       document.getElementById('specs-custom-area').innerHTML = '';
