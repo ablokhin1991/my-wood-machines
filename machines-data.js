@@ -1245,7 +1245,7 @@ const machines = [
       "images/wood-machines/veernaya-vayma-lisy-dvok-th6-25001050-6.webp"
     ],
     videos: [
-      "videos/LISY - DVOŘÁK TH6-2500x1050.MP4"
+      "videos/LISY-DVOŘÁK-TH6-2500x1050.MP4"
     ],
     price: 1300000,
     oldPrice: 1450000,
