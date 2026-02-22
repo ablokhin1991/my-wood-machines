@@ -3,6 +3,7 @@
 // Станки со status: "hidden" или "draft" не отображаются на сайте.
 
 const machines = [
+  // Боровичи С25-5А
   {
     id: 1,
     name: "Четырехсторонний станк Боровичи С25-5А",
@@ -42,6 +43,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Фрезерный станок ФС
   {
     id: 2,
     name: "Фрезерный станок ФС",
@@ -73,6 +75,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Фрезерный станок ФСШ-1
   {
     id: 3,
     name: "Фрезерный станок ФСШ-1",
@@ -104,6 +107,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Biesse Rover 49
   {
     id: 4,
     name: "Сверлильно-фрезерный станок Biesse Rover 49",
@@ -159,6 +163,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Пресс для склеивания бруса ПВС-3
   {
     id: 5,
     name: "Пресс для склеивания бруса ПВС-3",
@@ -205,6 +210,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Копировально-фрезерный станок Griggio G 60
   {
     id: 6,
     name: "Копировально-фрезерный станок Griggio G 60",
@@ -243,6 +249,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Станок для раскроя рулонов
   {
     id: 7,
     name: "Станок для раскроя рулонов",
@@ -274,6 +281,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Многопильный станок ЦДК 5-3
   {
     id: 8,
     name: "Многопильный станок ЦДК 5-3",
@@ -313,6 +321,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Боровичи С25-5А
   {
     id: 9,
     name: "Четырехсторонний станк Боровичи С25-5А",
@@ -352,6 +361,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Боровичи С25-4А
   {
     id: 10,
     name: "Четырехсторонний станк Боровичи С25-4А",
@@ -390,6 +400,7 @@ const machines = [
     ],
     status: "active"
   },
+  // ШЛК-10 Простор
   {
     id: 11,
     name: "Шлифовальный станок ШЛК-10 Простор",
@@ -431,6 +442,7 @@ const machines = [
     ],
     status: "active"
   },
+  // ШлПС-6М
   {
     id: 12,
     name: "Шлифовальный станок ШлПС-6М",
@@ -470,6 +482,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Ленточная пила по дереву Centauro SP 500
   {
     id: 13,
     name: "Ленточная пила по дереву Centauro SP 500",
@@ -513,6 +526,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Сверлильно-пазовальный станок с ЧПУ Yuetong MDK 4120 NC
   {
     id: 14,
     name: "Сверлильно-пазовальный станок с ЧПУ Yuetong MDK 4120 NC",
@@ -551,6 +565,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Artech Lato 23s Biesse
   {
     id: 15,
     name: "Кромкооблицовочный станок Artech Lato 23s Biesse",
@@ -599,6 +614,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Бакаут СФ 003
   {
     id: 16,
     name: "Двухшпиндельный фрезерный станок Бакаут СФ 003",
@@ -636,6 +652,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Бакаут СФ 003
   {
     id: 17,
     name: "Двухшпиндельный фрезерный станок Бакаут СФ 003",
@@ -673,6 +690,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Веерная вайма SROJ & LES CERKNICA SLR 6/6
   {
     id: 18,
     name: "Веерная вайма SROJ & LES CERKNICA SLR 6/6",
@@ -711,6 +729,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Станок для резки багета Alfamacchine T350
   {
     id: 19,
     name: "Станок для резки багета Alfamacchine T350",
@@ -747,6 +766,7 @@ const machines = [
     ],
     status: "active"
   },
+  // СВПГ-2А ДСПО
   {
     id: 20,
     name: "Сверлильно-пазовальный станок СВПГ-2А ДСПО",
@@ -785,8 +805,8 @@ const machines = [
       { label: "Год", value: 1993 }
     ],
     status: "active"
-  }
-  ,
+  },
+  // Фрезерный станок ФСШ-1а
   {
     id: 21,
     name: "Фрезерный станок ФСШ-1а",
@@ -817,8 +837,8 @@ const machines = [
       { label: "Год", value: "-" }
     ],
     status: "active"
-  }
-  ,
+  },
+  // Фрезерный станок ФСШ-1А(К)
   {
     id: 22,
     name: "Фрезерный станок ФСШ-1А(К)",
@@ -850,6 +870,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Форматно-раскроенный станок Giben matic standard
   {
     id: 23,
     name: "Форматно-раскроенный станок Giben matic standard",
@@ -892,6 +913,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Станок торцовочный ЦCТ - 01 КОДОС
   {
     id: 24,
     name: "Станок торцовочный ЦCТ - 01 КОДОС",
@@ -928,6 +950,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Станок круглопильный циркулярный Ц6-2
   {
     id: 25,
     name: "Станок круглопильный циркулярный Ц6-2",
@@ -966,6 +989,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Станок круглопильный циркулярный Ц6-2
   {
     id: 26,
     name: "Станок круглопильный циркулярный Ц6-2",
@@ -1004,6 +1028,7 @@ const machines = [
     ],
     status: "active"
   },
+  // Станок круглопильный циркулярный Ц6-2
   {
     id: 27,
     name: "Станок круглопильный циркулярный Ц6-2",
