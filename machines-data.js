@@ -1118,7 +1118,8 @@ const machines = [
       "images/wood-machines/stanok-tortsovochnyy-stb-002-bakaut-2.webp",
       "images/wood-machines/stanok-tortsovochnyy-stb-002-bakaut-3.webp",
       "images/wood-machines/stanok-tortsovochnyy-stb-002-bakaut-4.webp",
-      "images/wood-machines/stanok-tortsovochnyy-stb-002-bakaut-5.webp"
+      "images/wood-machines/stanok-tortsovochnyy-stb-002-bakaut-5.webp",
+      "images/wood-machines/stanok-tortsovochnyy-stb-002-bakaut-6.webp"
     ],
     price: 150000,
     oldPrice: 176000,
