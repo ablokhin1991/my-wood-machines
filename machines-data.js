@@ -1179,5 +1179,48 @@ const machines = [
       { label: "Год", value: "-" }
     ],
     status: "active"
+  },
+  // Stegherr KSF-mini
+  {
+    id: 31,
+    name: "Станок для фрезерования крестовых соединений Stegherr KSF-mini",
+    type: "Фрезерный",
+    kind: "Горизонтальный",
+    manufacturer: "Stegherr",
+    country: "Германия",
+    year: 2004,
+    power: "4,4",
+    dimensions: "520х640х1350",
+    weight: 180,
+    instock: 1,
+    images: [
+      "images/wood-machines/stegherr-ksf-mini.webp",
+      "images/wood-machines/stegherr-ksf-mini-2.webp",
+      "images/wood-machines/stegherr-ksf-mini-3.webp",
+      "images/wood-machines/stegherr-ksf-mini-4.webp",
+      "images/wood-machines/stegherr-ksf-mini-5.webp",
+      "images/wood-machines/stegherr-ksf-mini-6.webp",
+      "images/wood-machines/stegherr-ksf-mini-8.webp",
+      "images/wood-machines/stegherr-ksf-mini-7.webp"
+    ],
+    price: 610000,
+    oldPrice: 692000,
+    description: "Продаем станок для фрезерования крестовых соединений Stegherr KSF-mini. Это уникальный станок для всех крестовых соединений, которые встречаются на практике. На данном станке мы изготавливали крестовое соединение штапиков для межкомнатных дверей со стеклом. Заготовка обрабатывается с трех сторон за один зажим, что обеспечивает абсолютно точную фрезеровку. Станок позволяет без сколов фрезеровать контр-профиль профилированных заготовок. Станок занимает очень маленькую производственную площадь и идеально подходит для оснащения небольших мебельных мастерских, может применяться на производстве деревянной мебели, фасадов, окон, и на иных производствах. Станок в отличном состоянии - редкая и уникальная вещь.",
+    uniqueSpecs: [
+      { label: "Макс. ширина заготовки, мм", value: 53 },
+      { label: "Макс. высота заготовки, мм", value: 72 },
+      { label: "Частота вращения на фрезерном узле, об/мин", value: 14000 },
+      { label: "Частота вращения на на пильном узле, об/мин", value: 2850 },
+      { label: "Диаметр пил, мм", value: 250 },
+      { label: "Время выполнение одной операции (приблиз.), сек", value: 15 },
+      { label: "Патрубок аспирации Ø, мм", value: 100 },
+      { label: "Мощность, кВт", value: "4,4" },
+      { label: "Габариты ДxШxВ, мм", value: "520х640х1350" },
+      { label: "Масса, кг", value: 180 },
+      { label: "Производитель", value: "Stegherr" },
+      { label: "Страна", value: "Германия" },
+      { label: "Год", value: 2004 }
+    ],
+    status: "active"
   }
 ];
