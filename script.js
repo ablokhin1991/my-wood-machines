@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <li><strong>Тип:</strong> <span itemprop="category">${machine.type}</span></li>
           <li><strong>Вид:</strong> ${machine.kind}</li>
           <li><strong>Мощность:</strong> ${powerText}</li>
+          <li><strong>Производитель:</strong> ${machine.manufacturer}</li>
           <li><strong>Страна:</strong> ${machine.country}</li>
           <li><strong>Год:</strong> ${yearText}</li>
         </ul>
