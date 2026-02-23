@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prodam-stanki.ru/sitemap.xml
+
+
+# Для Яндекса — игнорируем все UTM-метки
+User-agent: Yandex
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
