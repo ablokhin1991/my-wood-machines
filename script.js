@@ -323,6 +323,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.add("active");
     modal.scrollTop = 0;
     document.body.classList.add("modal-open");
+    ym(106970033,'reachGoal','card_open');
   };
 
     const closeModal = () => {
@@ -639,12 +640,28 @@ document.addEventListener("DOMContentLoaded", () => {
   // === Инициализация ===
   renderCatalog();
 
-  // Для целей Яндекс.Метрики можно навесить обработчики здесь:
-  // document.querySelectorAll('.js-phone-link').forEach(link => {
-  //   link.addEventListener('click', () => { ym(XXXXXX, 'reachGoal', 'phone_click'); });
-  // });
-  // document.querySelector('.js-go-to-catalog').addEventListener('click', () => {
-  //   ym(XXXXXX, 'reachGoal', 'go_to_catalog');
-  // });
+    // === Цели Яндекс.Метрики ===
+
+  // Цель 1: phone_click — клик по любой ссылке tel: (делегирование, ловит и динамические ссылки в модалках)
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href^="tel:"]');
+    if (link) {
+      ym(106970033, 'reachGoal', 'phone_click');
+    }
+  });
+
+  // Цель 3: engaged_45s — пользователь провёл на сайте 45+ секунд
+  setTimeout(function() {
+    ym(106970033, 'reachGoal', 'engaged_45s');
+  }, 45000);
+
+  // Цель 4: scroll_50 — пользователь прокрутил 50% страницы
+  var scrollFired = false;
+  window.addEventListener('scroll', function() {
+    if (!scrollFired && window.scrollY > document.body.scrollHeight * 0.5) {
+      ym(106970033, 'reachGoal', 'scroll_50');
+      scrollFired = true;
+    }
+  });
 
 });
