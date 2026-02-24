@@ -1303,5 +1303,36 @@ const machines = [
       { label: "Год", value: "-" }
     ],
     status: "active"
+  },
+  {
+    id: 34,
+    name: "Станок дисковый отрезной (пила маятниковая)",
+    type: "Торцовочный",
+    kind: "Ручной",
+    manufacturer: "-",
+    country: "Россия",
+    year: "-",
+    power: "1,5",
+    dimensions: "690x490x1250",
+    weight: 150,
+    instock: 1,
+    images: [
+      "images/wood-machines/stanok-diskovyy-otreznoy-pila-mayatnikovaya.webp",
+      "images/wood-machines/stanok-diskovyy-otreznoy-pila-mayatnikovaya-2.webp",
+      "images/wood-machines/stanok-diskovyy-otreznoy-pila-mayatnikovaya-3.webp"
+    ],
+    price: 55000,
+    oldPrice: 74000,
+    description: "Продаем компактный отрезной станок, с мощным приводом и минимальными требованиями к условиям эксплуатации. Использовался для черновой резки пиломатериала в условиях заготовительных участков. У станка высокая производительность, простая эксплуатация, недорогие расходники и не убиваемая конструкция - прослужит долгие года. Состояние - хорошее, рабочее.",
+    uniqueSpecs: [
+      { label: "Диаметр пилы, мм", value: "300 - 400" },
+      { label: "Мощность, кВт", value: "1,5" },
+      { label: "Габариты ДxШxВ, мм", value: "690x490x1250" },
+      { label: "Масса, кг", value: 150 },
+      { label: "Производитель", value: "-" },
+      { label: "Страна", value: "Россия" },
+      { label: "Год", value: "-" }
+    ],
+    status: "active"
   }
 ];
