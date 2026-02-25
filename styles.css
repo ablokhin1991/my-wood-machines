@@ -632,7 +632,7 @@ a:hover { text-decoration: underline; }
 .cookie-banner button {
   appearance: none;
   border: none;
-  background: #0071e3;
+  background: #1f4b7a;
   color: #fff;
   font-size: 14px;
   padding: 8px 18px;
@@ -642,12 +642,12 @@ a:hover { text-decoration: underline; }
 }
 
 .cookie-banner button:hover {
-  background: #0077ed;
+  background: #337dcc;
 }
 
 .cookie-banner a {
   font-size: 13px;
-  color: #0071e3;
+  color: #1f4b7a;
   text-decoration: none;
 }
 
