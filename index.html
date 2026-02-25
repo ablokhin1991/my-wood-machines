@@ -436,5 +436,47 @@
   <script src="machines-data.js" defer></script>
   <link rel="preload" href="script.js" as="script">
   <script src="script.js" defer></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Проверка: не показываем баннер, если уже приняли куки
+    if (localStorage.getItem('cookiesAccepted') === 'true') return;
+
+    // Создаем overlay
+    const overlay = document.createElement('div');
+    overlay.id = 'cookieOverlay';
+    overlay.className = 'cookie-overlay';
+    overlay.style.display = 'block'; // показываем сразу
+    document.body.appendChild(overlay);
+
+    // Создаем баннер
+    const banner = document.createElement('div');
+    banner.id = 'cookieBanner';
+    banner.className = 'cookie-banner';
+    banner.style.display = 'flex'; // сразу видим
+
+    banner.innerHTML = `
+        <div class="cookie-banner__content">
+            <p>
+                Мы используем файлы cookie для корректной работы сайта и улучшения пользовательского опыта.
+                Продолжая использовать сайт, вы соглашаетесь с их использованием.
+            </p>
+            <div class="cookie-banner__actions">
+                <button id="cookieAccept">Хорошо</button>
+                <a href="/cookie-policy.html">Подробнее</a>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(banner);
+
+    // Добавляем обработчик кнопки "Хорошо"
+    const acceptBtn = banner.querySelector('#cookieAccept');
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        banner.remove();
+        overlay.remove();
+    });
+});
+</script>
 </body>
 </html>
