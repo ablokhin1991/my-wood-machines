@@ -1147,7 +1147,7 @@ const machines = [
     type: "Шлифовальный",
     kind: "Калибровальный",
     manufacturer: "ITALMAC",
-    country: "Италия",
+    country: "Китай",
     year: "-",
     power: "36",
     dimensions: "2350х2100х2050",
@@ -1175,7 +1175,7 @@ const machines = [
       { label: "Габариты ДxШxВ, мм", value: "2350х2100х2050" },
       { label: "Масса, кг", value: 2800 },
       { label: "Производитель", value: "ITALMAC" },
-      { label: "Страна", value: "Италия" },
+      { label: "Страна", value: "Китай" },
       { label: "Год", value: "-" }
     ],
     status: "active"
