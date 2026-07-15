@@ -373,7 +373,7 @@ const machines = [
     power: "38,6",
     dimensions: "3150x1570x1315",
     weight: 4200,
-    instock: 1,
+    instock: 0,
     images: [
       "images/wood-machines/borovichi-s25-4a-1994-1.webp",
       "images/wood-machines/borovichi-s25-4a-1994-2.webp",
