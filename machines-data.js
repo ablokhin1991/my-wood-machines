@@ -380,8 +380,8 @@ const machines = [
       "images/wood-machines/borovichi-s25-4a-1994-3.webp",
       "images/wood-machines/borovichi-s25-4a-1994-4.webp"
     ],
-    price: 500000,
-    oldPrice: 700000,
+    price: "Продан",
+    oldPrice: "-",
     description: "Четырехшпиндельный станок тяжелой серии предназначен для производства различных погонажных изделий и профилированного бруса, в том числе естественной влажности. Станок в отличном состоянии и полностью рабочий!",
     uniqueSpecs: [
       { label: "Количество шпинделей", value: 4 },
