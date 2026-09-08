@@ -764,37 +764,7 @@ const machines = [
     status: "active"
   },
   // Фрезерный станок ФСШ-1А(К)
-  {
-    id: 22,
-    name: "Фрезерный станок ФСШ-1А(К)",
-    type: "Фрезерный",
-    kind: "Горизонтальный",
-    manufacturer: "КСЗ",
-    country: "Россия",
-    year: 2000,
-    power: "4,2",
-    dimensions: "1270x1100x1000",
-    weight: 860,
-    instock: 0,
-    images: [
-      "images/wood-machines/frezernyy-stanok-fssh-1ak.webp",
-      "images/wood-machines/frezernyy-stanok-fssh-1ak-4.webp",
-      "images/wood-machines/frezernyy-stanok-fssh-1ak-2.webp",
-      "images/wood-machines/frezernyy-stanok-fssh-1ak-3.webp"
-    ],
-    price: 105000,
-    oldPrice: 134000,
-    description: "Продаем отличный и надежный фрезер. Надёжная отечественная машина, выпущенная на Кировском станкостроительном заводе. Станок предназначен для выполнения разнообразных фрезерных работ по дереву с ручной подачей, нарезки простых шипов с помощью шипорезной каретки. Классическая конструкция с мощным приводом 4,2 кВт - отличное решением для мастерской с высоким уровнем нагрузки.",
-    uniqueSpecs: [
-      { label: "Мощность, кВт", value: "4,2" },
-      { label: "Габариты ДxШxВ, мм", value: "1270x1100x1000" },
-      { label: "Масса, кг", value: 860 },
-      { label: "Производитель", value: "КСЗ" },
-      { label: "Страна", value: "СССР" },
-      { label: "Год", value: 2000 }
-    ],
-    status: "active"
-  },
+  
   // Форматно-раскроенный станок Giben matic standard
   {
     id: 23,
