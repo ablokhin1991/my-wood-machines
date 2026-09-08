@@ -775,7 +775,7 @@ const machines = [
     power: "4,2",
     dimensions: "1270x1100x1000",
     weight: 860,
-    instock: 1,
+    instock: 0,
     images: [
       "images/wood-machines/frezernyy-stanok-fssh-1ak.webp",
       "images/wood-machines/frezernyy-stanok-fssh-1ak-4.webp",
