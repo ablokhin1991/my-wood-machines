@@ -703,7 +703,7 @@ const machines = [
     power: "2",
     dimensions: "1496x724x1115",
     weight: "525",
-    instock: 1,
+    instock: 0,
     images: [
       "images/wood-machines/sverlilno-pazovalnyy-stanok-svpg-2a-dspo-2.webp",
       "images/wood-machines/sverlilno-pazovalnyy-stanok-svpg-2a-dspo.webp"
