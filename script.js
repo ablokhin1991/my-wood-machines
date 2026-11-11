@@ -323,6 +323,10 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.add("active");
     modal.scrollTop = 0;
     document.body.classList.add("modal-open");
+    const nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.set("machine", String(machine.id));
+    nextUrl.hash = "";
+    history.replaceState(null, "", nextUrl);
     ym(106970033,'reachGoal','card_open');
   };
 
@@ -335,6 +339,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     modal.classList.remove("active");
     document.body.classList.remove("modal-open");
+    const nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.delete("machine");
+    history.replaceState(null, "", nextUrl);
   };
 
   // Закрытие по клику на overlay
@@ -527,7 +534,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const normalizedImage = machine.images && machine.images[0]
         ? (machine.images[0].startsWith("/") ? machine.images[0] : "/" + machine.images[0])
         : "";
-      const url = siteUrl + "#machine-" + machine.id;
+      const url = origin + "/?machine=" + machine.id;
       const imageUrl = normalizedImage ? origin + normalizedImage : undefined;
       const yearText = (!machine.year || machine.year === "-") ? "не указан" : String(machine.year);
       const powerText = (!machine.power || machine.power === "-") ? "не указана" : machine.power + " кВт";
@@ -639,6 +646,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // === Инициализация ===
   renderCatalog();
+
+  const openMachineFromUrl = () => {
+    const params = new URLSearchParams(window.location.search);
+    let id = parseInt(params.get("machine"), 10);
+    if (!id && /^#machine-\d+/.test(window.location.hash)) {
+      id = parseInt(window.location.hash.replace("#machine-", ""), 10);
+    }
+    if (!id) return;
+    const machine = machines.find((m) => m.id === id && (!m.status || m.status === "active"));
+    if (machine) openModal(machine);
+  };
+  openMachineFromUrl();
 
     // === Цели Яндекс.Метрики ===
 

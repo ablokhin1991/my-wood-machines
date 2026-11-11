@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2026-11-10 15:42">
+  <shop>
+    <name>Станки по дереву б/у</name>
+    <company>Prodam-stanki</company>
+    <url>https://prodam-stanki.ru/</url>
+    <currencies>
+      <currency id="RUB" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">Строгальный</category>
+      <category id="2">Фрезерный</category>
+      <category id="3">Пресс</category>
+      <category id="4">Раскройный</category>
+      <category id="5">Распиловочный</category>
+      <category id="6">Шлифовальный</category>
+      <category id="7">Долбежный</category>
+      <category id="8">Кромкооблицовочный</category>
+      <category id="9">Торцовочный</category>
+      <category id="10">Другие</category>
+    </categories>
+    <offers>
+      <offer id="1" available="true">
+        <url>https://prodam-stanki.ru/?machine=1</url>
+        <price>600000</price>
+        <oldprice>800000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/borovichi-s25-5a-2002-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/borovichi-s25-5a-2002-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/borovichi-s25-5a-2002-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/borovichi-s25-5a-2002-4.webp</picture>
+        <name>Четырехсторонний станок Боровичи С25-5А, 2002 г.</name>
+        <vendor>БЗДС</vendor>
+        <description><![CDATA[Продаем пятишпиндельный станок тяжелой серии предназначен для производства различных погонажных изделий и профилированного бруса, в том числе естественной влажности. Рябухи сверху и снизу, подходит для строгания бруса. Станок в отличном состоянии и полностью рабочий!]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Строгальный</param>
+        <param name="Вид">Четырёхсторонний</param>
+        <param name="Год выпуска">2002</param>
+        <param name="Мощность, кВт">49,6</param>
+        <param name="Габариты, мм">4800x2000x1500</param>
+        <param name="Масса, кг">5200</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="2" available="true">
+        <url>https://prodam-stanki.ru/?machine=2</url>
+        <price>75000</price>
+        <oldprice>105000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-fs-1971-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-fs-1971-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-fs-1971-3.webp</picture>
+        <name>Фрезерный станок ФС, 1971 г.</name>
+        <vendor>Главдревстанкопром</vendor>
+        <description><![CDATA[Продаем отличный и надежный фрезер. Надёжная машина советского времени, выпущенная в 1971 году заводом Главдревстанкопром (г. Днепропетровск). Предназначен для: фрезеровки профилей, торцов, фигурных элементов и других столярных задач. Классическая конструкция с мощным приводом 5 кВт - отличное решением для мастерской с высоким уровнем нагрузки.]]></description>
+        <country_of_origin>СССР</country_of_origin>
+        <param name="Тип">Фрезерный</param>
+        <param name="Вид">Горизонтальный</param>
+        <param name="Год выпуска">1971</param>
+        <param name="Мощность, кВт">5</param>
+        <param name="Габариты, мм">1360x1265x1200</param>
+        <param name="Масса, кг">880</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="3" available="true">
+        <url>https://prodam-stanki.ru/?machine=3</url>
+        <price>75000</price>
+        <oldprice>105000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-fssh-1-1980-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-fssh-1-1980-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-fssh-1-1980-3.webp</picture>
+        <name>Фрезерный станок ФСШ-1, 1980 г.</name>
+        <vendor>ДСПО</vendor>
+        <description><![CDATA[Продаем отличный и надежный фрезер. Надёжный представитель советской инженерной школы, выпущенный в 1980 году Днепропетровским станкостроительным заводом (ДСПО). Идеально подходит для фрезеровки профилей, торцов, фигурных и сложных элементов. Мощный двигатель 5 кВт, частота вращения шпинделя до 9000 об/мин дает отличную обработку даже твёрдых пород древесины. При весе 810 кг станок стоит монолитно и исключает вибрации, что повышает точность и чистоту обработки. ФСШ-1 — для кто ценит советское качество, долговечность и простоту обслуживания. Он одинаково хорош как для частной мастерской, так и для производственного цеха, где ценится стабильный результат и надёжность, проверенная временем.]]></description>
+        <country_of_origin>СССР</country_of_origin>
+        <param name="Тип">Фрезерный</param>
+        <param name="Вид">Горизонтальный</param>
+        <param name="Год выпуска">1980</param>
+        <param name="Мощность, кВт">5</param>
+        <param name="Габариты, мм">1270x1110x1000</param>
+        <param name="Масса, кг">810</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="4" available="true">
+        <url>https://prodam-stanki.ru/?machine=4</url>
+        <price>850000</price>
+        <oldprice>1500000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/sverlilno-frezernyy-stanok-rover-49-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/sverlilno-frezernyy-stanok-rover-49-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/sverlilno-frezernyy-stanok-rover-49-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/sverlilno-frezernyy-stanok-rover-49-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/sverlilno-frezernyy-stanok-rover-49-5.webp</picture>
+        <name>Сверлильно-фрезерный станок Biesse Rover 49, 1988 г.</name>
+        <vendor>Biesse</vendor>
+        <description><![CDATA[Редкая находка для мебельного производства и любых предприятий, где ценят надёжность, стабильность и долговечность оборудования. Этот станок построен так, что один раз настроив на деталь, можно работать круглосуточно без остановки, что делает его идеальным решением для поточного и массового производства. Станок работает по координатам X, Y и Z, может фрезеровать криволинейные профили, пазы, выборки и фигурные элементы с высокой точностью. Оснащён 36 вертикальными шпинделями и 12 горизонтальными, что позволяет одновременно выполнять присадку множества отверстий на панели с четырёх сторон — идеальное решение для серийного производства. Два фрезера со стандартными цангами и два с конусом Морзе CM2 обеспечивают возможность работы с фрезами разного диаметра и формы, включая дисковые фрезы до Ø120 мм. Шпиндели фрезеров работают до 18 000 об/мин с мощностью до 5,59 кВт, а дисковые фрезы обеспечивают быстрый и точный рез любой древесины или композитных материалов. Станок рассчитан на непрерывное производство, один раз настроив на деталь, можно работать круглосуточно без остановки. При желании можно за небольшие деньги обновить главный компьютер, и станок будет работать на современном уровне. Для сравнения: аналогичная модель Biesse Rover 2025 года сегодня продаётся от 20 млн рублей. ROVER 49 даёт практически те же возможности за разумные деньги.]]></description>
+        <country_of_origin>Италия</country_of_origin>
+        <param name="Тип">Фрезерный</param>
+        <param name="Вид">с ЧПУ</param>
+        <param name="Год выпуска">1988</param>
+        <param name="Мощность, кВт">22,6</param>
+        <param name="Габариты, мм">5300x2440x2240</param>
+        <param name="Масса, кг">4600</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="5" available="true">
+        <url>https://prodam-stanki.ru/?machine=5</url>
+        <price>1000000</price>
+        <oldprice>1500000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>3</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/press-dlya-skleivaniya-brusa-pvs-3-5.webp</picture>
+        <name>Пресс для склеивания бруса ПВС-3</name>
+        <description><![CDATA[Цена за 2 пресса! Состояние: хорошее, рабочее! По одному не продается. Пресс вертикальный для склеивания бруса и щита, предназначен для сращивания заготовок на гладкую фугу по толщине с целью получения бруса или по ширине с целью получения щита из массивной древесины. Пресс состоит из 2-х частей (каждая из которых по техническим характеристикам соответствует мод. ПВС-3) и устанавливается на специальных домкратах входящих в состав пресса, с помощью которых производится выставка опорных поверхностей 2-х частей в одной плоскости с требуемой точностью. После этого они могут быть соединены технологическими накладками или сваркой. Работа пресса предусматривается в двух режимах: работа на половине пресса (для изделий до 3000 мм.) и работа всего пресса (для изделий до 6000 мм.). Режим работы выбирается переключателем, расположенном на эл. шкафу.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Пресс</param>
+        <param name="Вид">Вертикальный</param>
+        <param name="Габариты, мм">4100x2400x1600</param>
+        <param name="Масса, кг">2000</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="6" available="true">
+        <url>https://prodam-stanki.ru/?machine=6</url>
+        <price>185000</price>
+        <oldprice>210000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/kopirovalno-frezernyy-stanok-griggio-g60-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/kopirovalno-frezernyy-stanok-griggio-g60-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/kopirovalno-frezernyy-stanok-griggio-g60-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/kopirovalno-frezernyy-stanok-griggio-g60-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/kopirovalno-frezernyy-stanok-griggio-g60-5.webp</picture>
+        <name>Копировально-фрезерный станок Griggio G 60</name>
+        <vendor>Griggio</vendor>
+        <description><![CDATA[Станок в хорошем и рабочем состоянии! Надёжный итальянский копировально-фрезерный станок, идеально подходящий для мебельных и столярных цехов. Он легко справляется с фрезеровкой прямых и криволинейных форм, пазов и декоративных элементов по шаблону — от дверных полотен до фасадов и рамок. Две скорости шпинделя (9000 и 18 000 об/мин) позволяют точно работать с деревом, МДФ и фанерой, а прочная конструкция и плавная регулировка стола обеспечивают стабильную и чистую обработку. Это универсальная и долговечная «рабочая лошадка» для тех, кто ценит качество и надёжность.]]></description>
+        <country_of_origin>Италия</country_of_origin>
+        <param name="Тип">Фрезерный</param>
+        <param name="Вид">Копировально-фрезерный</param>
+        <param name="Мощность, кВт">2,2</param>
+        <param name="Габариты, мм">1900x1200x800</param>
+        <param name="Масса, кг">230</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="7" available="true">
+        <url>https://prodam-stanki.ru/?machine=7</url>
+        <price>300000</price>
+        <oldprice>361000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>4</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-dlya-raskroya-rulonov-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-dlya-raskroya-rulonov-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-dlya-raskroya-rulonov-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-dlya-raskroya-rulonov-4.webp</picture>
+        <name>Станок для раскроя рулонов, 2010 г.</name>
+        <description><![CDATA[Станок отличного качества и неприхотливый - изготовили сами, силами слесарной комманды на базе имеющегося станка. Продаем в связи не надобностью! Данный станок использовался для дверного производства, а именно для раскроя рулонов покрытия дверей (пленка / бумага / пластик) - на фото видно.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Раскройный</param>
+        <param name="Вид">Раскрой рулона</param>
+        <param name="Год выпуска">2010</param>
+        <param name="Мощность, кВт">3</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="8" available="true">
+        <url>https://prodam-stanki.ru/?machine=8</url>
+        <price>300000</price>
+        <oldprice>350000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>5</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/mnogopilnyy-stanok-cdk-5-3-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/mnogopilnyy-stanok-cdk-5-3-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/mnogopilnyy-stanok-cdk-5-3-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/mnogopilnyy-stanok-cdk-5-3-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/mnogopilnyy-stanok-cdk-5-3-5.webp</picture>
+        <name>Многопильный станок ЦДК 5-3, 1993 г.</name>
+        <vendor>ТСЗ</vendor>
+        <description><![CDATA[Станок в хорошем состоянии — всю жизнь отработал в тёплом цеху! В наличии 2 шт.! Многопильный ЦДК 5-3, произведённый Тюменским станкостроительным заводом, — это надёжная и мощная машина (32,4 кВт) для продольного раскроя бруса и досок на обрезные пиломатериалы. Благодаря чугунной станине, продуманной конструкции и виброустойчивому пильному узлу, станок работает спокойно и точно даже при высоких оборотах. Подача заготовок осуществляется широкой конвейерной цепью, обеспечивающей стабильное и ровное движение без пробуксовок. Подходит для пилорам и деревообрабатывающих цехов, где требуется стабильная «рабочая лошадка» для поточного распила заготовок толщиной до 120 мм и шириной до 260 мм.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Распиловочный</param>
+        <param name="Вид">Дисковый многопильный</param>
+        <param name="Год выпуска">1993</param>
+        <param name="Мощность, кВт">32,4</param>
+        <param name="Габариты, мм">1930x1780x1630</param>
+        <param name="Масса, кг">2150</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="9" available="true">
+        <url>https://prodam-stanki.ru/?machine=9</url>
+        <price>525000</price>
+        <oldprice>700000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/borovichi-s25-5a-1997-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/borovichi-s25-5a-1997-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/borovichi-s25-5a-1997-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/borovichi-s25-5a-1997-4.webp</picture>
+        <name>Четырехсторонний станок Боровичи С25-5А, 1997 г.</name>
+        <vendor>БЗДС</vendor>
+        <description><![CDATA[Пятишпиндельный станок тяжелой серии предназначен для производства различных погонажных изделий и профилированного бруса, в том числе естественной влажности. Рябухи сверху и снизу, подходит для строгания бруса. Станок в отличном состоянии и полностью рабочий!]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Строгальный</param>
+        <param name="Вид">Четырёхсторонний</param>
+        <param name="Год выпуска">1997</param>
+        <param name="Мощность, кВт">49,6</param>
+        <param name="Габариты, мм">4800x2000x1500</param>
+        <param name="Масса, кг">5200</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="11" available="true">
+        <url>https://prodam-stanki.ru/?machine=11</url>
+        <price>250000</price>
+        <oldprice>300000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>6</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/shlifovalnyy-stanok-shlk-10-prostor-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/shlifovalnyy-stanok-shlk-10-prostor-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/shlifovalnyy-stanok-shlk-10-prostor-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/shlifovalnyy-stanok-shlk-10-prostor-4.webp</picture>
+        <name>Шлифовальный станок ШЛК-10 Простор, 2000 г.</name>
+        <vendor>Простор</vendor>
+        <description><![CDATA[Станок в хорошем и рабочем состоянии! Станок ШЛК-10 широколенточный с конвейерной подачей заготовки предназначен для калибрования и шлифования плоских параллельных поверхностей щитовых деталей.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Шлифовальный</param>
+        <param name="Вид">Калибровальный</param>
+        <param name="Год выпуска">2000</param>
+        <param name="Мощность, кВт">18</param>
+        <param name="Габариты, мм">1950x1850x1630</param>
+        <param name="Масса, кг">2800</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="12" available="true">
+        <url>https://prodam-stanki.ru/?machine=12</url>
+        <price>75000</price>
+        <oldprice>130000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>6</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/shlifovalnyy-stanok-shlps-6m-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/shlifovalnyy-stanok-shlps-6m-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/shlifovalnyy-stanok-shlps-6m-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/shlifovalnyy-stanok-shlps-6m-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/shlifovalnyy-stanok-shlps-6m-5.webp</picture>
+        <name>Шлифовальный станок ШлПС-6М, 1995 г.</name>
+        <vendor>Кодос</vendor>
+        <description><![CDATA[Станки в хорошем состоянии — всю жизнь отработали в тёплом цеху! *В наличии 2 шт!* Станок ШлПС-6М предназначен для шлифования плоских поверхностей щитовых деталей из массивной древесины и мебельных щитов, в том числе облицованных шпоном и покрытых полиэфирным лаком узкой шлифовальной лентой на подвижном столе с утюжком.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Шлифовальный</param>
+        <param name="Вид">Ленточный</param>
+        <param name="Год выпуска">1995</param>
+        <param name="Мощность, кВт">2,2</param>
+        <param name="Габариты, мм">3500x1500x1500</param>
+        <param name="Масса, кг">450</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="13" available="true">
+        <url>https://prodam-stanki.ru/?machine=13</url>
+        <price>349000</price>
+        <oldprice>496000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>5</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/lentochnaya-pila-centauro-sp-500-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/lentochnaya-pila-centauro-sp-500-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/lentochnaya-pila-centauro-sp-500-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/lentochnaya-pila-centauro-sp-500-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/lentochnaya-pila-centauro-sp-500-5.webp</picture>
+        <name>Ленточная пила по дереву Centauro SP 500, 2004 г.</name>
+        <vendor>Centauro</vendor>
+        <description><![CDATA[Сocтояние отличное, рaбoтaли на станке не много - только точечные и какие-то разовые операции, требующие ручного распила! Ленточнaя пилa по дереву Сеntaurо SР-500 (Италия) - это профессиональный станок для продольного, поперечного и криволинейного распила древесины. Максимально удобная для работы конструкции. Станок выдает обработку древесины на высоком и качественном уровне.]]></description>
+        <country_of_origin>Италия</country_of_origin>
+        <param name="Тип">Распиловочный</param>
+        <param name="Вид">Ленточный</param>
+        <param name="Год выпуска">2004</param>
+        <param name="Мощность, кВт">1,8</param>
+        <param name="Габариты, мм">1910x905x630</param>
+        <param name="Масса, кг">230</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="14" available="true">
+        <url>https://prodam-stanki.ru/?machine=14</url>
+        <price>1200000</price>
+        <oldprice>1490000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>7</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/sverlilno-pazovalnyy-stanok-yuetong-mdk-4120-nc-5.webp</picture>
+        <name>Сверлильно-пазовальный станок с ЧПУ Yuetong MDK 4120 NC, 2007 г.</name>
+        <vendor>Yuetong</vendor>
+        <description><![CDATA[Сocтояние отличное, рaбoтaли на станке мало - только разовые операции под заказные двери! Станок предназначен специально для проведения фрезерных операций при изготовлении пазов и отверстий различного назначение (установка фурнитуры дверного полотна/коробки: механизм замка, накладка замка, личинка, ручка, петли).]]></description>
+        <country_of_origin>Китай</country_of_origin>
+        <param name="Тип">Долбежный</param>
+        <param name="Вид">Сверлильно-пазовальный</param>
+        <param name="Год выпуска">2007</param>
+        <param name="Мощность, кВт">7</param>
+        <param name="Габариты, мм">2540x2270x1620</param>
+        <param name="Масса, кг">1900</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="15" available="true">
+        <url>https://prodam-stanki.ru/?machine=15</url>
+        <price>750000</price>
+        <oldprice>849000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>8</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/Biesse-Artech-Lato-23s.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/Biesse-Artech-Lato-23s-2.webp</picture>
+        <name>Кромкооблицовочный станок Artech Lato 23s Biesse, 2007 г.</name>
+        <vendor>Biesse</vendor>
+        <description><![CDATA[Автоматический односторонний кромочный станок LATO приклеивает и обрабатывает плоскую кромку в рулоне (из меламиновой бумаги, ПВХ, ABS, шпона) или в полосках (массивное дерево) к деревянным панелям, ДСП, МДФ, а также к многослойной деревянной плите. Скорость 10м/мин, кромка 0.4-3 мм, торцевание, фрезерование свесов, циклевание, полирование. Данный станок 2007 года выпуска, Италия, куплен новым. Практически не эксплуатировался, можно сказать новый станок с минимальным пробегом. Продаем так как данным станком не пользуемся. Прекрасное техническое и внешнее состояние.]]></description>
+        <country_of_origin>Италия</country_of_origin>
+        <param name="Тип">Кромкооблицовочный</param>
+        <param name="Вид">Односторонний</param>
+        <param name="Год выпуска">2007</param>
+        <param name="Мощность, кВт">7</param>
+        <param name="Габариты, мм">3690x1400x1195</param>
+        <param name="Масса, кг">1000</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="16" available="true">
+        <url>https://prodam-stanki.ru/?machine=16</url>
+        <price>250000</price>
+        <oldprice>300000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-bakaut-sf-003.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-bakaut-sf-003-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-bakaut-sf-003-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-bakaut-sf-003-4.webp</picture>
+        <name>Двухшпиндельный фрезерный станок Бакаут СФ 003</name>
+        <vendor>Бакаут</vendor>
+        <description><![CDATA[Продаем двухшпиндельный фрезерный станок Бакаут СФ 003, предназначенный для фрезерования криволинейных кромок деталей из древесины по копиру (мы делали арочные царги дверей и фасадов – на последнем фото пример изделия). Станок имеет два шпинделя, вращающихся в противоположном направлении, что позволяет обрабатывать криволинейные поверхности без сколов и выровов - с учетом расположения волокон. Шпиндели имеют возможность регулировки по высоте ± 5 мм. Рекомендуется для обработки по шаблонам концевыми профильными фрезами замкнутых фигурных пазов на фасадах дверей, мебельных, строительных и других подобных изделий из натуральной древесины. Состояние: отличное, практически не эксплуатировался, можно сказать новый станок. Продаем так как данным станком не пользуемся.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Фрезерный</param>
+        <param name="Вид">Горизонтальный</param>
+        <param name="Мощность, кВт">11,2</param>
+        <param name="Габариты, мм">1425x1350x755</param>
+        <param name="Масса, кг">440</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="17" available="true">
+        <url>https://prodam-stanki.ru/?machine=17</url>
+        <price>200000</price>
+        <oldprice>250000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <name>Двухшпиндельный фрезерный станок Бакаут СФ 003</name>
+        <vendor>Бакаут</vendor>
+        <description><![CDATA[Продаем двухшпиндельный фрезерный станок Бакаут СФ 003, предназначенный для фрезерования криволинейных кромок деталей из древесины по копиру (мы делали арочные царги дверей и фасадов – на последнем фото пример изделия). Станок имеет два шпинделя, вращающихся в противоположном направлении, что позволяет обрабатывать криволинейные поверхности без сколов и выровов - с учетом расположения волокон. Шпиндели имеют возможность регулировки по высоте ± 5 мм. Рекомендуется для обработки по шаблонам концевыми профильными фрезами замкнутых фигурных пазов на фасадах дверей, мебельных, строительных и других подобных изделий из натуральной древесины. Состояние: хорошее, эксплуатировался мало. Продаем так как данным станком не пользуемся.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Фрезерный</param>
+        <param name="Вид">Горизонтальный</param>
+        <param name="Мощность, кВт">11,2</param>
+        <param name="Габариты, мм">1425x1350x755</param>
+        <param name="Масса, кг">440</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="18" available="true">
+        <url>https://prodam-stanki.ru/?machine=18</url>
+        <price>270000</price>
+        <oldprice>300000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>3</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/veernaya-vayma-sroj--les-cerknica-slr-66.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/veernaya-vayma-sroj--les-cerknica-slr-66-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/veernaya-vayma-sroj--les-cerknica-slr-66-3.webp</picture>
+        <name>Веерная вайма SROJ &amp; LES CERKNICA SLR 6/6, 2002 г.</name>
+        <vendor>SROJ &amp; LES</vendor>
+        <description><![CDATA[Продаем веерную вайму шести пролётную для склейки щита Stroj & Les (Производство Словения). Модель SLR 6/6. Год выпуска 2002. Клеит щит размером 2400 × 800 мм. Хорошее состояние. Очень качественное оборудование по разумной цене.]]></description>
+        <country_of_origin>Словения</country_of_origin>
+        <param name="Тип">Пресс</param>
+        <param name="Вид">Веерный</param>
+        <param name="Год выпуска">2002</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="21" available="true">
+        <url>https://prodam-stanki.ru/?machine=21</url>
+        <price>105000</price>
+        <oldprice>134000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-fssh-1a.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-fssh-1a-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-fssh-1a-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/frezernyy-stanok-fssh-1a-4.webp</picture>
+        <name>Фрезерный станок ФСШ-1а</name>
+        <vendor>Главдревстанкопром</vendor>
+        <description><![CDATA[Продаем отличный и надежный фрезер. Надёжная машина советского времени, выпущенная заводом Главдревстанкопром (г. Днепропетровск). Предназначен для: фрезеровки профилей, торцов, фигурных элементов и других столярных задач. Классическая конструкция с мощным приводом 5 кВт - отличное решением для мастерской с высоким уровнем нагрузки.]]></description>
+        <country_of_origin>СССР</country_of_origin>
+        <param name="Тип">Фрезерный</param>
+        <param name="Вид">Горизонтальный</param>
+        <param name="Мощность, кВт">5</param>
+        <param name="Габариты, мм">1360x1265x1200</param>
+        <param name="Масса, кг">880</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="23" available="true">
+        <url>https://prodam-stanki.ru/?machine=23</url>
+        <price>820000</price>
+        <oldprice>875000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>5</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/formatno-raskroennyy-stanok-giben-matic-standard.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/formatno-raskroennyy-stanok-giben-matic-standard-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/formatno-raskroennyy-stanok-giben-matic-standard-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/formatno-raskroennyy-stanok-giben-matic-standard-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/formatno-raskroennyy-stanok-giben-matic-standard-5.webp</picture>
+        <name>Форматно-раскроенный станок Giben matic standard</name>
+        <vendor>GIBEN</vendor>
+        <description><![CDATA[Продаем форматно-раскроенный станок, произведенный заводом GIBEN в Италии. Состояние - хорошое, полностью рабочее. Станок отличается высокой точностью, безопасностью и чистотой реза - рез получается финишным, за счет наличия основной и подрезной пилы. Станок имеет 4 диапазона положения пильного узла. Ему не нужно каждый раз возвращаться в исходное положение, если вы пилите короткие заготовки. Это серьезно сокращает время цикла. Работа на станке безопасна, потому что во время самого реза оператор не имеет прямого контакта с разрезаемым материалом, а заготовка прижимается сверху прижимной балкой с помощью сжатого воздуха. Активация прижимной балки и подача пилы осуществляется с помощью ножной педали. Станок может работать в автоматическом и полуавтоматическом цикле. Станок подходит для работы с плитным материалом и деревом. Станок массивный, прочный и надежный.]]></description>
+        <country_of_origin>Италия</country_of_origin>
+        <param name="Тип">Распиловочный</param>
+        <param name="Вид">Форматно-раскроечный</param>
+        <param name="Мощность, кВт">7,5</param>
+        <param name="Габариты, мм">6000х3000х1300</param>
+        <param name="Масса, кг">3500</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="24" available="true">
+        <url>https://prodam-stanki.ru/?machine=24</url>
+        <price>150000</price>
+        <oldprice>176000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>9</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-tortsovochnyy-tsct-01-kodos.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-tortsovochnyy-tsct-01-kodos-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-tortsovochnyy-tsct-01-kodos-3.webp</picture>
+        <name>Станок торцовочный ЦCТ - 01 КОДОС, 2008 г.</name>
+        <vendor>КОДОС</vendor>
+        <description><![CDATA[Продаем станок торцовочный ЦCТ - 01 пневматический с нижним расположением пилы для поперечного раскроя строганных заготовок на планки, для последующей зашиповки штучного паркета, а также устанавливается в линии сращивания. Прижим материала производится автоматически верхним упором перед подъемом пилы за счет общего пневмоцилиндра; конструкция прижима исключает образование сколов на поверхности заготовки; для безопасности работы применяется двуручное управление, электродинамическое торможение и система блокировок, отключающих станок. Станок может также использоваться для поперечного раскроя и торцовки деревянных деталей. Область применения - предприятия и цеха для производства паркета, столярно-строительных изделий, стандартного домостроения и других производств. Рабочий цикл осуществляется за счет пневмопривода. Управление пневмоцилиндрами осуществляется ножной пневмопедалью. Пневматическая схема собрана из импортных комплектующих. Состояние - хорошее, рабочее. Столы в комплекте имеются.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Торцовочный</param>
+        <param name="Вид">Стационарный</param>
+        <param name="Год выпуска">2008</param>
+        <param name="Мощность, кВт">3</param>
+        <param name="Габариты, мм">3880х1100х860</param>
+        <param name="Масса, кг">400</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="25" available="true">
+        <url>https://prodam-stanki.ru/?machine=25</url>
+        <price>110000</price>
+        <oldprice>134000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>5</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kruglopilnyy-tsirkulyarnyy-ts6-2-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kruglopilnyy-tsirkulyarnyy-ts6-2-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kruglopilnyy-tsirkulyarnyy-ts6-2-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kruglopilnyy-tsirkulyarnyy-ts6-2.webp</picture>
+        <name>Станок круглопильный циркулярный Ц6-2, 1992 г.</name>
+        <vendor>УСЗ</vendor>
+        <description><![CDATA[Продаем надежный станок произведенный Уссурийским Станкостроительным Заводом в 1992г. Станок круглопильный универсальный модели Ц6-2 предназначен для продольной и поперечной распиловки досок, брусьев, древесных плит и листовых материалов (ДСП, ДВП, фанера, и т.п.). Станина выполнена в виде прочной литой чугунной отливки коробчатой формы, что обеспечивает устойчивость и долговечность станка. С помощью механизма подъема можно регулировать высоту выступания пильного диска над рабочим столом, адаптируя глубину реза под нужды конкретной операции. Состояние - хорошее, рабочее.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Распиловочный</param>
+        <param name="Вид">Циркулярный</param>
+        <param name="Год выпуска">1992</param>
+        <param name="Мощность, кВт">4</param>
+        <param name="Габариты, мм">1610х1505х1150</param>
+        <param name="Масса, кг">815</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="26" available="true">
+        <url>https://prodam-stanki.ru/?machine=26</url>
+        <price>110000</price>
+        <oldprice>134000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>5</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kruglopilnyy-tsirkulyarnyy-ts6-2-1991.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kruglopilnyy-tsirkulyarnyy-ts6-2-1991-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kruglopilnyy-tsirkulyarnyy-ts6-2-1991-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kruglopilnyy-tsirkulyarnyy-ts6-2-1991-4.webp</picture>
+        <name>Станок круглопильный циркулярный Ц6-2, 1991 г.</name>
+        <description><![CDATA[Продаем надежный станок произведенный в 1991г. Станок круглопильный универсальный модели Ц6-2 предназначен для продольной и поперечной распиловки досок, брусьев, древесных плит и листовых материалов (ДСП, ДВП, фанера, и т.п.). Станина выполнена в виде прочной литой чугунной отливки коробчатой формы, что обеспечивает устойчивость и долговечность станка. С помощью механизма подъема можно регулировать высоту выступания пильного диска над рабочим столом, адаптируя глубину реза под нужды конкретной операции. Состояние - хорошее, рабочее.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Распиловочный</param>
+        <param name="Вид">Циркулярный</param>
+        <param name="Год выпуска">1991</param>
+        <param name="Мощность, кВт">4</param>
+        <param name="Габариты, мм">1610х1505х1150</param>
+        <param name="Масса, кг">815</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="27" available="true">
+        <url>https://prodam-stanki.ru/?machine=27</url>
+        <price>110000</price>
+        <oldprice>134000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>5</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kruglopilnyy-tsirkulyarnyy-ts6-2(2).webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kruglopilnyy-tsirkulyarnyy-ts6-2(2)-2.webp</picture>
+        <name>Станок круглопильный циркулярный Ц6-2</name>
+        <vendor>УСЗ</vendor>
+        <description><![CDATA[Продаем надежный станок произведенный Уссурийским Станкостроительным Заводом. Станок круглопильный универсальный модели Ц6-2 предназначен для продольной и поперечной распиловки досок, брусьев, древесных плит и листовых материалов (ДСП, ДВП, фанера, и т.п.). Станина выполнена в виде прочной литой чугунной отливки коробчатой формы, что обеспечивает устойчивость и долговечность станка. С помощью механизма подъема можно регулировать высоту выступания пильного диска над рабочим столом, адаптируя глубину реза под нужды конкретной операции. Состояние - хорошее, рабочее.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Распиловочный</param>
+        <param name="Вид">Циркулярный</param>
+        <param name="Мощность, кВт">4</param>
+        <param name="Габариты, мм">1610х1505х1150</param>
+        <param name="Масса, кг">815</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="29" available="true">
+        <url>https://prodam-stanki.ru/?machine=29</url>
+        <price>150000</price>
+        <oldprice>176000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>9</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-tortsovochnyy-stb-002-bakaut.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-tortsovochnyy-stb-002-bakaut-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-tortsovochnyy-stb-002-bakaut-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-tortsovochnyy-stb-002-bakaut-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-tortsovochnyy-stb-002-bakaut-5.webp</picture>
+        <name>Станок торцовочный СТБ 002 Бакаут</name>
+        <vendor>Бакаут</vendor>
+        <description><![CDATA[Продаем надежную торцовку. Данный станок зарекомендовал себя в работе, как простой и надежный агрегат (используем на производстве несколько таких). Данный станок продаем, так как не пользуемся им. По времени один разрез составляет до 2 секунд. Управлять станком можно при помощи двух имеющихся кнопок, а также использовать ножную педаль. Безопасная работа: при отсутствии заготовки, поднятие пилы не происходит. Может встраиваться на любую поточную линию. Обладает повышенной производительностью и чистым резом. Станок в хорошем, рабочем состоянии.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Торцовочный</param>
+        <param name="Вид">Стационарный</param>
+        <param name="Мощность, кВт">4,2</param>
+        <param name="Габариты, мм">1200х700х620</param>
+        <param name="Масса, кг">120</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="30" available="true">
+        <url>https://prodam-stanki.ru/?machine=30</url>
+        <price>720000</price>
+        <oldprice>772000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>6</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/kalibrovalno-shlifovalnyy-stanok-italmac-phg2-1100-rt.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/kalibrovalno-shlifovalnyy-stanok-italmac-phg2-1100-rt-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/kalibrovalno-shlifovalnyy-stanok-italmac-phg2-1100-rt-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/kalibrovalno-shlifovalnyy-stanok-italmac-phg2-1100-rt-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/kalibrovalno-shlifovalnyy-stanok-italmac-phg2-1100-rt-5.webp</picture>
+        <name>Калибровально-шлифовальный станок ITALMAC PHG2-1100 RT</name>
+        <vendor>ITALMAC</vendor>
+        <description><![CDATA[Продаем станок для калибрования и шлифования клееных щитов, древесно-стружных плит, облицованных шпоном, окон, заготовок из древесины, а также для промежуточного шлифования лакированных поверхностей. Станок прост и надежен в эксплуатации. Два рабочих узла, калибровальный, шлифовальный. подающий и принимающий стол, регулируемый утюжок, пылеудаляющая щетка с абразивной ленты, автоматическое выставление размеров, минимальная ширина рабочей зоны 470мм, суммарная мощность двигателей 36 кВт. Преимущества: 1) сенсорное управление упрощает настройку шлифовальных узлов; 2) наличие электронной системы предварительной настройки станка под толщину детали, позволяет уменьшить время настройки станка и увеличить его производительность; 3) изменяемая в широком диапазоне (6 - 30 м/мин) скорость подачи, позволяет точно подобрать режим обработки для каждой заготовки; 4) системы экстренной остановки станка, дополнены пневматическими тормозными колодками, гарантирующими мгновенную остановку шлифовальных валов; 5) электронная система индикации перемещения стола позволяет устанавливать величину съема с точностью до 0,1 мм; 6) подъем, опускание стола осуществляется четырьмя винтами, что обеспечивает точность и надежность подачи; 7) положение шлифовальной ленты на валах и ее обрыв контролируется электронной системой предупреждения; 8) увеличенная мощность основных двигателей, позволят осуществлять съем материала до 3 мм и обеспечивает надежность и безотказность при эксплуатации. Станок в хорошем, рабочем состоянии.]]></description>
+        <country_of_origin>Китай</country_of_origin>
+        <param name="Тип">Шлифовальный</param>
+        <param name="Вид">Калибровальный</param>
+        <param name="Мощность, кВт">36</param>
+        <param name="Габариты, мм">2350х2100х2050</param>
+        <param name="Масса, кг">2800</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="31" available="true">
+        <url>https://prodam-stanki.ru/?machine=31</url>
+        <price>610000</price>
+        <oldprice>692000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stegherr-ksf-mini.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stegherr-ksf-mini-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stegherr-ksf-mini-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stegherr-ksf-mini-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stegherr-ksf-mini-5.webp</picture>
+        <name>Станок для фрезерования крестовых соединений Stegherr KSF-mini, 2004 г.</name>
+        <vendor>Stegherr</vendor>
+        <description><![CDATA[Продаем станок для фрезерования крестовых соединений Stegherr KSF-mini. Это уникальный станок для всех крестовых соединений, которые встречаются на практике. На данном станке мы изготавливали крестовое соединение штапиков для межкомнатных дверей со стеклом - работали мало. Заготовка обрабатывается с трех сторон за один зажим, что обеспечивает абсолютно точную фрезеровку. Станок позволяет без сколов фрезеровать контр-профиль профилированных заготовок. Станок занимает очень маленькую производственную площадь и идеально подходит для оснащения небольших мебельных мастерских, может применяться на производстве деревянной мебели, фасадов, окон, и на иных производствах. Станок в отличном состоянии - редкая и уникальная вещь.]]></description>
+        <country_of_origin>Германия</country_of_origin>
+        <param name="Тип">Фрезерный</param>
+        <param name="Вид">Горизонтальный</param>
+        <param name="Год выпуска">2004</param>
+        <param name="Мощность, кВт">4,4</param>
+        <param name="Габариты, мм">520х640х1350</param>
+        <param name="Масса, кг">180</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="32" available="true">
+        <url>https://prodam-stanki.ru/?machine=32</url>
+        <price>1300000</price>
+        <oldprice>1450000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>3</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/veernaya-vayma-lisy-dvok-th6-25001050.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/veernaya-vayma-lisy-dvok-th6-25001050-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/veernaya-vayma-lisy-dvok-th6-25001050-3.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/veernaya-vayma-lisy-dvok-th6-25001050-4.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/veernaya-vayma-lisy-dvok-th6-25001050-5.webp</picture>
+        <name>Веерная вайма LISY - DVOŘÁK TH6-2500/1050, 2008 г.</name>
+        <vendor>LISY - DVOŘÁK</vendor>
+        <description><![CDATA[Шестипролётный пресс для склейки мебельного щита размером до 2500 х 1050 мм. Оборудование в хорошем рабочем состоянии. Пресс предназначен для склеивания щитов из ламелей (в работе использовалась сосна). На станке изготавливались щиты из предварительно подготовленных ламелей сосны. Оборудование отличается удобством и высокой производительностью благодаря шести рабочим столам: пока на шестом столе выполняется склейка, первый уже готов к выгрузке. Такой цикличный процесс значительно ускоряет производство и повышает эффективность работы. Конструкция сварная, с жёсткой неподвижной рамой. Звёздчатый ротор на 6 столов установлен на подшипниках. Каждый стол оснащён регулируемыми прижимными устройствами с верхней зажимной балкой. Источник давления — электрогидравлический насос. Гидравлическая система позволяет делить рабочий стол на 2 или 3 независимые зоны с помощью центральных шаровых клапанов. Дополнительно каждый цилиндр может иметь собственный запорный клапан, что даёт возможность гибко настраивать рабочие зоны под разные задачи. Вращение ротора — вручную (маховиком с фиксацией педалью) или автоматически через электроредуктор. Качественное европейское оборудование по разумной цене.]]></description>
+        <country_of_origin>Чехия</country_of_origin>
+        <param name="Тип">Пресс</param>
+        <param name="Вид">Веерный</param>
+        <param name="Год выпуска">2008</param>
+        <param name="Мощность, кВт">1.1</param>
+        <param name="Габариты, мм">4000x3250x3250</param>
+        <param name="Масса, кг">1300</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="33" available="true">
+        <url>https://prodam-stanki.ru/?machine=33</url>
+        <price>75000</price>
+        <oldprice>125000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/ustroystvo-naneseniya-kleya-unk-009-bakaut.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/ustroystvo-naneseniya-kleya-unk-009-bakaut-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/ustroystvo-naneseniya-kleya-unk-009-bakaut-3.webp</picture>
+        <name>Устройство нанесения клея УНК 009 Бакаут</name>
+        <vendor>Бакаут</vendor>
+        <description><![CDATA[Устройство нанесения клея одностороннее, предназначено для нанесения клея на плоскую поверхность бруса (доски). Рассчитано на работу с ПВА, карбамидными и другими водорастворимыми клеями. Легкая регулировка положения клеенаносящего ролика по высоте, позволяет наносить клей на материалы толщиной от 0 до 90 мм. Рекомендуется для производства широкого ассортимента продукции: мебельного щита, дверей, оконного бруска, клееного стенового бруса. Удобная конструкция позволяет быстро снять валик для промывки в конце смены. Основные достоинства аппарата: Скорость подачи до 23,5 м/мин; Простота эксплуатации; Жёсткая конструкция. Устройство в рабочем, хорошем состоянии.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Другие</param>
+        <param name="Вид">Клеенаносящий</param>
+        <param name="Мощность, кВт">0,2</param>
+        <param name="Габариты, мм">690x490x1250</param>
+        <param name="Масса, кг">55</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="34" available="true">
+        <url>https://prodam-stanki.ru/?machine=34</url>
+        <price>55000</price>
+        <oldprice>74000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>9</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-diskovyy-otreznoy-pila-mayatnikovaya.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-diskovyy-otreznoy-pila-mayatnikovaya-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-diskovyy-otreznoy-pila-mayatnikovaya-3.webp</picture>
+        <name>Станок дисковый отрезной (пила маятниковая)</name>
+        <description><![CDATA[Продаем компактный отрезной станок, с мощным приводом и минимальными требованиями к условиям эксплуатации. Использовался для черновой резки пиломатериала в условиях заготовительных участков. У станка высокая производительность, простая эксплуатация, недорогие расходники и не убиваемая конструкция - прослужит долгие года. Состояние - хорошее, рабочее.]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Торцовочный</param>
+        <param name="Вид">Ручной</param>
+        <param name="Мощность, кВт">1,5</param>
+        <param name="Габариты, мм">690x490x1250</param>
+        <param name="Масса, кг">150</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+      <offer id="35" available="true">
+        <url>https://prodam-stanki.ru/?machine=35</url>
+        <price>200000</price>
+        <oldprice>276000</oldprice>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kombinirovannyy-k-40-m-1.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kombinirovannyy-k-40-m-1-2.webp</picture>
+        <picture>https://prodam-stanki.ru/images/wood-machines/stanok-kombinirovannyy-k-40-m-1-3.webp</picture>
+        <name>Станок комбинированный К 40 М 1, 1999 г.</name>
+        <vendor>Завод им. Ф.Э. Дзержинского</vendor>
+        <description><![CDATA[Уникальный и мощный станок предназначен для выполнения продольного и поперечного пиления, распиловки под углом, торцовки, строгания и рейсмусования, проходного фрезерования, сверления-пазования, нарезки шипов и заточки фуговальных ножей. Состоит из двух модулей (станин): пильно-фрезерный модуль и фуговально-рейсмусный–сверлильный-пазовально-заточной модуль. Станок имеет составную виброустойчивую станину коробчатой формы. Пильный стол имеет неподвижное крепление. Сверлильно-пазовальный стол откидывается и имеет фиксатор. Столы для фугования имеют коробчатую форму. Данные фуговальные столы установлены на кронштейнах станины и размещаются над ножевым валом. При выполнении операции рейсмусования столы откидывают, а в рабочем положении фиксируют с помощью эксцентриковыми зажимами. Для настройки станка на требуемую глубину фугования просто изменяют высоту переднего стола. На станине в шарикоподшипниковых опорах размещается ножевой вал. При помощи винтов и клиньев в корпусе закреплены 2 ножа, которые позволяют достаточно легко и плавно отрегулировать высоту ножей. В одном из концов ножевого вала имеется коническое отверстие для установки патрона, с помощью которого крепятся фреза или сверло. Станок в хорошем и рабочем состоянии!]]></description>
+        <country_of_origin>Россия</country_of_origin>
+        <param name="Тип">Строгальный</param>
+        <param name="Вид">Комбинированный</param>
+        <param name="Год выпуска">1999</param>
+        <param name="Мощность, кВт">13</param>
+        <param name="Габариты, мм">1650x1850x950</param>
+        <param name="Масса, кг">1250</param>
+        <param name="Состояние">Б/у, рабочее</param>
+        <sales_notes>Продажа от собственника. Самовывоз или отправка по России</sales_notes>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>
