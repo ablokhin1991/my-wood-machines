@@ -131,6 +131,43 @@ a:hover { text-decoration: underline; }
   overflow: hidden;
   background: #f0f0f0;
 }
+.badge-promo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  display: inline-block;
+  background: #c62828;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  padding: 5px 10px;
+  border-radius: 4px;
+  line-height: 1.2;
+  box-shadow: 0 2px 8px rgba(198, 40, 40, 0.35);
+  pointer-events: none;
+}
+.badge-promo--modal {
+  position: static;
+  top: auto;
+  left: auto;
+  font-size: 13px;
+  padding: 3px 10px;
+  box-shadow: none;
+  pointer-events: auto;
+}
+.modal-promo-note {
+  font-size: 13px;
+  color: #c62828;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 56px 10px 0;
+  padding: 8px 12px;
+  background: #ffebee;
+  border-left: 3px solid #c62828;
+  border-radius: 0 4px 4px 0;
+}
 .card-image-wrap img {
   position: absolute;
   top: 0; left: 0;
@@ -538,6 +575,8 @@ a:hover { text-decoration: underline; }
   .gallery-thumbs img { width: 56px; height: 42px; }
   .gallery-thumbs { margin-right: 18px; }
   .modal-highlight { margin-right: 18px; }
+  .modal-promo-note { margin-right: 18px; font-size: 12px; padding: 7px 10px; }
+  .badge-promo { font-size: 11px; padding: 4px 8px; top: 8px; left: 8px; }
   .modal-description { margin-right: 18px; }
   .specs-heading { margin-right: 18px; }
   .specs-table { max-width: 95%; }

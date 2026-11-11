@@ -50,9 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const yearText = (!machine.year || machine.year === "-") ? "не указан" : machine.year;
     const powerText = (!machine.power || machine.power === "-") ? "не указана" : machine.power + " кВт";
     const shortDesc = truncateText(machine.description, 140);
+    const promoBadgeHtml = machine.promo
+      ? `<span class="badge-promo" aria-label="Скидка ${machine.promo.discount}% до ${machine.promo.until}">−${machine.promo.discount}%</span>`
+      : "";
 
     const card = document.createElement("article");
-    card.className = "machine-card";
+    card.className = "machine-card" + (machine.promo ? " has-promo" : "");
     card.id = "machine-" + machine.id;
     card.setAttribute("itemscope", "");
     card.setAttribute("itemtype", "https://schema.org/Product");
@@ -61,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       card.innerHTML = `
       <div class="card-image-wrap">
+        ${promoBadgeHtml}
         ${thumb1
           ? `<img class="card-img-main" src="${thumb1}"${thumb2 ? ' data-hover="' + thumb2 + '"' : ''} alt="${machine.type} ${machine.name} б/у — фото 1" width="400" height="300" loading="${loadingAttr}"${priorityAttr} decoding="async" itemprop="image" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-image-placeholder" style="display:none">Фото скоро появится</div>`
           : `<div class="card-image-placeholder">Фото скоро появится</div>`
@@ -234,8 +238,10 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="modal-price-row">
         <span class="modal-price">${formatPrice(machine.price)}</span>
         <span class="modal-old-price">${formatPrice(machine.oldPrice)}</span>
+        ${machine.promo ? `<span class="badge-promo badge-promo--modal">−${machine.promo.discount}%</span>` : ""}
         <span class="badge-torg">Торг</span>
       </div>
+      ${machine.promo ? `<div class="modal-promo-note">Цена по акции до ${machine.promo.until} — далее будет прежняя цена ${formatPrice(machine.oldPrice)}</div>` : ""}
       <div class="modal-instock">В наличии: ${machine.instock} шт.</div>
 
       
