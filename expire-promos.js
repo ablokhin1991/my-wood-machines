@@ -89,3 +89,4 @@ if (dryRun) {
 
 fs.writeFileSync(filePath, next, "utf8");
 console.log("Готово. Обновлено блоков:", changed);
+require("./generate-static-catalog.js")();

@@ -203,3 +203,5 @@ console.log(
   "->",
   noYear.map((m) => m.id).join(", ")
 );
+
+require("./generate-static-catalog.js")();
