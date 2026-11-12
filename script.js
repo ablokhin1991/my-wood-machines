@@ -477,20 +477,21 @@ document.addEventListener("DOMContentLoaded", () => {
     "@type": "LocalBusiness",
     "@id": businessId,
     "name": "Станки по деревообработке б/у от собственника",
-    "description": "Продажа б/у деревообрабатывающих станков от собственника во Владимирской области. Четырёхсторонние, фрезерные, шлифовальные, распиловочные станки.",
+    "description": "Продажа б/у деревообрабатывающих станков от собственника в г. Александров, Владимирская область. Четырёхсторонние, фрезерные, шлифовальные, распиловочные станки.",
     "url": siteUrl,
     "telephone": "+7-910-092-82-79",
     "priceRange": "₽₽",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "ул. П. Топоркова, 21",
+      "addressLocality": "Александров",
       "addressRegion": "Владимирская область",
-      "addressLocality": "Александровский район",
       "addressCountry": "RU"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 56.3926,
-      "longitude": 38.7382
+      "latitude": 56.396623,
+      "longitude": 38.697473
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -499,6 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "closes": "19:00"
     },
     "areaServed": [
+      { "@type": "City", "name": "Александров" },
       { "@type": "State", "name": "Владимирская область" },
       { "@type": "Country", "name": "Россия" }
     ],
@@ -651,6 +653,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // === Инициализация ===
+  const instockStat = document.getElementById("stat-instock");
+  if (instockStat) {
+    const totalInstock = machines
+      .filter((m) => !m.status || m.status === "active")
+      .reduce((sum, m) => sum + (Number(m.instock) || 0), 0);
+    instockStat.textContent = String(totalInstock);
+  }
+
   renderCatalog();
 
   const openMachineFromUrl = () => {

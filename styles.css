@@ -716,18 +716,3 @@ a:hover { text-decoration: underline; }
 
 
 
-
-.cookie-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.45);
-    z-index: 999;
-}
-
-
-
-.cookie-banner,
-.cookie-banner * {
-    pointer-events: auto;
-}
-.cookie-banner button { pointer-events: auto !important; }   
