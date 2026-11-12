@@ -1,6 +1,12 @@
 /**
  * Откат истёкших акций в machines-data.js (постоянно правит файл).
  *
+ * Подхватывает все блоки promo с restorePrice/restoreOldPrice, в т.ч.:
+ * - Боровичи С25-5А 2002 (id 1)
+ * - Боровичи С25-5А 1997 (id 9)
+ * - Giben matic standard (id 23)
+ * - LISY - DVOŘÁK TH6-2500/1050 (id 32)
+ *
  * По умолчанию срабатывает только если сейчас позже until 23:59 МСК.
  * Принудительно: node expire-promos.js --force
  * Проверка без записи: node expire-promos.js --dry-run
